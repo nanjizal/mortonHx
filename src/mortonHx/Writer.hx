@@ -1,7 +1,7 @@
 package mortonHx;
 class Writer {
     public var v:( get_v, null ): Int;
-    public function get_v(): Int {
+    public inline function get_v(): Int {
         return xy;
     }
     var xy: Int = 0;
