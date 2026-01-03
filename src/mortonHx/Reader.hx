@@ -1,7 +1,11 @@
+import mortonHx.Writer;
 public class Reader {
   var x: Int = 0; 
   var y: Int = 0;
-  public static function fromWriter( morton: Int ): Reader {
+  public static function fromWriter( v: Writer ): Reader {
+    return fromWriterXY( morton.x, morton.y );
+  }
+  public static function fromWriterXY( morton: Int ): Reader {
     return new Reader( x, y );
   }
   public function new( x: Int, y: Int ){
