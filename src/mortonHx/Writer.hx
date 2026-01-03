@@ -1,5 +1,9 @@
 package mortonHx;
 class Writer {
+    public var v:( get_v, null ): Int;
+    public function get_v(): Int {
+        return xy;
+    }
     var xy: Int = 0;
     /**
      * Interleaves bits of two 16-bit integers into one 32-bit Morton code.
