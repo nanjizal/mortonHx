@@ -9,7 +9,7 @@ class Writer {
     public inline static function fromFloatXY( x: Float, y: Float, wid: Float, hi: Float ): Int {
         var scaleX = scalar/wid;
         var scaleY = scalar/hi;
-        return new Writer( Std.int( x * scaleX ), std.int( y * scaleY ) );
+        return new Writer( Std.int( x * scaleX ), Std.int( y * scaleY ) );
     }
     public inline static function fromFloatXYoffSet( x: Float, y: Float, xOff: Float, yOff: Float, wid: Float, hi: Float ): Int {
         return new fromFloatXY( x - offX, y - offY );
