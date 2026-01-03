@@ -19,4 +19,5 @@ public class Reader {
     j = (j ^ (j >> 4)) & 0x00ff00ff;
     j = (j ^ (j >> 8)) & 0x0000ffff;
     return j;
+  }
 }
