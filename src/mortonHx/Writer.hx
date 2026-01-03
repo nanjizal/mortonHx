@@ -5,9 +5,21 @@ class Writer {
         return xy;
     }
     var xy: Int = 0;
+    final scaler = 32767;
     /**
      * Interleaves bits of two 16-bit integers into one 32-bit Morton code.
      */
+    public inline static function fromFloatXY( x: Float, y: Float, wid: Float, hi: Float ): Int {
+        var scaleX = scalar/wid;
+        var scaleY = scalar/hi;
+        return new Writer( Std.int( x * scaleX ), std.int( y * scaleY ) );
+    }
+    public inline static function fromFloatXYoffSet( x: Float, y: Float, xOff: Float, yOff: Float, wid: Float, hi: Float ): Int {
+        return new fromFloatXY( x - offX, y - offY );
+    }
+    public inline static function fromFloatX_YoffSet( x: Float, y: Float, xOff: Float, yOff: Float, wid: Float, hi: Float ): Int {
+        return new fromFloatXY( x - offX, -(y - offY) );
+    }
     public inline function new( x: Int, y: Int ): Int {
         xy = ( part1By1( y ) << 1 ) | part1By1( x );
     }
