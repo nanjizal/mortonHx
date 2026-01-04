@@ -1,0 +1,50 @@
+extern class Std {
+
+	@:deprecated("Std.is is deprecated. Use Std.isOfType instead.")
+	static function is(v:Dynamic, t:Dynamic):Bool;
+
+	static function isOfType(v:Dynamic, t:Dynamic):Bool;
+
+	static function downcast<{
+	name = T;
+	class = downcast.T;
+	host = TPHMethod;
+	type = TInst(downcast.T, []);
+	constraints = [TAnon];
+	default = None;
+}, {
+	name = S;
+	class = downcast.S;
+	host = TPHMethod;
+	type = TInst(downcast.S, []);
+	constraints = [TInst(downcast.T, [])];
+	default = None;
+}>(value:downcast.T, c:Class<downcast.S>):downcast.S;
+
+	@:deprecated("Std.instance() is deprecated. Use Std.downcast() instead.")
+	static function instance<{
+	name = T;
+	class = instance.T;
+	host = TPHMethod;
+	type = TInst(instance.T, []);
+	constraints = [TAnon];
+	default = None;
+}, {
+	name = S;
+	class = instance.S;
+	host = TPHMethod;
+	type = TInst(instance.S, []);
+	constraints = [TInst(instance.T, [])];
+	default = None;
+}>(value:instance.T, c:Class<instance.S>):instance.S;
+
+	static function string(s:Dynamic):String;
+
+	static function int(x:Float):Int;
+
+	static function parseInt(x:String):Null<Int>;
+
+	static function parseFloat(x:String):Float;
+
+	static function random(x:Int):Int;
+}

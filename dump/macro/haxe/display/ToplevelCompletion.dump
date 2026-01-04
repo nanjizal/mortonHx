@@ -1,0 +1,8 @@
+typedef haxe.display.ToplevelCompletion<{
+	name = T;
+	class = haxe.display.ToplevelCompletion.T;
+	host = TPHType;
+	type = TInst(haxe.display.ToplevelCompletion.T, []);
+	constraints = [];
+	default = None;
+}> = { ?expectedTypeFollowed : Null<haxe.display.JsonType<haxe.display.ToplevelCompletion.T>>, ?expectedType : Null<haxe.display.JsonType<haxe.display.ToplevelCompletion.T>>, ?compatibleTypes : Null<Array<haxe.display.JsonType<Dynamic>>> }

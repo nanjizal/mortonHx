@@ -1,0 +1,9 @@
+@:enum
+abstract haxe.display.JsonAnonStatusKind<{
+	name = T;
+	class = haxe.display.JsonAnonStatusKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.JsonAnonStatusKind.T, []);
+	constraints = [];
+	default = None;
+}> {}

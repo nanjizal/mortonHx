@@ -1,0 +1,14 @@
+enum haxe.macro.Platform {
+	Cross;
+	Js;
+	Lua;
+	Neko;
+	Flash;
+	Php;
+	Cpp;
+	Jvm;
+	Python;
+	Hl;
+	Eval;
+	CustomTarget(name:String);
+}

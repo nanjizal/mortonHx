@@ -1,0 +1,9 @@
+extern interface ArrayAccess<{
+	name = T;
+	class = ArrayAccess.T;
+	host = TPHType;
+	type = TInst(ArrayAccess.T, []);
+	constraints = [];
+	default = None;
+}> {
+}

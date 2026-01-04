@@ -1,0 +1,9 @@
+@:used @:enum
+abstract js.html.webgl.Extension<{
+	name = T;
+	class = js.html.webgl.Extension.T;
+	host = TPHType;
+	type = TInst(js.html.webgl.Extension.T, []);
+	constraints = [];
+	default = None;
+}> from String to String {}

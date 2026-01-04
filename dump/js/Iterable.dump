@@ -1,0 +1,8 @@
+typedef Iterable<{
+	name = T;
+	class = Iterable.T;
+	host = TPHType;
+	type = TInst(Iterable.T, []);
+	constraints = [];
+	default = None;
+}> = { iterator : () -> Iterator<Iterable.T> }

@@ -1,0 +1,5 @@
+@:realPath("js.html.WakeLock") @:native("WakeLock")
+extern class WakeLock {
+
+	function request(type:Null<js.html.WakeLockType>):Promise<WakeLockSentinel>;
+}

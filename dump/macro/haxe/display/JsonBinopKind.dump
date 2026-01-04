@@ -1,0 +1,9 @@
+@:enum
+abstract haxe.display.JsonBinopKind<{
+	name = T;
+	class = haxe.display.JsonBinopKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.JsonBinopKind.T, []);
+	constraints = [];
+	default = None;
+}> {}

@@ -1,0 +1,52 @@
+@:directlyUsed @:coreApi
+extern class String {
+
+	@:pure
+	function new(string:String):Void;
+
+	var length(default,null):Int;
+
+	@:pure
+	function toUpperCase():String;
+
+	@:pure
+	function toLowerCase():String;
+
+	@:pure
+	function charAt(index:Int):String;
+
+	@:pure
+	function indexOf(str:String, startIndex:Null<Int>):Int;
+
+	@:pure
+	function lastIndexOf(str:String, startIndex:Null<Int>):Int;
+
+	@:pure
+	function split(delimiter:String):Array<String>;
+
+	@:pure
+	function toString():String;
+
+	@:pure
+	function substring(startIndex:Int, endIndex:Null<Int>):String;
+
+	@:pure
+	inline function charCodeAt(index:Int):Null<Int>;
+
+	@:pure
+	inline function substr(pos:Int, len:Null<Int>):String;
+
+	@:has_untyped @:pure
+	static inline function fromCharCode(code:Int):String;
+
+	static function __init__() [Call:Unknown<3>]
+		[Ident:(String, Dynamic) -> Unknown<2>] __feature__
+		[Const:String] "String.fromCharCode"
+		[Call:Dynamic]
+			[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+				[TypeExpr js.Syntax:Class<js.Syntax>]
+				[FStatic:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+					js.Syntax
+					code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
+			[Const:String] "if( String.fromCodePoint == null ) String.fromCodePoint = function(c) { return c < 0x10000 ? String.fromCharCode(c) : String.fromCharCode((c>>10)+0xD7C0)+String.fromCharCode((c&0x3FF)+0xDC00); }"
+}

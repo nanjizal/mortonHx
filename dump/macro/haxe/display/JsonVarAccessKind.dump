@@ -1,0 +1,9 @@
+@:enum
+abstract haxe.display.JsonVarAccessKind<{
+	name = T;
+	class = haxe.display.JsonVarAccessKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.JsonVarAccessKind.T, []);
+	constraints = [];
+	default = None;
+}> {}

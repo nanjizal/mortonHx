@@ -1,0 +1,2 @@
+@:enum
+abstract js.html.WakeLockType from String to String {}

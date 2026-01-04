@@ -1,0 +1,8 @@
+typedef js.lib.AsyncIterator<{
+	name = T;
+	class = js.lib.AsyncIterator.T;
+	host = TPHType;
+	type = TInst(js.lib.AsyncIterator.T, []);
+	constraints = [];
+	default = None;
+}> = { next : () -> Promise<js.lib.IteratorStep<js.lib.AsyncIterator.T>> }

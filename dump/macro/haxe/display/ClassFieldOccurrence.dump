@@ -1,0 +1,8 @@
+typedef haxe.display.ClassFieldOccurrence<{
+	name = T;
+	class = haxe.display.ClassFieldOccurrence.T;
+	host = TPHType;
+	type = TInst(haxe.display.ClassFieldOccurrence.T, []);
+	constraints = [];
+	default = None;
+}> = { resolution : haxe.display.FieldResolution, ?origin : Null<haxe.display.ClassFieldOrigin<haxe.display.ClassFieldOccurrence.T>>, field : haxe.display.JsonClassField }

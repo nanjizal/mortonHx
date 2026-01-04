@@ -1,0 +1,8 @@
+typedef Iterator<{
+	name = T;
+	class = Iterator.T;
+	host = TPHType;
+	type = TInst(Iterator.T, []);
+	constraints = [];
+	default = None;
+}> = { next : () -> Iterator.T, hasNext : () -> Bool }

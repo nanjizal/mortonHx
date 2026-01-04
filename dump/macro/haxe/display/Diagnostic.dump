@@ -1,0 +1,8 @@
+typedef haxe.display.Diagnostic<{
+	name = T;
+	class = haxe.display.Diagnostic.T;
+	host = TPHType;
+	type = TInst(haxe.display.Diagnostic.T, []);
+	constraints = [];
+	default = None;
+}> = { severity : haxe.display.DiagnosticSeverity, relatedInformation : Array<haxe.display.DiagnosticRelatedInformation>, range : haxe.display.Range, kind : haxe.display.DiagnosticKind<haxe.display.Diagnostic.T>, code : Null<String>, args : haxe.display.Diagnostic.T }

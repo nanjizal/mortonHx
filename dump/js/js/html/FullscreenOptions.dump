@@ -1,0 +1,1 @@
+typedef js.html.FullscreenOptions = { ?navigationUI : Null<js.html.FullscreenOptionsNavigationUI> }

@@ -1,0 +1,9 @@
+@:enum
+abstract haxe.display.JsonFieldKindKind<{
+	name = T;
+	class = haxe.display.JsonFieldKindKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.JsonFieldKindKind.T, []);
+	constraints = [];
+	default = None;
+}> {}

@@ -1,0 +1,8 @@
+abstract haxe.DynamicAccess<{
+	name = T;
+	class = haxe.DynamicAccess.T;
+	host = TPHType;
+	type = TInst(haxe.DynamicAccess.T, []);
+	constraints = [];
+	default = None;
+}> from Dynamic<haxe.DynamicAccess.T> to Dynamic<haxe.DynamicAccess.T> {}

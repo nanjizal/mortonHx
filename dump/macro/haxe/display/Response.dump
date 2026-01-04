@@ -1,0 +1,8 @@
+typedef haxe.display.Response<{
+	name = T;
+	class = haxe.display.Response.T;
+	host = TPHType;
+	type = TInst(haxe.display.Response.T, []);
+	constraints = [];
+	default = None;
+}> = { ?timestamp : Null<Float>, ?timers : Null<haxe.display.Timer>, ?result : Null<haxe.display.Response.T> }

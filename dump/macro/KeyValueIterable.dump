@@ -1,0 +1,15 @@
+typedef KeyValueIterable<{
+	name = K;
+	class = KeyValueIterable.K;
+	host = TPHType;
+	type = TInst(KeyValueIterable.K, []);
+	constraints = [];
+	default = None;
+}, {
+	name = V;
+	class = KeyValueIterable.V;
+	host = TPHType;
+	type = TInst(KeyValueIterable.V, []);
+	constraints = [];
+	default = None;
+}> = { keyValueIterator : () -> KeyValueIterator<KeyValueIterable.K, KeyValueIterable.V> }

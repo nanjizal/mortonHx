@@ -1,0 +1,8 @@
+typedef haxe.display.JsonClassKind<{
+	name = T;
+	class = haxe.display.JsonClassKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.JsonClassKind.T, []);
+	constraints = [];
+	default = None;
+}> = { kind : haxe.display.JsonClassKindKind<haxe.display.JsonClassKind.T>, args : haxe.display.JsonClassKind.T }

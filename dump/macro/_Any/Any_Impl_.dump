@@ -1,0 +1,26 @@
+private class _Any.Any_Impl_ {
+
+	@:noCompletion @:to
+	static inline function __promote<{
+	name = T;
+	class = __promote.T;
+	host = TPHMethod;
+	type = TInst(__promote.T, []);
+	constraints = [];
+	default = None;
+}>[Function:(this : Dynamic) -> __promote.T]
+		[Arg this<73>:Dynamic]
+		[Return:Dynamic] [Local this(73):Dynamic:Dynamic]
+
+	@:noCompletion
+	static inline function toString[Function:(this : Dynamic) -> String]
+		[Arg this<74>:Dynamic]
+		[Return:Dynamic]
+			[Call:String]
+				[Field:(s : Dynamic) -> String]
+					[TypeExpr Std:Class<Std>]
+					[FStatic:(s : Dynamic) -> String]
+						Std
+						string:(s : Dynamic) -> String
+				[Local this(74):Dynamic:Dynamic]
+}

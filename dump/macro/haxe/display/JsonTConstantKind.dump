@@ -1,0 +1,9 @@
+@:enum
+abstract haxe.display.JsonTConstantKind<{
+	name = T;
+	class = haxe.display.JsonTConstantKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.JsonTConstantKind.T, []);
+	constraints = [];
+	default = None;
+}> {}

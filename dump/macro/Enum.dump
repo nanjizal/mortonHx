@@ -1,0 +1,9 @@
+@:coreType @:runtimeValue
+abstract Enum<{
+	name = T;
+	class = Enum.T;
+	host = TPHType;
+	type = TInst(Enum.T, []);
+	constraints = [];
+	default = None;
+}> {}

@@ -1,0 +1,17 @@
+extern class eval.vm.Context {
+
+	static function addBreakpoint(file:String, line:Int):Void;
+
+	static function breakHere():Void;
+
+	static function callMacroApi(s:String):Dynamic;
+
+	static function loadPlugin<{
+	name = T;
+	class = loadPlugin.T;
+	host = TPHMethod;
+	type = TInst(loadPlugin.T, []);
+	constraints = [];
+	default = None;
+}>(filePath:String):loadPlugin.T;
+}

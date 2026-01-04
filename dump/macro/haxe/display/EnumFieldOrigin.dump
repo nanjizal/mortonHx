@@ -1,0 +1,8 @@
+typedef haxe.display.EnumFieldOrigin<{
+	name = T;
+	class = haxe.display.EnumFieldOrigin.T;
+	host = TPHType;
+	type = TInst(haxe.display.EnumFieldOrigin.T, []);
+	constraints = [];
+	default = None;
+}> = { kind : haxe.display.EnumFieldOriginKind<haxe.display.EnumFieldOrigin.T>, ?args : Null<haxe.display.EnumFieldOrigin.T> }

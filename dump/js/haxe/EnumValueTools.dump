@@ -1,0 +1,17 @@
+extern class haxe.EnumValueTools {
+
+	static inline function equals<{
+	name = T;
+	class = equals.T;
+	host = TPHMethod;
+	type = TInst(equals.T, []);
+	constraints = [TAbstract(EnumValue, [])];
+	default = None;
+}>(a:equals.T, b:equals.T):Bool;
+
+	static inline function getName(e:EnumValue):String;
+
+	static inline function getParameters(e:EnumValue):Array<Dynamic>;
+
+	static inline function getIndex(e:EnumValue):Int;
+}

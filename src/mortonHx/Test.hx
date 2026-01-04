@@ -3,7 +3,7 @@ import mortonHx.Morton2D;
 import js.Browser;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
-
+@:dox(hide)
 class Test {
     static function main() {
         trace('testing MortonHx');

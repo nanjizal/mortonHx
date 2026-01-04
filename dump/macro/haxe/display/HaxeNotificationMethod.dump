@@ -1,0 +1,8 @@
+abstract haxe.display.HaxeNotificationMethod<{
+	name = TParams;
+	class = haxe.display.HaxeNotificationMethod.TParams;
+	host = TPHType;
+	type = TInst(haxe.display.HaxeNotificationMethod.TParams, []);
+	constraints = [];
+	default = None;
+}> to String {}

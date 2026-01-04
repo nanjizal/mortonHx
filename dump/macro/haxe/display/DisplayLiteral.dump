@@ -1,0 +1,8 @@
+typedef haxe.display.DisplayLiteral<{
+	name = T;
+	class = haxe.display.DisplayLiteral.T;
+	host = TPHType;
+	type = TInst(haxe.display.DisplayLiteral.T, []);
+	constraints = [];
+	default = None;
+}> = { name : String }

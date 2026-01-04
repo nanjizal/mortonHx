@@ -1,0 +1,16 @@
+@:keep @:directlyUsed @:keepInit
+extern class Math {
+
+	@:pure
+	static function ceil(v:Float):Int;
+
+	static function __init__() [Call:Unknown<1>]
+		[Ident:(String, Class<Math>) -> Unknown<0>] __feature__
+		[Const:String] "Type.resolveClass"
+		[Binop:Class<Math>]
+			[Array:Class<Math>]
+				[Ident:Array<Class<Math>>] $hxClasses
+				[Const:String] "Math"
+			=
+			[TypeExpr Math:Class<Math>]
+}

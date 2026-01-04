@@ -1,0 +1,9 @@
+@:forward @:transitive
+abstract js.lib.Thenable<{
+	name = T;
+	class = js.lib.Thenable.T;
+	host = TPHType;
+	type = TInst(js.lib.Thenable.T, []);
+	constraints = [];
+	default = None;
+}> from js.lib.ThenableStruct<js.lib.Thenable.T> {}

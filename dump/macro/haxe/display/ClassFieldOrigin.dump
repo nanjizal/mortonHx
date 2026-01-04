@@ -1,0 +1,8 @@
+typedef haxe.display.ClassFieldOrigin<{
+	name = T;
+	class = haxe.display.ClassFieldOrigin.T;
+	host = TPHType;
+	type = TInst(haxe.display.ClassFieldOrigin.T, []);
+	constraints = [];
+	default = None;
+}> = { kind : haxe.display.ClassFieldOriginKind<haxe.display.ClassFieldOrigin.T>, ?args : Null<haxe.display.ClassFieldOrigin.T> }

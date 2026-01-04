@@ -1,0 +1,8 @@
+@:dox(hide)
+class mortonHx.Doc {
+
+	public function new[Function:() -> Void] [Block:Void]
+
+	@:keep
+	public static function main[Function:() -> Void] [Block:Void]
+}

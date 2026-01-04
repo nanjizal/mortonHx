@@ -1,0 +1,9 @@
+@:enum
+abstract haxe.display.CompletionModeKind<{
+	name = T;
+	class = haxe.display.CompletionModeKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.CompletionModeKind.T, []);
+	constraints = [];
+	default = None;
+}> {}

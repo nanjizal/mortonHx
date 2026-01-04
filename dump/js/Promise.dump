@@ -1,0 +1,96 @@
+@:realPath("js.lib.Promise") @:native("Promise")
+extern class Promise<{
+	name = T;
+	class = js.lib.Promise.T;
+	host = TPHType;
+	type = TInst(js.lib.Promise.T, []);
+	constraints = [];
+	default = None;
+}> {
+
+	function new(init:(resolve : ((value : js.lib.Promise.T) -> Void), reject : ((reason : Dynamic) -> Void)) -> Void):Void;
+
+	function then<{
+	name = TOut;
+	class = then.TOut;
+	host = TPHMethod;
+	type = TInst(then.TOut, []);
+	constraints = [];
+	default = None;
+}>(onFulfilled:Null<js.lib.PromiseHandler<js.lib.Promise.T, then.TOut>>, onRejected:Null<js.lib.PromiseHandler<Dynamic, then.TOut>>):Promise<then.TOut>;
+
+	@:realPath("catchError") @:native("catch")
+	function catch(onRejected:js.lib.PromiseHandler<Dynamic, js.lib.Promise.T>):Promise<js.lib.Promise.T>;
+
+	@:native("catch")
+	function catch<{
+	name = TOut;
+	class = catchError.TOut;
+	host = TPHMethod;
+	type = TInst(catchError.TOut, []);
+	constraints = [];
+	default = None;
+}>(onRejected:js.lib.PromiseHandler<Dynamic, catchError.TOut>):Promise<haxe.extern.EitherType<js.lib.Promise.T, catchError.TOut>>;
+
+	function finally(onFinally:() -> Void):Promise<js.lib.Promise.T>;
+
+	static function resolve<{
+	name = T;
+	class = resolve.T;
+	host = TPHMethod;
+	type = TInst(resolve.T, []);
+	constraints = [];
+	default = None;
+}>(thenable:js.lib.Thenable<resolve.T>):Promise<resolve.T>;
+
+	static function resolve<{
+	name = T;
+	class = resolve.T;
+	host = TPHMethod;
+	type = TInst(resolve.T, []);
+	constraints = [];
+	default = None;
+}>(value:Null<resolve.T>):Promise<resolve.T>;
+
+	static function reject<{
+	name = T;
+	class = reject.T;
+	host = TPHMethod;
+	type = TInst(reject.T, []);
+	constraints = [];
+	default = None;
+}>(reason:Null<Dynamic>):Promise<reject.T>;
+
+	static function all<{
+	name = T;
+	class = all.T;
+	host = TPHMethod;
+	type = TInst(all.T, []);
+	constraints = [];
+	default = None;
+}>(iterable:Array<Promise<all.T>>):Promise<Array<all.T>>;
+
+	static function all(iterable:Array<Dynamic>):Promise<Array<Dynamic>>;
+
+	static function allSettled<{
+	name = T;
+	class = allSettled.T;
+	host = TPHMethod;
+	type = TInst(allSettled.T, []);
+	constraints = [];
+	default = None;
+}>(iterable:Array<Promise<allSettled.T>>):Promise<Array<js.lib.PromiseSettleOutcome<allSettled.T>>>;
+
+	static function allSettled(iterable:Array<Dynamic>):Promise<Array<js.lib.PromiseSettleOutcome<Dynamic>>>;
+
+	static function race<{
+	name = T;
+	class = race.T;
+	host = TPHMethod;
+	type = TInst(race.T, []);
+	constraints = [];
+	default = None;
+}>(iterable:Array<Promise<race.T>>):Promise<race.T>;
+
+	static function race(iterable:Array<Dynamic>):Promise<Dynamic>;
+}

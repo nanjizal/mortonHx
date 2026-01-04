@@ -1,0 +1,3 @@
+@:realPath("js.html.webgl.Program") @:native("WebGLProgram")
+extern class WebGLProgram {
+}

@@ -1,0 +1,8 @@
+typedef haxe.macro.Ref<{
+	name = T;
+	class = haxe.macro.Ref.T;
+	host = TPHType;
+	type = TInst(haxe.macro.Ref.T, []);
+	constraints = [];
+	default = None;
+}> = { toString : () -> String, get : () -> haxe.macro.Ref.T }

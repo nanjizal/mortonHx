@@ -1,0 +1,49 @@
+@:realPath("js.html.svg.PreserveAspectRatio") @:native("SVGPreserveAspectRatio")
+extern class SVGPreserveAspectRatio {
+
+	var align:Int;
+
+	var meetOrSlice:Int;
+
+	@:value(0)
+	static inline var SVG_PRESERVEASPECTRATIO_UNKNOWN:Int = [Const:Int] 0;
+
+	@:value(1)
+	static inline var SVG_PRESERVEASPECTRATIO_NONE:Int = [Const:Int] 1;
+
+	@:value(2)
+	static inline var SVG_PRESERVEASPECTRATIO_XMINYMIN:Int = [Const:Int] 2;
+
+	@:value(3)
+	static inline var SVG_PRESERVEASPECTRATIO_XMIDYMIN:Int = [Const:Int] 3;
+
+	@:value(4)
+	static inline var SVG_PRESERVEASPECTRATIO_XMAXYMIN:Int = [Const:Int] 4;
+
+	@:value(5)
+	static inline var SVG_PRESERVEASPECTRATIO_XMINYMID:Int = [Const:Int] 5;
+
+	@:value(6)
+	static inline var SVG_PRESERVEASPECTRATIO_XMIDYMID:Int = [Const:Int] 6;
+
+	@:value(7)
+	static inline var SVG_PRESERVEASPECTRATIO_XMAXYMID:Int = [Const:Int] 7;
+
+	@:value(8)
+	static inline var SVG_PRESERVEASPECTRATIO_XMINYMAX:Int = [Const:Int] 8;
+
+	@:value(9)
+	static inline var SVG_PRESERVEASPECTRATIO_XMIDYMAX:Int = [Const:Int] 9;
+
+	@:value(10)
+	static inline var SVG_PRESERVEASPECTRATIO_XMAXYMAX:Int = [Const:Int] 10;
+
+	@:value(0)
+	static inline var SVG_MEETORSLICE_UNKNOWN:Int = [Const:Int] 0;
+
+	@:value(1)
+	static inline var SVG_MEETORSLICE_MEET:Int = [Const:Int] 1;
+
+	@:value(2)
+	static inline var SVG_MEETORSLICE_SLICE:Int = [Const:Int] 2;
+}

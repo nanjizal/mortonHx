@@ -1,0 +1,362 @@
+private class haxe._Int32.Int32_Impl_ {
+
+	@:op(-A)
+	static inline function negate[Function:(this : Int) -> haxe.Int32]
+		[Arg this<673>:Int]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Unop:Int]
+						~
+						Prefix
+						[Local this(673):Int:Int]
+					+
+					[Const:Int] 1
+
+	@:op(++A)
+	static inline function preIncrement[Function:(this : Int) -> haxe.Int32]
+		[Arg this<1862>(VAssigned):Int]
+		[Return:Dynamic]
+			[Binop:Int]
+				[Local this(1862):Int:Int]
+				=
+				[Block:Int]
+					[Var x<1865>:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local this(1862):Int:Int]
+					[Parenthesis:Int] [Local x(1865):Int:Int]
+
+	@:op(A++)
+	static inline function postIncrement[Function:(this : Int) -> haxe.Int32]
+		[Arg this<681>(VAssigned):Int]
+		[Block:Dynamic]
+			[Var ret<682>(VUsedByTyper):Int]
+				[Unop:Int]
+					++
+					Postfix
+					[Local this(681):Int:Int]
+			[Binop:Int]
+				[Local this(681):Int:Int]
+				=
+				[Parenthesis:Int] [Local this(681):Int:Int]
+			[Return:Dynamic] [Local ret(682):Int:Int]
+
+	@:op(--A)
+	static inline function preDecrement[Function:(this : Int) -> haxe.Int32]
+		[Arg this<1866>(VAssigned):Int]
+		[Return:Dynamic]
+			[Binop:Int]
+				[Local this(1866):Int:Int]
+				=
+				[Block:Int]
+					[Var x<1869>:Int]
+						[Unop:Int]
+							--
+							Prefix
+							[Local this(1866):Int:Int]
+					[Parenthesis:Int] [Local x(1869):Int:Int]
+
+	@:op(A--)
+	static inline function postDecrement[Function:(this : Int) -> haxe.Int32]
+		[Arg this<879>(VAssigned):Int]
+		[Block:Dynamic]
+			[Var ret<880>(VUsedByTyper):Int]
+				[Unop:Int]
+					--
+					Postfix
+					[Local this(879):Int:Int]
+			[Binop:Int]
+				[Local this(879):Int:Int]
+				=
+				[Parenthesis:Int] [Local this(879):Int:Int]
+			[Return:Dynamic] [Local ret(880):Int:Int]
+
+	@:op(A + B)
+	static inline function add[Function:(a : haxe.Int32, b : haxe.Int32) -> haxe.Int32]
+		[Arg a<1000>(VUsedByTyper):haxe.Int32]
+		[Arg b<1001>(VUsedByTyper):haxe.Int32]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(1000):haxe.Int32:haxe.Int32]
+					+
+					[Cast:Int] [Local b(1001):haxe.Int32:haxe.Int32]
+
+	@:op(A + B) @:commutative
+	static inline function addInt[Function:(a : haxe.Int32, b : Int) -> haxe.Int32]
+		[Arg a<1005>(VUsedByTyper):haxe.Int32]
+		[Arg b<1006>(VUsedByTyper):Int]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(1005):haxe.Int32:haxe.Int32]
+					+
+					[Local b(1006):Int:Int]
+
+	@:noExpr @:op(A + B) @:commutative
+	static function addFloat
+
+	@:op(A - B)
+	static inline function sub[Function:(a : haxe.Int32, b : haxe.Int32) -> haxe.Int32]
+		[Arg a<530>(VUsedByTyper):haxe.Int32]
+		[Arg b<531>(VUsedByTyper):haxe.Int32]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(530):haxe.Int32:haxe.Int32]
+					-
+					[Cast:Int] [Local b(531):haxe.Int32:haxe.Int32]
+
+	@:op(A - B)
+	static inline function subInt[Function:(a : haxe.Int32, b : Int) -> haxe.Int32]
+		[Arg a<1870>(VUsedByTyper):haxe.Int32]
+		[Arg b<1871>(VUsedByTyper):Int]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Cast:Int] [Local a(1870):haxe.Int32:haxe.Int32]
+					-
+					[Local b(1871):Int:Int]
+
+	@:op(A - B)
+	static inline function intSub[Function:(a : Int, b : haxe.Int32) -> haxe.Int32]
+		[Arg a<1875>(VUsedByTyper):Int]
+		[Arg b<1876>(VUsedByTyper):haxe.Int32]
+		[Return:Dynamic]
+			[Parenthesis:Int]
+				[Binop:Int]
+					[Local a(1875):Int:Int]
+					-
+					[Cast:Int] [Local b(1876):haxe.Int32:haxe.Int32]
+
+	@:noExpr @:op(A - B)
+	static function subFloat
+
+	@:noExpr @:op(A - B)
+	static function floatSub
+
+	@:noExpr @:op(A * B)
+	static function mul
+
+	@:noExpr @:op(A * B) @:commutative
+	static function mulInt
+
+	@:noExpr @:op(A * B) @:commutative
+	static function mulFloat
+
+	@:noExpr @:op(A / B)
+	static function div
+
+	@:noExpr @:op(A / B)
+	static function divInt
+
+	@:noExpr @:op(A / B)
+	static function intDiv
+
+	@:noExpr @:op(A / B)
+	static function divFloat
+
+	@:noExpr @:op(A / B)
+	static function floatDiv
+
+	@:noExpr @:op(A % B)
+	static function mod
+
+	@:noExpr @:op(A % B)
+	static function modInt
+
+	@:noExpr @:op(A % B)
+	static function intMod
+
+	@:noExpr @:op(A % B)
+	static function modFloat
+
+	@:noExpr @:op(A % B)
+	static function floatMod
+
+	@:noExpr @:op(A == B)
+	static function eq
+
+	@:noExpr @:op(A == B) @:commutative
+	static function eqInt
+
+	@:noExpr @:op(A == B) @:commutative
+	static function eqFloat
+
+	@:noExpr @:op(A != B)
+	static function neq
+
+	@:noExpr @:op(A != B) @:commutative
+	static function neqInt
+
+	@:noExpr @:op(A != B) @:commutative
+	static function neqFloat
+
+	@:noExpr @:op(A < B)
+	static function lt
+
+	@:noExpr @:op(A < B)
+	static function ltInt
+
+	@:noExpr @:op(A < B)
+	static function intLt
+
+	@:noExpr @:op(A < B)
+	static function ltFloat
+
+	@:noExpr @:op(A < B)
+	static function floatLt
+
+	@:noExpr @:op(A <= B)
+	static function lte
+
+	@:noExpr @:op(A <= B)
+	static function lteInt
+
+	@:noExpr @:op(A <= B)
+	static function intLte
+
+	@:noExpr @:op(A <= B)
+	static function lteFloat
+
+	@:noExpr @:op(A <= B)
+	static function floatLte
+
+	@:noExpr @:op(A > B)
+	static function gt
+
+	@:noExpr @:op(A > B)
+	static function gtInt
+
+	@:noExpr @:op(A > B)
+	static function intGt
+
+	@:noExpr @:op(A > B)
+	static function gtFloat
+
+	@:noExpr @:op(A > B)
+	static function floatGt
+
+	@:noExpr @:op(A >= B)
+	static function gte
+
+	@:noExpr @:op(A >= B)
+	static function gteInt
+
+	@:noExpr @:op(A >= B)
+	static function intGte
+
+	@:noExpr @:op(A >= B)
+	static function gteFloat
+
+	@:noExpr @:op(A >= B)
+	static function floatGte
+
+	@:noExpr @:op(~A)
+	static function complement
+
+	@:noExpr @:op(A & B)
+	static function and
+
+	@:noExpr @:op(A & B) @:commutative
+	static function andInt
+
+	@:noExpr @:op(A | B)
+	static function or
+
+	@:noExpr @:op(A | B) @:commutative
+	static function orInt
+
+	@:noExpr @:op(A ^ B)
+	static function xor
+
+	@:noExpr @:op(A ^ B) @:commutative
+	static function xorInt
+
+	@:noExpr @:op(A >> B)
+	static function shr
+
+	@:noExpr @:op(A >> B)
+	static function shrInt
+
+	@:noExpr @:op(A >> B)
+	static function intShr
+
+	@:noExpr @:op(A >>> B)
+	static function ushr
+
+	@:noExpr @:op(A >>> B)
+	static function ushrInt
+
+	@:noExpr @:op(A >>> B)
+	static function intUshr
+
+	@:noExpr @:op(A << B)
+	static function shl
+
+	@:noExpr @:op(A << B)
+	static function shlInt
+
+	@:noExpr @:op(A << B)
+	static function intShl
+
+	@:to
+	static inline function toFloat[Function:(this : Int) -> Float]
+		[Arg this<1010>:Int]
+		[Return:Dynamic] [Local this(1010):Int:Int]
+
+	public static function ucompare[Function:(a : haxe.Int32, b : haxe.Int32) -> Int]
+		[Arg a<541>(VUsedByTyper):haxe.Int32]
+		[Arg b<542>(VUsedByTyper):haxe.Int32]
+		[Block:Dynamic]
+			[If:Void]
+				[Binop:Bool]
+					[Local a(541):haxe.Int32:haxe.Int32]
+					<
+					[Const:Int] 0
+				[Then:Dynamic] [Block:Dynamic]
+					[Return:Dynamic]
+						[If:Int]
+							[Binop:Bool]
+								[Local b(542):haxe.Int32:haxe.Int32]
+								<
+								[Const:Int] 0
+							[Then:haxe.Int32] [Block:haxe.Int32]
+								[Parenthesis:haxe.Int32]
+									[Cast:haxe.Int32]
+										[Parenthesis:Int]
+											[Binop:Int]
+												[Cast:Int]
+													[Unop:haxe.Int32]
+														~
+														Prefix
+														[Local b(542):haxe.Int32:haxe.Int32]
+												-
+												[Cast:Int]
+													[Unop:haxe.Int32]
+														~
+														Prefix
+														[Local a(541):haxe.Int32:haxe.Int32]
+							[Else:Int] [Block:Int] [Const:Int] 1
+			[Return:Dynamic]
+				[If:Int]
+					[Binop:Bool]
+						[Local b(542):haxe.Int32:haxe.Int32]
+						<
+						[Const:Int] 0
+					[Then:Int] [Block:Int] [Const:Int] -1
+					[Else:haxe.Int32] [Block:haxe.Int32]
+						[Parenthesis:haxe.Int32]
+							[Cast:haxe.Int32]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Cast:Int] [Local a(541):haxe.Int32:haxe.Int32]
+										-
+										[Cast:Int] [Local b(542):haxe.Int32:haxe.Int32]
+
+	static inline function clamp[Function:(x : Int) -> Int]
+		[Arg x<532>(VUsedByTyper):Int]
+		[Block:Dynamic] [Return:Dynamic] [Parenthesis:Int] [Local x(532):Int:Int]
+}

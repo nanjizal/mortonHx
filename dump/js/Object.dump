@@ -1,0 +1,318 @@
+@:realPath("js.lib.Object") @:native("Object")
+extern class Object {
+
+	@:pure
+	function new(value:Null<Any>):Void;
+
+	static function assign<{
+	name = TSource;
+	class = assign.TSource;
+	host = TPHMethod;
+	type = TInst(assign.TSource, []);
+	constraints = [TAnon];
+	default = None;
+}, {
+	name = TDest;
+	class = assign.TDest;
+	host = TPHMethod;
+	type = TInst(assign.TDest, []);
+	constraints = [TAnon];
+	default = None;
+}>(target:assign.TSource, sources:haxe.extern.Rest<{ }>):assign.TDest;
+
+	@:pure
+	static function create<{
+	name = T;
+	class = create.T;
+	host = TPHMethod;
+	type = TInst(create.T, []);
+	constraints = [];
+	default = None;
+}>(proto:Null<{ }>, propertiesObject:Null<haxe.DynamicAccess<js.lib.ObjectPropertyDescriptor<Any>>>):create.T;
+
+	static function defineProperties<{
+	name = T;
+	class = defineProperties.T;
+	host = TPHMethod;
+	type = TInst(defineProperties.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:defineProperties.T, props:haxe.DynamicAccess<js.lib.ObjectPropertyDescriptor<Any>>):defineProperties.T;
+
+	static function defineProperty<{
+	name = T;
+	class = defineProperty.T;
+	host = TPHMethod;
+	type = TInst(defineProperty.T, []);
+	constraints = [TAnon];
+	default = None;
+}, {
+	name = TProp;
+	class = defineProperty.TProp;
+	host = TPHMethod;
+	type = TInst(defineProperty.TProp, []);
+	constraints = [];
+	default = None;
+}>(obj:defineProperty.T, prop:String, descriptor:js.lib.ObjectPropertyDescriptor<defineProperty.TProp>):defineProperty.T;
+
+	static function defineProperty<{
+	name = T;
+	class = defineProperty.T;
+	host = TPHMethod;
+	type = TInst(defineProperty.T, []);
+	constraints = [TAnon];
+	default = None;
+}, {
+	name = TProp;
+	class = defineProperty.TProp;
+	host = TPHMethod;
+	type = TInst(defineProperty.TProp, []);
+	constraints = [];
+	default = None;
+}>(obj:defineProperty.T, prop:Symbol, descriptor:js.lib.ObjectPropertyDescriptor<defineProperty.TProp>):defineProperty.T;
+
+	@:pure
+	static function entries<{
+	name = T;
+	class = entries.T;
+	host = TPHMethod;
+	type = TInst(entries.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:entries.T):Array<js.lib.ObjectEntry>;
+
+	static function freeze<{
+	name = T;
+	class = freeze.T;
+	host = TPHMethod;
+	type = TInst(freeze.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:freeze.T):freeze.T;
+
+	@:pure
+	static function fromEntries<{
+	name = T;
+	class = fromEntries.T;
+	host = TPHMethod;
+	type = TInst(fromEntries.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(iterable:Any):fromEntries.T;
+
+	@:pure
+	static function getOwnPropertyDescriptor<{
+	name = T;
+	class = getOwnPropertyDescriptor.T;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyDescriptor.T, []);
+	constraints = [];
+	default = None;
+}, {
+	name = TProp;
+	class = getOwnPropertyDescriptor.TProp;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyDescriptor.TProp, []);
+	constraints = [];
+	default = None;
+}>(obj:getOwnPropertyDescriptor.T, prop:String):Null<js.lib.ObjectPropertyDescriptor<getOwnPropertyDescriptor.TProp>>;
+
+	@:pure
+	static function getOwnPropertyDescriptor(obj:String, prop:Symbol):Null<js.lib.ObjectPropertyDescriptor<String>>;
+
+	@:pure
+	static function getOwnPropertyDescriptor(obj:String, prop:String):Null<js.lib.ObjectPropertyDescriptor<String>>;
+
+	@:pure
+	static function getOwnPropertyDescriptor<{
+	name = T;
+	class = getOwnPropertyDescriptor.T;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyDescriptor.T, []);
+	constraints = [];
+	default = None;
+}>(target:Array<getOwnPropertyDescriptor.T>, propertyKey:Int):Null<js.lib.ObjectPropertyDescriptor<getOwnPropertyDescriptor.T>>;
+
+	@:pure
+	static function getOwnPropertyDescriptor<{
+	name = T;
+	class = getOwnPropertyDescriptor.T;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyDescriptor.T, []);
+	constraints = [];
+	default = None;
+}, {
+	name = TProp;
+	class = getOwnPropertyDescriptor.TProp;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyDescriptor.TProp, []);
+	constraints = [];
+	default = None;
+}>(obj:getOwnPropertyDescriptor.T, prop:Symbol):Null<js.lib.ObjectPropertyDescriptor<getOwnPropertyDescriptor.TProp>>;
+
+	@:pure
+	static function getOwnPropertyDescriptors<{
+	name = T;
+	class = getOwnPropertyDescriptors.T;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyDescriptors.T, []);
+	constraints = [];
+	default = None;
+}>(obj:getOwnPropertyDescriptors.T):haxe.DynamicAccess<js.lib.ObjectPropertyDescriptor<Any>>;
+
+	@:pure
+	static function getOwnPropertyDescriptors(target:String):haxe.DynamicAccess<js.lib.ObjectPropertyDescriptor<String>>;
+
+	@:pure
+	static function getOwnPropertyDescriptors<{
+	name = T;
+	class = getOwnPropertyDescriptors.T;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyDescriptors.T, []);
+	constraints = [];
+	default = None;
+}>(target:Array<getOwnPropertyDescriptors.T>):haxe.DynamicAccess<js.lib.ObjectPropertyDescriptor<getOwnPropertyDescriptors.T>>;
+
+	@:pure
+	static function getOwnPropertyNames<{
+	name = T;
+	class = getOwnPropertyNames.T;
+	host = TPHMethod;
+	type = TInst(getOwnPropertyNames.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:getOwnPropertyNames.T):Array<String>;
+
+	@:pure
+	static function getOwnPropertySymbols<{
+	name = T;
+	class = getOwnPropertySymbols.T;
+	host = TPHMethod;
+	type = TInst(getOwnPropertySymbols.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:getOwnPropertySymbols.T):Array<Symbol>;
+
+	@:pure
+	static function getPrototypeOf<{
+	name = T;
+	class = getPrototypeOf.T;
+	host = TPHMethod;
+	type = TInst(getPrototypeOf.T, []);
+	constraints = [TAnon];
+	default = None;
+}, {
+	name = TProto;
+	class = getPrototypeOf.TProto;
+	host = TPHMethod;
+	type = TInst(getPrototypeOf.TProto, []);
+	constraints = [];
+	default = None;
+}>(obj:getPrototypeOf.T):getPrototypeOf.TProto;
+
+	@:realPath("isSame") @:native("is") @:pure
+	static function is<{
+	name = T;
+	class = isSame.T;
+	host = TPHMethod;
+	type = TInst(isSame.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj1:isSame.T, obj2:isSame.T):Bool;
+
+	@:deprecated("Use Object.isSame()") @:pure
+	static function is<{
+	name = T;
+	class = is.T;
+	host = TPHMethod;
+	type = TInst(is.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj1:is.T, obj2:is.T):Bool;
+
+	@:pure
+	static function isExtensible<{
+	name = T;
+	class = isExtensible.T;
+	host = TPHMethod;
+	type = TInst(isExtensible.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:isExtensible.T):Bool;
+
+	@:pure
+	static function isFrozen<{
+	name = T;
+	class = isFrozen.T;
+	host = TPHMethod;
+	type = TInst(isFrozen.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:isFrozen.T):Bool;
+
+	@:pure
+	static function isSealed<{
+	name = T;
+	class = isSealed.T;
+	host = TPHMethod;
+	type = TInst(isSealed.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:isSealed.T):Bool;
+
+	@:pure
+	static function keys<{
+	name = T;
+	class = keys.T;
+	host = TPHMethod;
+	type = TInst(keys.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:keys.T):Array<String>;
+
+	static function preventExtensions<{
+	name = T;
+	class = preventExtensions.T;
+	host = TPHMethod;
+	type = TInst(preventExtensions.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:preventExtensions.T):preventExtensions.T;
+
+	static function seal<{
+	name = T;
+	class = seal.T;
+	host = TPHMethod;
+	type = TInst(seal.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:seal.T):seal.T;
+
+	static function setPrototypeOf<{
+	name = T;
+	class = setPrototypeOf.T;
+	host = TPHMethod;
+	type = TInst(setPrototypeOf.T, []);
+	constraints = [TAnon];
+	default = None;
+}, {
+	name = TProto;
+	class = setPrototypeOf.TProto;
+	host = TPHMethod;
+	type = TInst(setPrototypeOf.TProto, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:setPrototypeOf.T, proto:Null<setPrototypeOf.TProto>):setPrototypeOf.T;
+
+	@:pure
+	static function values<{
+	name = T;
+	class = values.T;
+	host = TPHMethod;
+	type = TInst(values.T, []);
+	constraints = [TAnon];
+	default = None;
+}>(obj:values.T):Array<Any>;
+
+	static var prototype(default,never):js.lib.ObjectPrototype;
+}

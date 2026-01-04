@@ -1,0 +1,15 @@
+abstract js.lib.KeyValue<{
+	name = K;
+	class = js.lib.KeyValue.K;
+	host = TPHType;
+	type = TInst(js.lib.KeyValue.K, []);
+	constraints = [];
+	default = None;
+}, {
+	name = V;
+	class = js.lib.KeyValue.V;
+	host = TPHType;
+	type = TInst(js.lib.KeyValue.V, []);
+	constraints = [];
+	default = None;
+}> {}

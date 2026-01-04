@@ -1,0 +1,19 @@
+@:keep @:directlyUsed @:coreApi
+extern class Array<{
+	name = T;
+	class = Array.T;
+	host = TPHType;
+	type = TInst(Array.T, []);
+	constraints = [];
+	default = None;
+}> {
+
+	function new():Void;
+
+	var length(default,null):Int;
+
+	function join(sep:String):String;
+
+	@:runtime
+	inline function iterator():haxe.iterators.ArrayIterator<Array.T>;
+}

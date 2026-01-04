@@ -1,0 +1,233 @@
+@:keep @:directlyUsed @:coreApi
+class haxe.Exception extends Error {
+
+	@:has_untyped
+	public function new[Function:(message : String, ?previous : Null<haxe.Exception>, ?native : Null<Any>) -> Void]
+		[Arg message<6478>(VUsedByTyper):String]
+		[Arg previous<6479>(VUsedByTyper):Null<haxe.Exception>] [Const:Null<haxe.Exception>] null
+		[Arg native<6480>(VUsedByTyper):Null<Any>] [Const:Null<Any>] null
+		[Block:Unknown<27>]
+			[Call:Void]
+				[Const:Error] super
+				[Local message(6478):String:String]
+			[Binop:String]
+				[Field:String]
+					[Cast:{ message : String }] [Const:haxe.Exception] this
+					[FAnon:String] message:String
+				=
+				[Local message(6478):String:String]
+			[Binop:Null<haxe.Exception>]
+				[Field:Null<haxe.Exception>]
+					[Const:haxe.Exception] this
+					[FInstance:Null<haxe.Exception>]
+						haxe.Exception
+						__previousException:Null<haxe.Exception>
+				=
+				[Local previous(6479):Null<haxe.Exception>:Null<haxe.Exception>]
+			[Binop:Any]
+				[Field:Any]
+					[Const:haxe.Exception] this
+					[FInstance:Any]
+						haxe.Exception
+						__nativeException:Any
+				=
+				[If:Any]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local native(6480):Null<Any>:Null<Any>]
+							!=
+							[Const:Null<Any>] null
+					[Then:Null<Any>] [Local native(6480):Null<Any>:Null<Any>]
+					[Else:haxe.Exception] [Const:haxe.Exception] this
+			[Call:Unknown<27>]
+				[Ident:(String, Dynamic) -> Unknown<26>] __feature__
+				[Const:String] "haxe.Exception.stack"
+				[Block:Dynamic]
+					[Binop:Int]
+						[Field:Int]
+							[Const:haxe.Exception] this
+							[FInstance:Int]
+								haxe.Exception
+								__skipStack:Int
+						=
+						[Const:Int] 0
+					[Var old<6481>(VUsedByTyper):Unknown<23>]
+						[Call:Dynamic]
+							[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+								[TypeExpr js.Syntax:Class<js.Syntax>]
+								[FStatic:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+									js.Syntax
+									code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
+							[Const:String] "Error.prepareStackTrace"
+					[Call:Dynamic]
+						[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+							[TypeExpr js.Syntax:Class<js.Syntax>]
+							[FStatic:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+								js.Syntax
+								code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
+						[Const:String] "Error.prepareStackTrace = function(e) { return e.stack; }"
+					[If:Void]
+						[Parenthesis:Bool]
+							[Call:Bool]
+								[Field:(Null<Any>, Class<js.lib.Error>) -> Bool]
+									[TypeExpr js.Syntax:Class<js.Syntax>]
+									[FStatic:(Null<Any>, Class<js.lib.Error>) -> Bool]
+										js.Syntax
+										instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
+								[Local native(6480):Null<Any>:Null<Any>]
+								[TypeExpr Error:Class<js.lib.Error>]
+						[Then:Unknown<25>] [Binop:Unknown<25>]
+							[Field:Unknown<25>]
+								[Cast:{ stack : Unknown<25> }] [Const:haxe.Exception] this
+								[FAnon:Unknown<25>] stack:Unknown<25>
+							=
+							[Field:Unknown<25>]
+								[Local native(6480):Null<Any>:Null<Any>]
+								[FDynamic:Unknown<25>] stack
+						[Else:String] [Block:String]
+							[Var e<6482>(VUsedByTyper VAssigned):Error] [Const:Error] null
+							[If:Void]
+								[Parenthesis:Bool]
+									[Field:Bool]
+										[Cast:{ captureStackTrace : Bool }] [TypeExpr Error:Class<js.lib.Error>]
+										[FAnon:Bool] captureStackTrace:Bool
+								[Then:Error] [Block:Error]
+									[Call:Unknown<24>]
+										[Field:(haxe.Exception, Class<haxe.Exception>) -> Unknown<24>]
+											[Cast:{ captureStackTrace : (haxe.Exception, Class<haxe.Exception>) -> Unknown<24> }] [TypeExpr Error:Class<js.lib.Error>]
+											[FAnon:(haxe.Exception, Class<haxe.Exception>) -> Unknown<24>] captureStackTrace:(haxe.Exception, Class<haxe.Exception>) -> Unknown<24>
+										[Const:haxe.Exception] this
+										[TypeExpr haxe.Exception:Class<haxe.Exception>]
+									[Binop:Error]
+										[Local e(6482):Error:Error]
+										=
+										[Cast:Error] [Const:haxe.Exception] this
+								[Else:Void] [Block:Void]
+									[Binop:Error]
+										[Local e(6482):Error:Error]
+										=
+										[New:Error] Error
+									[If:Void]
+										[Parenthesis:Bool]
+											[Binop:Bool]
+												[Call:String]
+													[Field:(o : Dynamic) -> String]
+														[TypeExpr js.Syntax:Class<js.Syntax>]
+														[FStatic:(o : Dynamic) -> String]
+															js.Syntax
+															typeof:(o : Dynamic) -> String
+													[Field:String]
+														[Local e(6482):Error:Error]
+														[FInstance:String]
+															Error
+															stack:String
+												==
+												[Const:String] "undefined"
+										[Then:Int] [Block:Int]
+											[Call:Dynamic]
+												[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+													[TypeExpr js.Syntax:Class<js.Syntax>]
+													[FStatic:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+														js.Syntax
+														code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
+												[Const:String] "try { throw {0}; } catch(_) {}"
+												[Local e(6482):Error:Error]
+											[Unop:Int]
+												++
+												Postfix
+												[Field:Int]
+													[Const:haxe.Exception] this
+													[FInstance:Int]
+														haxe.Exception
+														__skipStack:Int
+							[Binop:String]
+								[Field:String]
+									[Cast:{ stack : String }] [Const:haxe.Exception] this
+									[FAnon:String] stack:String
+								=
+								[Field:String]
+									[Local e(6482):Error:Error]
+									[FInstance:String]
+										Error
+										stack:String
+					[Call:Dynamic]
+						[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+							[TypeExpr js.Syntax:Class<js.Syntax>]
+							[FStatic:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+								js.Syntax
+								code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
+						[Const:String] "Error.prepareStackTrace = {0}"
+						[Local old(6481):Unknown<23>:Unknown<23>]
+
+	public var native(get,never):Any;
+
+	@:ifFeature("haxe.Exception.get_stack") @:noCompletion
+	var __skipStack:Int;
+
+	@:noCompletion
+	var __nativeException:Any;
+
+	@:noCompletion
+	var __previousException:Null<haxe.Exception>;
+
+	function get_native[Function:() -> Any]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Field:Any]
+					[Const:haxe.Exception] this
+					[FInstance:Any]
+						haxe.Exception
+						__nativeException:Any
+
+	@:has_untyped
+	static function thrown[Function:(value : Any) -> Any]
+		[Arg value<6486>(VUsedByTyper):Any]
+		[Block:Void]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Call:Bool]
+						[Field:(Any, Class<haxe.Exception>) -> Bool]
+							[TypeExpr js.Syntax:Class<js.Syntax>]
+							[FStatic:(Any, Class<haxe.Exception>) -> Bool]
+								js.Syntax
+								instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
+						[Local value(6486):Any:Any]
+						[TypeExpr haxe.Exception:Class<haxe.Exception>]
+				[Then:Dynamic] [Return:Dynamic]
+					[Call:Any]
+						[Field:() -> Any]
+							[Meta:haxe.Exception]
+								:implicitCast
+								[Cast:haxe.Exception] [Cast:Dynamic] [Local value(6486):Any:Any]
+							[FInstance:() -> Any]
+								haxe.Exception
+								get_native:() -> Any
+				[Else:Void] [If:Void]
+					[Parenthesis:Bool]
+						[Call:Bool]
+							[Field:(Any, Class<js.lib.Error>) -> Bool]
+								[TypeExpr js.Syntax:Class<js.Syntax>]
+								[FStatic:(Any, Class<js.lib.Error>) -> Bool]
+									js.Syntax
+									instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
+							[Local value(6486):Any:Any]
+							[TypeExpr Error:Class<js.lib.Error>]
+					[Then:Dynamic] [Return:Dynamic] [Local value(6486):Any:Any]
+					[Else:Dynamic] [Block:Dynamic]
+						[Var e<6490>(VUsedByTyper):haxe.ValueException]
+							[New:haxe.ValueException]
+								haxe.ValueException
+								[Local value(6486):Any:Any]
+						[Call:Unknown<29>]
+							[Ident:(String, (Void)) -> Unknown<28>] __feature__
+							[Const:String] "haxe.Exception.get_stack"
+							[Unop:Int]
+								++
+								Postfix
+								[Field:Int]
+									[Local e(6490):haxe.ValueException:haxe.ValueException]
+									[FInstance:Int]
+										haxe.Exception
+										__skipStack:Int
+						[Return:Dynamic] [Local e(6490):haxe.ValueException:haxe.ValueException]
+}

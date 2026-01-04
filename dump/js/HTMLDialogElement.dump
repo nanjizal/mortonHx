@@ -1,0 +1,13 @@
+@:realPath("js.html.DialogElement") @:native("HTMLDialogElement")
+extern class HTMLDialogElement extends HTMLElement {
+
+	var open:Bool;
+
+	var returnValue:String;
+
+	function close(returnValue:Null<String>):Void;
+
+	function show():Void;
+
+	function showModal():Void;
+}

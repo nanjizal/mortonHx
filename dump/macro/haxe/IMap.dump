@@ -1,0 +1,36 @@
+interface haxe.IMap<{
+	name = K;
+	class = haxe.IMap.K;
+	host = TPHType;
+	type = TInst(haxe.IMap.K, []);
+	constraints = [];
+	default = None;
+}, {
+	name = V;
+	class = haxe.IMap.V;
+	host = TPHType;
+	type = TInst(haxe.IMap.V, []);
+	constraints = [];
+	default = None;
+}> {
+
+	function get(k:haxe.IMap.K):Null<haxe.IMap.V>;
+
+	function set(k:haxe.IMap.K, v:haxe.IMap.V):Void;
+
+	function exists(k:haxe.IMap.K):Bool;
+
+	function remove(k:haxe.IMap.K):Bool;
+
+	function keys():Iterator<haxe.IMap.K>;
+
+	function iterator():Iterator<haxe.IMap.V>;
+
+	function keyValueIterator():KeyValueIterator<haxe.IMap.K, haxe.IMap.V>;
+
+	function copy():haxe.IMap<haxe.IMap.K, haxe.IMap.V>;
+
+	function toString():String;
+
+	function clear():Void;
+}

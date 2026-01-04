@@ -1,0 +1,8 @@
+typedef js.lib.IteratorStep<{
+	name = T;
+	class = js.lib.IteratorStep.T;
+	host = TPHType;
+	type = TInst(js.lib.IteratorStep.T, []);
+	constraints = [];
+	default = None;
+}> = { ?value : Null<js.lib.IteratorStep.T>, done : Bool }

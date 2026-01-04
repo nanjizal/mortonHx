@@ -1,0 +1,8 @@
+typedef haxe.display.DisplayItem<{
+	name = T;
+	class = haxe.display.DisplayItem.T;
+	host = TPHType;
+	type = TInst(haxe.display.DisplayItem.T, []);
+	constraints = [];
+	default = None;
+}> = { ?type : Null<haxe.display.JsonType<Dynamic>>, kind : haxe.display.DisplayItemKind<haxe.display.DisplayItem.T>, ?index : Null<Int>, args : haxe.display.DisplayItem.T }

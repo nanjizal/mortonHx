@@ -1,0 +1,9 @@
+@:enum
+abstract haxe.display.DiagnosticKind<{
+	name = T;
+	class = haxe.display.DiagnosticKind.T;
+	host = TPHType;
+	type = TInst(haxe.display.DiagnosticKind.T, []);
+	constraints = [];
+	default = None;
+}> from Int to Int {}

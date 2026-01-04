@@ -1,0 +1,47 @@
+extern class haxe.EnumTools {
+
+	static inline function getName<{
+	name = T;
+	class = getName.T;
+	host = TPHMethod;
+	type = TInst(getName.T, []);
+	constraints = [];
+	default = None;
+}>(e:Enum<getName.T>):String;
+
+	static inline function createByName<{
+	name = T;
+	class = createByName.T;
+	host = TPHMethod;
+	type = TInst(createByName.T, []);
+	constraints = [];
+	default = None;
+}>(e:Enum<createByName.T>, constr:String, params:Null<Array<Dynamic>>):createByName.T;
+
+	static inline function createByIndex<{
+	name = T;
+	class = createByIndex.T;
+	host = TPHMethod;
+	type = TInst(createByIndex.T, []);
+	constraints = [];
+	default = None;
+}>(e:Enum<createByIndex.T>, index:Int, params:Null<Array<Dynamic>>):createByIndex.T;
+
+	static inline function createAll<{
+	name = T;
+	class = createAll.T;
+	host = TPHMethod;
+	type = TInst(createAll.T, []);
+	constraints = [];
+	default = None;
+}>(e:Enum<createAll.T>):Array<createAll.T>;
+
+	static inline function getConstructors<{
+	name = T;
+	class = getConstructors.T;
+	host = TPHMethod;
+	type = TInst(getConstructors.T, []);
+	constraints = [];
+	default = None;
+}>(e:Enum<getConstructors.T>):Array<String>;
+}

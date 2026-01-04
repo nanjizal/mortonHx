@@ -1,0 +1,8 @@
+typedef haxe.display.JsonModuleType<{
+	name = T;
+	class = haxe.display.JsonModuleType.T;
+	host = TPHType;
+	type = TInst(haxe.display.JsonModuleType.T, []);
+	constraints = [];
+	default = None;
+}> = { pos : haxe.display.JsonPos, params : haxe.display.JsonTypeParameters, pack : Array<String>, name : String, moduleName : String, meta : haxe.display.JsonMetadata, kind : haxe.display.JsonModuleTypeKind<haxe.display.JsonModuleType.T>, isPrivate : Bool, doc : haxe.display.JsonDoc, args : haxe.display.JsonModuleType.T }

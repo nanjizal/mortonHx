@@ -1,0 +1,592 @@
+@:dox(hide)
+class mortonHx.Test {
+
+	static function main[Function:() -> Void]
+		[Block:Void]
+			[Call:Void]
+				[Ident:Dynamic] `trace
+				[Const:String] "testing MortonHx"
+				[ObjectDecl:{ methodName : String, lineNumber : Int, fileName : String, className : String }]
+					fileName: [Const:String] "src/mortonHx/Test.hx"
+					lineNumber: [Const:Int] 9
+					className: [Const:String] "mortonHx.Test"
+					methodName: [Const:String] "main"
+			[Var canvas<6651>(VUsedByTyper):HTMLCanvasElement]
+				[Cast:HTMLCanvasElement]
+					[Call:HTMLElement]
+						[Field:(localName : String, ?options : Null<js.html.ElementCreationOptions>) -> HTMLElement]
+							[Field:HTMLDocument]
+								[Cast:Window]
+									[Call:Dynamic]
+										[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+											[TypeExpr js.Syntax:Class<js.Syntax>]
+											[FStatic:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+												js.Syntax
+												code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
+										[Const:String] "window"
+								[FInstance:HTMLDocument]
+									Window
+									document:HTMLDocument
+							[FInstance:(localName : String, ?options : Null<js.html.ElementCreationOptions>) -> HTMLElement]
+								Document
+								createElement:(localName : String, ?options : Null<js.html.ElementCreationOptions>) -> HTMLElement
+						[Const:String] "canvas"
+			[Binop:Int]
+				[Field:Int]
+					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[FInstance:Int]
+						HTMLCanvasElement
+						width:Int
+				=
+				[Const:Int] 800
+			[Binop:Int]
+				[Field:Int]
+					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[FInstance:Int]
+						HTMLCanvasElement
+						height:Int
+				=
+				[Const:Int] 600
+			[Var ctx<6655>(VUsedByTyper):CanvasRenderingContext2D]
+				[Cast:CanvasRenderingContext2D]
+					[Call:Dynamic]
+						[Field:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic]
+							[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+							[FInstance:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic]
+								HTMLCanvasElement
+								getContext:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic
+						[Const:String] "2d"
+						[Const:Null<{ }>] null
+			[Call:Node]
+				[Field:(node : Node) -> Node]
+					[Field:HTMLElement]
+						[Field:HTMLDocument]
+							[Cast:Window]
+								[Call:Dynamic]
+									[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+										[TypeExpr js.Syntax:Class<js.Syntax>]
+										[FStatic:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
+											js.Syntax
+											code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
+									[Const:String] "window"
+							[FInstance:HTMLDocument]
+								Window
+								document:HTMLDocument
+						[FInstance:HTMLElement]
+							Document
+							body:HTMLElement
+					[FInstance:(node : Node) -> Node]
+						Node
+						appendChild:(node : Node) -> Node
+				[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+			[Call:Void]
+				[Field:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
+					[TypeExpr mortonHx.Test:Class<mortonHx.Test>]
+					[FStatic:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
+						mortonHx.Test
+						drawGrid:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void
+				[Local ctx(6655):CanvasRenderingContext2D:CanvasRenderingContext2D]
+				[Field:Int]
+					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[FInstance:Int]
+						HTMLCanvasElement
+						width:Int
+				[Field:Int]
+					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[FInstance:Int]
+						HTMLCanvasElement
+						height:Int
+				[Const:Int] 40
+			[Call:Void]
+				[Field:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
+					[TypeExpr mortonHx.Test:Class<mortonHx.Test>]
+					[FStatic:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
+						mortonHx.Test
+						drawMordon:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void
+				[Local ctx(6655):CanvasRenderingContext2D:CanvasRenderingContext2D]
+				[Field:Int]
+					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[FInstance:Int]
+						HTMLCanvasElement
+						width:Int
+				[Field:Int]
+					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[FInstance:Int]
+						HTMLCanvasElement
+						height:Int
+				[Const:Int] 40
+
+	static function drawMordon[Function:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
+		[Arg ctx<6664>(VUsedByTyper):CanvasRenderingContext2D]
+		[Arg width<6665>(VUsedByTyper):Int]
+		[Arg height<6666>(VUsedByTyper):Int]
+		[Arg step<6667>:Int]
+		[Block:Void]
+			[Var wid<6668>(VUsedByTyper):Int]
+				[Call:Int]
+					[Field:(v : Float) -> Int]
+						[TypeExpr Math:Class<Math>]
+						[FStatic:(v : Float) -> Int]
+							Math
+							ceil:(v : Float) -> Int
+					[Binop:Float]
+						[Local width(6665):Int:Int]
+						/
+						[Const:Int] 40
+			[Var hi<6669>(VUsedByTyper):Int]
+				[Call:Int]
+					[Field:(v : Float) -> Int]
+						[TypeExpr Math:Class<Math>]
+						[FStatic:(v : Float) -> Int]
+							Math
+							ceil:(v : Float) -> Int
+					[Binop:Float]
+						[Local height(6666):Int:Int]
+						/
+						[Const:Int] 40
+			[Call:Void]
+				[Field:() -> Void]
+					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[FInstance:() -> Void]
+						CanvasRenderingContext2D
+						beginPath:() -> Void
+			[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
+				[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
+					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
+						CanvasRenderingContext2D
+						strokeStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
+				=
+				[Const:String] "#FF0000"
+			[Var this1<6672>:Int]
+				[Cast:mortonHx.Morton2D]
+					[Const:Int] 0
+					[TypeExpr Int:mortonHx.Morton2D]
+			[Var j<6673>(VAssigned):Int] [Local this1(6672):Int:Int]
+			[Binop:Int]
+				[Local j(6673):Int:Int]
+				&=
+				[Const:Int] 1431655765
+			[Binop:Int]
+				[Local j(6673):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j(6673):Int:Int]
+							^
+							[Binop:Int]
+								[Local j(6673):Int:Int]
+								>>
+								[Const:Int] 1
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local j(6673):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j(6673):Int:Int]
+							^
+							[Binop:Int]
+								[Local j(6673):Int:Int]
+								>>
+								[Const:Int] 2
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local j(6673):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j(6673):Int:Int]
+							^
+							[Binop:Int]
+								[Local j(6673):Int:Int]
+								>>
+								[Const:Int] 4
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local j(6673):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j(6673):Int:Int]
+							^
+							[Binop:Int]
+								[Local j(6673):Int:Int]
+								>>
+								[Const:Int] 8
+					&
+					[Const:Int] 65535
+			[Var j1<6675>(VAssigned):Int]
+				[Binop:Int]
+					[Local this1(6672):Int:Int]
+					>>
+					[Const:Int] 1
+			[Binop:Int]
+				[Local j1(6675):Int:Int]
+				&=
+				[Const:Int] 1431655765
+			[Binop:Int]
+				[Local j1(6675):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j1(6675):Int:Int]
+							^
+							[Binop:Int]
+								[Local j1(6675):Int:Int]
+								>>
+								[Const:Int] 1
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local j1(6675):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j1(6675):Int:Int]
+							^
+							[Binop:Int]
+								[Local j1(6675):Int:Int]
+								>>
+								[Const:Int] 2
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local j1(6675):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j1(6675):Int:Int]
+							^
+							[Binop:Int]
+								[Local j1(6675):Int:Int]
+								>>
+								[Const:Int] 4
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local j1(6675):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local j1(6675):Int:Int]
+							^
+							[Binop:Int]
+								[Local j1(6675):Int:Int]
+								>>
+								[Const:Int] 8
+					&
+					[Const:Int] 65535
+			[Var p_x<7136>(VAssigned):Int] [Local j(6673):Int:Int]
+			[Var p_y<7137>(VAssigned):Int] [Local j1(6675):Int:Int]
+			[Call:Void]
+				[Field:(x : Float, y : Float) -> Void]
+					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[FInstance:(x : Float, y : Float) -> Void]
+						CanvasRenderingContext2D
+						moveTo:(x : Float, y : Float) -> Void
+				[Binop:Int]
+					[Binop:Int]
+						[Const:Int] 40
+						*
+						[Local p_x(7136):Int:Int]
+					+
+					[Const:Int] 2
+				[Binop:Int]
+					[Binop:Int]
+						[Const:Int] 40
+						*
+						[Local p_y(7137):Int:Int]
+					+
+					[Const:Int] 2
+			[Var tot<6682>(VUsedByTyper):Int]
+				[Binop:Int]
+					[Binop:Int]
+						[Binop:Int]
+							[Local wid(6668):Int:Int]
+							*
+							[Local hi(6669):Int:Int]
+						*
+						[Const:Int] 40
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<6693>(VAssigned):Int] [Const:Int] 1
+				[Var _g1<6694>:Int] [Local tot(6682):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(6693):Int:Int]
+							<
+							[Local _g1(6694):Int:Int]
+					[Block:Dynamic]
+						[Var i<6683>(VUsedByTyper):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(6693):Int:Int]
+						[Var this1<6686>:Int]
+							[Cast:mortonHx.Morton2D]
+								[Local i(6683):Int:Int]
+								[TypeExpr Int:mortonHx.Morton2D]
+						[Var j<6687>(VAssigned):Int] [Local this1(6686):Int:Int]
+						[Binop:Int]
+							[Local j(6687):Int:Int]
+							&=
+							[Const:Int] 1431655765
+						[Binop:Int]
+							[Local j(6687):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(6687):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(6687):Int:Int]
+											>>
+											[Const:Int] 1
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local j(6687):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(6687):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(6687):Int:Int]
+											>>
+											[Const:Int] 2
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local j(6687):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(6687):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(6687):Int:Int]
+											>>
+											[Const:Int] 4
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local j(6687):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(6687):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(6687):Int:Int]
+											>>
+											[Const:Int] 8
+								&
+								[Const:Int] 65535
+						[Var j1<6689>(VAssigned):Int]
+							[Binop:Int]
+								[Local this1(6686):Int:Int]
+								>>
+								[Const:Int] 1
+						[Binop:Int]
+							[Local j1(6689):Int:Int]
+							&=
+							[Const:Int] 1431655765
+						[Binop:Int]
+							[Local j1(6689):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(6689):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(6689):Int:Int]
+											>>
+											[Const:Int] 1
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local j1(6689):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(6689):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(6689):Int:Int]
+											>>
+											[Const:Int] 2
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local j1(6689):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(6689):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(6689):Int:Int]
+											>>
+											[Const:Int] 4
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local j1(6689):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(6689):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(6689):Int:Int]
+											>>
+											[Const:Int] 8
+								&
+								[Const:Int] 65535
+						[Var p_x<7145>(VAssigned):Int] [Local j(6687):Int:Int]
+						[Var p_y<7146>(VAssigned):Int] [Local j1(6689):Int:Int]
+						[If:Void]
+							[Parenthesis:Bool]
+								[Binop:Bool]
+									[Binop:Bool]
+										[Local p_x(7145):Int:Int]
+										<
+										[Local wid(6668):Int:Int]
+									&&
+									[Binop:Bool]
+										[Local p_y(7146):Int:Int]
+										<
+										[Local hi(6669):Int:Int]
+							[Then:Void] [Call:Void]
+								[Field:(x : Float, y : Float) -> Void]
+									[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+									[FInstance:(x : Float, y : Float) -> Void]
+										CanvasRenderingContext2D
+										lineTo:(x : Float, y : Float) -> Void
+								[Binop:Int]
+									[Binop:Int]
+										[Const:Int] 40
+										*
+										[Local p_x(7145):Int:Int]
+									+
+									[Const:Int] 2
+								[Binop:Int]
+									[Binop:Int]
+										[Const:Int] 40
+										*
+										[Local p_y(7146):Int:Int]
+									+
+									[Const:Int] 2
+			[Call:Void]
+				[Field:() -> Void]
+					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[FInstance:() -> Void]
+						CanvasRenderingContext2D
+						stroke:() -> Void
+
+	static function drawGrid[Function:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
+		[Arg ctx<6658>(VUsedByTyper):CanvasRenderingContext2D]
+		[Arg width<6659>(VUsedByTyper):Int]
+		[Arg height<6660>(VUsedByTyper):Int]
+		[Arg step<6661>(VUsedByTyper):Int]
+		[Block:Void]
+			[Call:Void]
+				[Field:() -> Void]
+					[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[FInstance:() -> Void]
+						CanvasRenderingContext2D
+						beginPath:() -> Void
+			[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
+				[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
+					[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
+						CanvasRenderingContext2D
+						strokeStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
+				=
+				[Const:String] "#CCCCCC"
+			[Var x<6662>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+			[While:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local x(6662):Int:Int]
+						<=
+						[Local width(6659):Int:Int]
+				[Block:Dynamic]
+					[Call:Void]
+						[Field:(x : Float, y : Float) -> Void]
+							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[FInstance:(x : Float, y : Float) -> Void]
+								CanvasRenderingContext2D
+								moveTo:(x : Float, y : Float) -> Void
+						[Local x(6662):Int:Int]
+						[Const:Int] 0
+					[Call:Void]
+						[Field:(x : Float, y : Float) -> Void]
+							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[FInstance:(x : Float, y : Float) -> Void]
+								CanvasRenderingContext2D
+								lineTo:(x : Float, y : Float) -> Void
+						[Local x(6662):Int:Int]
+						[Local height(6660):Int:Int]
+					[Binop:Int]
+						[Local x(6662):Int:Int]
+						+=
+						[Local step(6661):Int:Int]
+			[Var y<6663>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+			[While:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local y(6663):Int:Int]
+						<=
+						[Local height(6660):Int:Int]
+				[Block:Dynamic]
+					[Call:Void]
+						[Field:(x : Float, y : Float) -> Void]
+							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[FInstance:(x : Float, y : Float) -> Void]
+								CanvasRenderingContext2D
+								moveTo:(x : Float, y : Float) -> Void
+						[Const:Int] 0
+						[Local y(6663):Int:Int]
+					[Call:Void]
+						[Field:(x : Float, y : Float) -> Void]
+							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[FInstance:(x : Float, y : Float) -> Void]
+								CanvasRenderingContext2D
+								lineTo:(x : Float, y : Float) -> Void
+						[Local width(6659):Int:Int]
+						[Local y(6663):Int:Int]
+					[Binop:Int]
+						[Local y(6663):Int:Int]
+						+=
+						[Local step(6661):Int:Int]
+			[Call:Void]
+				[Field:() -> Void]
+					[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[FInstance:() -> Void]
+						CanvasRenderingContext2D
+						stroke:() -> Void
+}

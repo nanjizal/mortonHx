@@ -1,0 +1,8 @@
+typedef haxe.display.CompletionMode<{
+	name = T;
+	class = haxe.display.CompletionMode.T;
+	host = TPHType;
+	type = TInst(haxe.display.CompletionMode.T, []);
+	constraints = [];
+	default = None;
+}> = { kind : haxe.display.CompletionModeKind<haxe.display.CompletionMode.T>, ?args : Null<haxe.display.CompletionMode.T> }
