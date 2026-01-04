@@ -2,6 +2,7 @@ import mortonHx.Writer;
 public class Reader {
   var x: Int = 0; 
   var y: Int = 0;
+  
   public static inline function fromWriter( w: Writer ): Reader {
     return new Reader( w.v );
   }
@@ -16,5 +17,10 @@ public class Reader {
     j = (j ^ (j >> 4)) & 0x00ff00ff;
     j = (j ^ (j >> 8)) & 0x0000ffff;
     return j;
+  }
+  public inline static function toFloatXY( wid: Float, hi: Float ): Int {
+      var scaleX = wid*scaler;
+      var scaleY = hi*scalar;
+      return { x: x * scaleX , y: y * scaleY };
   }
 }
