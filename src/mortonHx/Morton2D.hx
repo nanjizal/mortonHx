@@ -46,4 +46,38 @@ abstract Morton2D(Int) from Int to Int {
         j = (j ^ (j >> 8)) & 0x0000ffff;
         return j;
     }
+
+    // 2D bitmasks for 32-bit integers
+    // x: 01010101... (even bits)
+    static inline var maskX2d:Int = 0x55555555;
+    // y: 10101010... (odd bits)
+    static inline var maskY2d:Int = 0xAAAAAAAA;
+
+    // Negated masks for borrow/carry protection
+    static inline var maskNotX2d:Int = ~0x55555555;
+    static inline var maskNotY2d:Int = ~0xAAAAAAAA;
+    /**
+     * Overloads the '+' operator for bitwise Morton addition.
+     * Adds the coordinates interleaved, adding 'offset' to the 'base'.
+     */
+     @:op(A + B)
+     public static inline function add(base:Morton2D, offset:Morton2D):Morton2D {
+         return (
+             ((base:Int) & maskX2d) + ((offset:Int) & maskX2d) |
+             ((base:Int) & maskY2d) + ((offset:Int) & maskY2d)
+             : Morton2D
+         );
+     }
+     /**
+     * Overloads the '-' operator for bitwise Morton subtraction.
+     * Subtracts the coordinates interleaved in 'offset' from 'base'.
+     */
+     @:op(A - B)
+     public static inline function subtract(base:Morton2D, offset:Morton2D):Morton2D {
+         return (
+             ((base:Int) | maskNotX2d) - ((offset:Int) & maskX2d) |
+             ((base:Int) | maskNotY2d) - ((offset:Int) & maskY2d)
+             : Morton2D
+         );
+     }
 }

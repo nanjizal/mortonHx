@@ -24,6 +24,19 @@ abstract Point3DInt( Point3DInt_ ) from Point3DInt_ to Point3DInt_ {
 abstract Morton3D(Int) from Int to Int {
     // Max value for 10 bits is 1023
     public static inline var maxCoord = 1023; 
+    
+    // Bitmask code for addition and subtraction //
+    // 3D bitmasks for 32-bit integers (10 bits per dimension)
+    // x: bits 0, 3, 6, 9...
+    static inline var maskX3d:Int = 0x09249249; 
+    // y: bits 1, 4, 7, 10...
+    static inline var maskY3d:Int = 0x12492492;
+    // z: bits 2, 5, 8, 11...
+    static inline var maskZ3d:Int = 0x24924924;
+    // Negated masks to set "guard bits" for borrow handling
+    static inline var maskNotX3d:Int = ~0x09249249;
+    static inline var maskNotY3d:Int = ~0x12492492;
+    static inline var maskNotZ3d:Int = ~0x24924924;
 
     public inline function new( x: Int, y: Int, z: Int ) {
         // Interleave: z in bits 2, 5, 8... y in 1, 4, 7... x in 0, 3, 6...
@@ -57,4 +70,30 @@ abstract Morton3D(Int) from Int to Int {
         v = (v | (v >> 16)) & 0x000003ff;
         return v;
     }
+ 
+     /**
+      * Overloading the '+' operator.
+      */
+      @:op(A + B)
+      public static inline function add(base:Morton3D, offset:Morton3D):Morton3D {
+          return (
+              ((base:Int) & maskX3d) + ((offset:Int) & maskX3d) |
+              ((base:Int) & maskY3d) + ((offset:Int) & maskY3d) |
+              ((base:Int) & maskZ3d) + ((offset:Int) & maskZ3d)
+              : Morton3D
+          );
+      }
+      /**
+     * Overloading the '-' operator allows you to use `codeA - codeB` 
+     * where both are Morton3D types.
+     */
+      @:op(A - B)
+      public static inline function subtract(base:Morton3D, offset:Morton3D):Morton3D {
+          return (
+              ((base:Int) | maskNotX3d) - ((offset:Int) & maskX3d) |
+              ((base:Int) | maskNotY3d) - ((offset:Int) & maskY3d) |
+              ((base:Int) | maskNotZ3d) - ((offset:Int) & maskZ3d)
+              : Morton3D
+          );
+      }
 }

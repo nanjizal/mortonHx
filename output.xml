@@ -37252,6 +37252,42 @@
 	<x path="Int"/>
 	<x path="Int"/>
 </f></compact1By1>
+	<maskX2d get="inline" set="null" expr="0x55555555" line="52" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x55555555</e></m></meta>
+	</maskX2d>
+	<maskY2d get="inline" set="null" expr="0xAAAAAAAA" line="54" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0xAAAAAAAA</e></m></meta>
+	</maskY2d>
+	<maskNotX2d get="inline" set="null" expr="~0x55555555" line="57" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x55555555</e></m></meta>
+	</maskNotX2d>
+	<maskNotY2d get="inline" set="null" expr="~0xAAAAAAAA" line="58" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0xAAAAAAAA</e></m></meta>
+	</maskNotY2d>
+	<add public="1" get="inline" set="null" line="64" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+		</f>
+		<meta><m n=":op"><e>A + B</e></m></meta>
+		<haxe_doc>* Overloads the '+' operator for bitwise Morton addition.
+     * Adds the coordinates interleaved, adding 'offset' to the 'base'.</haxe_doc>
+	</add>
+	<subtract public="1" get="inline" set="null" line="76" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+		</f>
+		<meta><m n=":op"><e>A - B</e></m></meta>
+		<haxe_doc>* Overloads the '-' operator for bitwise Morton subtraction.
+     * Subtracts the coordinates interleaved in 'offset' from 'base'.</haxe_doc>
+	</subtract>
 </class></impl>
 	</abstract>
 	<class path="mortonHx._Morton2D.Morton2D_Impl_" params="" file="src/mortonHx/Morton2D.hx" private="1" module="mortonHx.Morton2D" final="1">
@@ -37281,6 +37317,42 @@
 	<x path="Int"/>
 	<x path="Int"/>
 </f></compact1By1>
+		<maskX2d get="inline" set="null" expr="0x55555555" line="52" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x55555555</e></m></meta>
+		</maskX2d>
+		<maskY2d get="inline" set="null" expr="0xAAAAAAAA" line="54" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0xAAAAAAAA</e></m></meta>
+		</maskY2d>
+		<maskNotX2d get="inline" set="null" expr="~0x55555555" line="57" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x55555555</e></m></meta>
+		</maskNotX2d>
+		<maskNotY2d get="inline" set="null" expr="~0xAAAAAAAA" line="58" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0xAAAAAAAA</e></m></meta>
+		</maskNotY2d>
+		<add public="1" get="inline" set="null" line="64" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+			</f>
+			<meta><m n=":op"><e>A + B</e></m></meta>
+			<haxe_doc>* Overloads the '+' operator for bitwise Morton addition.
+     * Adds the coordinates interleaved, adding 'offset' to the 'base'.</haxe_doc>
+		</add>
+		<subtract public="1" get="inline" set="null" line="76" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+			</f>
+			<meta><m n=":op"><e>A - B</e></m></meta>
+			<haxe_doc>* Overloads the '-' operator for bitwise Morton subtraction.
+     * Subtracts the coordinates interleaved in 'offset' from 'base'.</haxe_doc>
+		</subtract>
 	</class>
 	<class path="mortonHx.Point3DInt_" params="" file="src/mortonHx/Morton3D.hx" module="mortonHx.Morton3D">
 		<x public="1"><x path="Int"/></x>
@@ -37351,7 +37423,31 @@
 		<x path="Int"/>
 		<meta><m n=":value"><e>1023</e></m></meta>
 	</maxCoord>
-	<_new public="1" get="inline" set="null" line="28" static="1">
+	<maskX3d get="inline" set="null" expr="0x09249249" line="31" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x09249249</e></m></meta>
+	</maskX3d>
+	<maskY3d get="inline" set="null" expr="0x12492492" line="33" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x12492492</e></m></meta>
+	</maskY3d>
+	<maskZ3d get="inline" set="null" expr="0x24924924" line="35" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x24924924</e></m></meta>
+	</maskZ3d>
+	<maskNotX3d get="inline" set="null" expr="~0x09249249" line="37" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x09249249</e></m></meta>
+	</maskNotX3d>
+	<maskNotY3d get="inline" set="null" expr="~0x12492492" line="38" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x12492492</e></m></meta>
+	</maskNotY3d>
+	<maskNotZ3d get="inline" set="null" expr="~0x24924924" line="39" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x24924924</e></m></meta>
+	</maskNotZ3d>
+	<_new public="1" get="inline" set="null" line="41" static="1">
 		<f a="x:y:z">
 			<x path="Int"/>
 			<x path="Int"/>
@@ -37360,20 +37456,39 @@
 		</f>
 		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<part1By2 get="inline" set="null" line="34" static="1"><f a="this:v">
+	<part1By2 get="inline" set="null" line="47" static="1"><f a="this:v">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></part1By2>
-	<decode public="1" get="inline" set="null" line="43" static="1"><f a="this">
+	<decode public="1" get="inline" set="null" line="56" static="1"><f a="this">
 	<x path="Int"/>
 	<x path="mortonHx.Point3DInt"/>
 </f></decode>
-	<compact1By2 get="inline" set="null" line="52" static="1"><f a="this:v">
+	<compact1By2 get="inline" set="null" line="65" static="1"><f a="this:v">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></compact1By2>
+	<add public="1" get="inline" set="null" line="78" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+		</f>
+		<meta><m n=":op"><e>A + B</e></m></meta>
+		<haxe_doc>* Overloading the '+' operator.</haxe_doc>
+	</add>
+	<subtract public="1" get="inline" set="null" line="91" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+		</f>
+		<meta><m n=":op"><e>A - B</e></m></meta>
+		<haxe_doc>* Overloading the '-' operator allows you to use `codeA - codeB` 
+     * where both are Morton3D types.</haxe_doc>
+	</subtract>
 </class></impl>
 	</abstract>
 	<class path="mortonHx._Morton3D.Morton3D_Impl_" params="" file="src/mortonHx/Morton3D.hx" private="1" module="mortonHx.Morton3D" final="1">
@@ -37381,7 +37496,31 @@
 			<x path="Int"/>
 			<meta><m n=":value"><e>1023</e></m></meta>
 		</maxCoord>
-		<_new public="1" get="inline" set="null" line="28" static="1">
+		<maskX3d get="inline" set="null" expr="0x09249249" line="31" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x09249249</e></m></meta>
+		</maskX3d>
+		<maskY3d get="inline" set="null" expr="0x12492492" line="33" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x12492492</e></m></meta>
+		</maskY3d>
+		<maskZ3d get="inline" set="null" expr="0x24924924" line="35" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x24924924</e></m></meta>
+		</maskZ3d>
+		<maskNotX3d get="inline" set="null" expr="~0x09249249" line="37" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x09249249</e></m></meta>
+		</maskNotX3d>
+		<maskNotY3d get="inline" set="null" expr="~0x12492492" line="38" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x12492492</e></m></meta>
+		</maskNotY3d>
+		<maskNotZ3d get="inline" set="null" expr="~0x24924924" line="39" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x24924924</e></m></meta>
+		</maskNotZ3d>
+		<_new public="1" get="inline" set="null" line="41" static="1">
 			<f a="x:y:z">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -37390,20 +37529,39 @@
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<part1By2 get="inline" set="null" line="34" static="1"><f a="this:v">
+		<part1By2 get="inline" set="null" line="47" static="1"><f a="this:v">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></part1By2>
-		<decode public="1" get="inline" set="null" line="43" static="1"><f a="this">
+		<decode public="1" get="inline" set="null" line="56" static="1"><f a="this">
 	<x path="Int"/>
 	<x path="mortonHx.Point3DInt"/>
 </f></decode>
-		<compact1By2 get="inline" set="null" line="52" static="1"><f a="this:v">
+		<compact1By2 get="inline" set="null" line="65" static="1"><f a="this:v">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></compact1By2>
+		<add public="1" get="inline" set="null" line="78" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+			</f>
+			<meta><m n=":op"><e>A + B</e></m></meta>
+			<haxe_doc>* Overloading the '+' operator.</haxe_doc>
+		</add>
+		<subtract public="1" get="inline" set="null" line="91" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+			</f>
+			<meta><m n=":op"><e>A - B</e></m></meta>
+			<haxe_doc>* Overloading the '-' operator allows you to use `codeA - codeB` 
+     * where both are Morton3D types.</haxe_doc>
+		</subtract>
 	</class>
 	<class path="mortonHx.Test" params="" file="src/mortonHx/Test.hx">
 		<main set="method" line="8" static="1"><f a=""><x path="Void"/></f></main>

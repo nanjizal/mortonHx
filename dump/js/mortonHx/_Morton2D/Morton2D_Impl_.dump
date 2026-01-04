@@ -407,4 +407,84 @@ private class mortonHx._Morton2D.Morton2D_Impl_ {
 					&
 					[Const:Int] 65535
 			[Return:Dynamic] [Local j(6534):Int:Int]
+
+	@:value(0x55555555)
+	static inline var maskX2d:Int = [Const:Int] 1431655765;
+
+	@:value(0xAAAAAAAA)
+	static inline var maskY2d:Int = [Const:Int] -1431655766;
+
+	@:value(~0x55555555)
+	static inline var maskNotX2d:Int = [Const:Int] -1431655766;
+
+	@:value(~0xAAAAAAAA)
+	static inline var maskNotY2d:Int = [Const:Int] 1431655765;
+
+	@:op(A + B)
+	public static inline function add[Function:(base : mortonHx.Morton2D, offset : mortonHx.Morton2D) -> mortonHx.Morton2D]
+		[Arg base<6556>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg offset<6557>(VUsedByTyper):mortonHx.Morton2D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:mortonHx.Morton2D]
+					[Binop:Int]
+						[Binop:Int]
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local base(6556):mortonHx.Morton2D:mortonHx.Morton2D]
+									&
+									[Const:Int] 1431655765
+							+
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local offset(6557):mortonHx.Morton2D:mortonHx.Morton2D]
+									&
+									[Const:Int] 1431655765
+						|
+						[Binop:Int]
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local base(6556):mortonHx.Morton2D:mortonHx.Morton2D]
+									&
+									[Const:Int] -1431655766
+							+
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local offset(6557):mortonHx.Morton2D:mortonHx.Morton2D]
+									&
+									[Const:Int] -1431655766
+
+	@:op(A - B)
+	public static inline function subtract[Function:(base : mortonHx.Morton2D, offset : mortonHx.Morton2D) -> mortonHx.Morton2D]
+		[Arg base<6558>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg offset<6559>(VUsedByTyper):mortonHx.Morton2D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:mortonHx.Morton2D]
+					[Binop:Int]
+						[Binop:Int]
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local base(6558):mortonHx.Morton2D:mortonHx.Morton2D]
+									|
+									[Const:Int] -1431655766
+							-
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local offset(6559):mortonHx.Morton2D:mortonHx.Morton2D]
+									&
+									[Const:Int] 1431655765
+						|
+						[Binop:Int]
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local base(6558):mortonHx.Morton2D:mortonHx.Morton2D]
+									|
+									[Const:Int] 1431655765
+							-
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local offset(6559):mortonHx.Morton2D:mortonHx.Morton2D]
+									&
+									[Const:Int] -1431655766
 }
