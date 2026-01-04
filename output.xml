@@ -37141,11 +37141,11 @@
 		The default is `BestFit`.</haxe_doc>
 </localeMatcher></a></typedef>
 	<class path="mortonHx.Doc" params="" file="src/mortonHx/Doc.hx">
-		<main public="1" set="method" line="5" static="1">
+		<main public="1" set="method" line="6" static="1">
 			<f a=""><x path="Void"/></f>
 			<meta><m n=":keep"/></meta>
 		</main>
-		<new public="1" set="method" line="8"><f a=""><x path="Void"/></f></new>
+		<new public="1" set="method" line="9"><f a=""><x path="Void"/></f></new>
 		<meta><m n=":dox"><e>hide</e></m></meta>
 	</class>
 	<class path="mortonHx.Point2DInt_" params="" file="src/mortonHx/Morton2D.hx" module="mortonHx.Morton2D">
@@ -37282,6 +37282,129 @@
 	<x path="Int"/>
 </f></compact1By1>
 	</class>
+	<class path="mortonHx.Point3DInt_" params="" file="src/mortonHx/Morton3D.hx" module="mortonHx.Morton3D">
+		<x public="1"><x path="Int"/></x>
+		<y public="1"><x path="Int"/></y>
+		<z public="1"><x path="Int"/></z>
+		<new public="1" get="inline" set="null" line="8"><f a="x:y:z">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":structInit"/>
+		</meta>
+	</class>
+	<abstract path="mortonHx.Point3DInt" params="" file="src/mortonHx/Morton3D.hx" module="mortonHx.Morton3D">
+		<from><icast><c path="mortonHx.Point3DInt_"/></icast></from>
+		<this><c path="mortonHx.Point3DInt_"/></this>
+		<to>
+			<icast><c path="mortonHx.Point3DInt_"/></icast>
+			<icast field="toMorton3D"><x path="mortonHx.Morton3D"/></icast>
+		</to>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="mortonHx._Morton3D.Point3DInt_Impl_" params="" file="src/mortonHx/Morton3D.hx" private="1" module="mortonHx.Morton3D" final="1">
+	<_new public="1" get="inline" set="null" line="16" static="1">
+		<f a="x:y:z">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="mortonHx.Point3DInt"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+	</_new>
+	<toMorton3D public="1" get="inline" set="null" line="20" static="1">
+		<f a="this">
+			<c path="mortonHx.Point3DInt_"/>
+			<x path="mortonHx.Morton3D"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</toMorton3D>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._Morton3D.Point3DInt_Impl_" params="" file="src/mortonHx/Morton3D.hx" private="1" module="mortonHx.Morton3D" final="1">
+		<_new public="1" get="inline" set="null" line="16" static="1">
+			<f a="x:y:z">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="mortonHx.Point3DInt"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</_new>
+		<toMorton3D public="1" get="inline" set="null" line="20" static="1">
+			<f a="this">
+				<c path="mortonHx.Point3DInt_"/>
+				<x path="mortonHx.Morton3D"/>
+			</f>
+			<meta><m n=":to"/></meta>
+		</toMorton3D>
+	</class>
+	<abstract path="mortonHx.Morton3D" params="" file="src/mortonHx/Morton3D.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<impl><class path="mortonHx._Morton3D.Morton3D_Impl_" params="" file="src/mortonHx/Morton3D.hx" private="1" module="mortonHx.Morton3D" final="1">
+	<maxCoord public="1" get="inline" set="null" expr="1023" line="26" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>1023</e></m></meta>
+	</maxCoord>
+	<_new public="1" get="inline" set="null" line="28" static="1">
+		<f a="x:y:z">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="mortonHx.Morton3D"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+	</_new>
+	<part1By2 get="inline" set="null" line="34" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></part1By2>
+	<decode public="1" get="inline" set="null" line="43" static="1"><f a="this">
+	<x path="Int"/>
+	<x path="mortonHx.Point3DInt"/>
+</f></decode>
+	<compact1By2 get="inline" set="null" line="52" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></compact1By2>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._Morton3D.Morton3D_Impl_" params="" file="src/mortonHx/Morton3D.hx" private="1" module="mortonHx.Morton3D" final="1">
+		<maxCoord public="1" get="inline" set="null" expr="1023" line="26" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>1023</e></m></meta>
+		</maxCoord>
+		<_new public="1" get="inline" set="null" line="28" static="1">
+			<f a="x:y:z">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="mortonHx.Morton3D"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</_new>
+		<part1By2 get="inline" set="null" line="34" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></part1By2>
+		<decode public="1" get="inline" set="null" line="43" static="1"><f a="this">
+	<x path="Int"/>
+	<x path="mortonHx.Point3DInt"/>
+</f></decode>
+		<compact1By2 get="inline" set="null" line="52" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></compact1By2>
+	</class>
 	<class path="mortonHx.Test" params="" file="src/mortonHx/Test.hx">
 		<main set="method" line="8" static="1"><f a=""><x path="Void"/></f></main>
 		<drawMordon set="method" line="18" static="1"><f a="ctx:width:height:step">
@@ -37298,6 +37421,83 @@
 	<x path="Int"/>
 	<x path="Void"/>
 </f></drawGrid>
+		<meta><m n=":dox"><e>hide</e></m></meta>
+	</class>
+	<class path="mortonHx.Test3D" params="" file="src/mortonHx/Test3D.hx">
+		<STEP get="inline" set="null" expr="30" line="9" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>30</e></m></meta>
+		</STEP>
+		<CUBE_SIZE get="inline" set="null" expr="8" line="10" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>8</e></m></meta>
+		</CUBE_SIZE>
+		<main set="method" line="12" static="1"><f a=""><x path="Void"/></f></main>
+		<project set="method" line="28" static="1">
+			<f a="x:y:z">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<a>
+					<y><x path="Float"/></y>
+					<x><x path="Float"/></x>
+				</a>
+			</f>
+			<haxe_doc>* Projects 3D coordinates to 2D using simple Isometric Projection</haxe_doc>
+		</project>
+		<drawMordon3D set="method" line="37" static="1"><f a="ctx">
+	<c path="js.html.CanvasRenderingContext2D"/>
+	<x path="Void"/>
+</f></drawMordon3D>
+		<drawFloorGrid set="method" line="74" static="1"><f a="ctx:size">
+	<c path="js.html.CanvasRenderingContext2D"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></drawFloorGrid>
+		<meta><m n=":dox"><e>hide</e></m></meta>
+	</class>
+	<class path="mortonHx.Test3Danimate" params="" file="src/mortonHx/Test3Danimate.hx">
+		<STEP get="inline" set="null" expr="10" line="10" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>10</e></m></meta>
+		</STEP>
+		<CUBE_SIZE get="inline" set="null" expr="16" line="11" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>16</e></m></meta>
+		</CUBE_SIZE>
+		<project set="method" line="16" static="1">
+			<f a="x:y:z">
+				<x path="Float"/>
+				<x path="Float"/>
+				<x path="Float"/>
+				<a>
+					<y><x path="Float"/></y>
+					<x><x path="Float"/></x>
+				</a>
+			</f>
+			<haxe_doc>* Projects 3D coordinates to 2D using simple Isometric Projection</haxe_doc>
+		</project>
+		<currentIdx expr="0" line="25" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0</e></m></meta>
+		</currentIdx>
+		<totalPoints expr="CUBE_SIZE * CUBE_SIZE * CUBE_SIZE" line="26" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>CUBE_SIZE * CUBE_SIZE * CUBE_SIZE</e></m></meta>
+		</totalPoints>
+		<ctx static="1"><c path="js.html.CanvasRenderingContext2D"/></ctx>
+		<canvas static="1"><c path="js.html.CanvasElement"/></canvas>
+		<main set="method" line="30" static="1"><f a=""><x path="Void"/></f></main>
+		<update set="method" line="41" static="1"><f a="time">
+	<x path="Float"/>
+	<x path="Void"/>
+</f></update>
+		<drawAnimatedMorton set="method" line="64" static="1"><f a=""><x path="Void"/></f></drawAnimatedMorton>
+		<drawFloorGrid set="method" line="91" static="1"><f a="ctx:size">
+	<c path="js.html.CanvasRenderingContext2D"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></drawFloorGrid>
 		<meta><m n=":dox"><e>hide</e></m></meta>
 	</class>
 </haxe>

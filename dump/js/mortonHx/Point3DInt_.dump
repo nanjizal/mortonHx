@@ -1,0 +1,39 @@
+@:directlyUsed @:structInit
+class mortonHx.Point3DInt_ {
+
+	public inline function new[Function:(x : Int, y : Int, z : Int) -> Void]
+		[Arg x<6556>(VUsedByTyper):Int]
+		[Arg y<6557>(VUsedByTyper):Int]
+		[Arg z<6558>(VUsedByTyper):Int]
+		[Block:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point3DInt_] this
+					[FInstance:Int]
+						mortonHx.Point3DInt_
+						x:Int
+				=
+				[Local x(6556):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point3DInt_] this
+					[FInstance:Int]
+						mortonHx.Point3DInt_
+						y:Int
+				=
+				[Local y(6557):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point3DInt_] this
+					[FInstance:Int]
+						mortonHx.Point3DInt_
+						z:Int
+				=
+				[Local z(6558):Int:Int]
+
+	public var x:Int;
+
+	public var y:Int;
+
+	public var z:Int;
+}

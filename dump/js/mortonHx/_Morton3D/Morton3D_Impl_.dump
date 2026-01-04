@@ -1,0 +1,544 @@
+private class mortonHx._Morton3D.Morton3D_Impl_ {
+
+	@:value(1023)
+	public static inline var maxCoord:Int = [Const:Int] 1023;
+
+	@:noCompletion
+	public static inline function _new[Function:(x : Int, y : Int, z : Int) -> mortonHx.Morton3D]
+		[Arg x<6564>(VUsedByTyper):Int]
+		[Arg y<6565>(VUsedByTyper):Int]
+		[Arg z<6566>(VUsedByTyper):Int]
+		[Block:Dynamic]
+			[Var v<6573>(VAssigned):Int] [Local z(6566):Int:Int]
+			[Binop:Int]
+				[Local v(6573):Int:Int]
+				&=
+				[Const:Int] 1023
+			[Binop:Int]
+				[Local v(6573):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6573):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6573):Int:Int]
+								<<
+								[Const:Int] 16
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v(6573):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6573):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6573):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v(6573):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6573):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6573):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v(6573):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6573):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6573):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 153391689
+			[Var v1<6577>(VAssigned):Int] [Local y(6565):Int:Int]
+			[Binop:Int]
+				[Local v1(6577):Int:Int]
+				&=
+				[Const:Int] 1023
+			[Binop:Int]
+				[Local v1(6577):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6577):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6577):Int:Int]
+								<<
+								[Const:Int] 16
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v1(6577):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6577):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6577):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v1(6577):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6577):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6577):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v1(6577):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6577):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6577):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 153391689
+			[Var v2<6581>(VAssigned):Int] [Local x(6564):Int:Int]
+			[Binop:Int]
+				[Local v2(6581):Int:Int]
+				&=
+				[Const:Int] 1023
+			[Binop:Int]
+				[Local v2(6581):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6581):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6581):Int:Int]
+								<<
+								[Const:Int] 16
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v2(6581):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6581):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6581):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v2(6581):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6581):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6581):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v2(6581):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6581):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6581):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 153391689
+			[Return:Dynamic]
+				[Cast:mortonHx.Morton3D]
+					[Binop:Int]
+						[Binop:Int]
+							[Binop:Int]
+								[Local v(6573):Int:Int]
+								<<
+								[Const:Int] 2
+							|
+							[Binop:Int]
+								[Local v1(6577):Int:Int]
+								<<
+								[Const:Int] 1
+						|
+						[Local v2(6581):Int:Int]
+
+	static inline function part1By2[Function:(this : Int, v : Int) -> Int]
+		[Arg this1<6568>:Int]
+		[Arg v<6569>(VUsedByTyper VAssigned):Int]
+		[Block:Dynamic]
+			[Binop:Int]
+				[Local v(6569):Int:Int]
+				&=
+				[Const:Int] 1023
+			[Binop:Int]
+				[Local v(6569):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6569):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6569):Int:Int]
+								<<
+								[Const:Int] 16
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v(6569):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6569):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6569):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v(6569):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6569):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6569):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v(6569):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6569):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6569):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 153391689
+			[Return:Dynamic] [Local v(6569):Int:Int]
+
+	public static inline function decode[Function:(this : Int) -> mortonHx.Point3DInt]
+		[Arg this1<6591>:Int]
+		[Block:Dynamic]
+			[Var v<6597>(VAssigned):Int] [Local this1(6591):Int:Int]
+			[Binop:Int]
+				[Local v(6597):Int:Int]
+				&=
+				[Const:Int] 153391689
+			[Binop:Int]
+				[Local v(6597):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6597):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6597):Int:Int]
+								>>
+								[Const:Int] 2
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v(6597):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6597):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6597):Int:Int]
+								>>
+								[Const:Int] 4
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v(6597):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6597):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6597):Int:Int]
+								>>
+								[Const:Int] 8
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v(6597):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6597):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6597):Int:Int]
+								>>
+								[Const:Int] 16
+					&
+					[Const:Int] 1023
+			[Var v1<6601>(VAssigned):Int]
+				[Binop:Int]
+					[Local this1(6591):Int:Int]
+					>>
+					[Const:Int] 1
+			[Binop:Int]
+				[Local v1(6601):Int:Int]
+				&=
+				[Const:Int] 153391689
+			[Binop:Int]
+				[Local v1(6601):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6601):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6601):Int:Int]
+								>>
+								[Const:Int] 2
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v1(6601):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6601):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6601):Int:Int]
+								>>
+								[Const:Int] 4
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v1(6601):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6601):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6601):Int:Int]
+								>>
+								[Const:Int] 8
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v1(6601):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6601):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6601):Int:Int]
+								>>
+								[Const:Int] 16
+					&
+					[Const:Int] 1023
+			[Var v2<6605>(VAssigned):Int]
+				[Binop:Int]
+					[Local this1(6591):Int:Int]
+					>>
+					[Const:Int] 2
+			[Binop:Int]
+				[Local v2(6605):Int:Int]
+				&=
+				[Const:Int] 153391689
+			[Binop:Int]
+				[Local v2(6605):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6605):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6605):Int:Int]
+								>>
+								[Const:Int] 2
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v2(6605):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6605):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6605):Int:Int]
+								>>
+								[Const:Int] 4
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v2(6605):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6605):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6605):Int:Int]
+								>>
+								[Const:Int] 8
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v2(6605):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6605):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6605):Int:Int]
+								>>
+								[Const:Int] 16
+					&
+					[Const:Int] 1023
+			[Return:Dynamic]
+				[Cast:mortonHx.Point3DInt]
+					[New:mortonHx.Point3DInt_]
+						mortonHx.Point3DInt_
+						[Local v(6597):Int:Int]
+						[Local v1(6601):Int:Int]
+						[Local v2(6605):Int:Int]
+
+	static inline function compact1By2[Function:(this : Int, v : Int) -> Int]
+		[Arg this1<6592>:Int]
+		[Arg v<6593>(VUsedByTyper VAssigned):Int]
+		[Block:Dynamic]
+			[Binop:Int]
+				[Local v(6593):Int:Int]
+				&=
+				[Const:Int] 153391689
+			[Binop:Int]
+				[Local v(6593):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6593):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6593):Int:Int]
+								>>
+								[Const:Int] 2
+					&
+					[Const:Int] 51130563
+			[Binop:Int]
+				[Local v(6593):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6593):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6593):Int:Int]
+								>>
+								[Const:Int] 4
+					&
+					[Const:Int] 50393103
+			[Binop:Int]
+				[Local v(6593):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6593):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6593):Int:Int]
+								>>
+								[Const:Int] 8
+					&
+					[Const:Int] 50331903
+			[Binop:Int]
+				[Local v(6593):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6593):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6593):Int:Int]
+								>>
+								[Const:Int] 16
+					&
+					[Const:Int] 1023
+			[Return:Dynamic] [Local v(6593):Int:Int]
+}

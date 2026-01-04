@@ -11,7 +11,7 @@ class mortonHx.Test {
 					lineNumber: [Const:Int] 9
 					className: [Const:String] "mortonHx.Test"
 					methodName: [Const:String] "main"
-			[Var canvas<6651>(VUsedByTyper):HTMLCanvasElement]
+			[Var canvas<6816>(VUsedByTyper):HTMLCanvasElement]
 				[Cast:HTMLCanvasElement]
 					[Call:HTMLElement]
 						[Field:(localName : String, ?options : Null<js.html.ElementCreationOptions>) -> HTMLElement]
@@ -33,7 +33,7 @@ class mortonHx.Test {
 						[Const:String] "canvas"
 			[Binop:Int]
 				[Field:Int]
-					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						width:Int
@@ -41,17 +41,17 @@ class mortonHx.Test {
 				[Const:Int] 800
 			[Binop:Int]
 				[Field:Int]
-					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						height:Int
 				=
 				[Const:Int] 600
-			[Var ctx<6655>(VUsedByTyper):CanvasRenderingContext2D]
+			[Var ctx<6820>(VUsedByTyper):CanvasRenderingContext2D]
 				[Cast:CanvasRenderingContext2D]
 					[Call:Dynamic]
 						[Field:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic]
-							[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+							[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 							[FInstance:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic]
 								HTMLCanvasElement
 								getContext:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic
@@ -78,21 +78,21 @@ class mortonHx.Test {
 					[FInstance:(node : Node) -> Node]
 						Node
 						appendChild:(node : Node) -> Node
-				[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+				[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 			[Call:Void]
 				[Field:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
 					[TypeExpr mortonHx.Test:Class<mortonHx.Test>]
 					[FStatic:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
 						mortonHx.Test
 						drawGrid:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void
-				[Local ctx(6655):CanvasRenderingContext2D:CanvasRenderingContext2D]
+				[Local ctx(6820):CanvasRenderingContext2D:CanvasRenderingContext2D]
 				[Field:Int]
-					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						width:Int
 				[Field:Int]
-					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						height:Int
@@ -103,26 +103,26 @@ class mortonHx.Test {
 					[FStatic:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
 						mortonHx.Test
 						drawMordon:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void
-				[Local ctx(6655):CanvasRenderingContext2D:CanvasRenderingContext2D]
+				[Local ctx(6820):CanvasRenderingContext2D:CanvasRenderingContext2D]
 				[Field:Int]
-					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						width:Int
 				[Field:Int]
-					[Local canvas(6651):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(6816):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						height:Int
 				[Const:Int] 40
 
 	static function drawMordon[Function:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
-		[Arg ctx<6664>(VUsedByTyper):CanvasRenderingContext2D]
-		[Arg width<6665>(VUsedByTyper):Int]
-		[Arg height<6666>(VUsedByTyper):Int]
-		[Arg step<6667>:Int]
+		[Arg ctx<6829>(VUsedByTyper):CanvasRenderingContext2D]
+		[Arg width<6830>(VUsedByTyper):Int]
+		[Arg height<6831>(VUsedByTyper):Int]
+		[Arg step<6832>:Int]
 		[Block:Void]
-			[Var wid<6668>(VUsedByTyper):Int]
+			[Var wid<6833>(VUsedByTyper):Int]
 				[Call:Int]
 					[Field:(v : Float) -> Int]
 						[TypeExpr Math:Class<Math>]
@@ -130,10 +130,10 @@ class mortonHx.Test {
 							Math
 							ceil:(v : Float) -> Int
 					[Binop:Float]
-						[Local width(6665):Int:Int]
+						[Local width(6830):Int:Int]
 						/
 						[Const:Int] 40
-			[Var hi<6669>(VUsedByTyper):Int]
+			[Var hi<6834>(VUsedByTyper):Int]
 				[Call:Int]
 					[Field:(v : Float) -> Int]
 						[TypeExpr Math:Class<Math>]
@@ -141,158 +141,158 @@ class mortonHx.Test {
 							Math
 							ceil:(v : Float) -> Int
 					[Binop:Float]
-						[Local height(6666):Int:Int]
+						[Local height(6831):Int:Int]
 						/
 						[Const:Int] 40
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(6829):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						beginPath:() -> Void
 			[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 				[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
-					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(6829):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 						CanvasRenderingContext2D
 						strokeStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
 				=
 				[Const:String] "#FF0000"
-			[Var this1<6672>:Int]
+			[Var this1<6837>:Int]
 				[Cast:mortonHx.Morton2D]
 					[Const:Int] 0
 					[TypeExpr Int:mortonHx.Morton2D]
-			[Var j<6673>(VAssigned):Int] [Local this1(6672):Int:Int]
+			[Var j<6838>(VAssigned):Int] [Local this1(6837):Int:Int]
 			[Binop:Int]
-				[Local j(6673):Int:Int]
+				[Local j(6838):Int:Int]
 				&=
 				[Const:Int] 1431655765
 			[Binop:Int]
-				[Local j(6673):Int:Int]
+				[Local j(6838):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j(6673):Int:Int]
+							[Local j(6838):Int:Int]
 							^
 							[Binop:Int]
-								[Local j(6673):Int:Int]
+								[Local j(6838):Int:Int]
 								>>
 								[Const:Int] 1
 					&
 					[Const:Int] 858993459
 			[Binop:Int]
-				[Local j(6673):Int:Int]
+				[Local j(6838):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j(6673):Int:Int]
+							[Local j(6838):Int:Int]
 							^
 							[Binop:Int]
-								[Local j(6673):Int:Int]
+								[Local j(6838):Int:Int]
 								>>
 								[Const:Int] 2
 					&
 					[Const:Int] 252645135
 			[Binop:Int]
-				[Local j(6673):Int:Int]
+				[Local j(6838):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j(6673):Int:Int]
+							[Local j(6838):Int:Int]
 							^
 							[Binop:Int]
-								[Local j(6673):Int:Int]
+								[Local j(6838):Int:Int]
 								>>
 								[Const:Int] 4
 					&
 					[Const:Int] 16711935
 			[Binop:Int]
-				[Local j(6673):Int:Int]
+				[Local j(6838):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j(6673):Int:Int]
+							[Local j(6838):Int:Int]
 							^
 							[Binop:Int]
-								[Local j(6673):Int:Int]
+								[Local j(6838):Int:Int]
 								>>
 								[Const:Int] 8
 					&
 					[Const:Int] 65535
-			[Var j1<6675>(VAssigned):Int]
+			[Var j1<6840>(VAssigned):Int]
 				[Binop:Int]
-					[Local this1(6672):Int:Int]
+					[Local this1(6837):Int:Int]
 					>>
 					[Const:Int] 1
 			[Binop:Int]
-				[Local j1(6675):Int:Int]
+				[Local j1(6840):Int:Int]
 				&=
 				[Const:Int] 1431655765
 			[Binop:Int]
-				[Local j1(6675):Int:Int]
+				[Local j1(6840):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j1(6675):Int:Int]
+							[Local j1(6840):Int:Int]
 							^
 							[Binop:Int]
-								[Local j1(6675):Int:Int]
+								[Local j1(6840):Int:Int]
 								>>
 								[Const:Int] 1
 					&
 					[Const:Int] 858993459
 			[Binop:Int]
-				[Local j1(6675):Int:Int]
+				[Local j1(6840):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j1(6675):Int:Int]
+							[Local j1(6840):Int:Int]
 							^
 							[Binop:Int]
-								[Local j1(6675):Int:Int]
+								[Local j1(6840):Int:Int]
 								>>
 								[Const:Int] 2
 					&
 					[Const:Int] 252645135
 			[Binop:Int]
-				[Local j1(6675):Int:Int]
+				[Local j1(6840):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j1(6675):Int:Int]
+							[Local j1(6840):Int:Int]
 							^
 							[Binop:Int]
-								[Local j1(6675):Int:Int]
+								[Local j1(6840):Int:Int]
 								>>
 								[Const:Int] 4
 					&
 					[Const:Int] 16711935
 			[Binop:Int]
-				[Local j1(6675):Int:Int]
+				[Local j1(6840):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local j1(6675):Int:Int]
+							[Local j1(6840):Int:Int]
 							^
 							[Binop:Int]
-								[Local j1(6675):Int:Int]
+								[Local j1(6840):Int:Int]
 								>>
 								[Const:Int] 8
 					&
 					[Const:Int] 65535
-			[Var p_x<7136>(VAssigned):Int] [Local j(6673):Int:Int]
-			[Var p_y<7137>(VAssigned):Int] [Local j1(6675):Int:Int]
+			[Var p_x<7325>(VAssigned):Int] [Local j(6838):Int:Int]
+			[Var p_y<7326>(VAssigned):Int] [Local j1(6840):Int:Int]
 			[Call:Void]
 				[Field:(x : Float, y : Float) -> Void]
-					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(6829):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:(x : Float, y : Float) -> Void]
 						CanvasRenderingContext2D
 						moveTo:(x : Float, y : Float) -> Void
@@ -300,189 +300,189 @@ class mortonHx.Test {
 					[Binop:Int]
 						[Const:Int] 40
 						*
-						[Local p_x(7136):Int:Int]
+						[Local p_x(7325):Int:Int]
 					+
 					[Const:Int] 2
 				[Binop:Int]
 					[Binop:Int]
 						[Const:Int] 40
 						*
-						[Local p_y(7137):Int:Int]
+						[Local p_y(7326):Int:Int]
 					+
 					[Const:Int] 2
-			[Var tot<6682>(VUsedByTyper):Int]
+			[Var tot<6847>(VUsedByTyper):Int]
 				[Binop:Int]
 					[Binop:Int]
 						[Binop:Int]
-							[Local wid(6668):Int:Int]
+							[Local wid(6833):Int:Int]
 							*
-							[Local hi(6669):Int:Int]
+							[Local hi(6834):Int:Int]
 						*
 						[Const:Int] 40
 					|
 					[Const:Int] 0
 			[Block:Void]
-				[Var _g<6693>(VAssigned):Int] [Const:Int] 1
-				[Var _g1<6694>:Int] [Local tot(6682):Int:Int]
+				[Var _g<6858>(VAssigned):Int] [Const:Int] 1
+				[Var _g1<6859>:Int] [Local tot(6847):Int:Int]
 				[While:Void]
 					[Parenthesis:Bool]
 						[Binop:Bool]
-							[Local _g(6693):Int:Int]
+							[Local _g(6858):Int:Int]
 							<
-							[Local _g1(6694):Int:Int]
+							[Local _g1(6859):Int:Int]
 					[Block:Dynamic]
-						[Var i<6683>(VUsedByTyper):Int]
+						[Var i<6848>(VUsedByTyper):Int]
 							[Unop:Int]
 								++
 								Postfix
-								[Local _g(6693):Int:Int]
-						[Var this1<6686>:Int]
+								[Local _g(6858):Int:Int]
+						[Var this1<6851>:Int]
 							[Cast:mortonHx.Morton2D]
-								[Local i(6683):Int:Int]
+								[Local i(6848):Int:Int]
 								[TypeExpr Int:mortonHx.Morton2D]
-						[Var j<6687>(VAssigned):Int] [Local this1(6686):Int:Int]
+						[Var j<6852>(VAssigned):Int] [Local this1(6851):Int:Int]
 						[Binop:Int]
-							[Local j(6687):Int:Int]
+							[Local j(6852):Int:Int]
 							&=
 							[Const:Int] 1431655765
 						[Binop:Int]
-							[Local j(6687):Int:Int]
+							[Local j(6852):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j(6687):Int:Int]
+										[Local j(6852):Int:Int]
 										^
 										[Binop:Int]
-											[Local j(6687):Int:Int]
+											[Local j(6852):Int:Int]
 											>>
 											[Const:Int] 1
 								&
 								[Const:Int] 858993459
 						[Binop:Int]
-							[Local j(6687):Int:Int]
+							[Local j(6852):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j(6687):Int:Int]
+										[Local j(6852):Int:Int]
 										^
 										[Binop:Int]
-											[Local j(6687):Int:Int]
+											[Local j(6852):Int:Int]
 											>>
 											[Const:Int] 2
 								&
 								[Const:Int] 252645135
 						[Binop:Int]
-							[Local j(6687):Int:Int]
+							[Local j(6852):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j(6687):Int:Int]
+										[Local j(6852):Int:Int]
 										^
 										[Binop:Int]
-											[Local j(6687):Int:Int]
+											[Local j(6852):Int:Int]
 											>>
 											[Const:Int] 4
 								&
 								[Const:Int] 16711935
 						[Binop:Int]
-							[Local j(6687):Int:Int]
+							[Local j(6852):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j(6687):Int:Int]
+										[Local j(6852):Int:Int]
 										^
 										[Binop:Int]
-											[Local j(6687):Int:Int]
+											[Local j(6852):Int:Int]
 											>>
 											[Const:Int] 8
 								&
 								[Const:Int] 65535
-						[Var j1<6689>(VAssigned):Int]
+						[Var j1<6854>(VAssigned):Int]
 							[Binop:Int]
-								[Local this1(6686):Int:Int]
+								[Local this1(6851):Int:Int]
 								>>
 								[Const:Int] 1
 						[Binop:Int]
-							[Local j1(6689):Int:Int]
+							[Local j1(6854):Int:Int]
 							&=
 							[Const:Int] 1431655765
 						[Binop:Int]
-							[Local j1(6689):Int:Int]
+							[Local j1(6854):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j1(6689):Int:Int]
+										[Local j1(6854):Int:Int]
 										^
 										[Binop:Int]
-											[Local j1(6689):Int:Int]
+											[Local j1(6854):Int:Int]
 											>>
 											[Const:Int] 1
 								&
 								[Const:Int] 858993459
 						[Binop:Int]
-							[Local j1(6689):Int:Int]
+							[Local j1(6854):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j1(6689):Int:Int]
+										[Local j1(6854):Int:Int]
 										^
 										[Binop:Int]
-											[Local j1(6689):Int:Int]
+											[Local j1(6854):Int:Int]
 											>>
 											[Const:Int] 2
 								&
 								[Const:Int] 252645135
 						[Binop:Int]
-							[Local j1(6689):Int:Int]
+							[Local j1(6854):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j1(6689):Int:Int]
+										[Local j1(6854):Int:Int]
 										^
 										[Binop:Int]
-											[Local j1(6689):Int:Int]
+											[Local j1(6854):Int:Int]
 											>>
 											[Const:Int] 4
 								&
 								[Const:Int] 16711935
 						[Binop:Int]
-							[Local j1(6689):Int:Int]
+							[Local j1(6854):Int:Int]
 							=
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Local j1(6689):Int:Int]
+										[Local j1(6854):Int:Int]
 										^
 										[Binop:Int]
-											[Local j1(6689):Int:Int]
+											[Local j1(6854):Int:Int]
 											>>
 											[Const:Int] 8
 								&
 								[Const:Int] 65535
-						[Var p_x<7145>(VAssigned):Int] [Local j(6687):Int:Int]
-						[Var p_y<7146>(VAssigned):Int] [Local j1(6689):Int:Int]
+						[Var p_x<7334>(VAssigned):Int] [Local j(6852):Int:Int]
+						[Var p_y<7335>(VAssigned):Int] [Local j1(6854):Int:Int]
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
 									[Binop:Bool]
-										[Local p_x(7145):Int:Int]
+										[Local p_x(7334):Int:Int]
 										<
-										[Local wid(6668):Int:Int]
+										[Local wid(6833):Int:Int]
 									&&
 									[Binop:Bool]
-										[Local p_y(7146):Int:Int]
+										[Local p_y(7335):Int:Int]
 										<
-										[Local hi(6669):Int:Int]
+										[Local hi(6834):Int:Int]
 							[Then:Void] [Call:Void]
 								[Field:(x : Float, y : Float) -> Void]
-									[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+									[Local ctx(6829):CanvasRenderingContext2D:CanvasRenderingContext2D]
 									[FInstance:(x : Float, y : Float) -> Void]
 										CanvasRenderingContext2D
 										lineTo:(x : Float, y : Float) -> Void
@@ -490,102 +490,102 @@ class mortonHx.Test {
 									[Binop:Int]
 										[Const:Int] 40
 										*
-										[Local p_x(7145):Int:Int]
+										[Local p_x(7334):Int:Int]
 									+
 									[Const:Int] 2
 								[Binop:Int]
 									[Binop:Int]
 										[Const:Int] 40
 										*
-										[Local p_y(7146):Int:Int]
+										[Local p_y(7335):Int:Int]
 									+
 									[Const:Int] 2
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(6664):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(6829):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						stroke:() -> Void
 
 	static function drawGrid[Function:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
-		[Arg ctx<6658>(VUsedByTyper):CanvasRenderingContext2D]
-		[Arg width<6659>(VUsedByTyper):Int]
-		[Arg height<6660>(VUsedByTyper):Int]
-		[Arg step<6661>(VUsedByTyper):Int]
+		[Arg ctx<6823>(VUsedByTyper):CanvasRenderingContext2D]
+		[Arg width<6824>(VUsedByTyper):Int]
+		[Arg height<6825>(VUsedByTyper):Int]
+		[Arg step<6826>(VUsedByTyper):Int]
 		[Block:Void]
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(6823):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						beginPath:() -> Void
 			[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 				[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
-					[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(6823):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 						CanvasRenderingContext2D
 						strokeStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
 				=
 				[Const:String] "#CCCCCC"
-			[Var x<6662>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+			[Var x<6827>(VUsedByTyper VAssigned):Int] [Const:Int] 0
 			[While:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local x(6662):Int:Int]
+						[Local x(6827):Int:Int]
 						<=
-						[Local width(6659):Int:Int]
+						[Local width(6824):Int:Int]
 				[Block:Dynamic]
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(6823):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								moveTo:(x : Float, y : Float) -> Void
-						[Local x(6662):Int:Int]
+						[Local x(6827):Int:Int]
 						[Const:Int] 0
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(6823):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								lineTo:(x : Float, y : Float) -> Void
-						[Local x(6662):Int:Int]
-						[Local height(6660):Int:Int]
+						[Local x(6827):Int:Int]
+						[Local height(6825):Int:Int]
 					[Binop:Int]
-						[Local x(6662):Int:Int]
+						[Local x(6827):Int:Int]
 						+=
-						[Local step(6661):Int:Int]
-			[Var y<6663>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+						[Local step(6826):Int:Int]
+			[Var y<6828>(VUsedByTyper VAssigned):Int] [Const:Int] 0
 			[While:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local y(6663):Int:Int]
+						[Local y(6828):Int:Int]
 						<=
-						[Local height(6660):Int:Int]
+						[Local height(6825):Int:Int]
 				[Block:Dynamic]
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(6823):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								moveTo:(x : Float, y : Float) -> Void
 						[Const:Int] 0
-						[Local y(6663):Int:Int]
+						[Local y(6828):Int:Int]
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(6823):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								lineTo:(x : Float, y : Float) -> Void
-						[Local width(6659):Int:Int]
-						[Local y(6663):Int:Int]
+						[Local width(6824):Int:Int]
+						[Local y(6828):Int:Int]
 					[Binop:Int]
-						[Local y(6663):Int:Int]
+						[Local y(6828):Int:Int]
 						+=
-						[Local step(6661):Int:Int]
+						[Local step(6826):Int:Int]
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(6658):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(6823):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						stroke:() -> Void
