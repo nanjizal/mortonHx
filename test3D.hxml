@@ -1,0 +1,12 @@
+-cp src
+-js testMorton3D.js
+
+-main mortonHx.Test3Danimate
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="testMorton3D.js"></script></body></html>' >testMorton3D.html
+# open html on mac os.
+-cmd open testMorton3D.html
