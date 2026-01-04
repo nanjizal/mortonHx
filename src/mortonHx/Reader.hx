@@ -3,7 +3,7 @@ public class Reader {
   var x: Int = 0; 
   var y: Int = 0;
   public static inline function fromWriter( w: Writer ): Reader {
-    return new Reader( w.x, w.y );
+    return new Reader( w.v );
   }
   public inline function new( k: Int ){
     x = compact1By1( k );
