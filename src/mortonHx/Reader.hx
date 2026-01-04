@@ -2,15 +2,12 @@ import mortonHx.Writer;
 public class Reader {
   var x: Int = 0; 
   var y: Int = 0;
-  public static inline function fromWriter( v: Writer ): Reader {
-    return fromXY( morton.x, morton.y );
+  public static inline function fromWriter( w: Writer ): Reader {
+    return new Reader( w.x, w.y );
   }
-  public static inline function fromXY( x: Int, y: Int ): Reader {
-    return new Reader( x, y );
-  }
-  public inline function new( x: Int, y: Int ){
-    x = compact1By1( morton );
-    y = compact1By1( morton >> 1 );
+  public inline function new( k: Int ){
+    x = compact1By1( k );
+    y = compact1By1( k >> 1 );
   }
   function inline compact1By1(j:Int):Int {
     j &= 0x55555555;
