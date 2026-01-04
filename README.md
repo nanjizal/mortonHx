@@ -9,9 +9,12 @@ var p = new Point2DInt( 100, 100 );
 var m: Mordon2D = p.toMordon2D();
 ```  
   
-[canvas test 800x600](https://nanjizal.github.io/mortonHx/testMorton.html) 
+[canvas test 800x600](https://nanjizal.github.io/mortonHx/testMorton.html)  
+  
+[canvas test Isometric 3D](https://nanjizal.github.io/mortonHx/testMorton3D.html)  
   
 <img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/d880e8c3-d6f0-421e-82d7-79928d55454d" />
+
 
 [dox](https://nanjizal.github.io/mortonHx/pages/index.html)
   

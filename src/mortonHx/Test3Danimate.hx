@@ -5,7 +5,7 @@ import js.Browser;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
 import mortonHx.Morton3D; // Ensure this matches your file structure
-
+@:dox(hide)
 class Test3Danimate {
     static inline var STEP:Int = 10; // Size of the grid cells
     static inline var CUBE_SIZE:Int = 16; // Render an 8x8x8 Morton Curve
