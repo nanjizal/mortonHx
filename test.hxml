@@ -1,0 +1,12 @@
+-cp src
+-js testMorton.js
+
+-main mortonHx.Test
+-D js-flatten 
+-dce full
+#--no-traces
+--next
+
+-cmd echo '<!DOCTYPE html><meta charset="UTF-8"><html><body><script src="testMorton.js"></script></body></html>' >testMorton.html
+# open html on mac os.
+-cmd open testMorton.html
