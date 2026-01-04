@@ -3,9 +3,9 @@ public class Reader {
   var x: Int = 0; 
   var y: Int = 0;
   public static inline function fromWriter( v: Writer ): Reader {
-    return fromWriterXY( morton.x, morton.y );
+    return fromXY( morton.x, morton.y );
   }
-  public static inline function fromWriterXY( morton: Int ): Reader {
+  public static inline function fromXY( x: Int, y: Int ): Reader {
     return new Reader( x, y );
   }
   public inline function new( x: Int, y: Int ){
