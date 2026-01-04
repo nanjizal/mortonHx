@@ -2,7 +2,7 @@ import mortonHx.Writer;
 public class Reader {
   var x: Int = 0; 
   var y: Int = 0;
-  
+  final scaler = 32767;
   public static inline function fromWriter( w: Writer ): Reader {
     return new Reader( w.v );
   }
