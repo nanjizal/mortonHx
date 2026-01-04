@@ -1,0 +1,12 @@
+{
+    "name"         : "mortonHx",
+    "url"          : "https://github.com/nanjizal/mortonHx#mortonHx",
+    "license"      : "MIT",
+    "tags"         : ["cross", "Morton Code", "2D" ],
+    "description"  : "mortonHx provide a way to hash x,y for quick access",
+    "version"      : "0.0.1-alpha",
+    "releasenote"  : "See https://github.com/nanjizal/mortonHx/blob/master/CHANGELOG.md",
+    "contributors" : ["Nanjizal"],
+    "classPath"    : "src/",
+    "dependencies" : {}
+}
