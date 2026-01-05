@@ -117,7 +117,7 @@ abstract Morton3D(Int) from Int to Int {
 
         // Check Y dimension (bits 1, 4, 7...)
         var py = pi & maskY3d;
-        if (py < (mi & maskY2d) || py > (ma & maskY2d)) return false;
+        if (py < (mi & maskY3d) || py > (ma & maskY3d)) return false;
 
         // Check Z dimension (bits 2, 5, 8...)
         var pz = pi & maskZ3d;

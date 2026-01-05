@@ -37638,6 +37638,17 @@
 		</f>
 		<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
 	</gte>
+	<isInsideBox public="1" get="inline" set="null" line="108" static="1">
+		<f a="p:min:max">
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="Bool"/>
+		</f>
+		<haxe_doc>* Checks if point 'p' is inside the 3D box defined by 'min' and 'max' without de-interleaving.
+        * This is used during a linear scan to filter out points that fall within the 
+        * Morton range [min, max] but are outside the spatial 3D volume.</haxe_doc>
+	</isInsideBox>
 </class></impl>
 	</abstract>
 	<class path="mortonHx._Morton3D.Morton3D_Impl_" params="" file="src/mortonHx/Morton3D.hx" private="1" module="mortonHx.Morton3D" final="1">
@@ -37743,6 +37754,17 @@
 			</f>
 			<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
 		</gte>
+		<isInsideBox public="1" get="inline" set="null" line="108" static="1">
+			<f a="p:min:max">
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc>* Checks if point 'p' is inside the 3D box defined by 'min' and 'max' without de-interleaving.
+        * This is used during a linear scan to filter out points that fall within the 
+        * Morton range [min, max] but are outside the spatial 3D volume.</haxe_doc>
+		</isInsideBox>
 	</class>
 	<abstract path="mortonHx.SortableArray" params="T" file="src/mortonHx/SortableArray.hx">
 		<from><icast><c path="Array"><c path="mortonHx.SortableArray.T"/></c></icast></from>

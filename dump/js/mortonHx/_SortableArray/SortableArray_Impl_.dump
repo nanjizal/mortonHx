@@ -2,146 +2,146 @@ private class mortonHx._SortableArray.SortableArray_Impl_ {
 
 	@:noCompletion
 	public static inline function _new[Function:(a : Array<mortonHx.SortableArray.T>) -> mortonHx.SortableArray<mortonHx.SortableArray.T>]
-		[Arg a<6789>(VUsedByTyper):Array<mortonHx.SortableArray.T>]
-		[Block:Dynamic] [Return:Dynamic] [Cast:mortonHx.SortableArray<mortonHx.SortableArray.T>] [Local a(6789):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+		[Arg a<6798>(VUsedByTyper):Array<mortonHx.SortableArray.T>]
+		[Block:Dynamic] [Return:Dynamic] [Cast:mortonHx.SortableArray<mortonHx.SortableArray.T>] [Local a(6798):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
 
 	public static function sortWithOrder[Function:(this : Array<mortonHx.SortableArray.T>, f : ((mortonHx.SortableArray.T, mortonHx.SortableArray.T) -> Int)) -> Array<Int>]
-		[Arg this1<6791>(VUsedByTyper VCaptured):Array<mortonHx.SortableArray.T>]
-		[Arg f<6792>(VUsedByTyper VCaptured):(mortonHx.SortableArray.T, mortonHx.SortableArray.T) -> Int]
+		[Arg this1<6800>(VUsedByTyper VCaptured):Array<mortonHx.SortableArray.T>]
+		[Arg f<6801>(VUsedByTyper VCaptured):(mortonHx.SortableArray.T, mortonHx.SortableArray.T) -> Int]
 		[Block:Dynamic]
-			[Var len<6793>(VUsedByTyper):Int]
+			[Var len<6802>(VUsedByTyper):Int]
 				[Field:Int]
-					[Local this1(6791):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+					[Local this1(6800):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
 					[FInstance:Int]
 						Array<mortonHx.SortableArray.T>
 						length:Int
-			[Var order<6794>(VUsedByTyper VAssigned):Array<Int>] [New:Array<Int>] Array<Int>
-			[Var _g<6795>:Array<Int>] [ArrayDecl:Array<Int>]
+			[Var order<6803>(VUsedByTyper VAssigned):Array<Int>] [New:Array<Int>] Array<Int>
+			[Var _g<6804>:Array<Int>] [ArrayDecl:Array<Int>]
 			[Block:Void]
-				[Var _g1<6797>(VAssigned):Int] [Const:Int] 0
-				[Var _g2<6798>:Int] [Local len(6793):Int:Int]
+				[Var _g1<6806>(VAssigned):Int] [Const:Int] 0
+				[Var _g2<6807>:Int] [Local len(6802):Int:Int]
 				[While:Void]
 					[Parenthesis:Bool]
 						[Binop:Bool]
-							[Local _g1(6797):Int:Int]
+							[Local _g1(6806):Int:Int]
 							<
-							[Local _g2(6798):Int:Int]
+							[Local _g2(6807):Int:Int]
 					[Block:Dynamic]
-						[Var i<6796>(VUsedByTyper):Int]
+						[Var i<6805>(VUsedByTyper):Int]
 							[Unop:Int]
 								++
 								Postfix
-								[Local _g1(6797):Int:Int]
+								[Local _g1(6806):Int:Int]
 						[Call:Int]
 							[Field:(x : Int) -> Int]
-								[Local _g(6795):Array<Int>:Array<Int>]
+								[Local _g(6804):Array<Int>:Array<Int>]
 								[FInstance:(x : Int) -> Int]
 									Array<Int>
 									push:(x : Array.T) -> Int
-							[Local i(6796):Int:Int]
+							[Local i(6805):Int:Int]
 			[Binop:Array<Int>]
-				[Local order(6794):Array<Int>:Array<Int>]
+				[Local order(6803):Array<Int>:Array<Int>]
 				=
-				[Local _g(6795):Array<Int>:Array<Int>]
+				[Local _g(6804):Array<Int>:Array<Int>]
 			[Call:Void]
 				[Field:(f : ((Int, Int) -> Int)) -> Void]
-					[Local order(6794):Array<Int>:Array<Int>]
+					[Local order(6803):Array<Int>:Array<Int>]
 					[FInstance:(f : ((Int, Int) -> Int)) -> Void]
 						Array<Int>
 						sort:(f : ((Array.T, Array.T) -> Int)) -> Void
 				[Function:(idxA : Int, idxB : Int) -> Int]
-					[Arg idxA<6799>(VUsedByTyper):Int]
-					[Arg idxB<6800>(VUsedByTyper):Int]
+					[Arg idxA<6808>(VUsedByTyper):Int]
+					[Arg idxB<6809>(VUsedByTyper):Int]
 					[Block:Dynamic]
 						[Return:Dynamic]
 							[Call:Int]
-								[Local f(6792):(mortonHx.SortableArray.T, mortonHx.SortableArray.T) -> Int:(mortonHx.SortableArray.T, mortonHx.SortableArray.T) -> Int]
+								[Local f(6801):(mortonHx.SortableArray.T, mortonHx.SortableArray.T) -> Int:(mortonHx.SortableArray.T, mortonHx.SortableArray.T) -> Int]
 								[Array:mortonHx.SortableArray.T]
-									[Local this1(6791):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
-									[Local idxA(6799):Int:Int]
+									[Local this1(6800):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+									[Local idxA(6808):Int:Int]
 								[Array:mortonHx.SortableArray.T]
-									[Local this1(6791):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
-									[Local idxB(6800):Int:Int]
-			[Var temp<6803>(VUsedByTyper):Array<mortonHx.SortableArray.T>]
+									[Local this1(6800):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+									[Local idxB(6809):Int:Int]
+			[Var temp<6812>(VUsedByTyper):Array<mortonHx.SortableArray.T>]
 				[Meta:Array<mortonHx.SortableArray.T>]
 					:pure
 					[Call:Array<mortonHx.SortableArray.T>]
 						[Field:() -> Array<mortonHx.SortableArray.T>]
-							[Cast:{ slice : () -> Array<mortonHx.SortableArray.T> }] [Local this1(6791):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+							[Cast:{ slice : () -> Array<mortonHx.SortableArray.T> }] [Local this1(6800):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
 							[FAnon:() -> Array<mortonHx.SortableArray.T>] slice:() -> Array<mortonHx.SortableArray.T>
 			[Block:Void]
-				[Var _g<6805>(VAssigned):Int] [Const:Int] 0
-				[Var _g1<6806>:Int] [Local len(6793):Int:Int]
+				[Var _g<6814>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<6815>:Int] [Local len(6802):Int:Int]
 				[While:Void]
 					[Parenthesis:Bool]
 						[Binop:Bool]
-							[Local _g(6805):Int:Int]
+							[Local _g(6814):Int:Int]
 							<
-							[Local _g1(6806):Int:Int]
+							[Local _g1(6815):Int:Int]
 					[Block:Dynamic]
-						[Var i<6804>(VUsedByTyper):Int]
+						[Var i<6813>(VUsedByTyper):Int]
 							[Unop:Int]
 								++
 								Postfix
-								[Local _g(6805):Int:Int]
+								[Local _g(6814):Int:Int]
 						[Binop:mortonHx.SortableArray.T]
 							[Array:mortonHx.SortableArray.T]
-								[Local this1(6791):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
-								[Local i(6804):Int:Int]
+								[Local this1(6800):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+								[Local i(6813):Int:Int]
 							=
 							[Array:mortonHx.SortableArray.T]
-								[Local temp(6803):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+								[Local temp(6812):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
 								[Array:Int]
-									[Local order(6794):Array<Int>:Array<Int>]
-									[Local i(6804):Int:Int]
-			[Return:Dynamic] [Local order(6794):Array<Int>:Array<Int>]
+									[Local order(6803):Array<Int>:Array<Int>]
+									[Local i(6813):Int:Int]
+			[Return:Dynamic] [Local order(6803):Array<Int>:Array<Int>]
 
 	public static function findStartIndex[Function:(this : Array<mortonHx.SortableArray.T>, target : mortonHx.SortableArray.T) -> Int]
-		[Arg this1<6807>:Array<mortonHx.SortableArray.T>]
-		[Arg target<6808>(VUsedByTyper):mortonHx.SortableArray.T]
+		[Arg this1<6816>:Array<mortonHx.SortableArray.T>]
+		[Arg target<6817>(VUsedByTyper):mortonHx.SortableArray.T]
 		[Block:Dynamic]
-			[Var low<6809>(VUsedByTyper VAssigned):Int] [Const:Int] 0
-			[Var high<6810>(VUsedByTyper VAssigned):Int]
+			[Var low<6818>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+			[Var high<6819>(VUsedByTyper VAssigned):Int]
 				[Field:Int]
-					[Local this1(6807):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+					[Local this1(6816):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
 					[FInstance:Int]
 						Array<mortonHx.SortableArray.T>
 						length:Int
 			[While:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local low(6809):Int:Int]
+						[Local low(6818):Int:Int]
 						<
-						[Local high(6810):Int:Int]
+						[Local high(6819):Int:Int]
 				[Block:Dynamic]
-					[Var mid<6811>(VUsedByTyper):Int]
+					[Var mid<6820>(VUsedByTyper):Int]
 						[Binop:Int]
 							[Binop:Int]
-								[Local low(6809):Int:Int]
+								[Local low(6818):Int:Int]
 								+
-								[Local high(6810):Int:Int]
+								[Local high(6819):Int:Int]
 							>>>
 							[Const:Int] 1
-					[Var v<6812>(VUsedByTyper):mortonHx.SortableArray.T]
+					[Var v<6821>(VUsedByTyper):mortonHx.SortableArray.T]
 						[Array:mortonHx.SortableArray.T]
-							[Local this1(6807):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
-							[Local mid(6811):Int:Int]
+							[Local this1(6816):Array<mortonHx.SortableArray.T>:Array<mortonHx.SortableArray.T>]
+							[Local mid(6820):Int:Int]
 					[If:Void]
 						[Parenthesis:Bool]
 							[Binop:Bool]
-								[Local v(6812):mortonHx.SortableArray.T:mortonHx.SortableArray.T]
+								[Local v(6821):mortonHx.SortableArray.T:mortonHx.SortableArray.T]
 								<
-								[Local target(6808):mortonHx.SortableArray.T:mortonHx.SortableArray.T]
+								[Local target(6817):mortonHx.SortableArray.T:mortonHx.SortableArray.T]
 						[Then:Int] [Binop:Int]
-							[Local low(6809):Int:Int]
+							[Local low(6818):Int:Int]
 							=
 							[Binop:Int]
-								[Local mid(6811):Int:Int]
+								[Local mid(6820):Int:Int]
 								+
 								[Const:Int] 1
 						[Else:Int] [Binop:Int]
-							[Local high(6810):Int:Int]
+							[Local high(6819):Int:Int]
 							=
-							[Local mid(6811):Int:Int]
-			[Return:Dynamic] [Local low(6809):Int:Int]
+							[Local mid(6820):Int:Int]
+			[Return:Dynamic] [Local low(6818):Int:Int]
 }

@@ -699,4 +699,92 @@ private class mortonHx._Morton3D.Morton3D_Impl_ {
 					[Cast:Int] [Local a(6643):mortonHx.Morton3D:mortonHx.Morton3D]
 					>=
 					[Cast:Int] [Local b(6644):mortonHx.Morton3D:mortonHx.Morton3D]
+
+	public static inline function isInsideBox[Function:(p : mortonHx.Morton3D, min : mortonHx.Morton3D, max : mortonHx.Morton3D) -> Bool]
+		[Arg p<6645>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg min<6646>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg max<6647>(VUsedByTyper):mortonHx.Morton3D]
+		[Block:Dynamic]
+			[Var pi<6648>(VUsedByTyper):Int] [Cast:Int] [Local p(6645):mortonHx.Morton3D:mortonHx.Morton3D]
+			[Var mi<6649>(VUsedByTyper):Int] [Cast:Int] [Local min(6646):mortonHx.Morton3D:mortonHx.Morton3D]
+			[Var ma<6650>(VUsedByTyper):Int] [Cast:Int] [Local max(6647):mortonHx.Morton3D:mortonHx.Morton3D]
+			[Var px<6651>(VUsedByTyper):Int]
+				[Binop:Int]
+					[Local pi(6648):Int:Int]
+					&
+					[Const:Int] 153391689
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Binop:Bool]
+							[Local px(6651):Int:Int]
+							<
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Local mi(6649):Int:Int]
+									&
+									[Const:Int] 153391689
+						||
+						[Binop:Bool]
+							[Local px(6651):Int:Int]
+							>
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Local ma(6650):Int:Int]
+									&
+									[Const:Int] 153391689
+				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Var py<6652>(VUsedByTyper):Int]
+				[Binop:Int]
+					[Local pi(6648):Int:Int]
+					&
+					[Const:Int] 306783378
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Binop:Bool]
+							[Local py(6652):Int:Int]
+							<
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Local mi(6649):Int:Int]
+									&
+									[Const:Int] 306783378
+						||
+						[Binop:Bool]
+							[Local py(6652):Int:Int]
+							>
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Local ma(6650):Int:Int]
+									&
+									[Const:Int] 306783378
+				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Var pz<6653>(VUsedByTyper):Int]
+				[Binop:Int]
+					[Local pi(6648):Int:Int]
+					&
+					[Const:Int] 613566756
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Binop:Bool]
+							[Local pz(6653):Int:Int]
+							<
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Local mi(6649):Int:Int]
+									&
+									[Const:Int] 613566756
+						||
+						[Binop:Bool]
+							[Local pz(6653):Int:Int]
+							>
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Local ma(6650):Int:Int]
+									&
+									[Const:Int] 613566756
+				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Return:Dynamic] [Const:Bool] true
 }
