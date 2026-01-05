@@ -1,0 +1,9 @@
+@:used
+abstract mortonHx.SortableArray<{
+	name = T;
+	class = mortonHx.SortableArray.T;
+	host = TPHType;
+	type = TInst(mortonHx.SortableArray.T, []);
+	constraints = [TAbstract(Float, [])];
+	default = None;
+}> from Array<mortonHx.SortableArray.T> to Array<mortonHx.SortableArray.T> {}

@@ -38,6 +38,39 @@
 
 		If `sep` is null, the result is unspecified.</haxe_doc>
 		</join>
+		<push public="1" set="method">
+			<f a="x">
+				<c path="Array.T"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Adds the element `x` at the end of `this` Array and returns the new
+		length of `this` Array.
+
+		This operation modifies `this` Array in place.
+
+		`this.length` increases by 1.</haxe_doc>
+		</push>
+		<sort public="1" set="method">
+			<f a="f">
+				<f a=":">
+					<c path="Array.T"/>
+					<c path="Array.T"/>
+					<x path="Int"/>
+				</f>
+				<x path="Void"/>
+			</f>
+			<haxe_doc><![CDATA[Sorts `this` Array according to the comparison function `f`, where
+		`f(x,y)` returns 0 if x == y, a positive Int if x > y and a
+		negative Int if x < y.
+
+		This operation modifies `this` Array in place.
+
+		The sort operation is not guaranteed to be stable, which means that the
+		order of equal elements may not be retained. For a stable Array sorting
+		algorithm, `haxe.ds.ArraySort.sort()` can be used instead.
+
+		If `f` is null, the result is unspecified.]]></haxe_doc>
+		</sort>
 		<iterator public="1" get="inline" set="null" line="88">
 			<f a=""><c path="haxe.iterators.ArrayIterator"><c path="Array.T"/></c></f>
 			<meta><m n=":runtime"/></meta>
@@ -37226,11 +37259,15 @@
 		<this><x path="Int"/></this>
 		<to><icast><x path="Int"/></icast></to>
 		<impl><class path="mortonHx._Morton2D.Morton2D_Impl_" params="" file="src/mortonHx/Morton2D.hx" private="1" module="mortonHx.Morton2D" final="1">
-	<size public="1" get="inline" set="null" expr="32767" line="26" static="1">
-		<x path="Int"/>
-		<meta><m n=":value"><e>32767</e></m></meta>
-	</size>
-	<_new public="1" get="inline" set="null" line="27" static="1">
+	<pack16 get="inline" set="null" expr="32767.0" line="27" static="1">
+		<x path="Float"/>
+		<meta><m n=":value"><e>32767.0</e></m></meta>
+	</pack16>
+	<packFloatToInt16 public="1" set="method" line="28" static="1"><f a="v">
+	<x path="Float"/>
+	<x path="Int"/>
+</f></packFloatToInt16>
+	<_new public="1" get="inline" set="null" line="37" static="1">
 		<f a="x:y">
 			<x path="Int"/>
 			<x path="Int"/>
@@ -37238,37 +37275,37 @@
 		</f>
 		<meta><m n=":noCompletion"/></meta>
 	</_new>
-	<part1By1 get="inline" set="null" line="30" static="1"><f a="this:v">
+	<part1By1 get="inline" set="null" line="40" static="1"><f a="this:v">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></part1By1>
-	<decode public="1" get="inline" set="null" line="38" static="1"><f a="this">
+	<decode public="1" get="inline" set="null" line="48" static="1"><f a="this">
 	<x path="Int"/>
 	<x path="mortonHx.Point2DInt"/>
 </f></decode>
-	<compact1By1 public="1" get="inline" set="null" line="41" static="1"><f a="this:j">
+	<compact1By1 public="1" get="inline" set="null" line="51" static="1"><f a="this:j">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></compact1By1>
-	<maskX2d get="inline" set="null" expr="0x55555555" line="52" static="1">
+	<maskX2d get="inline" set="null" expr="0x55555555" line="62" static="1">
 		<x path="Int"/>
 		<meta><m n=":value"><e>0x55555555</e></m></meta>
 	</maskX2d>
-	<maskY2d get="inline" set="null" expr="0xAAAAAAAA" line="54" static="1">
+	<maskY2d get="inline" set="null" expr="0xAAAAAAAA" line="65" static="1">
 		<x path="Int"/>
 		<meta><m n=":value"><e>0xAAAAAAAA</e></m></meta>
 	</maskY2d>
-	<maskNotX2d get="inline" set="null" expr="~0x55555555" line="57" static="1">
+	<maskNotX2d get="inline" set="null" expr="~0x55555555" line="68" static="1">
 		<x path="Int"/>
 		<meta><m n=":value"><e>~0x55555555</e></m></meta>
 	</maskNotX2d>
-	<maskNotY2d get="inline" set="null" expr="~0xAAAAAAAA" line="58" static="1">
+	<maskNotY2d get="inline" set="null" expr="~0xAAAAAAAA" line="69" static="1">
 		<x path="Int"/>
 		<meta><m n=":value"><e>~0xAAAAAAAA</e></m></meta>
 	</maskNotY2d>
-	<add public="1" get="inline" set="null" line="64" static="1">
+	<add public="1" get="inline" set="null" line="75" static="1">
 		<f a="base:offset">
 			<x path="mortonHx.Morton2D"/>
 			<x path="mortonHx.Morton2D"/>
@@ -37278,7 +37315,7 @@
 		<haxe_doc>* Overloads the '+' operator for bitwise Morton addition.
      * Adds the coordinates interleaved, adding 'offset' to the 'base'.</haxe_doc>
 	</add>
-	<subtract public="1" get="inline" set="null" line="76" static="1">
+	<subtract public="1" get="inline" set="null" line="87" static="1">
 		<f a="base:offset">
 			<x path="mortonHx.Morton2D"/>
 			<x path="mortonHx.Morton2D"/>
@@ -37288,14 +37325,56 @@
 		<haxe_doc>* Overloads the '-' operator for bitwise Morton subtraction.
      * Subtracts the coordinates interleaved in 'offset' from 'base'.</haxe_doc>
 	</subtract>
+	<lt get="inline" set="null" line="94" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+	</lt>
+	<gt get="inline" set="null" line="95" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+	</gt>
+	<lte get="inline" set="null" line="96" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+	</lte>
+	<gte get="inline" set="null" line="97" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton2D"/>
+			<x path="mortonHx.Morton2D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+	</gte>
+	<isInsideBox public="1" get="inline" set="null" line="100" static="1"><f a="p:min:max">
+	<x path="mortonHx.Morton2D"/>
+	<x path="mortonHx.Morton2D"/>
+	<x path="mortonHx.Morton2D"/>
+	<x path="Bool"/>
+</f></isInsideBox>
 </class></impl>
 	</abstract>
 	<class path="mortonHx._Morton2D.Morton2D_Impl_" params="" file="src/mortonHx/Morton2D.hx" private="1" module="mortonHx.Morton2D" final="1">
-		<size public="1" get="inline" set="null" expr="32767" line="26" static="1">
-			<x path="Int"/>
-			<meta><m n=":value"><e>32767</e></m></meta>
-		</size>
-		<_new public="1" get="inline" set="null" line="27" static="1">
+		<pack16 get="inline" set="null" expr="32767.0" line="27" static="1">
+			<x path="Float"/>
+			<meta><m n=":value"><e>32767.0</e></m></meta>
+		</pack16>
+		<packFloatToInt16 public="1" set="method" line="28" static="1"><f a="v">
+	<x path="Float"/>
+	<x path="Int"/>
+</f></packFloatToInt16>
+		<_new public="1" get="inline" set="null" line="37" static="1">
 			<f a="x:y">
 				<x path="Int"/>
 				<x path="Int"/>
@@ -37303,37 +37382,37 @@
 			</f>
 			<meta><m n=":noCompletion"/></meta>
 		</_new>
-		<part1By1 get="inline" set="null" line="30" static="1"><f a="this:v">
+		<part1By1 get="inline" set="null" line="40" static="1"><f a="this:v">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></part1By1>
-		<decode public="1" get="inline" set="null" line="38" static="1"><f a="this">
+		<decode public="1" get="inline" set="null" line="48" static="1"><f a="this">
 	<x path="Int"/>
 	<x path="mortonHx.Point2DInt"/>
 </f></decode>
-		<compact1By1 public="1" get="inline" set="null" line="41" static="1"><f a="this:j">
+		<compact1By1 public="1" get="inline" set="null" line="51" static="1"><f a="this:j">
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Int"/>
 </f></compact1By1>
-		<maskX2d get="inline" set="null" expr="0x55555555" line="52" static="1">
+		<maskX2d get="inline" set="null" expr="0x55555555" line="62" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>0x55555555</e></m></meta>
 		</maskX2d>
-		<maskY2d get="inline" set="null" expr="0xAAAAAAAA" line="54" static="1">
+		<maskY2d get="inline" set="null" expr="0xAAAAAAAA" line="65" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>0xAAAAAAAA</e></m></meta>
 		</maskY2d>
-		<maskNotX2d get="inline" set="null" expr="~0x55555555" line="57" static="1">
+		<maskNotX2d get="inline" set="null" expr="~0x55555555" line="68" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>~0x55555555</e></m></meta>
 		</maskNotX2d>
-		<maskNotY2d get="inline" set="null" expr="~0xAAAAAAAA" line="58" static="1">
+		<maskNotY2d get="inline" set="null" expr="~0xAAAAAAAA" line="69" static="1">
 			<x path="Int"/>
 			<meta><m n=":value"><e>~0xAAAAAAAA</e></m></meta>
 		</maskNotY2d>
-		<add public="1" get="inline" set="null" line="64" static="1">
+		<add public="1" get="inline" set="null" line="75" static="1">
 			<f a="base:offset">
 				<x path="mortonHx.Morton2D"/>
 				<x path="mortonHx.Morton2D"/>
@@ -37343,7 +37422,7 @@
 			<haxe_doc>* Overloads the '+' operator for bitwise Morton addition.
      * Adds the coordinates interleaved, adding 'offset' to the 'base'.</haxe_doc>
 		</add>
-		<subtract public="1" get="inline" set="null" line="76" static="1">
+		<subtract public="1" get="inline" set="null" line="87" static="1">
 			<f a="base:offset">
 				<x path="mortonHx.Morton2D"/>
 				<x path="mortonHx.Morton2D"/>
@@ -37353,6 +37432,44 @@
 			<haxe_doc>* Overloads the '-' operator for bitwise Morton subtraction.
      * Subtracts the coordinates interleaved in 'offset' from 'base'.</haxe_doc>
 		</subtract>
+		<lt get="inline" set="null" line="94" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+		</lt>
+		<gt get="inline" set="null" line="95" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+		</gt>
+		<lte get="inline" set="null" line="96" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+		</lte>
+		<gte get="inline" set="null" line="97" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton2D"/>
+				<x path="mortonHx.Morton2D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+		</gte>
+		<isInsideBox public="1" get="inline" set="null" line="100" static="1"><f a="p:min:max">
+	<x path="mortonHx.Morton2D"/>
+	<x path="mortonHx.Morton2D"/>
+	<x path="mortonHx.Morton2D"/>
+	<x path="Bool"/>
+</f></isInsideBox>
 	</class>
 	<class path="mortonHx.Point3DInt_" params="" file="src/mortonHx/Morton3D.hx" module="mortonHx.Morton3D">
 		<x public="1"><x path="Int"/></x>
@@ -37489,6 +37606,38 @@
 		<haxe_doc>* Overloading the '-' operator allows you to use `codeA - codeB` 
      * where both are Morton3D types.</haxe_doc>
 	</subtract>
+	<lt get="inline" set="null" line="99" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+	</lt>
+	<gt get="inline" set="null" line="100" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+	</gt>
+	<lte get="inline" set="null" line="101" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+	</lte>
+	<gte get="inline" set="null" line="102" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton3D"/>
+			<x path="mortonHx.Morton3D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+	</gte>
 </class></impl>
 	</abstract>
 	<class path="mortonHx._Morton3D.Morton3D_Impl_" params="" file="src/mortonHx/Morton3D.hx" private="1" module="mortonHx.Morton3D" final="1">
@@ -37562,6 +37711,97 @@
 			<haxe_doc>* Overloading the '-' operator allows you to use `codeA - codeB` 
      * where both are Morton3D types.</haxe_doc>
 		</subtract>
+		<lt get="inline" set="null" line="99" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+		</lt>
+		<gt get="inline" set="null" line="100" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+		</gt>
+		<lte get="inline" set="null" line="101" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+		</lte>
+		<gte get="inline" set="null" line="102" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton3D"/>
+				<x path="mortonHx.Morton3D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+		</gte>
+	</class>
+	<abstract path="mortonHx.SortableArray" params="T" file="src/mortonHx/SortableArray.hx">
+		<from><icast><c path="Array"><c path="mortonHx.SortableArray.T"/></c></icast></from>
+		<this><c path="Array"><c path="mortonHx.SortableArray.T"/></c></this>
+		<to><icast><c path="Array"><c path="mortonHx.SortableArray.T"/></c></icast></to>
+		<impl><class path="mortonHx._SortableArray.SortableArray_Impl_" params="" file="src/mortonHx/SortableArray.hx" private="1" module="mortonHx.SortableArray" final="1">
+	<_new public="1" get="inline" set="null" line="18" static="1">
+		<f a="a">
+			<c path="Array"><c path="mortonHx.SortableArray.T"/></c>
+			<x path="mortonHx.SortableArray"><c path="mortonHx.SortableArray.T"/></x>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+	</_new>
+	<sortWithOrder public="1" set="method" line="22" static="1"><f a="this:f">
+	<c path="Array"><c path="mortonHx.SortableArray.T"/></c>
+	<f a=":">
+		<c path="mortonHx.SortableArray.T"/>
+		<c path="mortonHx.SortableArray.T"/>
+		<x path="Int"/>
+	</f>
+	<c path="Array"><x path="Int"/></c>
+</f></sortWithOrder>
+	<findStartIndex public="1" set="method" line="58" static="1">
+		<f a="this:target">
+			<c path="Array"><c path="mortonHx.SortableArray.T"/></c>
+			<c path="mortonHx.SortableArray.T"/>
+			<x path="Int"/>
+		</f>
+		<haxe_doc><![CDATA[* Binary search for the first index where arr[index] >= target.
+    * Extremely fast: 20 steps for 1 million points.]]></haxe_doc>
+	</findStartIndex>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._SortableArray.SortableArray_Impl_" params="" file="src/mortonHx/SortableArray.hx" private="1" module="mortonHx.SortableArray" final="1">
+		<_new public="1" get="inline" set="null" line="18" static="1">
+			<f a="a">
+				<c path="Array"><c path="mortonHx.SortableArray.T"/></c>
+				<x path="mortonHx.SortableArray"><c path="mortonHx.SortableArray.T"/></x>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</_new>
+		<sortWithOrder public="1" set="method" line="22" static="1"><f a="this:f">
+	<c path="Array"><c path="mortonHx.SortableArray.T"/></c>
+	<f a=":">
+		<c path="mortonHx.SortableArray.T"/>
+		<c path="mortonHx.SortableArray.T"/>
+		<x path="Int"/>
+	</f>
+	<c path="Array"><x path="Int"/></c>
+</f></sortWithOrder>
+		<findStartIndex public="1" set="method" line="58" static="1">
+			<f a="this:target">
+				<c path="Array"><c path="mortonHx.SortableArray.T"/></c>
+				<c path="mortonHx.SortableArray.T"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc><![CDATA[* Binary search for the first index where arr[index] >= target.
+    * Extremely fast: 20 steps for 1 million points.]]></haxe_doc>
+		</findStartIndex>
 	</class>
 	<class path="mortonHx.Test" params="" file="src/mortonHx/Test.hx">
 		<main set="method" line="8" static="1"><f a=""><x path="Void"/></f></main>

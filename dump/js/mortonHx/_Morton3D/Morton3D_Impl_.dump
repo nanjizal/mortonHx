@@ -23,189 +23,189 @@ private class mortonHx._Morton3D.Morton3D_Impl_ {
 
 	@:noCompletion
 	public static inline function _new[Function:(x : Int, y : Int, z : Int) -> mortonHx.Morton3D]
-		[Arg x<6568>(VUsedByTyper):Int]
-		[Arg y<6569>(VUsedByTyper):Int]
-		[Arg z<6570>(VUsedByTyper):Int]
+		[Arg x<6585>(VUsedByTyper):Int]
+		[Arg y<6586>(VUsedByTyper):Int]
+		[Arg z<6587>(VUsedByTyper):Int]
 		[Block:Dynamic]
-			[Var v<6577>(VAssigned):Int] [Local z(6570):Int:Int]
+			[Var v<6594>(VAssigned):Int] [Local z(6587):Int:Int]
 			[Binop:Int]
-				[Local v(6577):Int:Int]
+				[Local v(6594):Int:Int]
 				&=
 				[Const:Int] 1023
 			[Binop:Int]
-				[Local v(6577):Int:Int]
+				[Local v(6594):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6577):Int:Int]
+							[Local v(6594):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6577):Int:Int]
+								[Local v(6594):Int:Int]
 								<<
 								[Const:Int] 16
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v(6577):Int:Int]
+				[Local v(6594):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6577):Int:Int]
+							[Local v(6594):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6577):Int:Int]
+								[Local v(6594):Int:Int]
 								<<
 								[Const:Int] 8
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v(6577):Int:Int]
+				[Local v(6594):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6577):Int:Int]
+							[Local v(6594):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6577):Int:Int]
+								[Local v(6594):Int:Int]
 								<<
 								[Const:Int] 4
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v(6577):Int:Int]
+				[Local v(6594):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6577):Int:Int]
+							[Local v(6594):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6577):Int:Int]
+								[Local v(6594):Int:Int]
 								<<
 								[Const:Int] 2
 					&
 					[Const:Int] 153391689
-			[Var v1<6581>(VAssigned):Int] [Local y(6569):Int:Int]
+			[Var v1<6598>(VAssigned):Int] [Local y(6586):Int:Int]
 			[Binop:Int]
-				[Local v1(6581):Int:Int]
+				[Local v1(6598):Int:Int]
 				&=
 				[Const:Int] 1023
 			[Binop:Int]
-				[Local v1(6581):Int:Int]
+				[Local v1(6598):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6581):Int:Int]
+							[Local v1(6598):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6581):Int:Int]
+								[Local v1(6598):Int:Int]
 								<<
 								[Const:Int] 16
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v1(6581):Int:Int]
+				[Local v1(6598):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6581):Int:Int]
+							[Local v1(6598):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6581):Int:Int]
+								[Local v1(6598):Int:Int]
 								<<
 								[Const:Int] 8
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v1(6581):Int:Int]
+				[Local v1(6598):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6581):Int:Int]
+							[Local v1(6598):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6581):Int:Int]
+								[Local v1(6598):Int:Int]
 								<<
 								[Const:Int] 4
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v1(6581):Int:Int]
+				[Local v1(6598):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6581):Int:Int]
+							[Local v1(6598):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6581):Int:Int]
+								[Local v1(6598):Int:Int]
 								<<
 								[Const:Int] 2
 					&
 					[Const:Int] 153391689
-			[Var v2<6585>(VAssigned):Int] [Local x(6568):Int:Int]
+			[Var v2<6602>(VAssigned):Int] [Local x(6585):Int:Int]
 			[Binop:Int]
-				[Local v2(6585):Int:Int]
+				[Local v2(6602):Int:Int]
 				&=
 				[Const:Int] 1023
 			[Binop:Int]
-				[Local v2(6585):Int:Int]
+				[Local v2(6602):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6585):Int:Int]
+							[Local v2(6602):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6585):Int:Int]
+								[Local v2(6602):Int:Int]
 								<<
 								[Const:Int] 16
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v2(6585):Int:Int]
+				[Local v2(6602):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6585):Int:Int]
+							[Local v2(6602):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6585):Int:Int]
+								[Local v2(6602):Int:Int]
 								<<
 								[Const:Int] 8
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v2(6585):Int:Int]
+				[Local v2(6602):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6585):Int:Int]
+							[Local v2(6602):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6585):Int:Int]
+								[Local v2(6602):Int:Int]
 								<<
 								[Const:Int] 4
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v2(6585):Int:Int]
+				[Local v2(6602):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6585):Int:Int]
+							[Local v2(6602):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6585):Int:Int]
+								[Local v2(6602):Int:Int]
 								<<
 								[Const:Int] 2
 					&
@@ -215,273 +215,273 @@ private class mortonHx._Morton3D.Morton3D_Impl_ {
 					[Binop:Int]
 						[Binop:Int]
 							[Binop:Int]
-								[Local v(6577):Int:Int]
+								[Local v(6594):Int:Int]
 								<<
 								[Const:Int] 2
 							|
 							[Binop:Int]
-								[Local v1(6581):Int:Int]
+								[Local v1(6598):Int:Int]
 								<<
 								[Const:Int] 1
 						|
-						[Local v2(6585):Int:Int]
+						[Local v2(6602):Int:Int]
 
 	static inline function part1By2[Function:(this : Int, v : Int) -> Int]
-		[Arg this1<6572>:Int]
-		[Arg v<6573>(VUsedByTyper VAssigned):Int]
+		[Arg this1<6589>:Int]
+		[Arg v<6590>(VUsedByTyper VAssigned):Int]
 		[Block:Dynamic]
 			[Binop:Int]
-				[Local v(6573):Int:Int]
+				[Local v(6590):Int:Int]
 				&=
 				[Const:Int] 1023
 			[Binop:Int]
-				[Local v(6573):Int:Int]
+				[Local v(6590):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6573):Int:Int]
+							[Local v(6590):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6573):Int:Int]
+								[Local v(6590):Int:Int]
 								<<
 								[Const:Int] 16
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v(6573):Int:Int]
+				[Local v(6590):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6573):Int:Int]
+							[Local v(6590):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6573):Int:Int]
+								[Local v(6590):Int:Int]
 								<<
 								[Const:Int] 8
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v(6573):Int:Int]
+				[Local v(6590):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6573):Int:Int]
+							[Local v(6590):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6573):Int:Int]
+								[Local v(6590):Int:Int]
 								<<
 								[Const:Int] 4
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v(6573):Int:Int]
+				[Local v(6590):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6573):Int:Int]
+							[Local v(6590):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6573):Int:Int]
+								[Local v(6590):Int:Int]
 								<<
 								[Const:Int] 2
 					&
 					[Const:Int] 153391689
-			[Return:Dynamic] [Local v(6573):Int:Int]
+			[Return:Dynamic] [Local v(6590):Int:Int]
 
 	public static inline function decode[Function:(this : Int) -> mortonHx.Point3DInt]
-		[Arg this1<6595>:Int]
+		[Arg this1<6612>:Int]
 		[Block:Dynamic]
-			[Var v<6601>(VAssigned):Int] [Local this1(6595):Int:Int]
+			[Var v<6618>(VAssigned):Int] [Local this1(6612):Int:Int]
 			[Binop:Int]
-				[Local v(6601):Int:Int]
+				[Local v(6618):Int:Int]
 				&=
 				[Const:Int] 153391689
 			[Binop:Int]
-				[Local v(6601):Int:Int]
+				[Local v(6618):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6601):Int:Int]
+							[Local v(6618):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6601):Int:Int]
+								[Local v(6618):Int:Int]
 								>>
 								[Const:Int] 2
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v(6601):Int:Int]
+				[Local v(6618):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6601):Int:Int]
+							[Local v(6618):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6601):Int:Int]
+								[Local v(6618):Int:Int]
 								>>
 								[Const:Int] 4
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v(6601):Int:Int]
+				[Local v(6618):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6601):Int:Int]
+							[Local v(6618):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6601):Int:Int]
+								[Local v(6618):Int:Int]
 								>>
 								[Const:Int] 8
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v(6601):Int:Int]
+				[Local v(6618):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6601):Int:Int]
+							[Local v(6618):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6601):Int:Int]
+								[Local v(6618):Int:Int]
 								>>
 								[Const:Int] 16
 					&
 					[Const:Int] 1023
-			[Var v1<6605>(VAssigned):Int]
+			[Var v1<6622>(VAssigned):Int]
 				[Binop:Int]
-					[Local this1(6595):Int:Int]
+					[Local this1(6612):Int:Int]
 					>>
 					[Const:Int] 1
 			[Binop:Int]
-				[Local v1(6605):Int:Int]
+				[Local v1(6622):Int:Int]
 				&=
 				[Const:Int] 153391689
 			[Binop:Int]
-				[Local v1(6605):Int:Int]
+				[Local v1(6622):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6605):Int:Int]
+							[Local v1(6622):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6605):Int:Int]
+								[Local v1(6622):Int:Int]
 								>>
 								[Const:Int] 2
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v1(6605):Int:Int]
+				[Local v1(6622):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6605):Int:Int]
+							[Local v1(6622):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6605):Int:Int]
+								[Local v1(6622):Int:Int]
 								>>
 								[Const:Int] 4
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v1(6605):Int:Int]
+				[Local v1(6622):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6605):Int:Int]
+							[Local v1(6622):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6605):Int:Int]
+								[Local v1(6622):Int:Int]
 								>>
 								[Const:Int] 8
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v1(6605):Int:Int]
+				[Local v1(6622):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6605):Int:Int]
+							[Local v1(6622):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6605):Int:Int]
+								[Local v1(6622):Int:Int]
 								>>
 								[Const:Int] 16
 					&
 					[Const:Int] 1023
-			[Var v2<6609>(VAssigned):Int]
+			[Var v2<6626>(VAssigned):Int]
 				[Binop:Int]
-					[Local this1(6595):Int:Int]
+					[Local this1(6612):Int:Int]
 					>>
 					[Const:Int] 2
 			[Binop:Int]
-				[Local v2(6609):Int:Int]
+				[Local v2(6626):Int:Int]
 				&=
 				[Const:Int] 153391689
 			[Binop:Int]
-				[Local v2(6609):Int:Int]
+				[Local v2(6626):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6609):Int:Int]
+							[Local v2(6626):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6609):Int:Int]
+								[Local v2(6626):Int:Int]
 								>>
 								[Const:Int] 2
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v2(6609):Int:Int]
+				[Local v2(6626):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6609):Int:Int]
+							[Local v2(6626):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6609):Int:Int]
+								[Local v2(6626):Int:Int]
 								>>
 								[Const:Int] 4
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v2(6609):Int:Int]
+				[Local v2(6626):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6609):Int:Int]
+							[Local v2(6626):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6609):Int:Int]
+								[Local v2(6626):Int:Int]
 								>>
 								[Const:Int] 8
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v2(6609):Int:Int]
+				[Local v2(6626):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6609):Int:Int]
+							[Local v2(6626):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6609):Int:Int]
+								[Local v2(6626):Int:Int]
 								>>
 								[Const:Int] 16
 					&
@@ -490,80 +490,80 @@ private class mortonHx._Morton3D.Morton3D_Impl_ {
 				[Cast:mortonHx.Point3DInt]
 					[New:mortonHx.Point3DInt_]
 						mortonHx.Point3DInt_
-						[Local v(6601):Int:Int]
-						[Local v1(6605):Int:Int]
-						[Local v2(6609):Int:Int]
+						[Local v(6618):Int:Int]
+						[Local v1(6622):Int:Int]
+						[Local v2(6626):Int:Int]
 
 	static inline function compact1By2[Function:(this : Int, v : Int) -> Int]
-		[Arg this1<6596>:Int]
-		[Arg v<6597>(VUsedByTyper VAssigned):Int]
+		[Arg this1<6613>:Int]
+		[Arg v<6614>(VUsedByTyper VAssigned):Int]
 		[Block:Dynamic]
 			[Binop:Int]
-				[Local v(6597):Int:Int]
+				[Local v(6614):Int:Int]
 				&=
 				[Const:Int] 153391689
 			[Binop:Int]
-				[Local v(6597):Int:Int]
+				[Local v(6614):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6597):Int:Int]
+							[Local v(6614):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6597):Int:Int]
+								[Local v(6614):Int:Int]
 								>>
 								[Const:Int] 2
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v(6597):Int:Int]
+				[Local v(6614):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6597):Int:Int]
+							[Local v(6614):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6597):Int:Int]
+								[Local v(6614):Int:Int]
 								>>
 								[Const:Int] 4
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v(6597):Int:Int]
+				[Local v(6614):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6597):Int:Int]
+							[Local v(6614):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6597):Int:Int]
+								[Local v(6614):Int:Int]
 								>>
 								[Const:Int] 8
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v(6597):Int:Int]
+				[Local v(6614):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6597):Int:Int]
+							[Local v(6614):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6597):Int:Int]
+								[Local v(6614):Int:Int]
 								>>
 								[Const:Int] 16
 					&
 					[Const:Int] 1023
-			[Return:Dynamic] [Local v(6597):Int:Int]
+			[Return:Dynamic] [Local v(6614):Int:Int]
 
 	@:op(A + B)
 	public static inline function add[Function:(base : mortonHx.Morton3D, offset : mortonHx.Morton3D) -> mortonHx.Morton3D]
-		[Arg base<6616>(VUsedByTyper):mortonHx.Morton3D]
-		[Arg offset<6617>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg base<6633>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg offset<6634>(VUsedByTyper):mortonHx.Morton3D]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Cast:mortonHx.Morton3D]
@@ -572,46 +572,46 @@ private class mortonHx._Morton3D.Morton3D_Impl_ {
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local base(6616):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local base(6633):mortonHx.Morton3D:mortonHx.Morton3D]
 										&
 										[Const:Int] 153391689
 								+
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local offset(6617):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local offset(6634):mortonHx.Morton3D:mortonHx.Morton3D]
 										&
 										[Const:Int] 153391689
 							|
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local base(6616):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local base(6633):mortonHx.Morton3D:mortonHx.Morton3D]
 										&
 										[Const:Int] 306783378
 								+
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local offset(6617):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local offset(6634):mortonHx.Morton3D:mortonHx.Morton3D]
 										&
 										[Const:Int] 306783378
 						|
 						[Binop:Int]
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local base(6616):mortonHx.Morton3D:mortonHx.Morton3D]
+									[Cast:Int] [Local base(6633):mortonHx.Morton3D:mortonHx.Morton3D]
 									&
 									[Const:Int] 613566756
 							+
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local offset(6617):mortonHx.Morton3D:mortonHx.Morton3D]
+									[Cast:Int] [Local offset(6634):mortonHx.Morton3D:mortonHx.Morton3D]
 									&
 									[Const:Int] 613566756
 
 	@:op(A - B)
 	public static inline function subtract[Function:(base : mortonHx.Morton3D, offset : mortonHx.Morton3D) -> mortonHx.Morton3D]
-		[Arg base<6618>(VUsedByTyper):mortonHx.Morton3D]
-		[Arg offset<6619>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg base<6635>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg offset<6636>(VUsedByTyper):mortonHx.Morton3D]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Cast:mortonHx.Morton3D]
@@ -620,39 +620,83 @@ private class mortonHx._Morton3D.Morton3D_Impl_ {
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local base(6618):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local base(6635):mortonHx.Morton3D:mortonHx.Morton3D]
 										|
 										[Const:Int] -153391690
 								-
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local offset(6619):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local offset(6636):mortonHx.Morton3D:mortonHx.Morton3D]
 										&
 										[Const:Int] 153391689
 							|
 							[Binop:Int]
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local base(6618):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local base(6635):mortonHx.Morton3D:mortonHx.Morton3D]
 										|
 										[Const:Int] -306783379
 								-
 								[Parenthesis:Int]
 									[Binop:Int]
-										[Cast:Int] [Local offset(6619):mortonHx.Morton3D:mortonHx.Morton3D]
+										[Cast:Int] [Local offset(6636):mortonHx.Morton3D:mortonHx.Morton3D]
 										&
 										[Const:Int] 306783378
 						|
 						[Binop:Int]
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local base(6618):mortonHx.Morton3D:mortonHx.Morton3D]
+									[Cast:Int] [Local base(6635):mortonHx.Morton3D:mortonHx.Morton3D]
 									|
 									[Const:Int] -613566757
 							-
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local offset(6619):mortonHx.Morton3D:mortonHx.Morton3D]
+									[Cast:Int] [Local offset(6636):mortonHx.Morton3D:mortonHx.Morton3D]
 									&
 									[Const:Int] 613566756
+
+	@:op(A < B)
+	static inline function lt[Function:(a : mortonHx.Morton3D, b : mortonHx.Morton3D) -> Bool]
+		[Arg a<6637>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg b<6638>(VUsedByTyper):mortonHx.Morton3D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6637):mortonHx.Morton3D:mortonHx.Morton3D]
+					<
+					[Cast:Int] [Local b(6638):mortonHx.Morton3D:mortonHx.Morton3D]
+
+	@:op(A > B)
+	static inline function gt[Function:(a : mortonHx.Morton3D, b : mortonHx.Morton3D) -> Bool]
+		[Arg a<6639>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg b<6640>(VUsedByTyper):mortonHx.Morton3D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6639):mortonHx.Morton3D:mortonHx.Morton3D]
+					>
+					[Cast:Int] [Local b(6640):mortonHx.Morton3D:mortonHx.Morton3D]
+
+	@:op(A <= B)
+	static inline function lte[Function:(a : mortonHx.Morton3D, b : mortonHx.Morton3D) -> Bool]
+		[Arg a<6641>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg b<6642>(VUsedByTyper):mortonHx.Morton3D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6641):mortonHx.Morton3D:mortonHx.Morton3D]
+					<=
+					[Cast:Int] [Local b(6642):mortonHx.Morton3D:mortonHx.Morton3D]
+
+	@:op(A >= B)
+	static inline function gte[Function:(a : mortonHx.Morton3D, b : mortonHx.Morton3D) -> Bool]
+		[Arg a<6643>(VUsedByTyper):mortonHx.Morton3D]
+		[Arg b<6644>(VUsedByTyper):mortonHx.Morton3D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6643):mortonHx.Morton3D:mortonHx.Morton3D]
+					>=
+					[Cast:Int] [Local b(6644):mortonHx.Morton3D:mortonHx.Morton3D]
 }

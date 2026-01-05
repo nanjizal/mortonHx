@@ -14,6 +14,10 @@ extern class Array<{
 
 	function join(sep:String):String;
 
+	function push(x:Array.T):Int;
+
+	function sort(f:(Array.T, Array.T) -> Int):Void;
+
 	@:runtime
 	inline function iterator():haxe.iterators.ArrayIterator<Array.T>;
 }

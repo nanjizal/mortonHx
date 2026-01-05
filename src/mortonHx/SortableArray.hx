@@ -1,0 +1,98 @@
+package mortonHx;
+
+#if cpp
+import cpp.Struct;
+// Contiguous memory struct: Fastest for C++ (Zero-GC pressure)
+@:struct
+class SortPair<T> {
+    public var val:T;
+    public var originalIndex:Int;
+    public function new(v:T, i:Int) {
+        this.val = v;
+        this.originalIndex = i;
+    }
+}
+#end
+
+abstract SortableArray<T:Float>(Array<T>) from Array<T> to Array<T> {
+    public inline function new(a:Array<T>) {
+        this = a;
+    }
+
+    public function sortWithOrder(f:(T, T) -> Int):Array<Int> {
+        var len = this.length;
+        var order = new Array<Int>();
+
+        #if cpp
+        // C++ HIGH PERFORMANCE: Uses flat memory structs
+        var pairs = new Array<SortPair<T>>();
+        for (i in 0...len) pairs.push(new SortPair(this[i], i));
+        
+        pairs.sort((a, b) -> f(a.val, b.val));
+
+        for (i in 0...len) {
+            this[i] = pairs[i].val;
+            order.push(pairs[i].originalIndex);
+        }
+
+        #else
+        // HL, JS, PYTHON, PHP, NEKO, FLASH: Uses a lightweight Index Map
+        // This is safer and highly efficient for VM-based targets
+        order = [for (i in 0...len) i];
+        
+        // Use native sort where available for best VM performance
+        order.sort((idxA, idxB) -> f(this[idxA], this[idxB]));
+        
+        var temp = this.copy();
+        for (i in 0...len) {
+            this[i] = temp[order[i]];
+        }
+        #end
+
+        return order;
+    }
+    /**
+    * Binary search for the first index where arr[index] >= target.
+    * Extremely fast: 20 steps for 1 million points.
+    */
+    public function findStartIndex( target: T ): Int {
+        var low:Int = 0;
+        var high:Int = this.length;
+
+        while (low < high) {
+            // bitwise shift optimization for (low + high) / 2
+            var mid:Int = (low + high) >>> 1; 
+            var v:T = this[mid];
+            if ( v < target) {
+                low = mid + 1;
+            } else {
+                high = mid;
+            }
+        }
+        return low;
+    }
+}
+
+
+/* Comments for later..
+ // 1. Get your window extremes
+var minK:Int = (new Morton2D(x, y) : Int);
+var maxK:Int = (new Morton2D(x + width, y + height) : Int);
+
+// 2. JUMP directly to the start of the spatial cluster
+var i:Int = findStartIndex(cast pointCurve, minK);
+
+// 3. Iterate ONLY the relevant numerical range
+while (i < pointCurve.length) {
+    var p:Int = pointCurve[i];
+    
+    // Stop as soon as we leave the window's 1D range
+    if (p > maxK) break; 
+    
+    // Check if it's actually in the 2D box (the bitwise check we discussed)
+    if (isInsideBox(p, minK, maxK)) {
+        // Triangle Hit Testing...
+    }
+    i++;
+}
+*/

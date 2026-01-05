@@ -23,7 +23,17 @@ abstract Point2DInt( Point2DInt_ ) from Point2DInt_ to Point2DInt_ {
     }
 }
 abstract Morton2D(Int) from Int to Int {
-    public static inline var size = 32767;
+    // Standard multiplier for mapping -1.0...1.0 to Int16
+    static inline var pack16: Float = 32767.0;
+    public static function packFloatToInt16( v: Float ): Int {
+        // Clamp to prevent overflow and round for precision
+        if( v > 1. ){ 
+            v = 1.;
+        } else if( v < -1.0) {
+            v = -1.0;
+        }
+        return Std.int( v * pack16 );
+    }
     public inline function new( x: Int, y: Int ): Int {
         this = ( part1By1( y ) << 1 ) | part1By1( x );
     }
@@ -39,11 +49,11 @@ abstract Morton2D(Int) from Int to Int {
         return new Point2DInt( compact1By1( this ), compact1By1( this >> 1 ) );
     }
     public inline function compact1By1( j: Int ): Int {
-        j &= 0x55555555;
-        j = (j ^ (j >> 1)) & 0x33333333;
-        j = (j ^ (j >> 2)) & 0x0f0f0f0f;
-        j = (j ^ (j >> 4)) & 0x00ff00ff;
-        j = (j ^ (j >> 8)) & 0x0000ffff;
+        j &= 0x55555555;//                  Isolate target bits (every 2nd bit)
+        j = (j ^ (j >> 1)) & 0x33333333; // Pack bits into groups of 2
+        j = (j ^ (j >> 2)) & 0x0f0f0f0f; // Pack bits into groups of 4
+        j = (j ^ (j >> 4)) & 0x00ff00ff; // Pack bits into groups of 8
+        j = (j ^ (j >> 8)) & 0x0000ffff; // Final alignment into a 16-bit integer
         return j;
     }
 
@@ -51,6 +61,7 @@ abstract Morton2D(Int) from Int to Int {
     // x: 01010101... (even bits)
     static inline var maskX2d:Int = 0x55555555;
     // y: 10101010... (odd bits)
+    // 
     static inline var maskY2d:Int = 0xAAAAAAAA;
 
     // Negated masks for borrow/carry protection
@@ -80,4 +91,19 @@ abstract Morton2D(Int) from Int to Int {
              : Morton2D
          );
      }
+     @:op(A < B) static inline function lt(a:Morton2D, b:Morton2D):Bool return (a:Int) < (b:Int);
+     @:op(A > B) static inline function gt(a:Morton2D, b:Morton2D):Bool return (a:Int) > (b:Int);
+     @:op(A <= B) static inline function lte(a:Morton2D, b:Morton2D):Bool return (a:Int) <= (b:Int);
+     @:op(A >= B) static inline function gte(a:Morton2D, b:Morton2D):Bool return (a:Int) >= (b:Int);
+    
+    // Checks if point 'p' is inside the box defined by 'min' and 'max' without de-interleaving
+    public static inline function isInsideBox(p:Morton2D, min:Morton2D, max:Morton2D):Bool {
+        // A point is in the box if its X and Y components are within bounds
+        // We isolate components with the masks we built earlier
+        var px = (p : Int) & maskX2d;
+        var py = (p : Int) & maskY2d;
+        return px >= ((min:Int) & maskX2d) && px <= ((max:Int) & maskX2d) &&
+           py >= ((min:Int) & maskY2d) && py <= ((max:Int) & maskY2d);
+    }
+
 }

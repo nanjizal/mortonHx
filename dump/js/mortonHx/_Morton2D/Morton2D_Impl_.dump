@@ -1,7 +1,40 @@
 private class mortonHx._Morton2D.Morton2D_Impl_ {
 
-	@:value(32767)
-	public static inline var size:Int = [Const:Int] 32767;
+	@:value(32767.0)
+	static inline var pack16:Float = [Const:Float] 32767.0;
+
+	public static function packFloatToInt16[Function:(v : Float) -> Int]
+		[Arg v<6556>(VUsedByTyper VAssigned):Float]
+		[Block:Dynamic]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local v(6556):Float:Float]
+						>
+						[Const:Float] 1.
+				[Then:Float] [Binop:Float]
+					[Local v(6556):Float:Float]
+					=
+					[Const:Float] 1.
+				[Else:Void] [If:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local v(6556):Float:Float]
+							<
+							[Const:Float] -1.0
+					[Then:Float] [Binop:Float]
+						[Local v(6556):Float:Float]
+						=
+						[Const:Float] -1.0
+			[Return:Dynamic]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local v(6556):Float:Float]
+							*
+							[Const:Float] 32767.0
+					|
+					[Const:Int] 0
 
 	@:noCompletion
 	public static inline function _new[Function:(x : Int, y : Int) -> mortonHx.Morton2D]
@@ -422,8 +455,8 @@ private class mortonHx._Morton2D.Morton2D_Impl_ {
 
 	@:op(A + B)
 	public static inline function add[Function:(base : mortonHx.Morton2D, offset : mortonHx.Morton2D) -> mortonHx.Morton2D]
-		[Arg base<6556>(VUsedByTyper):mortonHx.Morton2D]
-		[Arg offset<6557>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg base<6560>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg offset<6561>(VUsedByTyper):mortonHx.Morton2D]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Cast:mortonHx.Morton2D]
@@ -431,33 +464,33 @@ private class mortonHx._Morton2D.Morton2D_Impl_ {
 						[Binop:Int]
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local base(6556):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local base(6560):mortonHx.Morton2D:mortonHx.Morton2D]
 									&
 									[Const:Int] 1431655765
 							+
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local offset(6557):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local offset(6561):mortonHx.Morton2D:mortonHx.Morton2D]
 									&
 									[Const:Int] 1431655765
 						|
 						[Binop:Int]
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local base(6556):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local base(6560):mortonHx.Morton2D:mortonHx.Morton2D]
 									&
 									[Const:Int] -1431655766
 							+
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local offset(6557):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local offset(6561):mortonHx.Morton2D:mortonHx.Morton2D]
 									&
 									[Const:Int] -1431655766
 
 	@:op(A - B)
 	public static inline function subtract[Function:(base : mortonHx.Morton2D, offset : mortonHx.Morton2D) -> mortonHx.Morton2D]
-		[Arg base<6558>(VUsedByTyper):mortonHx.Morton2D]
-		[Arg offset<6559>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg base<6562>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg offset<6563>(VUsedByTyper):mortonHx.Morton2D]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Cast:mortonHx.Morton2D]
@@ -465,26 +498,126 @@ private class mortonHx._Morton2D.Morton2D_Impl_ {
 						[Binop:Int]
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local base(6558):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local base(6562):mortonHx.Morton2D:mortonHx.Morton2D]
 									|
 									[Const:Int] -1431655766
 							-
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local offset(6559):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local offset(6563):mortonHx.Morton2D:mortonHx.Morton2D]
 									&
 									[Const:Int] 1431655765
 						|
 						[Binop:Int]
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local base(6558):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local base(6562):mortonHx.Morton2D:mortonHx.Morton2D]
 									|
 									[Const:Int] 1431655765
 							-
 							[Parenthesis:Int]
 								[Binop:Int]
-									[Cast:Int] [Local offset(6559):mortonHx.Morton2D:mortonHx.Morton2D]
+									[Cast:Int] [Local offset(6563):mortonHx.Morton2D:mortonHx.Morton2D]
 									&
 									[Const:Int] -1431655766
+
+	@:op(A < B)
+	static inline function lt[Function:(a : mortonHx.Morton2D, b : mortonHx.Morton2D) -> Bool]
+		[Arg a<6564>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg b<6565>(VUsedByTyper):mortonHx.Morton2D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6564):mortonHx.Morton2D:mortonHx.Morton2D]
+					<
+					[Cast:Int] [Local b(6565):mortonHx.Morton2D:mortonHx.Morton2D]
+
+	@:op(A > B)
+	static inline function gt[Function:(a : mortonHx.Morton2D, b : mortonHx.Morton2D) -> Bool]
+		[Arg a<6566>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg b<6567>(VUsedByTyper):mortonHx.Morton2D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6566):mortonHx.Morton2D:mortonHx.Morton2D]
+					>
+					[Cast:Int] [Local b(6567):mortonHx.Morton2D:mortonHx.Morton2D]
+
+	@:op(A <= B)
+	static inline function lte[Function:(a : mortonHx.Morton2D, b : mortonHx.Morton2D) -> Bool]
+		[Arg a<6568>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg b<6569>(VUsedByTyper):mortonHx.Morton2D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6568):mortonHx.Morton2D:mortonHx.Morton2D]
+					<=
+					[Cast:Int] [Local b(6569):mortonHx.Morton2D:mortonHx.Morton2D]
+
+	@:op(A >= B)
+	static inline function gte[Function:(a : mortonHx.Morton2D, b : mortonHx.Morton2D) -> Bool]
+		[Arg a<6570>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg b<6571>(VUsedByTyper):mortonHx.Morton2D]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Cast:Int] [Local a(6570):mortonHx.Morton2D:mortonHx.Morton2D]
+					>=
+					[Cast:Int] [Local b(6571):mortonHx.Morton2D:mortonHx.Morton2D]
+
+	public static inline function isInsideBox[Function:(p : mortonHx.Morton2D, min : mortonHx.Morton2D, max : mortonHx.Morton2D) -> Bool]
+		[Arg p<6572>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg min<6573>(VUsedByTyper):mortonHx.Morton2D]
+		[Arg max<6574>(VUsedByTyper):mortonHx.Morton2D]
+		[Block:Dynamic]
+			[Var px<6575>(VUsedByTyper):Int]
+				[Binop:Int]
+					[Cast:Int] [Local p(6572):mortonHx.Morton2D:mortonHx.Morton2D]
+					&
+					[Const:Int] 1431655765
+			[Var py<6576>(VUsedByTyper):Int]
+				[Binop:Int]
+					[Cast:Int] [Local p(6572):mortonHx.Morton2D:mortonHx.Morton2D]
+					&
+					[Const:Int] -1431655766
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Binop:Bool]
+							[Binop:Bool]
+								[Local px(6575):Int:Int]
+								>=
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Cast:Int] [Local min(6573):mortonHx.Morton2D:mortonHx.Morton2D]
+										&
+										[Const:Int] 1431655765
+							&&
+							[Binop:Bool]
+								[Local px(6575):Int:Int]
+								<=
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Cast:Int] [Local max(6574):mortonHx.Morton2D:mortonHx.Morton2D]
+										&
+										[Const:Int] 1431655765
+						&&
+						[Binop:Bool]
+							[Local py(6576):Int:Int]
+							>=
+							[Parenthesis:Int]
+								[Binop:Int]
+									[Cast:Int] [Local min(6573):mortonHx.Morton2D:mortonHx.Morton2D]
+									&
+									[Const:Int] -1431655766
+				[Then:Dynamic] [Return:Dynamic]
+					[Binop:Bool]
+						[Local py(6576):Int:Int]
+						<=
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Cast:Int] [Local max(6574):mortonHx.Morton2D:mortonHx.Morton2D]
+								&
+								[Const:Int] -1431655766
+				[Else:Dynamic] [Return:Dynamic] [Const:Bool] false
 }

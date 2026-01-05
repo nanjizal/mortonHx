@@ -96,4 +96,34 @@ abstract Morton3D(Int) from Int to Int {
               : Morton3D
           );
       }
+      @:op(A < B) static inline function lt(a:Morton3D, b:Morton3D):Bool return (a:Int) < (b:Int);
+      @:op(A > B) static inline function gt(a:Morton3D, b:Morton3D):Bool return (a:Int) > (b:Int);
+      @:op(A <= B) static inline function lte(a:Morton3D, b:Morton3D):Bool return (a:Int) <= (b:Int);
+      @:op(A >= B) static inline function gte(a:Morton3D, b:Morton3D):Bool return (a:Int) >= (b:Int);
+      /**
+        * Checks if point 'p' is inside the 3D box defined by 'min' and 'max' without de-interleaving.
+        * This is used during a linear scan to filter out points that fall within the 
+        * Morton range [min, max] but are outside the spatial 3D volume.
+        */
+        public static inline function isInsideBox(p:Morton3D, min:Morton3D, max:Morton3D):Bool {
+        // Isolate interleaved bits for each dimension
+        var pi:Int = (p:Int);
+        var mi:Int = (min:Int);
+        var ma:Int = (max:Int);
+
+        // Check X dimension (bits 0, 3, 6...)
+        var px = pi & maskX3d;
+        if (px < (mi & maskX3d) || px > (ma & maskX3d)) return false;
+
+        // Check Y dimension (bits 1, 4, 7...)
+        var py = pi & maskY3d;
+        if (py < (mi & maskY2d) || py > (ma & maskY2d)) return false;
+
+        // Check Z dimension (bits 2, 5, 8...)
+        var pz = pi & maskZ3d;
+        if (pz < (mi & maskZ3d) || pz > (ma & maskZ3d)) return false;
+
+        return true;
+    }
+
 }
