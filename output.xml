@@ -37766,6 +37766,307 @@
         * Morton range [min, max] but are outside the spatial 3D volume.</haxe_doc>
 		</isInsideBox>
 	</class>
+	<class path="mortonHx.Point4DInt_" params="" file="src/mortonHx/Morton4D.hx" module="mortonHx.Morton4D">
+		<x public="1"><x path="Int"/></x>
+		<y public="1"><x path="Int"/></y>
+		<z public="1"><x path="Int"/></z>
+		<w public="1"><x path="Int"/></w>
+		<new public="1" get="inline" set="null" line="9"><f a="x:y:z:w">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":structInit"/>
+		</meta>
+	</class>
+	<abstract path="mortonHx.Point4DInt" params="" file="src/mortonHx/Morton4D.hx" module="mortonHx.Morton4D">
+		<from><icast><c path="mortonHx.Point4DInt_"/></icast></from>
+		<this><c path="mortonHx.Point4DInt_"/></this>
+		<to>
+			<icast><c path="mortonHx.Point4DInt_"/></icast>
+			<icast field="toMorton4D"><x path="mortonHx.Morton4D"/></icast>
+		</to>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="mortonHx._Morton4D.Point4DInt_Impl_" params="" file="src/mortonHx/Morton4D.hx" private="1" module="mortonHx.Morton4D" final="1">
+	<_new public="1" get="inline" set="null" line="19" static="1">
+		<f a="x:y:z:w">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="mortonHx.Point4DInt"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+	</_new>
+	<toMorton4D public="1" get="inline" set="null" line="23" static="1">
+		<f a="this">
+			<c path="mortonHx.Point4DInt_"/>
+			<x path="mortonHx.Morton4D"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</toMorton4D>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._Morton4D.Point4DInt_Impl_" params="" file="src/mortonHx/Morton4D.hx" private="1" module="mortonHx.Morton4D" final="1">
+		<_new public="1" get="inline" set="null" line="19" static="1">
+			<f a="x:y:z:w">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="mortonHx.Point4DInt"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</_new>
+		<toMorton4D public="1" get="inline" set="null" line="23" static="1">
+			<f a="this">
+				<c path="mortonHx.Point4DInt_"/>
+				<x path="mortonHx.Morton4D"/>
+			</f>
+			<meta><m n=":to"/></meta>
+		</toMorton4D>
+	</class>
+	<abstract path="mortonHx.Morton4D" params="" file="src/mortonHx/Morton4D.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to><icast><x path="Int"/></icast></to>
+		<impl><class path="mortonHx._Morton4D.Morton4D_Impl_" params="" file="src/mortonHx/Morton4D.hx" private="1" module="mortonHx.Morton4D" final="1">
+	<maxCoord public="1" get="inline" set="null" expr="255" line="30" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>255</e></m></meta>
+	</maxCoord>
+	<maskX4d get="inline" set="null" expr="0x11111111" line="33" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x11111111</e></m></meta>
+	</maskX4d>
+	<maskY4d get="inline" set="null" expr="0x22222222" line="34" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x22222222</e></m></meta>
+	</maskY4d>
+	<maskZ4d get="inline" set="null" expr="0x44444444" line="35" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x44444444</e></m></meta>
+	</maskZ4d>
+	<maskW4d get="inline" set="null" expr="0x88888888" line="36" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>0x88888888</e></m></meta>
+	</maskW4d>
+	<maskNotX4d get="inline" set="null" expr="~0x11111111" line="38" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x11111111</e></m></meta>
+	</maskNotX4d>
+	<maskNotY4d get="inline" set="null" expr="~0x22222222" line="39" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x22222222</e></m></meta>
+	</maskNotY4d>
+	<maskNotZ4d get="inline" set="null" expr="~0x44444444" line="40" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x44444444</e></m></meta>
+	</maskNotZ4d>
+	<maskNotW4d get="inline" set="null" expr="~0x88888888" line="41" static="1">
+		<x path="Int"/>
+		<meta><m n=":value"><e>~0x88888888</e></m></meta>
+	</maskNotW4d>
+	<_new public="1" get="inline" set="null" line="43" static="1">
+		<f a="x:y:z:w">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="mortonHx.Morton4D"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+	</_new>
+	<part1By3 get="inline" set="null" line="49" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></part1By3>
+	<decode public="1" get="inline" set="null" line="57" static="1"><f a="this">
+	<x path="Int"/>
+	<x path="mortonHx.Point4DInt"/>
+</f></decode>
+	<compact1By3 get="inline" set="null" line="67" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></compact1By3>
+	<add public="1" get="inline" set="null" line="76" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+		</f>
+		<meta><m n=":op"><e>A + B</e></m></meta>
+	</add>
+	<subtract public="1" get="inline" set="null" line="87" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+		</f>
+		<meta><m n=":op"><e>A - B</e></m></meta>
+	</subtract>
+	<lt get="inline" set="null" line="97" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+	</lt>
+	<gt get="inline" set="null" line="98" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+	</gt>
+	<lte get="inline" set="null" line="99" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+	</lte>
+	<gte get="inline" set="null" line="100" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4D"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+	</gte>
+	<isInsideBox public="1" get="inline" set="null" line="102" static="1"><f a="p:min:max">
+	<x path="mortonHx.Morton4D"/>
+	<x path="mortonHx.Morton4D"/>
+	<x path="mortonHx.Morton4D"/>
+	<x path="Bool"/>
+</f></isInsideBox>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._Morton4D.Morton4D_Impl_" params="" file="src/mortonHx/Morton4D.hx" private="1" module="mortonHx.Morton4D" final="1">
+		<maxCoord public="1" get="inline" set="null" expr="255" line="30" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>255</e></m></meta>
+		</maxCoord>
+		<maskX4d get="inline" set="null" expr="0x11111111" line="33" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x11111111</e></m></meta>
+		</maskX4d>
+		<maskY4d get="inline" set="null" expr="0x22222222" line="34" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x22222222</e></m></meta>
+		</maskY4d>
+		<maskZ4d get="inline" set="null" expr="0x44444444" line="35" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x44444444</e></m></meta>
+		</maskZ4d>
+		<maskW4d get="inline" set="null" expr="0x88888888" line="36" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>0x88888888</e></m></meta>
+		</maskW4d>
+		<maskNotX4d get="inline" set="null" expr="~0x11111111" line="38" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x11111111</e></m></meta>
+		</maskNotX4d>
+		<maskNotY4d get="inline" set="null" expr="~0x22222222" line="39" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x22222222</e></m></meta>
+		</maskNotY4d>
+		<maskNotZ4d get="inline" set="null" expr="~0x44444444" line="40" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x44444444</e></m></meta>
+		</maskNotZ4d>
+		<maskNotW4d get="inline" set="null" expr="~0x88888888" line="41" static="1">
+			<x path="Int"/>
+			<meta><m n=":value"><e>~0x88888888</e></m></meta>
+		</maskNotW4d>
+		<_new public="1" get="inline" set="null" line="43" static="1">
+			<f a="x:y:z:w">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="mortonHx.Morton4D"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</_new>
+		<part1By3 get="inline" set="null" line="49" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></part1By3>
+		<decode public="1" get="inline" set="null" line="57" static="1"><f a="this">
+	<x path="Int"/>
+	<x path="mortonHx.Point4DInt"/>
+</f></decode>
+		<compact1By3 get="inline" set="null" line="67" static="1"><f a="this:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+</f></compact1By3>
+		<add public="1" get="inline" set="null" line="76" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+			</f>
+			<meta><m n=":op"><e>A + B</e></m></meta>
+		</add>
+		<subtract public="1" get="inline" set="null" line="87" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+			</f>
+			<meta><m n=":op"><e>A - B</e></m></meta>
+		</subtract>
+		<lt get="inline" set="null" line="97" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+		</lt>
+		<gt get="inline" set="null" line="98" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+		</gt>
+		<lte get="inline" set="null" line="99" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+		</lte>
+		<gte get="inline" set="null" line="100" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4D"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+		</gte>
+		<isInsideBox public="1" get="inline" set="null" line="102" static="1"><f a="p:min:max">
+	<x path="mortonHx.Morton4D"/>
+	<x path="mortonHx.Morton4D"/>
+	<x path="mortonHx.Morton4D"/>
+	<x path="Bool"/>
+</f></isInsideBox>
+	</class>
 	<abstract path="mortonHx.SortableArray" params="T" file="src/mortonHx/SortableArray.hx">
 		<from><icast><c path="Array"><c path="mortonHx.SortableArray.T"/></c></icast></from>
 		<this><c path="Array"><c path="mortonHx.SortableArray.T"/></c></this>

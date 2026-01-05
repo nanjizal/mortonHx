@@ -1,0 +1,50 @@
+@:directlyUsed @:structInit
+class mortonHx.Point4DInt_ {
+
+	public inline function new[Function:(x : Int, y : Int, z : Int, w : Int) -> Void]
+		[Arg x<6505>(VUsedByTyper):Int]
+		[Arg y<6506>(VUsedByTyper):Int]
+		[Arg z<6507>(VUsedByTyper):Int]
+		[Arg w<6508>(VUsedByTyper):Int]
+		[Block:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point4DInt_] this
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						x:Int
+				=
+				[Local x(6505):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point4DInt_] this
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						y:Int
+				=
+				[Local y(6506):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point4DInt_] this
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						z:Int
+				=
+				[Local z(6507):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point4DInt_] this
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						w:Int
+				=
+				[Local w(6508):Int:Int]
+
+	public var x:Int;
+
+	public var y:Int;
+
+	public var z:Int;
+
+	public var w:Int;
+}

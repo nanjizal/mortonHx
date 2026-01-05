@@ -2,8 +2,8 @@
 class mortonHx.Point2DInt_ {
 
 	public inline function new[Function:(x : Int, y : Int) -> Void]
-		[Arg x<6505>(VUsedByTyper):Int]
-		[Arg y<6506>(VUsedByTyper):Int]
+		[Arg x<6593>(VUsedByTyper):Int]
+		[Arg y<6594>(VUsedByTyper):Int]
 		[Block:Int]
 			[Binop:Int]
 				[Field:Int]
@@ -12,7 +12,7 @@ class mortonHx.Point2DInt_ {
 						mortonHx.Point2DInt_
 						x:Int
 				=
-				[Local x(6505):Int:Int]
+				[Local x(6593):Int:Int]
 			[Binop:Int]
 				[Field:Int]
 					[Const:mortonHx.Point2DInt_] this
@@ -20,7 +20,7 @@ class mortonHx.Point2DInt_ {
 						mortonHx.Point2DInt_
 						y:Int
 				=
-				[Local y(6506):Int:Int]
+				[Local y(6594):Int:Int]
 
 	public var x:Int;
 

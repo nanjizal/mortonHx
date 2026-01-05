@@ -1,0 +1,252 @@
+private class mortonHx._Morton4D.Point4DInt_Impl_ {
+
+	@:noCompletion
+	public static inline function _new[Function:(x : Int, y : Int, z : Int, w : Int) -> mortonHx.Point4DInt]
+		[Arg x<6509>(VUsedByTyper):Int]
+		[Arg y<6510>(VUsedByTyper):Int]
+		[Arg z<6511>(VUsedByTyper):Int]
+		[Arg w<6512>(VUsedByTyper):Int]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:mortonHx.Point4DInt]
+					[New:mortonHx.Point4DInt_]
+						mortonHx.Point4DInt_
+						[Local x(6509):Int:Int]
+						[Local y(6510):Int:Int]
+						[Local z(6511):Int:Int]
+						[Local w(6512):Int:Int]
+
+	@:to
+	public static inline function toMorton4D[Function:(this : mortonHx.Point4DInt_) -> mortonHx.Morton4D]
+		[Arg this1<6514>:mortonHx.Point4DInt_]
+		[Block:Dynamic]
+			[Var v<6545>(VAssigned):Int]
+				[Field:Int]
+					[Local this1(6514):mortonHx.Point4DInt_:mortonHx.Point4DInt_]
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						w:Int
+			[Binop:Int]
+				[Local v(6545):Int:Int]
+				&=
+				[Const:Int] 255
+			[Binop:Int]
+				[Local v(6545):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6545):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6545):Int:Int]
+								<<
+								[Const:Int] 12
+					&
+					[Const:Int] 983055
+			[Binop:Int]
+				[Local v(6545):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6545):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6545):Int:Int]
+								<<
+								[Const:Int] 6
+					&
+					[Const:Int] 50529027
+			[Binop:Int]
+				[Local v(6545):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(6545):Int:Int]
+							|
+							[Binop:Int]
+								[Local v(6545):Int:Int]
+								<<
+								[Const:Int] 3
+					&
+					[Const:Int] 286331153
+			[Var v1<6546>(VAssigned):Int]
+				[Field:Int]
+					[Local this1(6514):mortonHx.Point4DInt_:mortonHx.Point4DInt_]
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						z:Int
+			[Binop:Int]
+				[Local v1(6546):Int:Int]
+				&=
+				[Const:Int] 255
+			[Binop:Int]
+				[Local v1(6546):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6546):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6546):Int:Int]
+								<<
+								[Const:Int] 12
+					&
+					[Const:Int] 983055
+			[Binop:Int]
+				[Local v1(6546):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6546):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6546):Int:Int]
+								<<
+								[Const:Int] 6
+					&
+					[Const:Int] 50529027
+			[Binop:Int]
+				[Local v1(6546):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(6546):Int:Int]
+							|
+							[Binop:Int]
+								[Local v1(6546):Int:Int]
+								<<
+								[Const:Int] 3
+					&
+					[Const:Int] 286331153
+			[Var v2<6547>(VAssigned):Int]
+				[Field:Int]
+					[Local this1(6514):mortonHx.Point4DInt_:mortonHx.Point4DInt_]
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						y:Int
+			[Binop:Int]
+				[Local v2(6547):Int:Int]
+				&=
+				[Const:Int] 255
+			[Binop:Int]
+				[Local v2(6547):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6547):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6547):Int:Int]
+								<<
+								[Const:Int] 12
+					&
+					[Const:Int] 983055
+			[Binop:Int]
+				[Local v2(6547):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6547):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6547):Int:Int]
+								<<
+								[Const:Int] 6
+					&
+					[Const:Int] 50529027
+			[Binop:Int]
+				[Local v2(6547):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v2(6547):Int:Int]
+							|
+							[Binop:Int]
+								[Local v2(6547):Int:Int]
+								<<
+								[Const:Int] 3
+					&
+					[Const:Int] 286331153
+			[Var v3<6548>(VAssigned):Int]
+				[Field:Int]
+					[Local this1(6514):mortonHx.Point4DInt_:mortonHx.Point4DInt_]
+					[FInstance:Int]
+						mortonHx.Point4DInt_
+						x:Int
+			[Binop:Int]
+				[Local v3(6548):Int:Int]
+				&=
+				[Const:Int] 255
+			[Binop:Int]
+				[Local v3(6548):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v3(6548):Int:Int]
+							|
+							[Binop:Int]
+								[Local v3(6548):Int:Int]
+								<<
+								[Const:Int] 12
+					&
+					[Const:Int] 983055
+			[Binop:Int]
+				[Local v3(6548):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v3(6548):Int:Int]
+							|
+							[Binop:Int]
+								[Local v3(6548):Int:Int]
+								<<
+								[Const:Int] 6
+					&
+					[Const:Int] 50529027
+			[Binop:Int]
+				[Local v3(6548):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v3(6548):Int:Int]
+							|
+							[Binop:Int]
+								[Local v3(6548):Int:Int]
+								<<
+								[Const:Int] 3
+					&
+					[Const:Int] 286331153
+			[Return:Dynamic]
+				[Cast:mortonHx.Morton4D]
+					[Binop:Int]
+						[Binop:Int]
+							[Binop:Int]
+								[Binop:Int]
+									[Local v(6545):Int:Int]
+									<<
+									[Const:Int] 3
+								|
+								[Binop:Int]
+									[Local v1(6546):Int:Int]
+									<<
+									[Const:Int] 2
+							|
+							[Binop:Int]
+								[Local v2(6547):Int:Int]
+								<<
+								[Const:Int] 1
+						|
+						[Local v3(6548):Int:Int]
+}

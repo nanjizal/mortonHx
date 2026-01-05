@@ -2,216 +2,216 @@ private class mortonHx._Morton3D.Point3DInt_Impl_ {
 
 	@:noCompletion
 	public static inline function _new[Function:(x : Int, y : Int, z : Int) -> mortonHx.Point3DInt]
-		[Arg x<6580>(VUsedByTyper):Int]
-		[Arg y<6581>(VUsedByTyper):Int]
-		[Arg z<6582>(VUsedByTyper):Int]
+		[Arg x<6668>(VUsedByTyper):Int]
+		[Arg y<6669>(VUsedByTyper):Int]
+		[Arg z<6670>(VUsedByTyper):Int]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Cast:mortonHx.Point3DInt]
 					[New:mortonHx.Point3DInt_]
 						mortonHx.Point3DInt_
-						[Local x(6580):Int:Int]
-						[Local y(6581):Int:Int]
-						[Local z(6582):Int:Int]
+						[Local x(6668):Int:Int]
+						[Local y(6669):Int:Int]
+						[Local z(6670):Int:Int]
 
 	@:to
 	public static inline function toMorton3D[Function:(this : mortonHx.Point3DInt_) -> mortonHx.Morton3D]
-		[Arg this1<6584>:mortonHx.Point3DInt_]
+		[Arg this1<6672>:mortonHx.Point3DInt_]
 		[Block:Dynamic]
-			[Var v<6609>(VAssigned):Int]
+			[Var v<6697>(VAssigned):Int]
 				[Field:Int]
-					[Local this1(6584):mortonHx.Point3DInt_:mortonHx.Point3DInt_]
+					[Local this1(6672):mortonHx.Point3DInt_:mortonHx.Point3DInt_]
 					[FInstance:Int]
 						mortonHx.Point3DInt_
 						z:Int
 			[Binop:Int]
-				[Local v(6609):Int:Int]
+				[Local v(6697):Int:Int]
 				&=
 				[Const:Int] 1023
 			[Binop:Int]
-				[Local v(6609):Int:Int]
+				[Local v(6697):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6609):Int:Int]
+							[Local v(6697):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6609):Int:Int]
+								[Local v(6697):Int:Int]
 								<<
 								[Const:Int] 16
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v(6609):Int:Int]
+				[Local v(6697):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6609):Int:Int]
+							[Local v(6697):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6609):Int:Int]
+								[Local v(6697):Int:Int]
 								<<
 								[Const:Int] 8
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v(6609):Int:Int]
+				[Local v(6697):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6609):Int:Int]
+							[Local v(6697):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6609):Int:Int]
+								[Local v(6697):Int:Int]
 								<<
 								[Const:Int] 4
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v(6609):Int:Int]
+				[Local v(6697):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v(6609):Int:Int]
+							[Local v(6697):Int:Int]
 							|
 							[Binop:Int]
-								[Local v(6609):Int:Int]
+								[Local v(6697):Int:Int]
 								<<
 								[Const:Int] 2
 					&
 					[Const:Int] 153391689
-			[Var v1<6610>(VAssigned):Int]
+			[Var v1<6698>(VAssigned):Int]
 				[Field:Int]
-					[Local this1(6584):mortonHx.Point3DInt_:mortonHx.Point3DInt_]
+					[Local this1(6672):mortonHx.Point3DInt_:mortonHx.Point3DInt_]
 					[FInstance:Int]
 						mortonHx.Point3DInt_
 						y:Int
 			[Binop:Int]
-				[Local v1(6610):Int:Int]
+				[Local v1(6698):Int:Int]
 				&=
 				[Const:Int] 1023
 			[Binop:Int]
-				[Local v1(6610):Int:Int]
+				[Local v1(6698):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6610):Int:Int]
+							[Local v1(6698):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6610):Int:Int]
+								[Local v1(6698):Int:Int]
 								<<
 								[Const:Int] 16
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v1(6610):Int:Int]
+				[Local v1(6698):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6610):Int:Int]
+							[Local v1(6698):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6610):Int:Int]
+								[Local v1(6698):Int:Int]
 								<<
 								[Const:Int] 8
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v1(6610):Int:Int]
+				[Local v1(6698):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6610):Int:Int]
+							[Local v1(6698):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6610):Int:Int]
+								[Local v1(6698):Int:Int]
 								<<
 								[Const:Int] 4
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v1(6610):Int:Int]
+				[Local v1(6698):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v1(6610):Int:Int]
+							[Local v1(6698):Int:Int]
 							|
 							[Binop:Int]
-								[Local v1(6610):Int:Int]
+								[Local v1(6698):Int:Int]
 								<<
 								[Const:Int] 2
 					&
 					[Const:Int] 153391689
-			[Var v2<6611>(VAssigned):Int]
+			[Var v2<6699>(VAssigned):Int]
 				[Field:Int]
-					[Local this1(6584):mortonHx.Point3DInt_:mortonHx.Point3DInt_]
+					[Local this1(6672):mortonHx.Point3DInt_:mortonHx.Point3DInt_]
 					[FInstance:Int]
 						mortonHx.Point3DInt_
 						x:Int
 			[Binop:Int]
-				[Local v2(6611):Int:Int]
+				[Local v2(6699):Int:Int]
 				&=
 				[Const:Int] 1023
 			[Binop:Int]
-				[Local v2(6611):Int:Int]
+				[Local v2(6699):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6611):Int:Int]
+							[Local v2(6699):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6611):Int:Int]
+								[Local v2(6699):Int:Int]
 								<<
 								[Const:Int] 16
 					&
 					[Const:Int] 50331903
 			[Binop:Int]
-				[Local v2(6611):Int:Int]
+				[Local v2(6699):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6611):Int:Int]
+							[Local v2(6699):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6611):Int:Int]
+								[Local v2(6699):Int:Int]
 								<<
 								[Const:Int] 8
 					&
 					[Const:Int] 50393103
 			[Binop:Int]
-				[Local v2(6611):Int:Int]
+				[Local v2(6699):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6611):Int:Int]
+							[Local v2(6699):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6611):Int:Int]
+								[Local v2(6699):Int:Int]
 								<<
 								[Const:Int] 4
 					&
 					[Const:Int] 51130563
 			[Binop:Int]
-				[Local v2(6611):Int:Int]
+				[Local v2(6699):Int:Int]
 				=
 				[Binop:Int]
 					[Parenthesis:Int]
 						[Binop:Int]
-							[Local v2(6611):Int:Int]
+							[Local v2(6699):Int:Int]
 							|
 							[Binop:Int]
-								[Local v2(6611):Int:Int]
+								[Local v2(6699):Int:Int]
 								<<
 								[Const:Int] 2
 					&
@@ -221,14 +221,14 @@ private class mortonHx._Morton3D.Point3DInt_Impl_ {
 					[Binop:Int]
 						[Binop:Int]
 							[Binop:Int]
-								[Local v(6609):Int:Int]
+								[Local v(6697):Int:Int]
 								<<
 								[Const:Int] 2
 							|
 							[Binop:Int]
-								[Local v1(6610):Int:Int]
+								[Local v1(6698):Int:Int]
 								<<
 								[Const:Int] 1
 						|
-						[Local v2(6611):Int:Int]
+						[Local v2(6699):Int:Int]
 }
