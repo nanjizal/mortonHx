@@ -1477,6 +1477,76 @@
 			<m n=":coreApi"/>
 		</meta>
 	</class>
+	<abstract path="haxe.Int32" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/haxe/Int32.hx">
+		<from><icast><x path="Int"/></icast></from>
+		<this><x path="Int"/></this>
+		<to>
+			<icast><x path="Int"/></icast>
+			<icast field="toFloat"><x path="Float"/></icast>
+		</to>
+		<haxe_doc>Int32 provides a 32-bit integer with consistent overflow behavior across
+	all platforms.</haxe_doc>
+		<meta><m n=":transitive"/></meta>
+		<impl><class path="haxe._Int32.Int32_Impl_" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/haxe/Int32.hx" private="1" module="haxe.Int32" final="1">
+	<ucompare public="1" set="method" line="254" static="1">
+		<f a="a:b">
+			<x path="haxe.Int32"/>
+			<x path="haxe.Int32"/>
+			<x path="Int"/>
+		</f>
+		<haxe_doc>Compare `a` and `b` in unsigned mode.</haxe_doc>
+	</ucompare>
+	<meta>
+		<m n=":keep"/>
+		<m n=":directlyUsed"/>
+	</meta>
+</class></impl>
+	</abstract>
+	<class path="haxe._Int32.Int32_Impl_" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/haxe/Int32.hx" private="1" module="haxe.Int32" final="1">
+		<ucompare public="1" set="method" line="254" static="1">
+			<f a="a:b">
+				<x path="haxe.Int32"/>
+				<x path="haxe.Int32"/>
+				<x path="Int"/>
+			</f>
+			<haxe_doc>Compare `a` and `b` in unsigned mode.</haxe_doc>
+		</ucompare>
+		<meta>
+			<m n=":keep"/>
+			<m n=":directlyUsed"/>
+		</meta>
+	</class>
+	<abstract path="haxe.Int64" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/haxe/Int64.hx">
+		<from>
+			<icast><t path="haxe._Int64.__Int64"/></icast>
+			<icast field="ofInt"><x path="Int"/></icast>
+		</from>
+		<this><t path="haxe._Int64.__Int64"/></this>
+		<to><icast><t path="haxe._Int64.__Int64"/></icast></to>
+		<haxe_doc>A cross-platform signed 64-bit integer.
+	Int64 instances can be created from two 32-bit words using `Int64.make()`.</haxe_doc>
+		<meta><m n=":transitive"/></meta>
+		<impl><class path="haxe._Int64.Int64_Impl_" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/haxe/Int64.hx" private="1" module="haxe.Int64" final="1"><meta><m n=":keep"/></meta></class></impl>
+	</abstract>
+	<typedef path="haxe._Int64.__Int64" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/haxe/Int64.hx" private="1" module="haxe.Int64">
+		<c path="haxe._Int64.___Int64"/>
+		<haxe_doc>This typedef will fool `@:coreApi` into thinking that we are using
+	the same underlying type, even though it might be different on
+	specific platforms.</haxe_doc>
+	</typedef>
+	<class path="haxe._Int64.___Int64" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/haxe/Int64.hx" private="1" module="haxe.Int64">
+		<high public="1"><x path="haxe.Int32"/></high>
+		<low public="1"><x path="haxe.Int32"/></low>
+		<new public="1" get="inline" set="null" line="473"><f a="high:low">
+	<x path="haxe.Int32"/>
+	<x path="haxe.Int32"/>
+	<x path="Void"/>
+</f></new>
+		<meta>
+			<m n=":keep"/>
+			<m n=":directlyUsed"/>
+		</meta>
+	</class>
 	<class path="haxe._NativeStackTrace.V8Error" params="" file="/home/nanjizalmac/haxe/versions/1423a5f/std/js/_std/haxe/NativeStackTrace.hx" private="1" module="haxe.NativeStackTrace" extern="1">
 		<prepareStackTrace public="1" static="1"><f a="error:structuredStackTrace">
 	<c path="js.lib.Error"/>
@@ -38066,6 +38136,914 @@
 	<x path="mortonHx.Morton4D"/>
 	<x path="Bool"/>
 </f></isInsideBox>
+	</class>
+	<abstract path="mortonHx.Morton4Di64" params="" file="src/mortonHx/Morton4Di64.hx">
+		<from>
+			<icast><x path="haxe.Int64"/></icast>
+			<icast field="fromMorton32"><x path="mortonHx.Morton4D"/></icast>
+			<icast field="fromInt"><x path="Int"/></icast>
+		</from>
+		<this><x path="haxe.Int64"/></this>
+		<to>
+			<icast><x path="haxe.Int64"/></icast>
+			<icast field="toMorton32"><x path="mortonHx.Morton4D"/></icast>
+			<icast field="toInt"><x path="Int"/></icast>
+		</to>
+		<haxe_doc>* 64-bit 4D Morton Code (16 bits per dimension).
+ * Supports spatial arithmetic and filtering without de-interleaving.</haxe_doc>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="mortonHx._Morton4Di64.Morton4Di64_Impl_" params="" file="src/mortonHx/Morton4Di64.hx" private="1" module="mortonHx.Morton4Di64" final="1">
+	<max32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></max32>
+	<get_max32 get="inline" set="null" line="14" static="1"><f a=""><x path="haxe.Int64"/></f></get_max32>
+	<min32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></min32>
+	<get_min32 get="inline" set="null" line="17" static="1"><f a=""><x path="haxe.Int64"/></f></get_min32>
+	<fromMorton32 public="1" get="inline" set="null" line="30" static="1">
+		<f a="v">
+			<x path="mortonHx.Morton4D"/>
+			<x path="mortonHx.Morton4Di64"/>
+		</f>
+		<meta><m n=":from"/></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m64 = new Morton4Di64(5, 0, 0, 0); 
+     * ...   var m32:Morton4D = m64;
+     * ...   (m32 : Int) > 0; }) == true
+     * >>> ({ 
+     * ...   var m64 = new Morton4Di64(65535, 65535, 65535, 65535); 
+     * ...   try { var m32:Morton4D = m64; false; } catch(e:String) { true; }; }) == true
+     * </code></pre>]]></haxe_doc>
+	</fromMorton32>
+	<toMorton32 public="1" get="inline" set="null" line="42" static="1">
+		<f a="this">
+			<x path="haxe.Int64"/>
+			<x path="mortonHx.Morton4D"/>
+		</f>
+		<meta>
+			<m n=":access"><e>haxe.Int64</e></m>
+			<m n=":to"/>
+		</meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m64 = new Morton4Di64(10, 10, 10, 10);
+     * ...   m64.toMorton32() != null; }) == true
+     * </code></pre>]]></haxe_doc>
+	</toMorton32>
+	<fromInt public="1" get="inline" set="null" line="56" static="1">
+		<f a="v">
+			<x path="Int"/>
+			<x path="mortonHx.Morton4Di64"/>
+		</f>
+		<meta><m n=":from"/></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton4Di64 = 12345;
+     * ...   m.toInt() == 12345; }) == true
+     * </code></pre>]]></haxe_doc>
+	</fromInt>
+	<toInt public="1" get="inline" set="null" line="65" static="1">
+		<f a="this">
+			<x path="haxe.Int64"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":to"/></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton4Di64 = 100;
+     * ...   m.toInt(); }) == 100
+     * </code></pre>]]></haxe_doc>
+	</toInt>
+	<maskX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskX>
+	<get_maskX get="inline" set="null" line="74" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskX>
+	<maskY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskY>
+	<get_maskY get="inline" set="null" line="80" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskY>
+	<maskZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskZ>
+	<get_maskZ get="inline" set="null" line="86" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskZ>
+	<maskW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskW>
+	<get_maskW get="inline" set="null" line="92" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskW>
+	<maskNotX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotX>
+	<get_maskNotX get="inline" set="null" line="97" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotX>
+	<maskNotY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotY>
+	<get_maskNotY get="inline" set="null" line="98" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotY>
+	<maskNotZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotZ>
+	<get_maskNotZ get="inline" set="null" line="99" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotZ>
+	<maskNotW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotW>
+	<get_maskNotW get="inline" set="null" line="100" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotW>
+	<_new public="1" get="inline" set="null" line="110" static="1">
+		<f a="x:y:z:w">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="mortonHx.Morton4Di64"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton4Di64(1, 2, 3, 4);
+     * ...   var d = m.decode();
+     * ...   d.x == 1 && d.y == 2 && d.z == 3 && d.w == 4; }) == true
+     * </code></pre>]]></haxe_doc>
+	</_new>
+	<part1By3 get="inline" set="null" line="114" static="1"><f a="this:v">
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+	<x path="haxe.Int64"/>
+</f></part1By3>
+	<decode public="1" get="inline" set="null" line="131" static="1">
+		<f a="this">
+			<x path="haxe.Int64"/>
+			<x path="mortonHx.Point4DInt"/>
+		</f>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton4Di64(65535, 32768, 0, 1);
+     * ...   var res = m.decode();
+     * ...   res.x == 65535 && res.y == 32768 && res.z == 0 && res.w == 1; }) == true
+     * </code></pre>]]></haxe_doc>
+	</decode>
+	<compact1By3 get="inline" set="null" line="135" static="1"><f a="this:v">
+	<x path="haxe.Int64"/>
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+</f></compact1By3>
+	<add public="1" get="inline" set="null" line="154" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+		</f>
+		<meta><m n=":op"><e>A + B</e></m></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton4Di64(100, 100, 100, 100);
+     * ...   var m2 = new Morton4Di64(50, 50, 50, 50);
+     * ...   var res = (m1 + m2).decode();
+     * ...   res.x == 150 && res.y == 150 && res.z == 150 && res.w == 150; }) == true
+     * </code></pre>]]></haxe_doc>
+	</add>
+	<subtract public="1" get="inline" set="null" line="172" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+		</f>
+		<meta><m n=":op"><e>A - B</e></m></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton4Di64(10, 10, 10, 10);
+     * ...   var m2 = new Morton4Di64(3, 3, 3, 3);
+     * ...   var res = (m1 - m2).decode();
+     * ...   res.x == 7 && res.y == 7 && res.z == 7 && res.w == 7; }) == true
+     * </code></pre>]]></haxe_doc>
+	</subtract>
+	<lt public="1" get="inline" set="null" line="188" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton4Di64(0, 0, 0, 10);
+     * ...   var m2 = new Morton4Di64(0, 0, 0, 20);
+     * ...   m1 < m2 && m1 != m2 && m1 <= m2 && m2 >= m1; }) == true
+     * </code></pre>]]></haxe_doc>
+	</lt>
+	<gt public="1" get="inline" set="null" line="189" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+	</gt>
+	<lte public="1" get="inline" set="null" line="190" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+	</lte>
+	<gte public="1" get="inline" set="null" line="191" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+	</gte>
+	<eq public="1" get="inline" set="null" line="192" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e>A == B</e></m></meta>
+	</eq>
+	<neq public="1" get="inline" set="null" line="193" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e>A != B</e></m></meta>
+	</neq>
+	<isInsideBox public="1" get="inline" set="null" line="209" static="1">
+		<f a="p:min:max">
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="mortonHx.Morton4Di64"/>
+			<x path="Bool"/>
+		</f>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var p = new Morton4Di64(50, 50, 50, 50);
+     * ...   var min = new Morton4Di64(40, 40, 40, 40);
+     * ...   var max = new Morton4Di64(60, 60, 60, 60);
+     * ...   Morton4Di64.isInsideBox(p, min, max); }) == true
+     * >>> ({ 
+     * ...   var p = new Morton4Di64(70, 50, 50, 50);
+     * ...   var min = new Morton4Di64(40, 40, 40, 40);
+     * ...   var max = new Morton4Di64(60, 60, 60, 60);
+     * ...   Morton4Di64.isInsideBox(p, min, max); }) == false
+     * </code></pre>]]></haxe_doc>
+	</isInsideBox>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._Morton4Di64.Morton4Di64_Impl_" params="" file="src/mortonHx/Morton4Di64.hx" private="1" module="mortonHx.Morton4Di64" final="1">
+		<max32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></max32>
+		<get_max32 get="inline" set="null" line="14" static="1"><f a=""><x path="haxe.Int64"/></f></get_max32>
+		<min32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></min32>
+		<get_min32 get="inline" set="null" line="17" static="1"><f a=""><x path="haxe.Int64"/></f></get_min32>
+		<fromMorton32 public="1" get="inline" set="null" line="30" static="1">
+			<f a="v">
+				<x path="mortonHx.Morton4D"/>
+				<x path="mortonHx.Morton4Di64"/>
+			</f>
+			<meta><m n=":from"/></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m64 = new Morton4Di64(5, 0, 0, 0); 
+     * ...   var m32:Morton4D = m64;
+     * ...   (m32 : Int) > 0; }) == true
+     * >>> ({ 
+     * ...   var m64 = new Morton4Di64(65535, 65535, 65535, 65535); 
+     * ...   try { var m32:Morton4D = m64; false; } catch(e:String) { true; }; }) == true
+     * </code></pre>]]></haxe_doc>
+		</fromMorton32>
+		<toMorton32 public="1" get="inline" set="null" line="42" static="1">
+			<f a="this">
+				<x path="haxe.Int64"/>
+				<x path="mortonHx.Morton4D"/>
+			</f>
+			<meta>
+				<m n=":access"><e>haxe.Int64</e></m>
+				<m n=":to"/>
+			</meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m64 = new Morton4Di64(10, 10, 10, 10);
+     * ...   m64.toMorton32() != null; }) == true
+     * </code></pre>]]></haxe_doc>
+		</toMorton32>
+		<fromInt public="1" get="inline" set="null" line="56" static="1">
+			<f a="v">
+				<x path="Int"/>
+				<x path="mortonHx.Morton4Di64"/>
+			</f>
+			<meta><m n=":from"/></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton4Di64 = 12345;
+     * ...   m.toInt() == 12345; }) == true
+     * </code></pre>]]></haxe_doc>
+		</fromInt>
+		<toInt public="1" get="inline" set="null" line="65" static="1">
+			<f a="this">
+				<x path="haxe.Int64"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":to"/></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton4Di64 = 100;
+     * ...   m.toInt(); }) == 100
+     * </code></pre>]]></haxe_doc>
+		</toInt>
+		<maskX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskX>
+		<get_maskX get="inline" set="null" line="74" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskX>
+		<maskY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskY>
+		<get_maskY get="inline" set="null" line="80" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskY>
+		<maskZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskZ>
+		<get_maskZ get="inline" set="null" line="86" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskZ>
+		<maskW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskW>
+		<get_maskW get="inline" set="null" line="92" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskW>
+		<maskNotX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotX>
+		<get_maskNotX get="inline" set="null" line="97" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotX>
+		<maskNotY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotY>
+		<get_maskNotY get="inline" set="null" line="98" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotY>
+		<maskNotZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotZ>
+		<get_maskNotZ get="inline" set="null" line="99" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotZ>
+		<maskNotW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotW>
+		<get_maskNotW get="inline" set="null" line="100" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotW>
+		<_new public="1" get="inline" set="null" line="110" static="1">
+			<f a="x:y:z:w">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="mortonHx.Morton4Di64"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton4Di64(1, 2, 3, 4);
+     * ...   var d = m.decode();
+     * ...   d.x == 1 && d.y == 2 && d.z == 3 && d.w == 4; }) == true
+     * </code></pre>]]></haxe_doc>
+		</_new>
+		<part1By3 get="inline" set="null" line="114" static="1"><f a="this:v">
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+	<x path="haxe.Int64"/>
+</f></part1By3>
+		<decode public="1" get="inline" set="null" line="131" static="1">
+			<f a="this">
+				<x path="haxe.Int64"/>
+				<x path="mortonHx.Point4DInt"/>
+			</f>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton4Di64(65535, 32768, 0, 1);
+     * ...   var res = m.decode();
+     * ...   res.x == 65535 && res.y == 32768 && res.z == 0 && res.w == 1; }) == true
+     * </code></pre>]]></haxe_doc>
+		</decode>
+		<compact1By3 get="inline" set="null" line="135" static="1"><f a="this:v">
+	<x path="haxe.Int64"/>
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+</f></compact1By3>
+		<add public="1" get="inline" set="null" line="154" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+			</f>
+			<meta><m n=":op"><e>A + B</e></m></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton4Di64(100, 100, 100, 100);
+     * ...   var m2 = new Morton4Di64(50, 50, 50, 50);
+     * ...   var res = (m1 + m2).decode();
+     * ...   res.x == 150 && res.y == 150 && res.z == 150 && res.w == 150; }) == true
+     * </code></pre>]]></haxe_doc>
+		</add>
+		<subtract public="1" get="inline" set="null" line="172" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+			</f>
+			<meta><m n=":op"><e>A - B</e></m></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton4Di64(10, 10, 10, 10);
+     * ...   var m2 = new Morton4Di64(3, 3, 3, 3);
+     * ...   var res = (m1 - m2).decode();
+     * ...   res.x == 7 && res.y == 7 && res.z == 7 && res.w == 7; }) == true
+     * </code></pre>]]></haxe_doc>
+		</subtract>
+		<lt public="1" get="inline" set="null" line="188" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton4Di64(0, 0, 0, 10);
+     * ...   var m2 = new Morton4Di64(0, 0, 0, 20);
+     * ...   m1 < m2 && m1 != m2 && m1 <= m2 && m2 >= m1; }) == true
+     * </code></pre>]]></haxe_doc>
+		</lt>
+		<gt public="1" get="inline" set="null" line="189" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+		</gt>
+		<lte public="1" get="inline" set="null" line="190" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+		</lte>
+		<gte public="1" get="inline" set="null" line="191" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+		</gte>
+		<eq public="1" get="inline" set="null" line="192" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e>A == B</e></m></meta>
+		</eq>
+		<neq public="1" get="inline" set="null" line="193" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e>A != B</e></m></meta>
+		</neq>
+		<isInsideBox public="1" get="inline" set="null" line="209" static="1">
+			<f a="p:min:max">
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="mortonHx.Morton4Di64"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var p = new Morton4Di64(50, 50, 50, 50);
+     * ...   var min = new Morton4Di64(40, 40, 40, 40);
+     * ...   var max = new Morton4Di64(60, 60, 60, 60);
+     * ...   Morton4Di64.isInsideBox(p, min, max); }) == true
+     * >>> ({ 
+     * ...   var p = new Morton4Di64(70, 50, 50, 50);
+     * ...   var min = new Morton4Di64(40, 40, 40, 40);
+     * ...   var max = new Morton4Di64(60, 60, 60, 60);
+     * ...   Morton4Di64.isInsideBox(p, min, max); }) == false
+     * </code></pre>]]></haxe_doc>
+		</isInsideBox>
+	</class>
+	<class path="mortonHx.Point5DInt_" params="" file="src/mortonHx/Morton5Di64.hx" module="mortonHx.Morton5Di64">
+		<x public="1"><x path="Int"/></x>
+		<y public="1"><x path="Int"/></y>
+		<z public="1"><x path="Int"/></z>
+		<w public="1"><x path="Int"/></w>
+		<v public="1"><x path="Int"/></v>
+		<toString public="1" set="method" line="20"><f a=""><c path="String"/></f></toString>
+		<new public="1" get="inline" set="null" line="16"><f a="x:y:z:w:v">
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Int"/>
+	<x path="Void"/>
+</f></new>
+		<haxe_doc>* Data container for decoded 5D Morton coordinates.</haxe_doc>
+		<meta>
+			<m n=":directlyUsed"/>
+			<m n=":structInit"/>
+		</meta>
+	</class>
+	<abstract path="mortonHx.Point5DInt" params="" file="src/mortonHx/Morton5Di64.hx" module="mortonHx.Morton5Di64">
+		<from>
+			<icast><c path="mortonHx.Point5DInt_"/></icast>
+			<icast field="fromMorton5D"><x path="mortonHx.Morton5Di64"/></icast>
+		</from>
+		<this><c path="mortonHx.Point5DInt_"/></this>
+		<to>
+			<icast><c path="mortonHx.Point5DInt_"/></icast>
+			<icast field="toMorton5D"><x path="mortonHx.Morton5Di64"/></icast>
+		</to>
+		<haxe_doc>* Abstract wrapper for Point5DInt providing conversion to/from Morton5Di64.</haxe_doc>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="mortonHx._Morton5Di64.Point5DInt_Impl_" params="" file="src/mortonHx/Morton5Di64.hx" private="1" module="mortonHx.Morton5Di64" final="1">
+	<_new public="1" get="inline" set="null" line="28" static="1">
+		<f a="x:y:z:w:v">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="mortonHx.Point5DInt"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+	</_new>
+	<toMorton5D public="1" get="inline" set="null" line="33" static="1">
+		<f a="this">
+			<c path="mortonHx.Point5DInt_"/>
+			<x path="mortonHx.Morton5Di64"/>
+		</f>
+		<meta><m n=":to"/></meta>
+	</toMorton5D>
+	<fromMorton5D public="1" get="inline" set="null" line="38" static="1">
+		<f a="m">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Point5DInt"/>
+		</f>
+		<meta><m n=":from"/></meta>
+	</fromMorton5D>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._Morton5Di64.Point5DInt_Impl_" params="" file="src/mortonHx/Morton5Di64.hx" private="1" module="mortonHx.Morton5Di64" final="1">
+		<_new public="1" get="inline" set="null" line="28" static="1">
+			<f a="x:y:z:w:v">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="mortonHx.Point5DInt"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+		</_new>
+		<toMorton5D public="1" get="inline" set="null" line="33" static="1">
+			<f a="this">
+				<c path="mortonHx.Point5DInt_"/>
+				<x path="mortonHx.Morton5Di64"/>
+			</f>
+			<meta><m n=":to"/></meta>
+		</toMorton5D>
+		<fromMorton5D public="1" get="inline" set="null" line="38" static="1">
+			<f a="m">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Point5DInt"/>
+			</f>
+			<meta><m n=":from"/></meta>
+		</fromMorton5D>
+	</class>
+	<abstract path="mortonHx.Morton5Di64" params="" file="src/mortonHx/Morton5Di64.hx">
+		<from>
+			<icast><x path="haxe.Int64"/></icast>
+			<icast field="fromInt"><x path="Int"/></icast>
+		</from>
+		<this><x path="haxe.Int64"/></this>
+		<to>
+			<icast><x path="haxe.Int64"/></icast>
+			<icast field="toInt"><x path="Int"/></icast>
+		</to>
+		<haxe_doc>* 64-bit 5D Morton Code (12 bits per dimension: 0-4095).
+ * Interleaves as: v11,w11,z11,y11,x11 ... v0,w0,z0,y0,x0</haxe_doc>
+		<meta><m n=":forward"/></meta>
+		<impl><class path="mortonHx._Morton5Di64.Morton5Di64_Impl_" params="" file="src/mortonHx/Morton5Di64.hx" private="1" module="mortonHx.Morton5Di64" final="1">
+	<max32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></max32>
+	<get_max32 get="inline" set="null" line="51" static="1"><f a=""><x path="haxe.Int64"/></f></get_max32>
+	<min32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></min32>
+	<get_min32 get="inline" set="null" line="54" static="1"><f a=""><x path="haxe.Int64"/></f></get_min32>
+	<maskX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskX>
+	<get_maskX get="inline" set="null" line="58" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskX>
+	<maskY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskY>
+	<get_maskY get="inline" set="null" line="60" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskY>
+	<maskZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskZ>
+	<get_maskZ get="inline" set="null" line="62" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskZ>
+	<maskW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskW>
+	<get_maskW get="inline" set="null" line="64" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskW>
+	<maskV public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskV>
+	<get_maskV get="inline" set="null" line="66" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskV>
+	<maskNotX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotX>
+	<get_maskNotX get="inline" set="null" line="68" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotX>
+	<maskNotY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotY>
+	<get_maskNotY get="inline" set="null" line="69" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotY>
+	<maskNotZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotZ>
+	<get_maskNotZ get="inline" set="null" line="70" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotZ>
+	<maskNotW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotW>
+	<get_maskNotW get="inline" set="null" line="71" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotW>
+	<maskNotV public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotV>
+	<get_maskNotV get="inline" set="null" line="72" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotV>
+	<_new public="1" get="inline" set="null" line="82" static="1">
+		<f a="x:y:z:w:v">
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="Int"/>
+			<x path="mortonHx.Morton5Di64"/>
+		</f>
+		<meta><m n=":noCompletion"/></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton5Di64(1, 2, 3, 4, 5);
+     * ...   var d = m.decode();
+     * ...   d.x == 1 && d.y == 2 && d.z == 3 && d.w == 4 && d.v == 5; }) == true
+     * </code></pre>]]></haxe_doc>
+	</_new>
+	<fromInt public="1" get="inline" set="null" line="93" static="1">
+		<f a="v">
+			<x path="Int"/>
+			<x path="mortonHx.Morton5Di64"/>
+		</f>
+		<meta><m n=":from"/></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton5Di64 = 1000;
+     * ...   m.toInt() == 1000; }) == true
+     * </code></pre>]]></haxe_doc>
+	</fromInt>
+	<toInt public="1" get="inline" set="null" line="105" static="1">
+		<f a="this">
+			<x path="haxe.Int64"/>
+			<x path="Int"/>
+		</f>
+		<meta><m n=":to"/></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton5Di64 = 500;
+     * ...   m.toInt(); }) == 500
+     * >>> ({ 
+     * ...   var m = new Morton5Di64(4000, 4000, 4000, 4000, 4000); 
+     * ...   try { m.toInt(); false; } catch(e:String) { true; }; }) == true
+     * </code></pre>]]></haxe_doc>
+	</toInt>
+	<spread get="inline" set="null" line="112" static="1"><f a="this:n">
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+	<x path="haxe.Int64"/>
+</f></spread>
+	<decode public="1" get="inline" set="null" line="128" static="1">
+		<f a="this">
+			<x path="haxe.Int64"/>
+			<x path="mortonHx.Point5DInt"/>
+		</f>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton5Di64(4095, 0, 4095, 0, 4095);
+     * ...   var res = m.decode();
+     * ...   res.x == 4095 && res.y == 0 && res.v == 4095; }) == true
+     * </code></pre>]]></haxe_doc>
+	</decode>
+	<compact get="inline" set="null" line="132" static="1"><f a="this:v">
+	<x path="haxe.Int64"/>
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+</f></compact>
+	<add public="1" get="inline" set="null" line="150" static="1">
+		<f a="base:offset">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+		</f>
+		<meta><m n=":op"><e>A + B</e></m></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton5Di64(10, 10, 10, 10, 10);
+     * ...   var m2 = new Morton5Di64(5, 5, 5, 5, 5);
+     * ...   var res = (m1 + m2).decode();
+     * ...   res.x == 15 && res.v == 15; }) == true
+     * </code></pre>]]></haxe_doc>
+	</add>
+	<lt public="1" get="inline" set="null" line="167" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton5Di64(1, 1, 1, 1, 1);
+     * ...   var m2 = new Morton5Di64(1, 1, 1, 1, 2);
+     * ...   m1 < m2 && m1 != m2 && m1 <= m1 && m2 >= m1; }) == true
+     * </code></pre>]]></haxe_doc>
+	</lt>
+	<gt public="1" get="inline" set="null" line="168" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+	</gt>
+	<lte public="1" get="inline" set="null" line="169" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+	</lte>
+	<gte public="1" get="inline" set="null" line="170" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+	</gte>
+	<eq public="1" get="inline" set="null" line="171" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e>A == B</e></m></meta>
+	</eq>
+	<neq public="1" get="inline" set="null" line="172" static="1">
+		<f a="a:b">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="Bool"/>
+		</f>
+		<meta><m n=":op"><e>A != B</e></m></meta>
+	</neq>
+	<isInsideBox public="1" get="inline" set="null" line="183" static="1">
+		<f a="p:min:max">
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="mortonHx.Morton5Di64"/>
+			<x path="Bool"/>
+		</f>
+		<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var p = new Morton5Di64(10, 10, 10, 10, 10);
+     * ...   var min = new Morton5Di64(0, 0, 0, 0, 0);
+     * ...   var max = new Morton5Di64(20, 20, 20, 20, 20);
+     * ...   Morton5Di64.isInsideBox(p, min, max); }) == true
+     * </code></pre>]]></haxe_doc>
+	</isInsideBox>
+</class></impl>
+	</abstract>
+	<class path="mortonHx._Morton5Di64.Morton5Di64_Impl_" params="" file="src/mortonHx/Morton5Di64.hx" private="1" module="mortonHx.Morton5Di64" final="1">
+		<max32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></max32>
+		<get_max32 get="inline" set="null" line="51" static="1"><f a=""><x path="haxe.Int64"/></f></get_max32>
+		<min32 get="accessor" set="null" static="1"><x path="haxe.Int64"/></min32>
+		<get_min32 get="inline" set="null" line="54" static="1"><f a=""><x path="haxe.Int64"/></f></get_min32>
+		<maskX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskX>
+		<get_maskX get="inline" set="null" line="58" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskX>
+		<maskY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskY>
+		<get_maskY get="inline" set="null" line="60" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskY>
+		<maskZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskZ>
+		<get_maskZ get="inline" set="null" line="62" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskZ>
+		<maskW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskW>
+		<get_maskW get="inline" set="null" line="64" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskW>
+		<maskV public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskV>
+		<get_maskV get="inline" set="null" line="66" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskV>
+		<maskNotX public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotX>
+		<get_maskNotX get="inline" set="null" line="68" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotX>
+		<maskNotY public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotY>
+		<get_maskNotY get="inline" set="null" line="69" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotY>
+		<maskNotZ public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotZ>
+		<get_maskNotZ get="inline" set="null" line="70" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotZ>
+		<maskNotW public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotW>
+		<get_maskNotW get="inline" set="null" line="71" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotW>
+		<maskNotV public="1" get="accessor" set="null" static="1"><x path="haxe.Int64"/></maskNotV>
+		<get_maskNotV get="inline" set="null" line="72" static="1"><f a=""><x path="haxe.Int64"/></f></get_maskNotV>
+		<_new public="1" get="inline" set="null" line="82" static="1">
+			<f a="x:y:z:w:v">
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="Int"/>
+				<x path="mortonHx.Morton5Di64"/>
+			</f>
+			<meta><m n=":noCompletion"/></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton5Di64(1, 2, 3, 4, 5);
+     * ...   var d = m.decode();
+     * ...   d.x == 1 && d.y == 2 && d.z == 3 && d.w == 4 && d.v == 5; }) == true
+     * </code></pre>]]></haxe_doc>
+		</_new>
+		<fromInt public="1" get="inline" set="null" line="93" static="1">
+			<f a="v">
+				<x path="Int"/>
+				<x path="mortonHx.Morton5Di64"/>
+			</f>
+			<meta><m n=":from"/></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton5Di64 = 1000;
+     * ...   m.toInt() == 1000; }) == true
+     * </code></pre>]]></haxe_doc>
+		</fromInt>
+		<toInt public="1" get="inline" set="null" line="105" static="1">
+			<f a="this">
+				<x path="haxe.Int64"/>
+				<x path="Int"/>
+			</f>
+			<meta><m n=":to"/></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m:Morton5Di64 = 500;
+     * ...   m.toInt(); }) == 500
+     * >>> ({ 
+     * ...   var m = new Morton5Di64(4000, 4000, 4000, 4000, 4000); 
+     * ...   try { m.toInt(); false; } catch(e:String) { true; }; }) == true
+     * </code></pre>]]></haxe_doc>
+		</toInt>
+		<spread get="inline" set="null" line="112" static="1"><f a="this:n">
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+	<x path="haxe.Int64"/>
+</f></spread>
+		<decode public="1" get="inline" set="null" line="128" static="1">
+			<f a="this">
+				<x path="haxe.Int64"/>
+				<x path="mortonHx.Point5DInt"/>
+			</f>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m = new Morton5Di64(4095, 0, 4095, 0, 4095);
+     * ...   var res = m.decode();
+     * ...   res.x == 4095 && res.y == 0 && res.v == 4095; }) == true
+     * </code></pre>]]></haxe_doc>
+		</decode>
+		<compact get="inline" set="null" line="132" static="1"><f a="this:v">
+	<x path="haxe.Int64"/>
+	<x path="haxe.Int64"/>
+	<x path="Int"/>
+</f></compact>
+		<add public="1" get="inline" set="null" line="150" static="1">
+			<f a="base:offset">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+			</f>
+			<meta><m n=":op"><e>A + B</e></m></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton5Di64(10, 10, 10, 10, 10);
+     * ...   var m2 = new Morton5Di64(5, 5, 5, 5, 5);
+     * ...   var res = (m1 + m2).decode();
+     * ...   res.x == 15 && res.v == 15; }) == true
+     * </code></pre>]]></haxe_doc>
+		</add>
+		<lt public="1" get="inline" set="null" line="167" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A < B]]></e></m></meta>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var m1 = new Morton5Di64(1, 1, 1, 1, 1);
+     * ...   var m2 = new Morton5Di64(1, 1, 1, 1, 2);
+     * ...   m1 < m2 && m1 != m2 && m1 <= m1 && m2 >= m1; }) == true
+     * </code></pre>]]></haxe_doc>
+		</lt>
+		<gt public="1" get="inline" set="null" line="168" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A > B]]></e></m></meta>
+		</gt>
+		<lte public="1" get="inline" set="null" line="169" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A <= B]]></e></m></meta>
+		</lte>
+		<gte public="1" get="inline" set="null" line="170" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e><![CDATA[A >= B]]></e></m></meta>
+		</gte>
+		<eq public="1" get="inline" set="null" line="171" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e>A == B</e></m></meta>
+		</eq>
+		<neq public="1" get="inline" set="null" line="172" static="1">
+			<f a="a:b">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="Bool"/>
+			</f>
+			<meta><m n=":op"><e>A != B</e></m></meta>
+		</neq>
+		<isInsideBox public="1" get="inline" set="null" line="183" static="1">
+			<f a="p:min:max">
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="mortonHx.Morton5Di64"/>
+				<x path="Bool"/>
+			</f>
+			<haxe_doc><![CDATA[* <pre><code>
+     * >>> ({ 
+     * ...   var p = new Morton5Di64(10, 10, 10, 10, 10);
+     * ...   var min = new Morton5Di64(0, 0, 0, 0, 0);
+     * ...   var max = new Morton5Di64(20, 20, 20, 20, 20);
+     * ...   Morton5Di64.isInsideBox(p, min, max); }) == true
+     * </code></pre>]]></haxe_doc>
+		</isInsideBox>
 	</class>
 	<abstract path="mortonHx.SortableArray" params="T" file="src/mortonHx/SortableArray.hx">
 		<from><icast><c path="Array"><c path="mortonHx.SortableArray.T"/></c></icast></from>

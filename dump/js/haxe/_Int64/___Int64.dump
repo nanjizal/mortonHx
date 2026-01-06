@@ -1,0 +1,28 @@
+@:keep @:directlyUsed
+private class haxe._Int64.___Int64 {
+
+	public inline function new[Function:(high : haxe.Int32, low : haxe.Int32) -> Void]
+		[Arg high<6916>(VUsedByTyper):haxe.Int32]
+		[Arg low<6917>(VUsedByTyper):haxe.Int32]
+		[Block:haxe.Int32]
+			[Binop:haxe.Int32]
+				[Field:haxe.Int32]
+					[Const:haxe._Int64.___Int64] this
+					[FInstance:haxe.Int32]
+						haxe._Int64.___Int64
+						high:haxe.Int32
+				=
+				[Local high(6916):haxe.Int32:haxe.Int32]
+			[Binop:haxe.Int32]
+				[Field:haxe.Int32]
+					[Const:haxe._Int64.___Int64] this
+					[FInstance:haxe.Int32]
+						haxe._Int64.___Int64
+						low:haxe.Int32
+				=
+				[Local low(6917):haxe.Int32:haxe.Int32]
+
+	public var high:haxe.Int32;
+
+	public var low:haxe.Int32;
+}

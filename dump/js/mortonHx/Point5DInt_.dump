@@ -1,0 +1,116 @@
+@:directlyUsed @:structInit
+class mortonHx.Point5DInt_ {
+
+	public inline function new[Function:(x : Int, y : Int, z : Int, w : Int, v : Int) -> Void]
+		[Arg x<10564>(VUsedByTyper):Int]
+		[Arg y<10565>(VUsedByTyper):Int]
+		[Arg z<10566>(VUsedByTyper):Int]
+		[Arg w<10567>(VUsedByTyper):Int]
+		[Arg v<10568>(VUsedByTyper):Int]
+		[Block:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point5DInt_] this
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						x:Int
+				=
+				[Local x(10564):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point5DInt_] this
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						y:Int
+				=
+				[Local y(10565):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point5DInt_] this
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						z:Int
+				=
+				[Local z(10566):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point5DInt_] this
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						w:Int
+				=
+				[Local w(10567):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.Point5DInt_] this
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						v:Int
+				=
+				[Local v(10568):Int:Int]
+
+	public var x:Int;
+
+	public var y:Int;
+
+	public var z:Int;
+
+	public var w:Int;
+
+	public var v:Int;
+
+	public function toString[Function:() -> String]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Binop:String]
+					[Binop:String]
+						[Binop:String]
+							[Binop:String]
+								[Binop:String]
+									[Binop:String]
+										[Binop:String]
+											[Binop:String]
+												[Binop:String]
+													[Binop:String]
+														[Const:String] "("
+														+
+														[Field:Int]
+															[Const:mortonHx.Point5DInt_] this
+															[FInstance:Int]
+																mortonHx.Point5DInt_
+																x:Int
+													+
+													[Const:String] ", "
+												+
+												[Field:Int]
+													[Const:mortonHx.Point5DInt_] this
+													[FInstance:Int]
+														mortonHx.Point5DInt_
+														y:Int
+											+
+											[Const:String] ", "
+										+
+										[Field:Int]
+											[Const:mortonHx.Point5DInt_] this
+											[FInstance:Int]
+												mortonHx.Point5DInt_
+												z:Int
+									+
+									[Const:String] ", "
+								+
+								[Field:Int]
+									[Const:mortonHx.Point5DInt_] this
+									[FInstance:Int]
+										mortonHx.Point5DInt_
+										w:Int
+							+
+							[Const:String] ", "
+						+
+						[Field:Int]
+							[Const:mortonHx.Point5DInt_] this
+							[FInstance:Int]
+								mortonHx.Point5DInt_
+								v:Int
+					+
+					[Const:String] ")"
+}

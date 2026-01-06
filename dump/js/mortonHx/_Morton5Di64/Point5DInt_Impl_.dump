@@ -1,0 +1,4860 @@
+private class mortonHx._Morton5Di64.Point5DInt_Impl_ {
+
+	@:noCompletion
+	public static inline function _new[Function:(x : Int, y : Int, z : Int, w : Int, v : Int) -> mortonHx.Point5DInt]
+		[Arg x<10569>(VUsedByTyper):Int]
+		[Arg y<10570>(VUsedByTyper):Int]
+		[Arg z<10571>(VUsedByTyper):Int]
+		[Arg w<10572>(VUsedByTyper):Int]
+		[Arg v<10573>(VUsedByTyper):Int]
+		[Block:Dynamic]
+			[Return:Dynamic]
+				[Cast:mortonHx.Point5DInt]
+					[New:mortonHx.Point5DInt_]
+						mortonHx.Point5DInt_
+						[Local x(10569):Int:Int]
+						[Local y(10570):Int:Int]
+						[Local z(10571):Int:Int]
+						[Local w(10572):Int:Int]
+						[Local v(10573):Int:Int]
+
+	@:to
+	public static inline function toMorton5D[Function:(this : mortonHx.Point5DInt_) -> mortonHx.Morton5Di64]
+		[Arg this1<10575>:mortonHx.Point5DInt_]
+		[Block:Dynamic]
+			[Var x<11210>:Int]
+				[Field:Int]
+					[Local this1(10575):mortonHx.Point5DInt_:mortonHx.Point5DInt_]
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						x:Int
+			[Var y<11211>:Int]
+				[Field:Int]
+					[Local this1(10575):mortonHx.Point5DInt_:mortonHx.Point5DInt_]
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						y:Int
+			[Var z<11212>:Int]
+				[Field:Int]
+					[Local this1(10575):mortonHx.Point5DInt_:mortonHx.Point5DInt_]
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						z:Int
+			[Var w<11213>:Int]
+				[Field:Int]
+					[Local this1(10575):mortonHx.Point5DInt_:mortonHx.Point5DInt_]
+					[FInstance:Int]
+						mortonHx.Point5DInt_
+						w:Int
+			[Var x1<11216>:Int]
+				[Binop:Int]
+					[Field:Int]
+						[Local this1(10575):mortonHx.Point5DInt_:mortonHx.Point5DInt_]
+						[FInstance:Int]
+							mortonHx.Point5DInt_
+							v:Int
+					&
+					[Const:Int] 4095
+			[Var x2<11219>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:Int]
+							[Local x1(11216):Int:Int]
+							>>
+							[Const:Int] 31
+						[Local x1(11216):Int:Int]
+			[Var b<11220>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(11220):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11232>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11220):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11220):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11220):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11220):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11220):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11220):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18318>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11232):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18319>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11232):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18325>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<18326>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x2(11219):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18318):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18325):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18319):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18326):haxe.Int32:haxe.Int32]
+			[Var b<11245>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(11245):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11257>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11245):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11245):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11245):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11245):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11245):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11245):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18369>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11257):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18370>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11257):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18376>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<18377>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x2(11219):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18369):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18376):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18370):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18377):haxe.Int32:haxe.Int32]
+			[Var b<11270>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(11270):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11282>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11270):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11270):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11270):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11270):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11270):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11270):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18420>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11282):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18421>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11282):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18427>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<18428>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Binop:haxe.Int64]
+				[Local x2(11219):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18420):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18427):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18421):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18428):haxe.Int32:haxe.Int32]
+			[Var a<11295>:haxe.Int64] [Local x2(11219):haxe.Int64:haxe.Int64]
+			[Var b<11296>(VAssigned):Int] [Const:Int] 4
+			[Binop:Int]
+				[Local b(11296):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var a1<11308>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11296):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11295):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11295):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11296):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11295):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11296):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11295):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11296):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11295):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11296):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11295):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11296):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var x1<11309>:Int]
+				[Binop:Int]
+					[Local w(11213):Int:Int]
+					&
+					[Const:Int] 4095
+			[Var x2<11312>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:Int]
+							[Local x1(11309):Int:Int]
+							>>
+							[Const:Int] 31
+						[Local x1(11309):Int:Int]
+			[Var b<11313>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(11313):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11325>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11313):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11313):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11313):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11313):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11313):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11313):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18506>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11325):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18507>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11325):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18513>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<18514>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x2(11312):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18506):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18513):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18507):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18514):haxe.Int32:haxe.Int32]
+			[Var b<11338>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(11338):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11350>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11338):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11338):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11338):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11338):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11338):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11338):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18557>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11350):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18558>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11350):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18564>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<18565>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x2(11312):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18557):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18564):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18558):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18565):haxe.Int32:haxe.Int32]
+			[Var b<11363>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(11363):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11375>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11363):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11363):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11363):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11363):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11363):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11363):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18608>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11375):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18609>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11375):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18615>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<18616>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Binop:haxe.Int64]
+				[Local x2(11312):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18608):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18615):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18609):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18616):haxe.Int32:haxe.Int32]
+			[Var a<11388>:haxe.Int64] [Local x2(11312):haxe.Int64:haxe.Int64]
+			[Var b<11389>(VAssigned):Int] [Const:Int] 3
+			[Binop:Int]
+				[Local b(11389):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11401>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11389):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11388):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11388):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11389):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11388):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11389):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11388):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11389):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11388):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11389):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11388):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11389):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18659>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local a1(11308):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11401):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18660>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local a1(11308):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11401):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var x1<11407>:Int]
+				[Binop:Int]
+					[Local z(11212):Int:Int]
+					&
+					[Const:Int] 4095
+			[Var x2<11410>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:Int]
+							[Local x1(11407):Int:Int]
+							>>
+							[Const:Int] 31
+						[Local x1(11407):Int:Int]
+			[Var b<11411>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(11411):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11423>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11411):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11411):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11411):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11411):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11411):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11411):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high1<18703>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11423):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low1<18704>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11423):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18710>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<18711>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x2(11410):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high1(18703):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18710):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low1(18704):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18711):haxe.Int32:haxe.Int32]
+			[Var b<11436>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(11436):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11448>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11436):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11436):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11436):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11436):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11436):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11436):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high1<18754>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11448):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low1<18755>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11448):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18761>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<18762>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x2(11410):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high1(18754):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18761):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low1(18755):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18762):haxe.Int32:haxe.Int32]
+			[Var b<11461>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(11461):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11473>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11461):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11461):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11461):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11461):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11461):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11461):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high1<18805>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11473):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low1<18806>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11473):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18812>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<18813>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Binop:haxe.Int64]
+				[Local x2(11410):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high1(18805):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18812):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low1(18806):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18813):haxe.Int32:haxe.Int32]
+			[Var a<11486>:haxe.Int64] [Local x2(11410):haxe.Int64:haxe.Int64]
+			[Var b<11487>(VAssigned):Int] [Const:Int] 2
+			[Binop:Int]
+				[Local b(11487):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11499>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11487):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11486):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11486):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11487):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11486):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11487):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11486):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11487):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11486):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11487):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11486):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11487):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high1<18856>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Local a_high(18659):haxe.Int32:haxe.Int32]
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11499):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low1<18857>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Local a_low(18660):haxe.Int32:haxe.Int32]
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11499):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var x1<11505>:Int]
+				[Binop:Int]
+					[Local y(11211):Int:Int]
+					&
+					[Const:Int] 4095
+			[Var x2<11508>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:Int]
+							[Local x1(11505):Int:Int]
+							>>
+							[Const:Int] 31
+						[Local x1(11505):Int:Int]
+			[Var b<11509>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(11509):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11521>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11509):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11509):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11509):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11509):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11509):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11509):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18900>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11521):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18901>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11521):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18907>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<18908>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x2(11508):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18900):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18907):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18901):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18908):haxe.Int32:haxe.Int32]
+			[Var b<11534>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(11534):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11546>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11534):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11534):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11534):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11534):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11534):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11534):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<18951>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11546):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<18952>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11546):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<18958>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<18959>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x2(11508):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(18951):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(18958):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(18952):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(18959):haxe.Int32:haxe.Int32]
+			[Var b<11559>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(11559):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11571>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11559):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11559):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11559):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11559):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11559):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11559):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<19002>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11571):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19003>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11571):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19009>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<19010>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Binop:haxe.Int64]
+				[Local x2(11508):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19002):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19009):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19003):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19010):haxe.Int32:haxe.Int32]
+			[Var a<11584>:haxe.Int64] [Local x2(11508):haxe.Int64:haxe.Int64]
+			[Var b<11585>(VAssigned):Int] [Const:Int] 1
+			[Binop:Int]
+				[Local b(11585):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11597>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11585):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11584):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local a(11584):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11585):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11584):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11585):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local a(11584):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11585):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11584):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11585):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local a(11584):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11585):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high<19053>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Local a_high1(18856):haxe.Int32:haxe.Int32]
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11597):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19054>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Local a_low1(18857):haxe.Int32:haxe.Int32]
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11597):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var x1<11603>:Int]
+				[Binop:Int]
+					[Local x(11210):Int:Int]
+					&
+					[Const:Int] 4095
+			[Var x<11606>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:Int]
+							[Local x1(11603):Int:Int]
+							>>
+							[Const:Int] 31
+						[Local x1(11603):Int:Int]
+			[Var b<11607>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(11607):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11619>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11607):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11607):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11607):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11607):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11607):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11607):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high1<19097>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11619):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low1<19098>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11619):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19104>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<19105>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x(11606):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high1(19097):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19104):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low1(19098):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19105):haxe.Int32:haxe.Int32]
+			[Var b<11632>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(11632):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11644>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11632):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11632):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11632):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11632):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11632):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11632):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high1<19148>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11644):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low1<19149>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11644):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19155>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<19156>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x(11606):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high1(19148):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19155):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low1(19149):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19156):haxe.Int32:haxe.Int32]
+			[Var b<11657>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(11657):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<11669>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(11657):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(11657):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Local b(11657):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(11657):Int:Int]
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Local b(11657):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											low:haxe.Int32
+									<<
+									[Binop:Int]
+										[Local b(11657):Int:Int]
+										-
+										[Const:Int] 32
+								[Const:Int] 0
+			[Var a_high1<19199>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11669):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low1<19200>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(11669):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19206>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<19207>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Binop:haxe.Int64]
+				[Local x(11606):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high1(19199):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19206):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low1(19200):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19207):haxe.Int32:haxe.Int32]
+			[Var b<11682>:haxe.Int64] [Local x(11606):haxe.Int64:haxe.Int64]
+			[Return:Dynamic]
+				[Cast:mortonHx.Morton5Di64]
+					[Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Binop:haxe.Int32]
+								[Local a_high(19053):haxe.Int32:haxe.Int32]
+								|
+								[Field:haxe.Int32]
+									[Cast:haxe._Int64.__Int64] [Local b(11682):haxe.Int64:haxe.Int64]
+									[FInstance:haxe.Int32]
+										haxe._Int64.___Int64
+										high:haxe.Int32
+							[Binop:haxe.Int32]
+								[Local a_low(19054):haxe.Int32:haxe.Int32]
+								|
+								[Field:haxe.Int32]
+									[Cast:haxe._Int64.__Int64] [Local b(11682):haxe.Int64:haxe.Int64]
+									[FInstance:haxe.Int32]
+										haxe._Int64.___Int64
+										low:haxe.Int32
+
+	@:from
+	public static inline function fromMorton5D[Function:(m : mortonHx.Morton5Di64) -> mortonHx.Point5DInt]
+		[Arg m<11687>(VUsedByTyper):mortonHx.Morton5Di64]
+		[Block:Dynamic]
+			[Var b_high<19231>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<19232>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Var x<12359>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							&
+							[Local b_high(19231):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							&
+							[Local b_low(19232):haxe.Int32:haxe.Int32]
+			[Var b<12360>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(12360):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12373>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12360):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12360):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12360):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12360):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12360):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12360):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19276>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12373):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19277>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12373):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19283>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<19284>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x(12359):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19276):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19283):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19277):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19284):haxe.Int32:haxe.Int32]
+			[Var b<12386>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(12386):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12399>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12386):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12386):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12386):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12386):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12386):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12386):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19328>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12399):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19329>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12399):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19335>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<19336>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x(12359):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19328):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19335):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19329):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19336):haxe.Int32:haxe.Int32]
+			[Var b<12412>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(12412):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12425>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12412):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12412):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12412):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12412):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12412):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12412):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19380>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12425):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19381>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12425):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19387>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<19388>(VAssigned):haxe.Int32] [Const:Int] 4095
+			[Binop:haxe.Int64]
+				[Local x(12359):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19380):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19387):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19381):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19388):haxe.Int32:haxe.Int32]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Field:haxe.Int32]
+							[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+							[FInstance:haxe.Int32]
+								haxe._Int64.___Int64
+								high:haxe.Int32
+						!=
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							>>
+							[Const:Int] 31
+				[Then:Dynamic] [Throw:Dynamic]
+					[Meta:Any]
+						:wrappedException
+						[Call:Any]
+							[Field:(value : Any) -> Any]
+								[TypeExpr haxe.Exception:Class<haxe.Exception>]
+								[FStatic:(value : Any) -> Any]
+									haxe.Exception
+									thrown:(value : Any) -> Any
+							[Const:String] "Overflow"
+			[Var x1<12438>:Int]
+				[Cast:Int]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12359):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b<12439>(VAssigned):Int] [Const:Int] 1
+			[Binop:Int]
+				[Local b(12439):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var v<12452>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12439):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12439):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12439):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12439):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12439):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12439):Int:Int]
+										-
+										[Const:Int] 32
+			[Var b_high<19430>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<19431>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Var x<12460>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12452):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							&
+							[Local b_high(19430):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12452):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							&
+							[Local b_low(19431):haxe.Int32:haxe.Int32]
+			[Var b<12461>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(12461):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12474>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12461):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12461):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12461):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12461):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12461):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12461):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19475>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12474):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19476>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12474):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19482>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<19483>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x(12460):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19475):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19482):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19476):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19483):haxe.Int32:haxe.Int32]
+			[Var b<12487>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(12487):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12500>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12487):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12487):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12487):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12487):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12487):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12487):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19527>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12500):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19528>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12500):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19534>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<19535>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x(12460):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19527):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19534):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19528):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19535):haxe.Int32:haxe.Int32]
+			[Var b<12513>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(12513):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12526>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12513):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12513):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12513):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12513):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12513):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12513):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19579>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12526):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19580>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12526):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19586>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<19587>(VAssigned):haxe.Int32] [Const:Int] 4095
+			[Binop:haxe.Int64]
+				[Local x(12460):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19579):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19586):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19580):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19587):haxe.Int32:haxe.Int32]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Field:haxe.Int32]
+							[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+							[FInstance:haxe.Int32]
+								haxe._Int64.___Int64
+								high:haxe.Int32
+						!=
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							>>
+							[Const:Int] 31
+				[Then:Dynamic] [Throw:Dynamic]
+					[Meta:Any]
+						:wrappedException
+						[Call:Any]
+							[Field:(value : Any) -> Any]
+								[TypeExpr haxe.Exception:Class<haxe.Exception>]
+								[FStatic:(value : Any) -> Any]
+									haxe.Exception
+									thrown:(value : Any) -> Any
+							[Const:String] "Overflow"
+			[Var y<12539>:Int]
+				[Cast:Int]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12460):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b<12540>(VAssigned):Int] [Const:Int] 2
+			[Binop:Int]
+				[Local b(12540):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var v<12553>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12540):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12540):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12540):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12540):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12540):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12540):Int:Int]
+										-
+										[Const:Int] 32
+			[Var b_high<19629>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<19630>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Var x<12561>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12553):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							&
+							[Local b_high(19629):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12553):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							&
+							[Local b_low(19630):haxe.Int32:haxe.Int32]
+			[Var b<12562>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(12562):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12575>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12562):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12562):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12562):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12562):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12562):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12562):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19674>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12575):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19675>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12575):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19681>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<19682>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x(12561):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19674):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19681):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19675):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19682):haxe.Int32:haxe.Int32]
+			[Var b<12588>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(12588):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12601>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12588):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12588):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12588):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12588):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12588):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12588):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19726>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12601):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19727>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12601):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19733>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<19734>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x(12561):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19726):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19733):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19727):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19734):haxe.Int32:haxe.Int32]
+			[Var b<12614>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(12614):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12627>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12614):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12614):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12614):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12614):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12614):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12614):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19778>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12627):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19779>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12627):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19785>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<19786>(VAssigned):haxe.Int32] [Const:Int] 4095
+			[Binop:haxe.Int64]
+				[Local x(12561):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19778):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19785):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19779):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19786):haxe.Int32:haxe.Int32]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Field:haxe.Int32]
+							[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+							[FInstance:haxe.Int32]
+								haxe._Int64.___Int64
+								high:haxe.Int32
+						!=
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							>>
+							[Const:Int] 31
+				[Then:Dynamic] [Throw:Dynamic]
+					[Meta:Any]
+						:wrappedException
+						[Call:Any]
+							[Field:(value : Any) -> Any]
+								[TypeExpr haxe.Exception:Class<haxe.Exception>]
+								[FStatic:(value : Any) -> Any]
+									haxe.Exception
+									thrown:(value : Any) -> Any
+							[Const:String] "Overflow"
+			[Var z<12640>:Int]
+				[Cast:Int]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12561):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b<12641>(VAssigned):Int] [Const:Int] 3
+			[Binop:Int]
+				[Local b(12641):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var v<12654>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12641):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12641):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12641):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12641):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12641):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12641):Int:Int]
+										-
+										[Const:Int] 32
+			[Var b_high<19828>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<19829>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Var x<12662>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12654):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							&
+							[Local b_high(19828):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12654):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							&
+							[Local b_low(19829):haxe.Int32:haxe.Int32]
+			[Var b<12663>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(12663):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12676>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12663):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12663):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12663):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12663):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12663):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12663):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19873>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12676):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19874>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12676):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19880>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<19881>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x(12662):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19873):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19880):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19874):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19881):haxe.Int32:haxe.Int32]
+			[Var b<12689>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(12689):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12702>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12689):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12689):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12689):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12689):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12689):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12689):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19925>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12702):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19926>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12702):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19932>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<19933>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x(12662):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19925):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19932):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19926):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19933):haxe.Int32:haxe.Int32]
+			[Var b<12715>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(12715):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12728>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12715):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12715):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12715):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12715):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12715):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12715):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<19977>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12728):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<19978>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12728):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<19984>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<19985>(VAssigned):haxe.Int32] [Const:Int] 4095
+			[Binop:haxe.Int64]
+				[Local x(12662):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(19977):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(19984):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(19978):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(19985):haxe.Int32:haxe.Int32]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Field:haxe.Int32]
+							[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+							[FInstance:haxe.Int32]
+								haxe._Int64.___Int64
+								high:haxe.Int32
+						!=
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							>>
+							[Const:Int] 31
+				[Then:Dynamic] [Throw:Dynamic]
+					[Meta:Any]
+						:wrappedException
+						[Call:Any]
+							[Field:(value : Any) -> Any]
+								[TypeExpr haxe.Exception:Class<haxe.Exception>]
+								[FStatic:(value : Any) -> Any]
+									haxe.Exception
+									thrown:(value : Any) -> Any
+							[Const:String] "Overflow"
+			[Var w<12741>:Int]
+				[Cast:Int]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12662):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b<12742>(VAssigned):Int] [Const:Int] 4
+			[Binop:Int]
+				[Local b(12742):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var v<12755>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12742):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12742):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12742):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12742):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12742):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Cast:haxe.Int64] [Local m(11687):mortonHx.Morton5Di64:mortonHx.Morton5Di64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12742):Int:Int]
+										-
+										[Const:Int] 32
+			[Var b_high<20027>(VAssigned):haxe.Int32] [Const:Int] 138547332
+			[Var b_low<20028>(VAssigned):haxe.Int32] [Const:Int] 554189328
+			[Var x<12763>(VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12755):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							&
+							[Local b_high(20027):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local v(12755):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							&
+							[Local b_low(20028):haxe.Int32:haxe.Int32]
+			[Var b<12764>(VAssigned):Int] [Const:Int] 8
+			[Binop:Int]
+				[Local b(12764):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12777>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12764):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12764):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12764):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12764):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12764):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12764):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<20072>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12777):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<20073>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12777):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<20079>(VAssigned):haxe.Int32] [Const:Int] 787200
+			[Var b_low<20080>(VAssigned):haxe.Int32] [Const:Int] -1070593021
+			[Binop:haxe.Int64]
+				[Local x(12763):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(20072):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(20079):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(20073):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(20080):haxe.Int32:haxe.Int32]
+			[Var b<12790>(VAssigned):Int] [Const:Int] 16
+			[Binop:Int]
+				[Local b(12790):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12803>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12790):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12790):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12790):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12790):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12790):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12790):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<20124>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12803):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<20125>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12803):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<20131>(VAssigned):haxe.Int32] [Const:Int] 3840
+			[Var b_low<20132>(VAssigned):haxe.Int32] [Const:Int] 255
+			[Binop:haxe.Int64]
+				[Local x(12763):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(20124):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(20131):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(20125):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(20132):haxe.Int32:haxe.Int32]
+			[Var b<12816>(VAssigned):Int] [Const:Int] 32
+			[Binop:Int]
+				[Local b(12816):Int:Int]
+				&=
+				[Const:Int] 63
+			[Var b1<12829>:haxe.Int64]
+				[If:haxe.Int64]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local b(12816):Int:Int]
+							==
+							[Const:Int] 0
+					[Then:haxe.Int64] [Cast:haxe.Int64]
+						[New:haxe._Int64.___Int64]
+							haxe._Int64.___Int64
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									high:haxe.Int32
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+					[Else:haxe.Int64] [If:haxe.Int64]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local b(12816):Int:Int]
+								<
+								[Const:Int] 32
+						[Then:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Local b(12816):Int:Int]
+								[Binop:haxe.Int32]
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+										<<
+										[Binop:Int]
+											[Const:Int] 32
+											-
+											[Local b(12816):Int:Int]
+									|
+									[Binop:haxe.Int32]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												low:haxe.Int32
+										>>>
+										[Local b(12816):Int:Int]
+						[Else:haxe.Int64] [Cast:haxe.Int64]
+							[New:haxe._Int64.___Int64]
+								haxe._Int64.___Int64
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Const:Int] 31
+								[Binop:haxe.Int32]
+									[Field:haxe.Int32]
+										[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+										[FInstance:haxe.Int32]
+											haxe._Int64.___Int64
+											high:haxe.Int32
+									>>
+									[Binop:Int]
+										[Local b(12816):Int:Int]
+										-
+										[Const:Int] 32
+			[Var a_high<20176>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12829):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							high:haxe.Int32
+			[Var a_low<20177>(VAssigned):haxe.Int32]
+				[Binop:haxe.Int32]
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+					|
+					[Field:haxe.Int32]
+						[Cast:haxe._Int64.__Int64] [Local b1(12829):haxe.Int64:haxe.Int64]
+						[FInstance:haxe.Int32]
+							haxe._Int64.___Int64
+							low:haxe.Int32
+			[Var b_high<20183>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<20184>(VAssigned):haxe.Int32] [Const:Int] 4095
+			[Binop:haxe.Int64]
+				[Local x(12763):haxe.Int64:haxe.Int64]
+				=
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Binop:haxe.Int32]
+							[Local a_high(20176):haxe.Int32:haxe.Int32]
+							&
+							[Local b_high(20183):haxe.Int32:haxe.Int32]
+						[Binop:haxe.Int32]
+							[Local a_low(20177):haxe.Int32:haxe.Int32]
+							&
+							[Local b_low(20184):haxe.Int32:haxe.Int32]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Field:haxe.Int32]
+							[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+							[FInstance:haxe.Int32]
+								haxe._Int64.___Int64
+								high:haxe.Int32
+						!=
+						[Binop:haxe.Int32]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+							>>
+							[Const:Int] 31
+				[Then:Dynamic] [Throw:Dynamic]
+					[Meta:Any]
+						:wrappedException
+						[Call:Any]
+							[Field:(value : Any) -> Any]
+								[TypeExpr haxe.Exception:Class<haxe.Exception>]
+								[FStatic:(value : Any) -> Any]
+									haxe.Exception
+									thrown:(value : Any) -> Any
+							[Const:String] "Overflow"
+			[Return:Dynamic]
+				[Cast:mortonHx.Point5DInt]
+					[New:mortonHx.Point5DInt_]
+						mortonHx.Point5DInt_
+						[Local x1(12438):Int:Int]
+						[Local y(12539):Int:Int]
+						[Local z(12640):Int:Int]
+						[Local w(12741):Int:Int]
+						[Cast:Int]
+							[Field:haxe.Int32]
+								[Cast:haxe._Int64.__Int64] [Local x(12763):haxe.Int64:haxe.Int64]
+								[FInstance:haxe.Int32]
+									haxe._Int64.___Int64
+									low:haxe.Int32
+}
