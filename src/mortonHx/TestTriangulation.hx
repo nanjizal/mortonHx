@@ -1,9 +1,11 @@
 package mortonHx;
 
+import mortonHx.PointHit.BarycentricHitInt;
 import js.Browser;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
 import mortonHx.EarCutMorton;
+import mortonHx.PointHit;
 class TestTriangulation {
     static var test1 = [ 93., 195., 129., 92., 280., 81., 402., 134., 477., 70., 619., 61., 759., 97., 758., 247., 662., 347., 665., 230., 721., 140., 607., 117., 472., 171., 580., 178., 603., 257., 605., 377., 690., 404., 787., 328., 786., 480., 617., 510., 611., 439., 544., 400., 529., 291., 509., 218., 400., 358., 489., 402., 425., 479., 268., 464., 341., 338., 393., 427., 373., 284., 429., 197., 301., 150., 296., 245., 252., 384., 118., 360., 190., 272., 244., 165., 81., 259., 40., 216.];
 
@@ -16,7 +18,9 @@ class TestTriangulation {
 
         // 1. Run Triangulation
         // scale 1.0 means we use the data as-is (pixels)
-        var earcut = EarCuttingMorton.fromArrayFloat( test1, 1.0 );
+        var earcut = EarCuttingMorton.fromArrayFloat( test1, 1.0, new EdgeFunctionHitInt() );
+        //var earcut = EarCuttingMorton.fromArrayFloat( test1, 1.0, new BarycentricHitInt() );
+        //var earcut = EarCuttingMorton.fromArrayFloat( test1, 1.0, new SameSideHitInt() );
         var triangles = earcut.triangulate();
 
         // 2. Draw

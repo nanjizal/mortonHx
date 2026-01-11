@@ -568,7 +568,7 @@ mortonHx_TestTriangulation.main = function() {
 	window.document.body.appendChild(canvas);
 	var arr = mortonHx_TestTriangulation.test1;
 	var scale = 1.0;
-	var pointHit = null;
+	var pointHit = new mortonHx_EdgeFunctionHitInt();
 	if(scale == null) {
 		scale = 40.95875;
 	}

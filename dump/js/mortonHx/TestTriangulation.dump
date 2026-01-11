@@ -160,7 +160,7 @@ class mortonHx.TestTriangulation {
 						mortonHx.TestTriangulation
 						test1:Array<Float>
 			[Var scale<12408>(VAssigned):Float] [Const:Float] 1.0
-			[Var pointHit<12409>:Null<mortonHx.IHitInt>] [Const:Null<mortonHx.IHitInt>] null
+			[Var pointHit<12409>:Null<mortonHx.IHitInt>] [New:mortonHx.EdgeFunctionHitInt] mortonHx.EdgeFunctionHitInt
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
