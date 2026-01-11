@@ -361,9 +361,9 @@ class mortonHx.Test3D {
 								[Const:Int] 16
 					&
 					[Const:Int] 1023
-			[Var p0_x<32307>(VAssigned):Int] [Local v(6901):Int:Int]
-			[Var p0_y<32308>(VAssigned):Int] [Local v1(6903):Int:Int]
-			[Var p0_z<32309>(VAssigned):Int] [Local v2(6905):Int:Int]
+			[Var p0_x<32351>(VAssigned):Int] [Local v(6901):Int:Int]
+			[Var p0_y<32352>(VAssigned):Int] [Local v1(6903):Int:Int]
+			[Var p0_z<32353>(VAssigned):Int] [Local v2(6905):Int:Int]
 			[Var screenP0<6914>(VUsedByTyper):{ y : Float, x : Float }]
 				[Call:{ y : Float, x : Float }]
 					[Field:(x : Float, y : Float, z : Float) -> { y : Float, x : Float }]
@@ -371,9 +371,9 @@ class mortonHx.Test3D {
 						[FStatic:(x : Float, y : Float, z : Float) -> { y : Float, x : Float }]
 							mortonHx.Test3D
 							project:(x : Float, y : Float, z : Float) -> { y : Float, x : Float }
-					[Local p0_x(32307):Int:Int]
-					[Local p0_y(32308):Int:Int]
-					[Local p0_z(32309):Int:Int]
+					[Local p0_x(32351):Int:Int]
+					[Local p0_y(32352):Int:Int]
+					[Local p0_z(32353):Int:Int]
 			[Call:Void]
 				[Field:(x : Float, y : Float) -> Void]
 					[Local ctx(6897):CanvasRenderingContext2D:CanvasRenderingContext2D]
@@ -598,25 +598,25 @@ class mortonHx.Test3D {
 											[Const:Int] 16
 								&
 								[Const:Int] 1023
-						[Var p_x<32319>(VAssigned):Int] [Local v(6921):Int:Int]
-						[Var p_y<32320>(VAssigned):Int] [Local v1(6923):Int:Int]
-						[Var p_z<32321>(VAssigned):Int] [Local v2(6925):Int:Int]
+						[Var p_x<32363>(VAssigned):Int] [Local v(6921):Int:Int]
+						[Var p_y<32364>(VAssigned):Int] [Local v1(6923):Int:Int]
+						[Var p_z<32365>(VAssigned):Int] [Local v2(6925):Int:Int]
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
 									[Binop:Bool]
 										[Binop:Bool]
-											[Local p_x(32319):Int:Int]
+											[Local p_x(32363):Int:Int]
 											<
 											[Const:Int] 8
 										&&
 										[Binop:Bool]
-											[Local p_y(32320):Int:Int]
+											[Local p_y(32364):Int:Int]
 											<
 											[Const:Int] 8
 									&&
 									[Binop:Bool]
-										[Local p_z(32321):Int:Int]
+										[Local p_z(32365):Int:Int]
 										<
 										[Const:Int] 8
 							[Then:{ y : Float, x : Float }] [Block:{ y : Float, x : Float }]
@@ -627,9 +627,9 @@ class mortonHx.Test3D {
 											[FStatic:(x : Float, y : Float, z : Float) -> { y : Float, x : Float }]
 												mortonHx.Test3D
 												project:(x : Float, y : Float, z : Float) -> { y : Float, x : Float }
-										[Local p_x(32319):Int:Int]
-										[Local p_y(32320):Int:Int]
-										[Local p_z(32321):Int:Int]
+										[Local p_x(32363):Int:Int]
+										[Local p_y(32364):Int:Int]
+										[Local p_z(32365):Int:Int]
 								[Call:Void]
 									[Field:() -> Void]
 										[Local ctx(6897):CanvasRenderingContext2D:CanvasRenderingContext2D]
@@ -659,7 +659,7 @@ class mortonHx.Test3D {
 															+
 															[Binop:Float]
 																[Binop:Float]
-																	[Local p_z(32321):Int:Int]
+																	[Local p_z(32365):Int:Int]
 																	/
 																	[Const:Int] 8
 																*
@@ -669,7 +669,7 @@ class mortonHx.Test3D {
 													+
 													[Binop:Float]
 														[Binop:Float]
-															[Local p_x(32319):Int:Int]
+															[Local p_x(32363):Int:Int]
 															/
 															[Const:Int] 8
 														*
@@ -679,7 +679,7 @@ class mortonHx.Test3D {
 											+
 											[Binop:Float]
 												[Binop:Float]
-													[Local p_y(32320):Int:Int]
+													[Local p_y(32364):Int:Int]
 													/
 													[Const:Int] 8
 												*

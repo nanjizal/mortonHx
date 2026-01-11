@@ -41,9 +41,9 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 	public static inline function toInt[Function:(this : haxe.Int64) -> Int]
 		[Arg this1<8572>:haxe.Int64]
 		[Block:Dynamic]
-			[Var tmp<33650>:Bool]
-			[Var b_high<18740>(VAssigned):haxe.Int32] [Const:Int] 0
-			[Var b_low<18741>(VAssigned):haxe.Int32] [Const:Int] 2147483647
+			[Var tmp<33694>:Bool]
+			[Var b_high<18784>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<18785>(VAssigned):haxe.Int32] [Const:Int] 2147483647
 			[Var v<8581>(VAssigned):haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
@@ -55,7 +55,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										haxe._Int64.___Int64
 										high:haxe.Int32
 							-
-							[Cast:Int] [Local b_high(18740):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_high(18784):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[If:Void]
@@ -78,7 +78,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[FInstance:haxe.Int32]
 								haxe._Int64.___Int64
 								low:haxe.Int32
-						[Local b_low(18741):haxe.Int32:haxe.Int32]
+						[Local b_low(18785):haxe.Int32:haxe.Int32]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
@@ -97,7 +97,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									[If:Int]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local b_high(18740):haxe.Int32:haxe.Int32]
+												[Local b_high(18784):haxe.Int32:haxe.Int32]
 												<
 												[Const:Int] 0
 										[Then:haxe.Int32] [Local v(8581):haxe.Int32:haxe.Int32]
@@ -105,7 +105,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 								[Else:Int] [If:Int]
 									[Parenthesis:Bool]
 										[Binop:Bool]
-											[Local b_high(18740):haxe.Int32:haxe.Int32]
+											[Local b_high(18784):haxe.Int32:haxe.Int32]
 											>=
 											[Const:Int] 0
 									[Then:haxe.Int32] [Local v(8581):haxe.Int32:haxe.Int32]
@@ -113,8 +113,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						<=
 						[Const:Int] 0
 				[Then:Bool] [Block:Bool]
-					[Var b_high<18747>(VAssigned):haxe.Int32] [Const:Int] -1
-					[Var b_low<18748>(VAssigned):haxe.Int32] [Const:Int] -2147483648
+					[Var b_high<18791>(VAssigned):haxe.Int32] [Const:Int] -1
+					[Var b_low<18792>(VAssigned):haxe.Int32] [Const:Int] -2147483648
 					[Var v<8590>(VAssigned):haxe.Int32]
 						[Cast:haxe.Int32]
 							[Binop:Int]
@@ -126,7 +126,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 												haxe._Int64.___Int64
 												high:haxe.Int32
 									-
-									[Cast:Int] [Local b_high(18747):haxe.Int32:haxe.Int32]
+									[Cast:Int] [Local b_high(18791):haxe.Int32:haxe.Int32]
 								|
 								[Const:Int] 0
 					[If:Void]
@@ -149,9 +149,9 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									[FInstance:haxe.Int32]
 										haxe._Int64.___Int64
 										low:haxe.Int32
-								[Local b_low(18748):haxe.Int32:haxe.Int32]
+								[Local b_low(18792):haxe.Int32:haxe.Int32]
 					[Binop:Bool]
-						[Local tmp(33650):Bool:Bool]
+						[Local tmp(33694):Bool:Bool]
 						=
 						[Binop:Bool]
 							[Parenthesis:Int]
@@ -169,7 +169,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[If:Int]
 											[Parenthesis:Bool]
 												[Binop:Bool]
-													[Local b_high(18747):haxe.Int32:haxe.Int32]
+													[Local b_high(18791):haxe.Int32:haxe.Int32]
 													<
 													[Const:Int] 0
 											[Then:haxe.Int32] [Local v(8590):haxe.Int32:haxe.Int32]
@@ -177,7 +177,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									[Else:Int] [If:Int]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local b_high(18747):haxe.Int32:haxe.Int32]
+												[Local b_high(18791):haxe.Int32:haxe.Int32]
 												>=
 												[Const:Int] 0
 										[Then:haxe.Int32] [Local v(8590):haxe.Int32:haxe.Int32]
@@ -185,11 +185,11 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							<
 							[Const:Int] 0
 				[Else:Bool] [Binop:Bool]
-					[Local tmp(33650):Bool:Bool]
+					[Local tmp(33694):Bool:Bool]
 					=
 					[Const:Bool] true
 			[If:Void]
-				[Parenthesis:Bool] [Local tmp(33650):Bool:Bool]
+				[Parenthesis:Bool] [Local tmp(33694):Bool:Bool]
 				[Then:Dynamic] [Throw:Dynamic]
 					[Meta:Any]
 						:wrappedException
@@ -261,8 +261,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 
 	static inline function get_maskNotX[Function:() -> haxe.Int64]
 		[Block:Dynamic]
-			[Var a_high<18768>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var a_low<18769>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var a_high<18812>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var a_low<18813>(VAssigned):haxe.Int32] [Const:Int] 1431655765
 			[Return:Dynamic]
 				[Cast:haxe.Int64]
 					[New:haxe._Int64.___Int64]
@@ -270,18 +270,18 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[Unop:haxe.Int32]
 							~
 							Prefix
-							[Local a_high(18768):haxe.Int32:haxe.Int32]
+							[Local a_high(18812):haxe.Int32:haxe.Int32]
 						[Unop:haxe.Int32]
 							~
 							Prefix
-							[Local a_low(18769):haxe.Int32:haxe.Int32]
+							[Local a_low(18813):haxe.Int32:haxe.Int32]
 
 	public static var maskNotY(get,never):haxe.Int64;
 
 	static inline function get_maskNotY[Function:() -> haxe.Int64]
 		[Block:Dynamic]
-			[Var a_high<18784>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var a_low<18785>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var a_high<18828>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var a_low<18829>(VAssigned):haxe.Int32] [Const:Int] -1431655766
 			[Return:Dynamic]
 				[Cast:haxe.Int64]
 					[New:haxe._Int64.___Int64]
@@ -289,11 +289,11 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[Unop:haxe.Int32]
 							~
 							Prefix
-							[Local a_high(18784):haxe.Int32:haxe.Int32]
+							[Local a_high(18828):haxe.Int32:haxe.Int32]
 						[Unop:haxe.Int32]
 							~
 							Prefix
-							[Local a_low(18785):haxe.Int32:haxe.Int32]
+							[Local a_low(18829):haxe.Int32:haxe.Int32]
 
 	@:noCompletion
 	public static inline function _new[Function:(x : Int, y : Int) -> mortonHx.Morton2Di64]
@@ -387,7 +387,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<18837>(VAssigned):haxe.Int32]
+			[Var a_high<18881>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -400,7 +400,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<18838>(VAssigned):haxe.Int32]
+			[Var a_low<18882>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -413,8 +413,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<18844>(VAssigned):haxe.Int32] [Const:Int] 65535
-			[Var b_low<18845>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_high<18888>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_low<18889>(VAssigned):haxe.Int32] [Const:Int] 65535
 			[Binop:haxe.Int64]
 				[Local x1(8830):haxe.Int64:haxe.Int64]
 				=
@@ -422,13 +422,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(18837):haxe.Int32:haxe.Int32]
+							[Local a_high(18881):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(18844):haxe.Int32:haxe.Int32]
+							[Local b_high(18888):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(18838):haxe.Int32:haxe.Int32]
+							[Local a_low(18882):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(18845):haxe.Int32:haxe.Int32]
+							[Local b_low(18889):haxe.Int32:haxe.Int32]
 			[Var b<8856>(VAssigned):Int] [Const:Int] 8
 			[Binop:Int]
 				[Local b(8856):Int:Int]
@@ -507,7 +507,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<18888>(VAssigned):haxe.Int32]
+			[Var a_high<18932>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -520,7 +520,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<18889>(VAssigned):haxe.Int32]
+			[Var a_low<18933>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -533,8 +533,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<18895>(VAssigned):haxe.Int32] [Const:Int] 16711935
-			[Var b_low<18896>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_high<18939>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_low<18940>(VAssigned):haxe.Int32] [Const:Int] 16711935
 			[Binop:haxe.Int64]
 				[Local x1(8830):haxe.Int64:haxe.Int64]
 				=
@@ -542,13 +542,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(18888):haxe.Int32:haxe.Int32]
+							[Local a_high(18932):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(18895):haxe.Int32:haxe.Int32]
+							[Local b_high(18939):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(18889):haxe.Int32:haxe.Int32]
+							[Local a_low(18933):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(18896):haxe.Int32:haxe.Int32]
+							[Local b_low(18940):haxe.Int32:haxe.Int32]
 			[Var b<8881>(VAssigned):Int] [Const:Int] 4
 			[Binop:Int]
 				[Local b(8881):Int:Int]
@@ -627,7 +627,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<18939>(VAssigned):haxe.Int32]
+			[Var a_high<18983>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -640,7 +640,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<18940>(VAssigned):haxe.Int32]
+			[Var a_low<18984>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -653,8 +653,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<18946>(VAssigned):haxe.Int32] [Const:Int] 252645135
-			[Var b_low<18947>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_high<18990>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_low<18991>(VAssigned):haxe.Int32] [Const:Int] 252645135
 			[Binop:haxe.Int64]
 				[Local x1(8830):haxe.Int64:haxe.Int64]
 				=
@@ -662,13 +662,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(18939):haxe.Int32:haxe.Int32]
+							[Local a_high(18983):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(18946):haxe.Int32:haxe.Int32]
+							[Local b_high(18990):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(18940):haxe.Int32:haxe.Int32]
+							[Local a_low(18984):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(18947):haxe.Int32:haxe.Int32]
+							[Local b_low(18991):haxe.Int32:haxe.Int32]
 			[Var b<8906>(VAssigned):Int] [Const:Int] 2
 			[Binop:Int]
 				[Local b(8906):Int:Int]
@@ -747,7 +747,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<18990>(VAssigned):haxe.Int32]
+			[Var a_high<19034>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -760,7 +760,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<18991>(VAssigned):haxe.Int32]
+			[Var a_low<19035>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -773,8 +773,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<18997>(VAssigned):haxe.Int32] [Const:Int] 858993459
-			[Var b_low<18998>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_high<19041>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_low<19042>(VAssigned):haxe.Int32] [Const:Int] 858993459
 			[Binop:haxe.Int64]
 				[Local x1(8830):haxe.Int64:haxe.Int64]
 				=
@@ -782,13 +782,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(18990):haxe.Int32:haxe.Int32]
+							[Local a_high(19034):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(18997):haxe.Int32:haxe.Int32]
+							[Local b_high(19041):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(18991):haxe.Int32:haxe.Int32]
+							[Local a_low(19035):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(18998):haxe.Int32:haxe.Int32]
+							[Local b_low(19042):haxe.Int32:haxe.Int32]
 			[Var b<8931>(VAssigned):Int] [Const:Int] 1
 			[Binop:Int]
 				[Local b(8931):Int:Int]
@@ -867,7 +867,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19041>(VAssigned):haxe.Int32]
+			[Var a_high<19085>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -880,7 +880,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19042>(VAssigned):haxe.Int32]
+			[Var a_low<19086>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
@@ -893,8 +893,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19048>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<19049>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high<19092>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<19093>(VAssigned):haxe.Int32] [Const:Int] 1431655765
 			[Binop:haxe.Int64]
 				[Local x1(8830):haxe.Int64:haxe.Int64]
 				=
@@ -902,13 +902,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19041):haxe.Int32:haxe.Int32]
+							[Local a_high(19085):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19048):haxe.Int32:haxe.Int32]
+							[Local b_high(19092):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19042):haxe.Int32:haxe.Int32]
+							[Local a_low(19086):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19049):haxe.Int32:haxe.Int32]
+							[Local b_low(19093):haxe.Int32:haxe.Int32]
 			[Var a<8958>:haxe.Int64] [Local x1(8830):haxe.Int64:haxe.Int64]
 			[Var b<8959>(VAssigned):Int] [Const:Int] 1
 			[Binop:Int]
@@ -1075,7 +1075,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19127>(VAssigned):haxe.Int32]
+			[Var a_high<19171>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1088,7 +1088,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19128>(VAssigned):haxe.Int32]
+			[Var a_low<19172>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1101,8 +1101,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19134>(VAssigned):haxe.Int32] [Const:Int] 65535
-			[Var b_low<19135>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_high<19178>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_low<19179>(VAssigned):haxe.Int32] [Const:Int] 65535
 			[Binop:haxe.Int64]
 				[Local x1(8977):haxe.Int64:haxe.Int64]
 				=
@@ -1110,13 +1110,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19127):haxe.Int32:haxe.Int32]
+							[Local a_high(19171):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19134):haxe.Int32:haxe.Int32]
+							[Local b_high(19178):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19128):haxe.Int32:haxe.Int32]
+							[Local a_low(19172):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19135):haxe.Int32:haxe.Int32]
+							[Local b_low(19179):haxe.Int32:haxe.Int32]
 			[Var b<9003>(VAssigned):Int] [Const:Int] 8
 			[Binop:Int]
 				[Local b(9003):Int:Int]
@@ -1195,7 +1195,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19178>(VAssigned):haxe.Int32]
+			[Var a_high<19222>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1208,7 +1208,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19179>(VAssigned):haxe.Int32]
+			[Var a_low<19223>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1221,8 +1221,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19185>(VAssigned):haxe.Int32] [Const:Int] 16711935
-			[Var b_low<19186>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_high<19229>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_low<19230>(VAssigned):haxe.Int32] [Const:Int] 16711935
 			[Binop:haxe.Int64]
 				[Local x1(8977):haxe.Int64:haxe.Int64]
 				=
@@ -1230,13 +1230,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19178):haxe.Int32:haxe.Int32]
+							[Local a_high(19222):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19185):haxe.Int32:haxe.Int32]
+							[Local b_high(19229):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19179):haxe.Int32:haxe.Int32]
+							[Local a_low(19223):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19186):haxe.Int32:haxe.Int32]
+							[Local b_low(19230):haxe.Int32:haxe.Int32]
 			[Var b<9028>(VAssigned):Int] [Const:Int] 4
 			[Binop:Int]
 				[Local b(9028):Int:Int]
@@ -1315,7 +1315,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19229>(VAssigned):haxe.Int32]
+			[Var a_high<19273>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1328,7 +1328,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19230>(VAssigned):haxe.Int32]
+			[Var a_low<19274>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1341,8 +1341,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19236>(VAssigned):haxe.Int32] [Const:Int] 252645135
-			[Var b_low<19237>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_high<19280>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_low<19281>(VAssigned):haxe.Int32] [Const:Int] 252645135
 			[Binop:haxe.Int64]
 				[Local x1(8977):haxe.Int64:haxe.Int64]
 				=
@@ -1350,13 +1350,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19229):haxe.Int32:haxe.Int32]
+							[Local a_high(19273):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19236):haxe.Int32:haxe.Int32]
+							[Local b_high(19280):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19230):haxe.Int32:haxe.Int32]
+							[Local a_low(19274):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19237):haxe.Int32:haxe.Int32]
+							[Local b_low(19281):haxe.Int32:haxe.Int32]
 			[Var b<9053>(VAssigned):Int] [Const:Int] 2
 			[Binop:Int]
 				[Local b(9053):Int:Int]
@@ -1435,7 +1435,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19280>(VAssigned):haxe.Int32]
+			[Var a_high<19324>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1448,7 +1448,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19281>(VAssigned):haxe.Int32]
+			[Var a_low<19325>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1461,8 +1461,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19287>(VAssigned):haxe.Int32] [Const:Int] 858993459
-			[Var b_low<19288>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_high<19331>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_low<19332>(VAssigned):haxe.Int32] [Const:Int] 858993459
 			[Binop:haxe.Int64]
 				[Local x1(8977):haxe.Int64:haxe.Int64]
 				=
@@ -1470,13 +1470,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19280):haxe.Int32:haxe.Int32]
+							[Local a_high(19324):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19287):haxe.Int32:haxe.Int32]
+							[Local b_high(19331):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19281):haxe.Int32:haxe.Int32]
+							[Local a_low(19325):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19288):haxe.Int32:haxe.Int32]
+							[Local b_low(19332):haxe.Int32:haxe.Int32]
 			[Var b<9078>(VAssigned):Int] [Const:Int] 1
 			[Binop:Int]
 				[Local b(9078):Int:Int]
@@ -1555,7 +1555,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19331>(VAssigned):haxe.Int32]
+			[Var a_high<19375>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1568,7 +1568,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19332>(VAssigned):haxe.Int32]
+			[Var a_low<19376>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
@@ -1581,8 +1581,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19338>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<19339>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high<19382>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<19383>(VAssigned):haxe.Int32] [Const:Int] 1431655765
 			[Binop:haxe.Int64]
 				[Local x1(8977):haxe.Int64:haxe.Int64]
 				=
@@ -1590,13 +1590,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19331):haxe.Int32:haxe.Int32]
+							[Local a_high(19375):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19338):haxe.Int32:haxe.Int32]
+							[Local b_high(19382):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19332):haxe.Int32:haxe.Int32]
+							[Local a_low(19376):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19339):haxe.Int32:haxe.Int32]
+							[Local b_low(19383):haxe.Int32:haxe.Int32]
 			[Var b<9106>:haxe.Int64] [Local x1(8977):haxe.Int64:haxe.Int64]
 			[Return:Dynamic]
 				[Cast:mortonHx.Morton2Di64]
@@ -1719,7 +1719,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19400>(VAssigned):haxe.Int32]
+			[Var a_high<19444>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -1732,7 +1732,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19401>(VAssigned):haxe.Int32]
+			[Var a_low<19445>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -1745,8 +1745,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19407>(VAssigned):haxe.Int32] [Const:Int] 65535
-			[Var b_low<19408>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_high<19451>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_low<19452>(VAssigned):haxe.Int32] [Const:Int] 65535
 			[Binop:haxe.Int64]
 				[Local x(8638):haxe.Int64:haxe.Int64]
 				=
@@ -1754,13 +1754,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19400):haxe.Int32:haxe.Int32]
+							[Local a_high(19444):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19407):haxe.Int32:haxe.Int32]
+							[Local b_high(19451):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19401):haxe.Int32:haxe.Int32]
+							[Local a_low(19445):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19408):haxe.Int32:haxe.Int32]
+							[Local b_low(19452):haxe.Int32:haxe.Int32]
 			[Var b<8679>(VAssigned):Int] [Const:Int] 8
 			[Binop:Int]
 				[Local b(8679):Int:Int]
@@ -1839,7 +1839,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19451>(VAssigned):haxe.Int32]
+			[Var a_high<19495>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -1852,7 +1852,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19452>(VAssigned):haxe.Int32]
+			[Var a_low<19496>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -1865,8 +1865,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19458>(VAssigned):haxe.Int32] [Const:Int] 16711935
-			[Var b_low<19459>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_high<19502>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_low<19503>(VAssigned):haxe.Int32] [Const:Int] 16711935
 			[Binop:haxe.Int64]
 				[Local x(8638):haxe.Int64:haxe.Int64]
 				=
@@ -1874,13 +1874,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19451):haxe.Int32:haxe.Int32]
+							[Local a_high(19495):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19458):haxe.Int32:haxe.Int32]
+							[Local b_high(19502):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19452):haxe.Int32:haxe.Int32]
+							[Local a_low(19496):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19459):haxe.Int32:haxe.Int32]
+							[Local b_low(19503):haxe.Int32:haxe.Int32]
 			[Var b<8716>(VAssigned):Int] [Const:Int] 4
 			[Binop:Int]
 				[Local b(8716):Int:Int]
@@ -1959,7 +1959,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19502>(VAssigned):haxe.Int32]
+			[Var a_high<19546>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -1972,7 +1972,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19503>(VAssigned):haxe.Int32]
+			[Var a_low<19547>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -1985,8 +1985,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19509>(VAssigned):haxe.Int32] [Const:Int] 252645135
-			[Var b_low<19510>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_high<19553>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_low<19554>(VAssigned):haxe.Int32] [Const:Int] 252645135
 			[Binop:haxe.Int64]
 				[Local x(8638):haxe.Int64:haxe.Int64]
 				=
@@ -1994,13 +1994,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19502):haxe.Int32:haxe.Int32]
+							[Local a_high(19546):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19509):haxe.Int32:haxe.Int32]
+							[Local b_high(19553):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19503):haxe.Int32:haxe.Int32]
+							[Local a_low(19547):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19510):haxe.Int32:haxe.Int32]
+							[Local b_low(19554):haxe.Int32:haxe.Int32]
 			[Var b<8753>(VAssigned):Int] [Const:Int] 2
 			[Binop:Int]
 				[Local b(8753):Int:Int]
@@ -2079,7 +2079,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19553>(VAssigned):haxe.Int32]
+			[Var a_high<19597>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -2092,7 +2092,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19554>(VAssigned):haxe.Int32]
+			[Var a_low<19598>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -2105,8 +2105,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19560>(VAssigned):haxe.Int32] [Const:Int] 858993459
-			[Var b_low<19561>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_high<19604>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_low<19605>(VAssigned):haxe.Int32] [Const:Int] 858993459
 			[Binop:haxe.Int64]
 				[Local x(8638):haxe.Int64:haxe.Int64]
 				=
@@ -2114,13 +2114,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19553):haxe.Int32:haxe.Int32]
+							[Local a_high(19597):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19560):haxe.Int32:haxe.Int32]
+							[Local b_high(19604):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19554):haxe.Int32:haxe.Int32]
+							[Local a_low(19598):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19561):haxe.Int32:haxe.Int32]
+							[Local b_low(19605):haxe.Int32:haxe.Int32]
 			[Var b<8790>(VAssigned):Int] [Const:Int] 1
 			[Binop:Int]
 				[Local b(8790):Int:Int]
@@ -2199,7 +2199,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										-
 										[Const:Int] 32
 								[Const:Int] 0
-			[Var a_high<19604>(VAssigned):haxe.Int32]
+			[Var a_high<19648>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -2212,7 +2212,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19605>(VAssigned):haxe.Int32]
+			[Var a_low<19649>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(8638):haxe.Int64:haxe.Int64]
@@ -2225,8 +2225,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19611>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<19612>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high<19655>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<19656>(VAssigned):haxe.Int32] [Const:Int] 1431655765
 			[Binop:haxe.Int64]
 				[Local x(8638):haxe.Int64:haxe.Int64]
 				=
@@ -2234,20 +2234,20 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19604):haxe.Int32:haxe.Int32]
+							[Local a_high(19648):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19611):haxe.Int32:haxe.Int32]
+							[Local b_high(19655):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19605):haxe.Int32:haxe.Int32]
+							[Local a_low(19649):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19612):haxe.Int32:haxe.Int32]
+							[Local b_low(19656):haxe.Int32:haxe.Int32]
 			[Return:Dynamic] [Local x(8638):haxe.Int64:haxe.Int64]
 
 	public static inline function decode[Function:(this : haxe.Int64) -> { y : Int, x : Int }]
 		[Arg this1<9111>:haxe.Int64]
 		[Block:Dynamic]
-			[Var b_high<19627>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<19628>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high<19671>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<19672>(VAssigned):haxe.Int32] [Const:Int] 1431655765
 			[Var x<9331>(VAssigned):haxe.Int64]
 				[Cast:haxe.Int64]
 					[New:haxe._Int64.___Int64]
@@ -2259,7 +2259,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									high:haxe.Int32
 							&
-							[Local b_high(19627):haxe.Int32:haxe.Int32]
+							[Local b_high(19671):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local this1(9111):haxe.Int64:haxe.Int64]
@@ -2267,7 +2267,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									low:haxe.Int32
 							&
-							[Local b_low(19628):haxe.Int32:haxe.Int32]
+							[Local b_low(19672):haxe.Int32:haxe.Int32]
 			[Var b<9332>(VAssigned):Int] [Const:Int] 1
 			[Binop:Int]
 				[Local b(9332):Int:Int]
@@ -2353,7 +2353,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9332):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<19672>(VAssigned):haxe.Int32]
+			[Var a_high<19716>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2366,7 +2366,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19673>(VAssigned):haxe.Int32]
+			[Var a_low<19717>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2379,8 +2379,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19679>(VAssigned):haxe.Int32] [Const:Int] 858993459
-			[Var b_low<19680>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_high<19723>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_low<19724>(VAssigned):haxe.Int32] [Const:Int] 858993459
 			[Binop:haxe.Int64]
 				[Local x(9331):haxe.Int64:haxe.Int64]
 				=
@@ -2388,13 +2388,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19672):haxe.Int32:haxe.Int32]
+							[Local a_high(19716):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19679):haxe.Int32:haxe.Int32]
+							[Local b_high(19723):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19673):haxe.Int32:haxe.Int32]
+							[Local a_low(19717):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19680):haxe.Int32:haxe.Int32]
+							[Local b_low(19724):haxe.Int32:haxe.Int32]
 			[Var b<9358>(VAssigned):Int] [Const:Int] 2
 			[Binop:Int]
 				[Local b(9358):Int:Int]
@@ -2480,7 +2480,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9358):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<19724>(VAssigned):haxe.Int32]
+			[Var a_high<19768>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2493,7 +2493,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19725>(VAssigned):haxe.Int32]
+			[Var a_low<19769>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2506,8 +2506,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19731>(VAssigned):haxe.Int32] [Const:Int] 252645135
-			[Var b_low<19732>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_high<19775>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_low<19776>(VAssigned):haxe.Int32] [Const:Int] 252645135
 			[Binop:haxe.Int64]
 				[Local x(9331):haxe.Int64:haxe.Int64]
 				=
@@ -2515,13 +2515,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19724):haxe.Int32:haxe.Int32]
+							[Local a_high(19768):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19731):haxe.Int32:haxe.Int32]
+							[Local b_high(19775):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19725):haxe.Int32:haxe.Int32]
+							[Local a_low(19769):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19732):haxe.Int32:haxe.Int32]
+							[Local b_low(19776):haxe.Int32:haxe.Int32]
 			[Var b<9384>(VAssigned):Int] [Const:Int] 4
 			[Binop:Int]
 				[Local b(9384):Int:Int]
@@ -2607,7 +2607,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9384):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<19776>(VAssigned):haxe.Int32]
+			[Var a_high<19820>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2620,7 +2620,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19777>(VAssigned):haxe.Int32]
+			[Var a_low<19821>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2633,8 +2633,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19783>(VAssigned):haxe.Int32] [Const:Int] 16711935
-			[Var b_low<19784>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_high<19827>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_low<19828>(VAssigned):haxe.Int32] [Const:Int] 16711935
 			[Binop:haxe.Int64]
 				[Local x(9331):haxe.Int64:haxe.Int64]
 				=
@@ -2642,13 +2642,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19776):haxe.Int32:haxe.Int32]
+							[Local a_high(19820):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19783):haxe.Int32:haxe.Int32]
+							[Local b_high(19827):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19777):haxe.Int32:haxe.Int32]
+							[Local a_low(19821):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19784):haxe.Int32:haxe.Int32]
+							[Local b_low(19828):haxe.Int32:haxe.Int32]
 			[Var b<9410>(VAssigned):Int] [Const:Int] 8
 			[Binop:Int]
 				[Local b(9410):Int:Int]
@@ -2734,7 +2734,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9410):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<19828>(VAssigned):haxe.Int32]
+			[Var a_high<19872>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2747,7 +2747,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19829>(VAssigned):haxe.Int32]
+			[Var a_low<19873>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2760,8 +2760,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19835>(VAssigned):haxe.Int32] [Const:Int] 65535
-			[Var b_low<19836>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_high<19879>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_low<19880>(VAssigned):haxe.Int32] [Const:Int] 65535
 			[Binop:haxe.Int64]
 				[Local x(9331):haxe.Int64:haxe.Int64]
 				=
@@ -2769,13 +2769,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19828):haxe.Int32:haxe.Int32]
+							[Local a_high(19872):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19835):haxe.Int32:haxe.Int32]
+							[Local b_high(19879):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19829):haxe.Int32:haxe.Int32]
+							[Local a_low(19873):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19836):haxe.Int32:haxe.Int32]
+							[Local b_low(19880):haxe.Int32:haxe.Int32]
 			[Var b<9436>(VAssigned):Int] [Const:Int] 16
 			[Binop:Int]
 				[Local b(9436):Int:Int]
@@ -2861,7 +2861,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9436):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<19880>(VAssigned):haxe.Int32]
+			[Var a_high<19924>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2874,7 +2874,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19881>(VAssigned):haxe.Int32]
+			[Var a_low<19925>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -2887,8 +2887,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19887>(VAssigned):haxe.Int32] [Const:Int] 0
-			[Var b_low<19888>(VAssigned):haxe.Int32] [Const:Int] -1
+			[Var b_high<19931>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<19932>(VAssigned):haxe.Int32] [Const:Int] -1
 			[Binop:haxe.Int64]
 				[Local x(9331):haxe.Int64:haxe.Int64]
 				=
@@ -2896,13 +2896,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19880):haxe.Int32:haxe.Int32]
+							[Local a_high(19924):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19887):haxe.Int32:haxe.Int32]
+							[Local b_high(19931):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19881):haxe.Int32:haxe.Int32]
+							[Local a_low(19925):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19888):haxe.Int32:haxe.Int32]
+							[Local b_low(19932):haxe.Int32:haxe.Int32]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
@@ -2930,7 +2930,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe.Exception
 									thrown:(value : Any) -> Any
 							[Const:String] "Overflow"
-			[Var tmp<33800>:Int]
+			[Var tmp<33844>:Int]
 				[Cast:Int]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9331):haxe.Int64:haxe.Int64]
@@ -3022,8 +3022,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9465):Int:Int]
 										-
 										[Const:Int] 32
-			[Var b_high<19930>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<19931>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high<19974>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<19975>(VAssigned):haxe.Int32] [Const:Int] 1431655765
 			[Var x<9489>(VAssigned):haxe.Int64]
 				[Cast:haxe.Int64]
 					[New:haxe._Int64.___Int64]
@@ -3035,7 +3035,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									high:haxe.Int32
 							&
-							[Local b_high(19930):haxe.Int32:haxe.Int32]
+							[Local b_high(19974):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local v(9481):haxe.Int64:haxe.Int64]
@@ -3043,7 +3043,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									low:haxe.Int32
 							&
-							[Local b_low(19931):haxe.Int32:haxe.Int32]
+							[Local b_low(19975):haxe.Int32:haxe.Int32]
 			[Var b<9490>(VAssigned):Int] [Const:Int] 1
 			[Binop:Int]
 				[Local b(9490):Int:Int]
@@ -3129,7 +3129,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9490):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<19975>(VAssigned):haxe.Int32]
+			[Var a_high<20019>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3142,7 +3142,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<19976>(VAssigned):haxe.Int32]
+			[Var a_low<20020>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3155,8 +3155,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<19982>(VAssigned):haxe.Int32] [Const:Int] 858993459
-			[Var b_low<19983>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_high<20026>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_low<20027>(VAssigned):haxe.Int32] [Const:Int] 858993459
 			[Binop:haxe.Int64]
 				[Local x(9489):haxe.Int64:haxe.Int64]
 				=
@@ -3164,13 +3164,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(19975):haxe.Int32:haxe.Int32]
+							[Local a_high(20019):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(19982):haxe.Int32:haxe.Int32]
+							[Local b_high(20026):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(19976):haxe.Int32:haxe.Int32]
+							[Local a_low(20020):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(19983):haxe.Int32:haxe.Int32]
+							[Local b_low(20027):haxe.Int32:haxe.Int32]
 			[Var b<9516>(VAssigned):Int] [Const:Int] 2
 			[Binop:Int]
 				[Local b(9516):Int:Int]
@@ -3256,7 +3256,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9516):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20027>(VAssigned):haxe.Int32]
+			[Var a_high<20071>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3269,7 +3269,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20028>(VAssigned):haxe.Int32]
+			[Var a_low<20072>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3282,8 +3282,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20034>(VAssigned):haxe.Int32] [Const:Int] 252645135
-			[Var b_low<20035>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_high<20078>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_low<20079>(VAssigned):haxe.Int32] [Const:Int] 252645135
 			[Binop:haxe.Int64]
 				[Local x(9489):haxe.Int64:haxe.Int64]
 				=
@@ -3291,13 +3291,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20027):haxe.Int32:haxe.Int32]
+							[Local a_high(20071):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20034):haxe.Int32:haxe.Int32]
+							[Local b_high(20078):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20028):haxe.Int32:haxe.Int32]
+							[Local a_low(20072):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20035):haxe.Int32:haxe.Int32]
+							[Local b_low(20079):haxe.Int32:haxe.Int32]
 			[Var b<9542>(VAssigned):Int] [Const:Int] 4
 			[Binop:Int]
 				[Local b(9542):Int:Int]
@@ -3383,7 +3383,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9542):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20079>(VAssigned):haxe.Int32]
+			[Var a_high<20123>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3396,7 +3396,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20080>(VAssigned):haxe.Int32]
+			[Var a_low<20124>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3409,8 +3409,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20086>(VAssigned):haxe.Int32] [Const:Int] 16711935
-			[Var b_low<20087>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_high<20130>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_low<20131>(VAssigned):haxe.Int32] [Const:Int] 16711935
 			[Binop:haxe.Int64]
 				[Local x(9489):haxe.Int64:haxe.Int64]
 				=
@@ -3418,13 +3418,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20079):haxe.Int32:haxe.Int32]
+							[Local a_high(20123):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20086):haxe.Int32:haxe.Int32]
+							[Local b_high(20130):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20080):haxe.Int32:haxe.Int32]
+							[Local a_low(20124):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20087):haxe.Int32:haxe.Int32]
+							[Local b_low(20131):haxe.Int32:haxe.Int32]
 			[Var b<9568>(VAssigned):Int] [Const:Int] 8
 			[Binop:Int]
 				[Local b(9568):Int:Int]
@@ -3510,7 +3510,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9568):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20131>(VAssigned):haxe.Int32]
+			[Var a_high<20175>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3523,7 +3523,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20132>(VAssigned):haxe.Int32]
+			[Var a_low<20176>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3536,8 +3536,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20138>(VAssigned):haxe.Int32] [Const:Int] 65535
-			[Var b_low<20139>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_high<20182>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_low<20183>(VAssigned):haxe.Int32] [Const:Int] 65535
 			[Binop:haxe.Int64]
 				[Local x(9489):haxe.Int64:haxe.Int64]
 				=
@@ -3545,13 +3545,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20131):haxe.Int32:haxe.Int32]
+							[Local a_high(20175):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20138):haxe.Int32:haxe.Int32]
+							[Local b_high(20182):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20132):haxe.Int32:haxe.Int32]
+							[Local a_low(20176):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20139):haxe.Int32:haxe.Int32]
+							[Local b_low(20183):haxe.Int32:haxe.Int32]
 			[Var b<9594>(VAssigned):Int] [Const:Int] 16
 			[Binop:Int]
 				[Local b(9594):Int:Int]
@@ -3637,7 +3637,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9594):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20183>(VAssigned):haxe.Int32]
+			[Var a_high<20227>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3650,7 +3650,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20184>(VAssigned):haxe.Int32]
+			[Var a_low<20228>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3663,8 +3663,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20190>(VAssigned):haxe.Int32] [Const:Int] 0
-			[Var b_low<20191>(VAssigned):haxe.Int32] [Const:Int] -1
+			[Var b_high<20234>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<20235>(VAssigned):haxe.Int32] [Const:Int] -1
 			[Binop:haxe.Int64]
 				[Local x(9489):haxe.Int64:haxe.Int64]
 				=
@@ -3672,13 +3672,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20183):haxe.Int32:haxe.Int32]
+							[Local a_high(20227):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20190):haxe.Int32:haxe.Int32]
+							[Local b_high(20234):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20184):haxe.Int32:haxe.Int32]
+							[Local a_low(20228):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20191):haxe.Int32:haxe.Int32]
+							[Local b_low(20235):haxe.Int32:haxe.Int32]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
@@ -3708,7 +3708,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[Const:String] "Overflow"
 			[Return:Dynamic]
 				[ObjectDecl:{ y : Int, x : Int }]
-					x: [Local tmp(33800):Int:Int]
+					x: [Local tmp(33844):Int:Int]
 					y: [Cast:Int]
 						[Field:haxe.Int32]
 							[Cast:haxe._Int64.__Int64] [Local x(9489):haxe.Int64:haxe.Int64]
@@ -3720,8 +3720,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 		[Arg this1<9112>:haxe.Int64]
 		[Arg v<9113>(VUsedByTyper):haxe.Int64]
 		[Block:Dynamic]
-			[Var b_high<20206>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20207>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high<20250>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20251>(VAssigned):haxe.Int32] [Const:Int] 1431655765
 			[Var x<9126>(VUsedByTyper VAssigned):haxe.Int64]
 				[Cast:haxe.Int64]
 					[New:haxe._Int64.___Int64]
@@ -3733,7 +3733,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									high:haxe.Int32
 							&
-							[Local b_high(20206):haxe.Int32:haxe.Int32]
+							[Local b_high(20250):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local v(9113):haxe.Int64:haxe.Int64]
@@ -3741,7 +3741,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									low:haxe.Int32
 							&
-							[Local b_low(20207):haxe.Int32:haxe.Int32]
+							[Local b_low(20251):haxe.Int32:haxe.Int32]
 			[Var b<9130>(VAssigned):Int] [Const:Int] 1
 			[Binop:Int]
 				[Local b(9130):Int:Int]
@@ -3827,7 +3827,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9130):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20251>(VAssigned):haxe.Int32]
+			[Var a_high<20295>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -3840,7 +3840,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20252>(VAssigned):haxe.Int32]
+			[Var a_low<20296>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -3853,8 +3853,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20258>(VAssigned):haxe.Int32] [Const:Int] 858993459
-			[Var b_low<20259>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_high<20302>(VAssigned):haxe.Int32] [Const:Int] 858993459
+			[Var b_low<20303>(VAssigned):haxe.Int32] [Const:Int] 858993459
 			[Binop:haxe.Int64]
 				[Local x(9126):haxe.Int64:haxe.Int64]
 				=
@@ -3862,13 +3862,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20251):haxe.Int32:haxe.Int32]
+							[Local a_high(20295):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20258):haxe.Int32:haxe.Int32]
+							[Local b_high(20302):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20252):haxe.Int32:haxe.Int32]
+							[Local a_low(20296):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20259):haxe.Int32:haxe.Int32]
+							[Local b_low(20303):haxe.Int32:haxe.Int32]
 			[Var b<9168>(VAssigned):Int] [Const:Int] 2
 			[Binop:Int]
 				[Local b(9168):Int:Int]
@@ -3954,7 +3954,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9168):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20303>(VAssigned):haxe.Int32]
+			[Var a_high<20347>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -3967,7 +3967,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20304>(VAssigned):haxe.Int32]
+			[Var a_low<20348>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -3980,8 +3980,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20310>(VAssigned):haxe.Int32] [Const:Int] 252645135
-			[Var b_low<20311>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_high<20354>(VAssigned):haxe.Int32] [Const:Int] 252645135
+			[Var b_low<20355>(VAssigned):haxe.Int32] [Const:Int] 252645135
 			[Binop:haxe.Int64]
 				[Local x(9126):haxe.Int64:haxe.Int64]
 				=
@@ -3989,13 +3989,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20303):haxe.Int32:haxe.Int32]
+							[Local a_high(20347):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20310):haxe.Int32:haxe.Int32]
+							[Local b_high(20354):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20304):haxe.Int32:haxe.Int32]
+							[Local a_low(20348):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20311):haxe.Int32:haxe.Int32]
+							[Local b_low(20355):haxe.Int32:haxe.Int32]
 			[Var b<9206>(VAssigned):Int] [Const:Int] 4
 			[Binop:Int]
 				[Local b(9206):Int:Int]
@@ -4081,7 +4081,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9206):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20355>(VAssigned):haxe.Int32]
+			[Var a_high<20399>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -4094,7 +4094,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20356>(VAssigned):haxe.Int32]
+			[Var a_low<20400>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -4107,8 +4107,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20362>(VAssigned):haxe.Int32] [Const:Int] 16711935
-			[Var b_low<20363>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_high<20406>(VAssigned):haxe.Int32] [Const:Int] 16711935
+			[Var b_low<20407>(VAssigned):haxe.Int32] [Const:Int] 16711935
 			[Binop:haxe.Int64]
 				[Local x(9126):haxe.Int64:haxe.Int64]
 				=
@@ -4116,13 +4116,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20355):haxe.Int32:haxe.Int32]
+							[Local a_high(20399):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20362):haxe.Int32:haxe.Int32]
+							[Local b_high(20406):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20356):haxe.Int32:haxe.Int32]
+							[Local a_low(20400):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20363):haxe.Int32:haxe.Int32]
+							[Local b_low(20407):haxe.Int32:haxe.Int32]
 			[Var b<9244>(VAssigned):Int] [Const:Int] 8
 			[Binop:Int]
 				[Local b(9244):Int:Int]
@@ -4208,7 +4208,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9244):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20407>(VAssigned):haxe.Int32]
+			[Var a_high<20451>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -4221,7 +4221,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20408>(VAssigned):haxe.Int32]
+			[Var a_low<20452>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -4234,8 +4234,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20414>(VAssigned):haxe.Int32] [Const:Int] 65535
-			[Var b_low<20415>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_high<20458>(VAssigned):haxe.Int32] [Const:Int] 65535
+			[Var b_low<20459>(VAssigned):haxe.Int32] [Const:Int] 65535
 			[Binop:haxe.Int64]
 				[Local x(9126):haxe.Int64:haxe.Int64]
 				=
@@ -4243,13 +4243,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20407):haxe.Int32:haxe.Int32]
+							[Local a_high(20451):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20414):haxe.Int32:haxe.Int32]
+							[Local b_high(20458):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20408):haxe.Int32:haxe.Int32]
+							[Local a_low(20452):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20415):haxe.Int32:haxe.Int32]
+							[Local b_low(20459):haxe.Int32:haxe.Int32]
 			[Var b<9282>(VAssigned):Int] [Const:Int] 16
 			[Binop:Int]
 				[Local b(9282):Int:Int]
@@ -4335,7 +4335,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 										[Local b(9282):Int:Int]
 										-
 										[Const:Int] 32
-			[Var a_high<20459>(VAssigned):haxe.Int32]
+			[Var a_high<20503>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -4348,7 +4348,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							high:haxe.Int32
-			[Var a_low<20460>(VAssigned):haxe.Int32]
+			[Var a_low<20504>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local x(9126):haxe.Int64:haxe.Int64]
@@ -4361,8 +4361,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						[FInstance:haxe.Int32]
 							haxe._Int64.___Int64
 							low:haxe.Int32
-			[Var b_high<20466>(VAssigned):haxe.Int32] [Const:Int] 0
-			[Var b_low<20467>(VAssigned):haxe.Int32] [Const:Int] -1
+			[Var b_high<20510>(VAssigned):haxe.Int32] [Const:Int] 0
+			[Var b_low<20511>(VAssigned):haxe.Int32] [Const:Int] -1
 			[Binop:haxe.Int64]
 				[Local x(9126):haxe.Int64:haxe.Int64]
 				=
@@ -4370,13 +4370,13 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high(20459):haxe.Int32:haxe.Int32]
+							[Local a_high(20503):haxe.Int32:haxe.Int32]
 							&
-							[Local b_high(20466):haxe.Int32:haxe.Int32]
+							[Local b_high(20510):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low(20460):haxe.Int32:haxe.Int32]
+							[Local a_low(20504):haxe.Int32:haxe.Int32]
 							&
-							[Local b_low(20467):haxe.Int32:haxe.Int32]
+							[Local b_low(20511):haxe.Int32:haxe.Int32]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
@@ -4419,9 +4419,9 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 		[Block:Dynamic]
 			[Var b<9622>(VUsedByTyper):haxe.Int64] [Local base(9620):mortonHx.Morton2Di64:mortonHx.Morton2Di64]
 			[Var o<9623>(VUsedByTyper):haxe.Int64] [Local offset(9621):mortonHx.Morton2Di64:mortonHx.Morton2Di64]
-			[Var b_high<20482>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20483>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var a_high<20491>(VAssigned):haxe.Int32]
+			[Var b_high<20526>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20527>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var a_high<20535>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9622):haxe.Int64:haxe.Int64]
@@ -4429,8 +4429,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20482):haxe.Int32:haxe.Int32]
-			[Var a_low<20492>(VAssigned):haxe.Int32]
+					[Local b_high(20526):haxe.Int32:haxe.Int32]
+			[Var a_low<20536>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9622):haxe.Int64:haxe.Int64]
@@ -4438,10 +4438,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20483):haxe.Int32:haxe.Int32]
-			[Var b_high<20498>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20499>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_high1<20507>(VAssigned):haxe.Int32]
+					[Local b_low(20527):haxe.Int32:haxe.Int32]
+			[Var b_high<20542>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20543>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high1<20551>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9623):haxe.Int64:haxe.Int64]
@@ -4449,8 +4449,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20498):haxe.Int32:haxe.Int32]
-			[Var b_low1<20508>(VAssigned):haxe.Int32]
+					[Local b_high(20542):haxe.Int32:haxe.Int32]
+			[Var b_low1<20552>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9623):haxe.Int64:haxe.Int64]
@@ -4458,23 +4458,23 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20499):haxe.Int32:haxe.Int32]
+					[Local b_low(20543):haxe.Int32:haxe.Int32]
 			[Var high<9652>(VAssigned):haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_high(20491):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_high(20535):haxe.Int32:haxe.Int32]
 							+
-							[Cast:Int] [Local b_high1(20507):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_high1(20551):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[Var low<9653>:haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_low(20492):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_low(20536):haxe.Int32:haxe.Int32]
 							+
-							[Cast:Int] [Local b_low1(20508):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_low1(20552):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[If:Void]
@@ -4487,7 +4487,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int32.Int32_Impl_
 									ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
 							[Local low(9653):haxe.Int32:haxe.Int32]
-							[Local a_low(20492):haxe.Int32:haxe.Int32]
+							[Local a_low(20536):haxe.Int32:haxe.Int32]
 						<
 						[Const:Int] 0
 				[Then:Int] [Block:Int]
@@ -4503,23 +4503,23 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[Cast:Int] [Local high(9652):haxe.Int32:haxe.Int32]
 							|
 							[Const:Int] 0
-			[Var a_high<20516>(VAssigned):haxe.Int32] [Local high(9652):haxe.Int32:haxe.Int32]
-			[Var a_low<20517>(VAssigned):haxe.Int32] [Local low(9653):haxe.Int32:haxe.Int32]
-			[Var b_high<20523>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20524>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var a_high1<20532>(VAssigned):haxe.Int32]
+			[Var a_high<20560>(VAssigned):haxe.Int32] [Local high(9652):haxe.Int32:haxe.Int32]
+			[Var a_low<20561>(VAssigned):haxe.Int32] [Local low(9653):haxe.Int32:haxe.Int32]
+			[Var b_high<20567>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20568>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var a_high1<20576>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_high(20516):haxe.Int32:haxe.Int32]
+					[Local a_high(20560):haxe.Int32:haxe.Int32]
 					&
-					[Local b_high(20523):haxe.Int32:haxe.Int32]
-			[Var a_low1<20533>(VAssigned):haxe.Int32]
+					[Local b_high(20567):haxe.Int32:haxe.Int32]
+			[Var a_low1<20577>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_low(20517):haxe.Int32:haxe.Int32]
+					[Local a_low(20561):haxe.Int32:haxe.Int32]
 					&
-					[Local b_low(20524):haxe.Int32:haxe.Int32]
-			[Var b_high<20539>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_low<20540>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var a_high<20548>(VAssigned):haxe.Int32]
+					[Local b_low(20568):haxe.Int32:haxe.Int32]
+			[Var b_high<20583>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_low<20584>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var a_high<20592>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9622):haxe.Int64:haxe.Int64]
@@ -4527,8 +4527,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20539):haxe.Int32:haxe.Int32]
-			[Var a_low<20549>(VAssigned):haxe.Int32]
+					[Local b_high(20583):haxe.Int32:haxe.Int32]
+			[Var a_low<20593>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9622):haxe.Int64:haxe.Int64]
@@ -4536,10 +4536,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20540):haxe.Int32:haxe.Int32]
-			[Var b_high<20555>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_low<20556>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_high1<20564>(VAssigned):haxe.Int32]
+					[Local b_low(20584):haxe.Int32:haxe.Int32]
+			[Var b_high<20599>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_low<20600>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_high1<20608>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9623):haxe.Int64:haxe.Int64]
@@ -4547,8 +4547,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20555):haxe.Int32:haxe.Int32]
-			[Var b_low1<20565>(VAssigned):haxe.Int32]
+					[Local b_high(20599):haxe.Int32:haxe.Int32]
+			[Var b_low1<20609>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9623):haxe.Int64:haxe.Int64]
@@ -4556,23 +4556,23 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20556):haxe.Int32:haxe.Int32]
+					[Local b_low(20600):haxe.Int32:haxe.Int32]
 			[Var high<9697>(VAssigned):haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_high(20548):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_high(20592):haxe.Int32:haxe.Int32]
 							+
-							[Cast:Int] [Local b_high1(20564):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_high1(20608):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[Var low<9698>:haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_low(20549):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_low(20593):haxe.Int32:haxe.Int32]
 							+
-							[Cast:Int] [Local b_low1(20565):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_low1(20609):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[If:Void]
@@ -4585,7 +4585,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int32.Int32_Impl_
 									ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
 							[Local low(9698):haxe.Int32:haxe.Int32]
-							[Local a_low(20549):haxe.Int32:haxe.Int32]
+							[Local a_low(20593):haxe.Int32:haxe.Int32]
 						<
 						[Const:Int] 0
 				[Then:Int] [Block:Int]
@@ -4601,32 +4601,32 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[Cast:Int] [Local high(9697):haxe.Int32:haxe.Int32]
 							|
 							[Const:Int] 0
-			[Var a_high<20573>(VAssigned):haxe.Int32] [Local high(9697):haxe.Int32:haxe.Int32]
-			[Var a_low<20574>(VAssigned):haxe.Int32] [Local low(9698):haxe.Int32:haxe.Int32]
-			[Var b_high<20580>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_low<20581>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_high1<20589>(VAssigned):haxe.Int32]
+			[Var a_high<20617>(VAssigned):haxe.Int32] [Local high(9697):haxe.Int32:haxe.Int32]
+			[Var a_low<20618>(VAssigned):haxe.Int32] [Local low(9698):haxe.Int32:haxe.Int32]
+			[Var b_high<20624>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_low<20625>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_high1<20633>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_high(20573):haxe.Int32:haxe.Int32]
+					[Local a_high(20617):haxe.Int32:haxe.Int32]
 					&
-					[Local b_high(20580):haxe.Int32:haxe.Int32]
-			[Var b_low1<20590>(VAssigned):haxe.Int32]
+					[Local b_high(20624):haxe.Int32:haxe.Int32]
+			[Var b_low1<20634>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_low(20574):haxe.Int32:haxe.Int32]
+					[Local a_low(20618):haxe.Int32:haxe.Int32]
 					&
-					[Local b_low(20581):haxe.Int32:haxe.Int32]
+					[Local b_low(20625):haxe.Int32:haxe.Int32]
 			[Return:Dynamic]
 				[Cast:haxe.Int64]
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high1(20532):haxe.Int32:haxe.Int32]
+							[Local a_high1(20576):haxe.Int32:haxe.Int32]
 							|
-							[Local b_high1(20589):haxe.Int32:haxe.Int32]
+							[Local b_high1(20633):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low1(20533):haxe.Int32:haxe.Int32]
+							[Local a_low1(20577):haxe.Int32:haxe.Int32]
 							|
-							[Local b_low1(20590):haxe.Int32:haxe.Int32]
+							[Local b_low1(20634):haxe.Int32:haxe.Int32]
 
 	@:op(A - B)
 	public static inline function subtract[Function:(base : mortonHx.Morton2Di64, offset : mortonHx.Morton2Di64) -> mortonHx.Morton2Di64]
@@ -4635,19 +4635,19 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 		[Block:Dynamic]
 			[Var b<9724>(VUsedByTyper):haxe.Int64] [Local base(9722):mortonHx.Morton2Di64:mortonHx.Morton2Di64]
 			[Var o<9725>(VUsedByTyper):haxe.Int64] [Local offset(9723):mortonHx.Morton2Di64:mortonHx.Morton2Di64]
-			[Var a_high<20605>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var a_low<20606>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_high<20614>(VAssigned):haxe.Int32]
+			[Var a_high<20649>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var a_low<20650>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high<20658>(VAssigned):haxe.Int32]
 				[Unop:haxe.Int32]
 					~
 					Prefix
-					[Local a_high(20605):haxe.Int32:haxe.Int32]
-			[Var b_low<20615>(VAssigned):haxe.Int32]
+					[Local a_high(20649):haxe.Int32:haxe.Int32]
+			[Var b_low<20659>(VAssigned):haxe.Int32]
 				[Unop:haxe.Int32]
 					~
 					Prefix
-					[Local a_low(20606):haxe.Int32:haxe.Int32]
-			[Var a_high<20623>(VAssigned):haxe.Int32]
+					[Local a_low(20650):haxe.Int32:haxe.Int32]
+			[Var a_high<20667>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9724):haxe.Int64:haxe.Int64]
@@ -4655,8 +4655,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					|
-					[Local b_high(20614):haxe.Int32:haxe.Int32]
-			[Var a_low<20624>(VAssigned):haxe.Int32]
+					[Local b_high(20658):haxe.Int32:haxe.Int32]
+			[Var a_low<20668>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9724):haxe.Int64:haxe.Int64]
@@ -4664,10 +4664,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					|
-					[Local b_low(20615):haxe.Int32:haxe.Int32]
-			[Var b_high<20630>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20631>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_high1<20639>(VAssigned):haxe.Int32]
+					[Local b_low(20659):haxe.Int32:haxe.Int32]
+			[Var b_high<20674>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20675>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high1<20683>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9725):haxe.Int64:haxe.Int64]
@@ -4675,8 +4675,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20630):haxe.Int32:haxe.Int32]
-			[Var b_low1<20640>(VAssigned):haxe.Int32]
+					[Local b_high(20674):haxe.Int32:haxe.Int32]
+			[Var b_low1<20684>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9725):haxe.Int64:haxe.Int64]
@@ -4684,23 +4684,23 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20631):haxe.Int32:haxe.Int32]
+					[Local b_low(20675):haxe.Int32:haxe.Int32]
 			[Var high<9759>(VAssigned):haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_high(20623):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_high(20667):haxe.Int32:haxe.Int32]
 							-
-							[Cast:Int] [Local b_high1(20639):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_high1(20683):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[Var low<9760>:haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_low(20624):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_low(20668):haxe.Int32:haxe.Int32]
 							-
-							[Cast:Int] [Local b_low1(20640):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_low1(20684):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[If:Void]
@@ -4712,8 +4712,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 								[FStatic:(a : haxe.Int32, b : haxe.Int32) -> Int]
 									haxe._Int32.Int32_Impl_
 									ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
-							[Local a_low(20624):haxe.Int32:haxe.Int32]
-							[Local b_low1(20640):haxe.Int32:haxe.Int32]
+							[Local a_low(20668):haxe.Int32:haxe.Int32]
+							[Local b_low1(20684):haxe.Int32:haxe.Int32]
 						<
 						[Const:Int] 0
 				[Then:Int] [Block:Int]
@@ -4729,33 +4729,33 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[Cast:Int] [Local high(9759):haxe.Int32:haxe.Int32]
 							|
 							[Const:Int] 0
-			[Var a_high<20648>(VAssigned):haxe.Int32] [Local high(9759):haxe.Int32:haxe.Int32]
-			[Var a_low<20649>(VAssigned):haxe.Int32] [Local low(9760):haxe.Int32:haxe.Int32]
-			[Var b_high<20655>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20656>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var a_high1<20664>(VAssigned):haxe.Int32]
+			[Var a_high<20692>(VAssigned):haxe.Int32] [Local high(9759):haxe.Int32:haxe.Int32]
+			[Var a_low<20693>(VAssigned):haxe.Int32] [Local low(9760):haxe.Int32:haxe.Int32]
+			[Var b_high<20699>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20700>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var a_high1<20708>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_high(20648):haxe.Int32:haxe.Int32]
+					[Local a_high(20692):haxe.Int32:haxe.Int32]
 					&
-					[Local b_high(20655):haxe.Int32:haxe.Int32]
-			[Var a_low1<20665>(VAssigned):haxe.Int32]
+					[Local b_high(20699):haxe.Int32:haxe.Int32]
+			[Var a_low1<20709>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_low(20649):haxe.Int32:haxe.Int32]
+					[Local a_low(20693):haxe.Int32:haxe.Int32]
 					&
-					[Local b_low(20656):haxe.Int32:haxe.Int32]
-			[Var a_high<20671>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var a_low<20672>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_high<20680>(VAssigned):haxe.Int32]
+					[Local b_low(20700):haxe.Int32:haxe.Int32]
+			[Var a_high<20715>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var a_low<20716>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_high<20724>(VAssigned):haxe.Int32]
 				[Unop:haxe.Int32]
 					~
 					Prefix
-					[Local a_high(20671):haxe.Int32:haxe.Int32]
-			[Var b_low<20681>(VAssigned):haxe.Int32]
+					[Local a_high(20715):haxe.Int32:haxe.Int32]
+			[Var b_low<20725>(VAssigned):haxe.Int32]
 				[Unop:haxe.Int32]
 					~
 					Prefix
-					[Local a_low(20672):haxe.Int32:haxe.Int32]
-			[Var a_high<20689>(VAssigned):haxe.Int32]
+					[Local a_low(20716):haxe.Int32:haxe.Int32]
+			[Var a_high<20733>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9724):haxe.Int64:haxe.Int64]
@@ -4763,8 +4763,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					|
-					[Local b_high(20680):haxe.Int32:haxe.Int32]
-			[Var a_low<20690>(VAssigned):haxe.Int32]
+					[Local b_high(20724):haxe.Int32:haxe.Int32]
+			[Var a_low<20734>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local b(9724):haxe.Int64:haxe.Int64]
@@ -4772,10 +4772,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					|
-					[Local b_low(20681):haxe.Int32:haxe.Int32]
-			[Var b_high<20696>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_low<20697>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_high1<20705>(VAssigned):haxe.Int32]
+					[Local b_low(20725):haxe.Int32:haxe.Int32]
+			[Var b_high<20740>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_low<20741>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_high1<20749>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9725):haxe.Int64:haxe.Int64]
@@ -4783,8 +4783,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20696):haxe.Int32:haxe.Int32]
-			[Var b_low1<20706>(VAssigned):haxe.Int32]
+					[Local b_high(20740):haxe.Int32:haxe.Int32]
+			[Var b_low1<20750>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local o(9725):haxe.Int64:haxe.Int64]
@@ -4792,23 +4792,23 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20697):haxe.Int32:haxe.Int32]
+					[Local b_low(20741):haxe.Int32:haxe.Int32]
 			[Var high<9809>(VAssigned):haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_high(20689):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_high(20733):haxe.Int32:haxe.Int32]
 							-
-							[Cast:Int] [Local b_high1(20705):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_high1(20749):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[Var low<9810>:haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_low(20690):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_low(20734):haxe.Int32:haxe.Int32]
 							-
-							[Cast:Int] [Local b_low1(20706):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_low1(20750):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[If:Void]
@@ -4820,8 +4820,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 								[FStatic:(a : haxe.Int32, b : haxe.Int32) -> Int]
 									haxe._Int32.Int32_Impl_
 									ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
-							[Local a_low(20690):haxe.Int32:haxe.Int32]
-							[Local b_low1(20706):haxe.Int32:haxe.Int32]
+							[Local a_low(20734):haxe.Int32:haxe.Int32]
+							[Local b_low1(20750):haxe.Int32:haxe.Int32]
 						<
 						[Const:Int] 0
 				[Then:Int] [Block:Int]
@@ -4837,32 +4837,32 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[Cast:Int] [Local high(9809):haxe.Int32:haxe.Int32]
 							|
 							[Const:Int] 0
-			[Var a_high<20714>(VAssigned):haxe.Int32] [Local high(9809):haxe.Int32:haxe.Int32]
-			[Var a_low<20715>(VAssigned):haxe.Int32] [Local low(9810):haxe.Int32:haxe.Int32]
-			[Var b_high<20721>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_low<20722>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_high1<20730>(VAssigned):haxe.Int32]
+			[Var a_high<20758>(VAssigned):haxe.Int32] [Local high(9809):haxe.Int32:haxe.Int32]
+			[Var a_low<20759>(VAssigned):haxe.Int32] [Local low(9810):haxe.Int32:haxe.Int32]
+			[Var b_high<20765>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_low<20766>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_high1<20774>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_high(20714):haxe.Int32:haxe.Int32]
+					[Local a_high(20758):haxe.Int32:haxe.Int32]
 					&
-					[Local b_high(20721):haxe.Int32:haxe.Int32]
-			[Var b_low1<20731>(VAssigned):haxe.Int32]
+					[Local b_high(20765):haxe.Int32:haxe.Int32]
+			[Var b_low1<20775>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
-					[Local a_low(20715):haxe.Int32:haxe.Int32]
+					[Local a_low(20759):haxe.Int32:haxe.Int32]
 					&
-					[Local b_low(20722):haxe.Int32:haxe.Int32]
+					[Local b_low(20766):haxe.Int32:haxe.Int32]
 			[Return:Dynamic]
 				[Cast:haxe.Int64]
 					[New:haxe._Int64.___Int64]
 						haxe._Int64.___Int64
 						[Binop:haxe.Int32]
-							[Local a_high1(20664):haxe.Int32:haxe.Int32]
+							[Local a_high1(20708):haxe.Int32:haxe.Int32]
 							|
-							[Local b_high1(20730):haxe.Int32:haxe.Int32]
+							[Local b_high1(20774):haxe.Int32:haxe.Int32]
 						[Binop:haxe.Int32]
-							[Local a_low1(20665):haxe.Int32:haxe.Int32]
+							[Local a_low1(20709):haxe.Int32:haxe.Int32]
 							|
-							[Local b_low1(20731):haxe.Int32:haxe.Int32]
+							[Local b_low1(20775):haxe.Int32:haxe.Int32]
 
 	@:op(A < B)
 	public static inline function lt[Function:(a : mortonHx.Morton2Di64, b : mortonHx.Morton2Di64) -> Bool]
@@ -5312,10 +5312,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 			[Var pi<9877>(VUsedByTyper):haxe.Int64] [Local p(9874):mortonHx.Morton2Di64:mortonHx.Morton2Di64]
 			[Var mi<9878>(VUsedByTyper):haxe.Int64] [Local min(9875):mortonHx.Morton2Di64:mortonHx.Morton2Di64]
 			[Var ma<9879>(VUsedByTyper):haxe.Int64] [Local max(9876):mortonHx.Morton2Di64:mortonHx.Morton2Di64]
-			[Var tmp<33984>:Bool]
-			[Var b_high<20746>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20747>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var a_high<20755>(VAssigned):haxe.Int32]
+			[Var tmp<34028>:Bool]
+			[Var b_high<20790>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20791>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var a_high<20799>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5323,8 +5323,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20746):haxe.Int32:haxe.Int32]
-			[Var a_low<20756>(VAssigned):haxe.Int32]
+					[Local b_high(20790):haxe.Int32:haxe.Int32]
+			[Var a_low<20800>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5332,10 +5332,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20747):haxe.Int32:haxe.Int32]
-			[Var b_high<20762>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_low<20763>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-			[Var b_high1<20771>(VAssigned):haxe.Int32]
+					[Local b_low(20791):haxe.Int32:haxe.Int32]
+			[Var b_high<20806>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_low<20807>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+			[Var b_high1<20815>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local mi(9878):haxe.Int64:haxe.Int64]
@@ -5343,8 +5343,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20762):haxe.Int32:haxe.Int32]
-			[Var b_low1<20772>(VAssigned):haxe.Int32]
+					[Local b_high(20806):haxe.Int32:haxe.Int32]
+			[Var b_low1<20816>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local mi(9878):haxe.Int64:haxe.Int64]
@@ -5352,14 +5352,14 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20763):haxe.Int32:haxe.Int32]
+					[Local b_low(20807):haxe.Int32:haxe.Int32]
 			[Var v<9908>(VAssigned):haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_high(20755):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_high(20799):haxe.Int32:haxe.Int32]
 							-
-							[Cast:Int] [Local b_high1(20771):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_high1(20815):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[If:Void]
@@ -5377,8 +5377,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[FStatic:(a : haxe.Int32, b : haxe.Int32) -> Int]
 								haxe._Int32.Int32_Impl_
 								ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
-						[Local a_low(20756):haxe.Int32:haxe.Int32]
-						[Local b_low1(20772):haxe.Int32:haxe.Int32]
+						[Local a_low(20800):haxe.Int32:haxe.Int32]
+						[Local b_low1(20816):haxe.Int32:haxe.Int32]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
@@ -5386,14 +5386,14 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[If:Int]
 								[Parenthesis:Bool]
 									[Binop:Bool]
-										[Local a_high(20755):haxe.Int32:haxe.Int32]
+										[Local a_high(20799):haxe.Int32:haxe.Int32]
 										<
 										[Const:Int] 0
 								[Then:Int] [Block:Int]
 									[If:Int]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local b_high1(20771):haxe.Int32:haxe.Int32]
+												[Local b_high1(20815):haxe.Int32:haxe.Int32]
 												<
 												[Const:Int] 0
 										[Then:haxe.Int32] [Local v(9908):haxe.Int32:haxe.Int32]
@@ -5401,7 +5401,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 								[Else:Int] [If:Int]
 									[Parenthesis:Bool]
 										[Binop:Bool]
-											[Local b_high1(20771):haxe.Int32:haxe.Int32]
+											[Local b_high1(20815):haxe.Int32:haxe.Int32]
 											>=
 											[Const:Int] 0
 									[Then:haxe.Int32] [Local v(9908):haxe.Int32:haxe.Int32]
@@ -5409,9 +5409,9 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						>=
 						[Const:Int] 0
 				[Then:Bool] [Block:Bool]
-					[Var b_high<20778>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-					[Var b_low<20779>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-					[Var a_high<20787>(VAssigned):haxe.Int32]
+					[Var b_high<20822>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+					[Var b_low<20823>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+					[Var a_high<20831>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5419,8 +5419,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									high:haxe.Int32
 							&
-							[Local b_high(20778):haxe.Int32:haxe.Int32]
-					[Var a_low<20788>(VAssigned):haxe.Int32]
+							[Local b_high(20822):haxe.Int32:haxe.Int32]
+					[Var a_low<20832>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5428,10 +5428,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									low:haxe.Int32
 							&
-							[Local b_low(20779):haxe.Int32:haxe.Int32]
-					[Var b_high<20794>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-					[Var b_low<20795>(VAssigned):haxe.Int32] [Const:Int] 1431655765
-					[Var b_high1<20803>(VAssigned):haxe.Int32]
+							[Local b_low(20823):haxe.Int32:haxe.Int32]
+					[Var b_high<20838>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+					[Var b_low<20839>(VAssigned):haxe.Int32] [Const:Int] 1431655765
+					[Var b_high1<20847>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local ma(9879):haxe.Int64:haxe.Int64]
@@ -5439,8 +5439,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									high:haxe.Int32
 							&
-							[Local b_high(20794):haxe.Int32:haxe.Int32]
-					[Var b_low1<20804>(VAssigned):haxe.Int32]
+							[Local b_high(20838):haxe.Int32:haxe.Int32]
+					[Var b_low1<20848>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local ma(9879):haxe.Int64:haxe.Int64]
@@ -5448,14 +5448,14 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									low:haxe.Int32
 							&
-							[Local b_low(20795):haxe.Int32:haxe.Int32]
+							[Local b_low(20839):haxe.Int32:haxe.Int32]
 					[Var v<9937>(VAssigned):haxe.Int32]
 						[Cast:haxe.Int32]
 							[Binop:Int]
 								[Binop:Int]
-									[Cast:Int] [Local a_high(20787):haxe.Int32:haxe.Int32]
+									[Cast:Int] [Local a_high(20831):haxe.Int32:haxe.Int32]
 									-
-									[Cast:Int] [Local b_high1(20803):haxe.Int32:haxe.Int32]
+									[Cast:Int] [Local b_high1(20847):haxe.Int32:haxe.Int32]
 								|
 								[Const:Int] 0
 					[If:Void]
@@ -5473,24 +5473,24 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									[FStatic:(a : haxe.Int32, b : haxe.Int32) -> Int]
 										haxe._Int32.Int32_Impl_
 										ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
-								[Local a_low(20788):haxe.Int32:haxe.Int32]
-								[Local b_low1(20804):haxe.Int32:haxe.Int32]
+								[Local a_low(20832):haxe.Int32:haxe.Int32]
+								[Local b_low1(20848):haxe.Int32:haxe.Int32]
 					[Binop:Bool]
-						[Local tmp(33984):Bool:Bool]
+						[Local tmp(34028):Bool:Bool]
 						=
 						[Binop:Bool]
 							[Parenthesis:Int]
 								[If:Int]
 									[Parenthesis:Bool]
 										[Binop:Bool]
-											[Local a_high(20787):haxe.Int32:haxe.Int32]
+											[Local a_high(20831):haxe.Int32:haxe.Int32]
 											<
 											[Const:Int] 0
 									[Then:Int] [Block:Int]
 										[If:Int]
 											[Parenthesis:Bool]
 												[Binop:Bool]
-													[Local b_high1(20803):haxe.Int32:haxe.Int32]
+													[Local b_high1(20847):haxe.Int32:haxe.Int32]
 													<
 													[Const:Int] 0
 											[Then:haxe.Int32] [Local v(9937):haxe.Int32:haxe.Int32]
@@ -5498,7 +5498,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									[Else:Int] [If:Int]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local b_high1(20803):haxe.Int32:haxe.Int32]
+												[Local b_high1(20847):haxe.Int32:haxe.Int32]
 												>=
 												[Const:Int] 0
 										[Then:haxe.Int32] [Local v(9937):haxe.Int32:haxe.Int32]
@@ -5506,16 +5506,16 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							>
 							[Const:Int] 0
 				[Else:Bool] [Binop:Bool]
-					[Local tmp(33984):Bool:Bool]
+					[Local tmp(34028):Bool:Bool]
 					=
 					[Const:Bool] true
 			[If:Void]
-				[Parenthesis:Bool] [Local tmp(33984):Bool:Bool]
+				[Parenthesis:Bool] [Local tmp(34028):Bool:Bool]
 				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
-			[Var tmp<33999>:Bool]
-			[Var b_high<20810>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_low<20811>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var a_high<20819>(VAssigned):haxe.Int32]
+			[Var tmp<34043>:Bool]
+			[Var b_high<20854>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_low<20855>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var a_high<20863>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5523,8 +5523,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20810):haxe.Int32:haxe.Int32]
-			[Var a_low<20820>(VAssigned):haxe.Int32]
+					[Local b_high(20854):haxe.Int32:haxe.Int32]
+			[Var a_low<20864>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5532,10 +5532,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20811):haxe.Int32:haxe.Int32]
-			[Var b_high<20826>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_low<20827>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-			[Var b_high1<20835>(VAssigned):haxe.Int32]
+					[Local b_low(20855):haxe.Int32:haxe.Int32]
+			[Var b_high<20870>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_low<20871>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+			[Var b_high1<20879>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local mi(9878):haxe.Int64:haxe.Int64]
@@ -5543,8 +5543,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							high:haxe.Int32
 					&
-					[Local b_high(20826):haxe.Int32:haxe.Int32]
-			[Var b_low1<20836>(VAssigned):haxe.Int32]
+					[Local b_high(20870):haxe.Int32:haxe.Int32]
+			[Var b_low1<20880>(VAssigned):haxe.Int32]
 				[Binop:haxe.Int32]
 					[Field:haxe.Int32]
 						[Cast:haxe._Int64.__Int64] [Local mi(9878):haxe.Int64:haxe.Int64]
@@ -5552,14 +5552,14 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							haxe._Int64.___Int64
 							low:haxe.Int32
 					&
-					[Local b_low(20827):haxe.Int32:haxe.Int32]
+					[Local b_low(20871):haxe.Int32:haxe.Int32]
 			[Var v<9966>(VAssigned):haxe.Int32]
 				[Cast:haxe.Int32]
 					[Binop:Int]
 						[Binop:Int]
-							[Cast:Int] [Local a_high(20819):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local a_high(20863):haxe.Int32:haxe.Int32]
 							-
-							[Cast:Int] [Local b_high1(20835):haxe.Int32:haxe.Int32]
+							[Cast:Int] [Local b_high1(20879):haxe.Int32:haxe.Int32]
 						|
 						[Const:Int] 0
 			[If:Void]
@@ -5577,8 +5577,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[FStatic:(a : haxe.Int32, b : haxe.Int32) -> Int]
 								haxe._Int32.Int32_Impl_
 								ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
-						[Local a_low(20820):haxe.Int32:haxe.Int32]
-						[Local b_low1(20836):haxe.Int32:haxe.Int32]
+						[Local a_low(20864):haxe.Int32:haxe.Int32]
+						[Local b_low1(20880):haxe.Int32:haxe.Int32]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
@@ -5586,14 +5586,14 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							[If:Int]
 								[Parenthesis:Bool]
 									[Binop:Bool]
-										[Local a_high(20819):haxe.Int32:haxe.Int32]
+										[Local a_high(20863):haxe.Int32:haxe.Int32]
 										<
 										[Const:Int] 0
 								[Then:Int] [Block:Int]
 									[If:Int]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local b_high1(20835):haxe.Int32:haxe.Int32]
+												[Local b_high1(20879):haxe.Int32:haxe.Int32]
 												<
 												[Const:Int] 0
 										[Then:haxe.Int32] [Local v(9966):haxe.Int32:haxe.Int32]
@@ -5601,7 +5601,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 								[Else:Int] [If:Int]
 									[Parenthesis:Bool]
 										[Binop:Bool]
-											[Local b_high1(20835):haxe.Int32:haxe.Int32]
+											[Local b_high1(20879):haxe.Int32:haxe.Int32]
 											>=
 											[Const:Int] 0
 									[Then:haxe.Int32] [Local v(9966):haxe.Int32:haxe.Int32]
@@ -5609,9 +5609,9 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 						>=
 						[Const:Int] 0
 				[Then:Bool] [Block:Bool]
-					[Var b_high<20842>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-					[Var b_low<20843>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-					[Var a_high<20851>(VAssigned):haxe.Int32]
+					[Var b_high<20886>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+					[Var b_low<20887>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+					[Var a_high<20895>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5619,8 +5619,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									high:haxe.Int32
 							&
-							[Local b_high(20842):haxe.Int32:haxe.Int32]
-					[Var a_low<20852>(VAssigned):haxe.Int32]
+							[Local b_high(20886):haxe.Int32:haxe.Int32]
+					[Var a_low<20896>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local pi(9877):haxe.Int64:haxe.Int64]
@@ -5628,10 +5628,10 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									low:haxe.Int32
 							&
-							[Local b_low(20843):haxe.Int32:haxe.Int32]
-					[Var b_high<20858>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-					[Var b_low<20859>(VAssigned):haxe.Int32] [Const:Int] -1431655766
-					[Var b_high1<20867>(VAssigned):haxe.Int32]
+							[Local b_low(20887):haxe.Int32:haxe.Int32]
+					[Var b_high<20902>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+					[Var b_low<20903>(VAssigned):haxe.Int32] [Const:Int] -1431655766
+					[Var b_high1<20911>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local ma(9879):haxe.Int64:haxe.Int64]
@@ -5639,8 +5639,8 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									high:haxe.Int32
 							&
-							[Local b_high(20858):haxe.Int32:haxe.Int32]
-					[Var b_low1<20868>(VAssigned):haxe.Int32]
+							[Local b_high(20902):haxe.Int32:haxe.Int32]
+					[Var b_low1<20912>(VAssigned):haxe.Int32]
 						[Binop:haxe.Int32]
 							[Field:haxe.Int32]
 								[Cast:haxe._Int64.__Int64] [Local ma(9879):haxe.Int64:haxe.Int64]
@@ -5648,14 +5648,14 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									haxe._Int64.___Int64
 									low:haxe.Int32
 							&
-							[Local b_low(20859):haxe.Int32:haxe.Int32]
+							[Local b_low(20903):haxe.Int32:haxe.Int32]
 					[Var v<9995>(VAssigned):haxe.Int32]
 						[Cast:haxe.Int32]
 							[Binop:Int]
 								[Binop:Int]
-									[Cast:Int] [Local a_high(20851):haxe.Int32:haxe.Int32]
+									[Cast:Int] [Local a_high(20895):haxe.Int32:haxe.Int32]
 									-
-									[Cast:Int] [Local b_high1(20867):haxe.Int32:haxe.Int32]
+									[Cast:Int] [Local b_high1(20911):haxe.Int32:haxe.Int32]
 								|
 								[Const:Int] 0
 					[If:Void]
@@ -5673,24 +5673,24 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									[FStatic:(a : haxe.Int32, b : haxe.Int32) -> Int]
 										haxe._Int32.Int32_Impl_
 										ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
-								[Local a_low(20852):haxe.Int32:haxe.Int32]
-								[Local b_low1(20868):haxe.Int32:haxe.Int32]
+								[Local a_low(20896):haxe.Int32:haxe.Int32]
+								[Local b_low1(20912):haxe.Int32:haxe.Int32]
 					[Binop:Bool]
-						[Local tmp(33999):Bool:Bool]
+						[Local tmp(34043):Bool:Bool]
 						=
 						[Binop:Bool]
 							[Parenthesis:Int]
 								[If:Int]
 									[Parenthesis:Bool]
 										[Binop:Bool]
-											[Local a_high(20851):haxe.Int32:haxe.Int32]
+											[Local a_high(20895):haxe.Int32:haxe.Int32]
 											<
 											[Const:Int] 0
 									[Then:Int] [Block:Int]
 										[If:Int]
 											[Parenthesis:Bool]
 												[Binop:Bool]
-													[Local b_high1(20867):haxe.Int32:haxe.Int32]
+													[Local b_high1(20911):haxe.Int32:haxe.Int32]
 													<
 													[Const:Int] 0
 											[Then:haxe.Int32] [Local v(9995):haxe.Int32:haxe.Int32]
@@ -5698,7 +5698,7 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 									[Else:Int] [If:Int]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local b_high1(20867):haxe.Int32:haxe.Int32]
+												[Local b_high1(20911):haxe.Int32:haxe.Int32]
 												>=
 												[Const:Int] 0
 										[Then:haxe.Int32] [Local v(9995):haxe.Int32:haxe.Int32]
@@ -5706,11 +5706,11 @@ private class mortonHx._Morton2Di64.Morton2Di64_Impl_ {
 							>
 							[Const:Int] 0
 				[Else:Bool] [Binop:Bool]
-					[Local tmp(33999):Bool:Bool]
+					[Local tmp(34043):Bool:Bool]
 					=
 					[Const:Bool] true
 			[If:Void]
-				[Parenthesis:Bool] [Local tmp(33999):Bool:Bool]
+				[Parenthesis:Bool] [Local tmp(34043):Bool:Bool]
 				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
 			[Return:Dynamic] [Const:Bool] true
 }

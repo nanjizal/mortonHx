@@ -1,2 +1,2 @@
-@:enum
+@:used @:enum
 abstract js.html.CanvasWindingRule {}

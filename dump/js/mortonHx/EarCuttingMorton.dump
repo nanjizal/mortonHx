@@ -1,3 +1,4 @@
+@:directlyUsed
 class mortonHx.EarCuttingMorton {
 
 	@:value({ pointHit : null })
@@ -1027,8 +1028,8 @@ class mortonHx.EarCuttingMorton {
 											[Const:Int] 8
 								&
 								[Const:Int] 65535
-						[Var decode_x<18675>(VAssigned):Int] [Local j(12323):Int:Int]
-						[Var decode_y<18676>(VAssigned):Int] [Local j1(12325):Int:Int]
+						[Var decode_x<18719>(VAssigned):Int] [Local j(12323):Int:Int]
+						[Var decode_y<18720>(VAssigned):Int] [Local j1(12325):Int:Int]
 						[If:Void]
 							[Parenthesis:Bool]
 								[Call:Bool]
@@ -1041,8 +1042,8 @@ class mortonHx.EarCuttingMorton {
 										[FInstance:(x : Int, y : Int) -> Bool]
 											mortonHx.IHitInt
 											hitCheck:(x : Int, y : Int) -> Bool
-									[Local decode_x(18675):Int:Int]
-									[Local decode_y(18676):Int:Int]
+									[Local decode_x(18719):Int:Int]
+									[Local decode_y(18720):Int:Int]
 							[Then:Dynamic] [Return:Dynamic] [Const:Bool] true
 			[Return:Dynamic] [Const:Bool] false
 

@@ -327,7 +327,7 @@ class js.Boot {
 									[Field:Null<Unknown<36>>]
 										[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 										[FAnon:Null<Unknown<36>>] toString:() -> String
-							Catch [Local _g(18665):Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] "???"
+							Catch [Local _g(18709):Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] "???"
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
