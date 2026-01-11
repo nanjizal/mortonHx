@@ -96,6 +96,43 @@ abstract Morton2D(Int) from Int to Int {
      @:op(A <= B) static inline function lte(a:Morton2D, b:Morton2D):Bool return (a:Int) <= (b:Int);
      @:op(A >= B) static inline function gte(a:Morton2D, b:Morton2D):Bool return (a:Int) >= (b:Int);
     
+    // bounding xy code
+    public static inline function minI( a: Int, b: Int ){
+        return (a < b ? a : b);
+    }
+    public static inline function maxI( a: Int, b: Int ){
+        return (a > b ? a : b);
+    }
+    public static inline function min3i( a: Int, b: Int, c: Int ){
+        return minI(a, minI(b, c));
+    }
+    public static inline function max3i( a: Int, b: Int, c: Int ){
+        return maxI(a, maxI(b, c));
+    }
+    public static function isInRange( pCode: Int, v1Code: Int, v2Code: Int, v3Code: Int ):Bool {
+        // 1. Efficiently find the range of the triangle's Morton codes
+        // Use your custom minI/maxI to avoid Math.min (which returns Floats)
+        var minCode = Morton2D.min3i( v1Code, v2Code, v3Code );
+        var maxCode = Morton2D.max3i( v1Code, v2Code, v3Code );
+        // 2. Determine the bits that differ between the extreme vertices
+        // A Morton range is a quadtree node if the shared prefix is the same
+        var diff = minCode ^ maxCode;
+        if (diff == 0) return pCode == v1Code;
+        // 3. Find MSB without Math.log
+        // This bit-smearing technique is faster than Math.log on all Haxe targets
+        var v = diff;
+        v |= v >> 1;
+        v |= v >> 2;
+        v |= v >> 4;
+        v |= v >> 8;
+        v |= v >> 16;
+        // Create a mask that keeps the prefix shared by the triangle
+        // (v + 1) is the next power of 2; we invert it for the mask
+        var mask = ~(v);
+        // 4. Check if pCode shares the same prefix as the triangle's cell
+        return (pCode & mask) == (v1Code & mask);
+    }
+
     // Checks if point 'p' is inside the box defined by 'min' and 'max' without de-interleaving
     public static inline function isInsideBox(p:Morton2D, min:Morton2D, max:Morton2D):Bool {
         // A point is in the box if its X and Y components are within bounds

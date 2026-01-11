@@ -3,7 +3,7 @@ class Std {
 
 	@:pure
 	public static function string[Function:(s : Dynamic) -> String]
-		[Arg s<5447>(VUsedByTyper):Dynamic]
+		[Arg s<5453>(VUsedByTyper):Dynamic]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Call:String]
@@ -12,7 +12,7 @@ class Std {
 						[FStatic:(o : Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>, s : String) -> String]
 							js.Boot
 							__string_rec:(o : Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>, s : String) -> String
-					[Local s(5447):Dynamic:Dynamic]
+					[Local s(5453):Dynamic:Dynamic]
 					[Const:String] ""
 
 	static function __init__() [Block:Unknown<22>]

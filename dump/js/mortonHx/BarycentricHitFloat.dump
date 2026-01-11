@@ -1,0 +1,365 @@
+class mortonHx.BarycentricHitFloat implements mortonHx.IHitFloat {
+
+	public function new[Function:() -> Void] [Block:Void]
+
+	var ax:Float;
+
+	var ay:Float;
+
+	var v0x:Float;
+
+	var v0y:Float;
+
+	var v1x:Float;
+
+	var v1y:Float;
+
+	var d00:Float;
+
+	var d01:Float;
+
+	var d11:Float;
+
+	var invDenom:Float;
+
+	public inline function prepare[Function:(ax : Float, ay : Float, bx : Float, by : Float, cx : Float, cy : Float) -> Void]
+		[Arg ax<6953>(VUsedByTyper):Float]
+		[Arg ay<6954>(VUsedByTyper):Float]
+		[Arg bx<6955>(VUsedByTyper):Float]
+		[Arg by<6956>(VUsedByTyper):Float]
+		[Arg cx<6957>(VUsedByTyper):Float]
+		[Arg cy<6958>(VUsedByTyper):Float]
+		[Block:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						ax:Float
+				=
+				[Local ax(6953):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						ay:Float
+				=
+				[Local ay(6954):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						v0x:Float
+				=
+				[Binop:Float]
+					[Local cx(6957):Float:Float]
+					-
+					[Local ax(6953):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						v0y:Float
+				=
+				[Binop:Float]
+					[Local cy(6958):Float:Float]
+					-
+					[Local ay(6954):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						v1x:Float
+				=
+				[Binop:Float]
+					[Local bx(6955):Float:Float]
+					-
+					[Local ax(6953):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						v1y:Float
+				=
+				[Binop:Float]
+					[Local by(6956):Float:Float]
+					-
+					[Local ay(6954):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						d00:Float
+				=
+				[Binop:Float]
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0x:Float
+						*
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0x:Float
+					+
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0y:Float
+						*
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0y:Float
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						d01:Float
+				=
+				[Binop:Float]
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0x:Float
+						*
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1x:Float
+					+
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0y:Float
+						*
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1y:Float
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						d11:Float
+				=
+				[Binop:Float]
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1x:Float
+						*
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1x:Float
+					+
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1y:Float
+						*
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1y:Float
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricHitFloat] this
+					[FInstance:Float]
+						mortonHx.BarycentricHitFloat
+						invDenom:Float
+				=
+				[Binop:Float]
+					[Const:Float] 1.0
+					/
+					[Parenthesis:Float]
+						[Binop:Float]
+							[Binop:Float]
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d00:Float
+								*
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d11:Float
+							-
+							[Binop:Float]
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d01:Float
+								*
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d01:Float
+
+	public inline function hitCheck[Function:(x : Float, y : Float) -> Bool]
+		[Arg x<6959>(VUsedByTyper):Float]
+		[Arg y<6960>(VUsedByTyper):Float]
+		[Block:Dynamic]
+			[Var v2x<6961>(VUsedByTyper VFinal):Float]
+				[Binop:Float]
+					[Local x(6959):Float:Float]
+					-
+					[Field:Float]
+						[Const:mortonHx.BarycentricHitFloat] this
+						[FInstance:Float]
+							mortonHx.BarycentricHitFloat
+							ax:Float
+			[Var v2y<6962>(VUsedByTyper VFinal):Float]
+				[Binop:Float]
+					[Local y(6960):Float:Float]
+					-
+					[Field:Float]
+						[Const:mortonHx.BarycentricHitFloat] this
+						[FInstance:Float]
+							mortonHx.BarycentricHitFloat
+							ay:Float
+			[Var d02<6963>(VUsedByTyper VFinal):Float]
+				[Binop:Float]
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0x:Float
+						*
+						[Local v2x(6961):Float:Float]
+					+
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v0y:Float
+						*
+						[Local v2y(6962):Float:Float]
+			[Var d12<6964>(VUsedByTyper VFinal):Float]
+				[Binop:Float]
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1x:Float
+						*
+						[Local v2x(6961):Float:Float]
+					+
+					[Binop:Float]
+						[Field:Float]
+							[Const:mortonHx.BarycentricHitFloat] this
+							[FInstance:Float]
+								mortonHx.BarycentricHitFloat
+								v1y:Float
+						*
+						[Local v2y(6962):Float:Float]
+			[Var u<6965>(VUsedByTyper VFinal):Float]
+				[Binop:Float]
+					[Parenthesis:Float]
+						[Binop:Float]
+							[Binop:Float]
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d11:Float
+								*
+								[Local d02(6963):Float:Float]
+							-
+							[Binop:Float]
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d01:Float
+								*
+								[Local d12(6964):Float:Float]
+					*
+					[Field:Float]
+						[Const:mortonHx.BarycentricHitFloat] this
+						[FInstance:Float]
+							mortonHx.BarycentricHitFloat
+							invDenom:Float
+			[Var v<6966>(VUsedByTyper VFinal):Float]
+				[Binop:Float]
+					[Parenthesis:Float]
+						[Binop:Float]
+							[Binop:Float]
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d00:Float
+								*
+								[Local d12(6964):Float:Float]
+							-
+							[Binop:Float]
+								[Field:Float]
+									[Const:mortonHx.BarycentricHitFloat] this
+									[FInstance:Float]
+										mortonHx.BarycentricHitFloat
+										d01:Float
+								*
+								[Local d02(6963):Float:Float]
+					*
+					[Field:Float]
+						[Const:mortonHx.BarycentricHitFloat] this
+						[FInstance:Float]
+							mortonHx.BarycentricHitFloat
+							invDenom:Float
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Binop:Bool]
+							[Local u(6965):Float:Float]
+							>=
+							[Const:Int] 0
+						&&
+						[Binop:Bool]
+							[Local v(6966):Float:Float]
+							>=
+							[Const:Int] 0
+				[Then:Dynamic] [Return:Dynamic]
+					[Binop:Bool]
+						[Binop:Float]
+							[Local u(6965):Float:Float]
+							+
+							[Local v(6966):Float:Float]
+						<
+						[Const:Int] 1
+				[Else:Dynamic] [Return:Dynamic] [Const:Bool] false
+}

@@ -2,20 +2,20 @@
 private class haxe._Int32.Int32_Impl_ {
 
 	public static function ucompare[Function:(a : haxe.Int32, b : haxe.Int32) -> Int]
-		[Arg a<7012>(VUsedByTyper):haxe.Int32]
-		[Arg b<7013>(VUsedByTyper):haxe.Int32]
+		[Arg a<7226>(VUsedByTyper):haxe.Int32]
+		[Arg b<7227>(VUsedByTyper):haxe.Int32]
 		[Block:Dynamic]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local a(7012):haxe.Int32:haxe.Int32]
+						[Local a(7226):haxe.Int32:haxe.Int32]
 						<
 						[Const:Int] 0
 				[Then:Void] [Block:Void]
 					[If:Void]
 						[Parenthesis:Bool]
 							[Binop:Bool]
-								[Local b(7013):haxe.Int32:haxe.Int32]
+								[Local b(7227):haxe.Int32:haxe.Int32]
 								<
 								[Const:Int] 0
 						[Then:Dynamic] [Return:Dynamic]
@@ -26,20 +26,20 @@ private class haxe._Int32.Int32_Impl_ {
 											[Unop:haxe.Int32]
 												~
 												Prefix
-												[Local b(7013):haxe.Int32:haxe.Int32]
+												[Local b(7227):haxe.Int32:haxe.Int32]
 										-
 										[Cast:Int]
 											[Unop:haxe.Int32]
 												~
 												Prefix
-												[Local a(7012):haxe.Int32:haxe.Int32]
+												[Local a(7226):haxe.Int32:haxe.Int32]
 									|
 									[Const:Int] 0
 						[Else:Dynamic] [Return:Dynamic] [Const:Int] 1
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local b(7013):haxe.Int32:haxe.Int32]
+						[Local b(7227):haxe.Int32:haxe.Int32]
 						<
 						[Const:Int] 0
 				[Then:Dynamic] [Return:Dynamic] [Const:Int] -1
@@ -47,9 +47,9 @@ private class haxe._Int32.Int32_Impl_ {
 					[Cast:haxe.Int32]
 						[Binop:Int]
 							[Binop:Int]
-								[Cast:Int] [Local a(7012):haxe.Int32:haxe.Int32]
+								[Cast:Int] [Local a(7226):haxe.Int32:haxe.Int32]
 								-
-								[Cast:Int] [Local b(7013):haxe.Int32:haxe.Int32]
+								[Cast:Int] [Local b(7227):haxe.Int32:haxe.Int32]
 							|
 							[Const:Int] 0
 }

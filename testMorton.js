@@ -239,79 +239,397 @@ js_Boot.__isNativeObj = function(o) {
 js_Boot.__resolveNativeClass = function(name) {
 	return $global[name];
 };
-var mortonHx_Test = function() { };
-mortonHx_Test.__name__ = "mortonHx.Test";
-mortonHx_Test.main = function() {
-	console.log("src/mortonHx/Test.hx:9:","testing MortonHx");
+var mortonHx_EarCuttingMorton = function(points,pointHit) {
+	this.pointHit = pointHit == null ? new mortonHx_EdgeFunctionHitInt() : pointHit;
+	if(!mortonHx_EarCuttingMorton.isCounterClockwise(points)) {
+		points.reverse();
+	}
+	this.points = points;
+	var _g = [];
+	var _g1 = 0;
+	while(_g1 < points.length) {
+		var p = points[_g1];
+		++_g1;
+		var v = p.y;
+		v &= 65535;
+		v = (v ^ v << 8) & 16711935;
+		v = (v ^ v << 4) & 252645135;
+		v = (v ^ v << 2) & 858993459;
+		v = (v ^ v << 1) & 1431655765;
+		var v1 = p.x;
+		v1 &= 65535;
+		v1 = (v1 ^ v1 << 8) & 16711935;
+		v1 = (v1 ^ v1 << 4) & 252645135;
+		v1 = (v1 ^ v1 << 2) & 858993459;
+		v1 = (v1 ^ v1 << 1) & 1431655765;
+		_g.push(v << 1 | v1);
+	}
+	this.sortableArr = _g;
+	var this1 = this.sortableArr;
+	var f = function(a,b) {
+		if(a < b) {
+			return -1;
+		}
+		if(a > b) {
+			return 1;
+		}
+		return 0;
+	};
+	var len = this1.length;
+	var order = [];
+	var _g = [];
+	var _g1 = 0;
+	var _g2 = len;
+	while(_g1 < _g2) {
+		var i = _g1++;
+		_g.push(i);
+	}
+	order = _g;
+	order.sort(function(idxA,idxB) {
+		return f(this1[idxA],this1[idxB]);
+	});
+	var temp = this1.slice();
+	var _g = 0;
+	var _g1 = len;
+	while(_g < _g1) {
+		var i = _g++;
+		this1[i] = temp[order[i]];
+	}
+};
+mortonHx_EarCuttingMorton.__name__ = "mortonHx.EarCuttingMorton";
+mortonHx_EarCuttingMorton.isCounterClockwise = function(p) {
+	var area = 0;
+	var _g = 0;
+	var _g1 = p.length;
+	while(_g < _g1) {
+		var i = _g++;
+		var j = (i + 1) % p.length;
+		area += js_Boot.__cast(p[i].x , Float) * p[j].y - js_Boot.__cast(p[j].x , Float) * p[i].y;
+	}
+	return area > 0;
+};
+mortonHx_EarCuttingMorton.isInRange = function(pCode,v1Code,minCode,maxCode) {
+	var diff = minCode ^ maxCode;
+	if(diff == 0) {
+		return pCode == v1Code;
+	}
+	var v = diff;
+	v |= v >> 1;
+	v |= v >> 2;
+	v |= v >> 4;
+	v |= v >> 8;
+	v |= v >> 16;
+	var mask = ~v;
+	return (pCode & mask) == (v1Code & mask);
+};
+mortonHx_EarCuttingMorton.prototype = {
+	pointsInTriangle: function(ax,ay,bx,by,cx,cy) {
+		this.pointHit.prepare(ax,ay,bx,by,cx,cy);
+		var v = ay;
+		v &= 65535;
+		v = (v ^ v << 8) & 16711935;
+		v = (v ^ v << 4) & 252645135;
+		v = (v ^ v << 2) & 858993459;
+		v = (v ^ v << 1) & 1431655765;
+		var v1 = ax;
+		v1 &= 65535;
+		v1 = (v1 ^ v1 << 8) & 16711935;
+		v1 = (v1 ^ v1 << 4) & 252645135;
+		v1 = (v1 ^ v1 << 2) & 858993459;
+		v1 = (v1 ^ v1 << 1) & 1431655765;
+		var v1Code = v << 1 | v1;
+		var v = by;
+		v &= 65535;
+		v = (v ^ v << 8) & 16711935;
+		v = (v ^ v << 4) & 252645135;
+		v = (v ^ v << 2) & 858993459;
+		v = (v ^ v << 1) & 1431655765;
+		var v1 = bx;
+		v1 &= 65535;
+		v1 = (v1 ^ v1 << 8) & 16711935;
+		v1 = (v1 ^ v1 << 4) & 252645135;
+		v1 = (v1 ^ v1 << 2) & 858993459;
+		v1 = (v1 ^ v1 << 1) & 1431655765;
+		var v2Code = v << 1 | v1;
+		var v = cy;
+		v &= 65535;
+		v = (v ^ v << 8) & 16711935;
+		v = (v ^ v << 4) & 252645135;
+		v = (v ^ v << 2) & 858993459;
+		v = (v ^ v << 1) & 1431655765;
+		var v1 = cx;
+		v1 &= 65535;
+		v1 = (v1 ^ v1 << 8) & 16711935;
+		v1 = (v1 ^ v1 << 4) & 252645135;
+		v1 = (v1 ^ v1 << 2) & 858993459;
+		v1 = (v1 ^ v1 << 1) & 1431655765;
+		var v3Code = v << 1 | v1;
+		var b = v2Code < v3Code ? v2Code : v3Code;
+		var minCode = v1Code < b ? v1Code : b;
+		var b = v2Code > v3Code ? v2Code : v3Code;
+		var maxCode = v1Code > b ? v1Code : b;
+		var start = mortonHx_SortableArray.findStartIndex(this.sortableArr,minCode);
+		var end = mortonHx_SortableArray.findEndIndexFrom(this.sortableArr,maxCode,start);
+		var _g = start;
+		var _g1 = end;
+		while(_g < _g1) {
+			var i = _g++;
+			var p = this.sortableArr[i];
+			if(!mortonHx_EarCuttingMorton.isInRange(p,v1Code,minCode,maxCode)) {
+				continue;
+			}
+			if(p == v1Code || p == v2Code || p == v3Code) {
+				continue;
+			}
+			var j = p;
+			j &= 1431655765;
+			j = (j ^ j >> 1) & 858993459;
+			j = (j ^ j >> 2) & 252645135;
+			j = (j ^ j >> 4) & 16711935;
+			j = (j ^ j >> 8) & 65535;
+			var j1 = p >> 1;
+			j1 &= 1431655765;
+			j1 = (j1 ^ j1 >> 1) & 858993459;
+			j1 = (j1 ^ j1 >> 2) & 252645135;
+			j1 = (j1 ^ j1 >> 4) & 16711935;
+			j1 = (j1 ^ j1 >> 8) & 65535;
+			var decode_x = j;
+			var decode_y = j1;
+			if(this.pointHit.hitCheck(decode_x,decode_y)) {
+				return true;
+			}
+		}
+		return false;
+	}
+	,createLinkedList: function() {
+		var _g = [];
+		var _g1 = 0;
+		var _g2 = this.points;
+		while(_g1 < _g2.length) {
+			var p = _g2[_g1];
+			++_g1;
+			var v = p.y;
+			v &= 65535;
+			v = (v ^ v << 8) & 16711935;
+			v = (v ^ v << 4) & 252645135;
+			v = (v ^ v << 2) & 858993459;
+			v = (v ^ v << 1) & 1431655765;
+			var v1 = p.x;
+			v1 &= 65535;
+			v1 = (v1 ^ v1 << 8) & 16711935;
+			v1 = (v1 ^ v1 << 4) & 252645135;
+			v1 = (v1 ^ v1 << 2) & 858993459;
+			v1 = (v1 ^ v1 << 1) & 1431655765;
+			var n = new mortonHx_EarNode(p.x,p.y,v << 1 | v1,null,null,false);
+			_g.push(n);
+		}
+		var list = _g;
+		var _g = 0;
+		var _g1 = list.length;
+		while(_g < _g1) {
+			var i = _g++;
+			list[i].next = list[(i + 1) % list.length];
+			list[i].prev = list[(i + list.length - 1) % list.length];
+		}
+		return list[0];
+	}
+	,triangulate: function() {
+		var current = this.createLinkedList();
+		var indices = [];
+		var count = this.points.length;
+		var node = current;
+		do {
+			var bx = node.x;
+			var by = node.y;
+			var val = js_Boot.__cast(bx - node.prev.x , Float) * (node.next.y - by) - js_Boot.__cast(by - node.prev.y , Float) * (node.next.x - bx);
+			node.isReflex = !(val > 0);
+			node = node.next;
+		} while(node != current);
+		var stopNode = current;
+		while(count > 3) {
+			var prev = current.prev;
+			var next = current.next;
+			if(current.isReflex ? false : !this.pointsInTriangle(current.prev.x,current.prev.y,current.x,current.y,current.next.x,current.next.y)) {
+				indices.push(prev.x);
+				indices.push(prev.y);
+				indices.push(current.x);
+				indices.push(current.y);
+				indices.push(next.x);
+				indices.push(next.y);
+				prev.next = next;
+				next.prev = prev;
+				var bx = prev.x;
+				var by = prev.y;
+				var val = js_Boot.__cast(bx - prev.prev.x , Float) * (prev.next.y - by) - js_Boot.__cast(by - prev.prev.y , Float) * (prev.next.x - bx);
+				prev.isReflex = !(val > 0);
+				var bx1 = next.x;
+				var by1 = next.y;
+				var val1 = js_Boot.__cast(bx1 - next.prev.x , Float) * (next.next.y - by1) - js_Boot.__cast(by1 - next.prev.y , Float) * (next.next.x - bx1);
+				next.isReflex = !(val1 > 0);
+				current = next;
+				stopNode = next;
+				--count;
+			} else {
+				current = next;
+				if(current == stopNode) {
+					break;
+				}
+			}
+		}
+		indices.push(current.prev.x);
+		indices.push(current.prev.y);
+		indices.push(current.x);
+		indices.push(current.y);
+		indices.push(current.next.x);
+		indices.push(current.next.y);
+		return indices;
+	}
+	,__class__: mortonHx_EarCuttingMorton
+};
+var mortonHx_EarNode = function(x,y,m,prev,next,isReflex) {
+	this.x = x;
+	this.y = y;
+	this.m = m;
+	this.prev = prev;
+	this.next = next;
+	this.isReflex = isReflex;
+};
+mortonHx_EarNode.__name__ = "mortonHx.EarNode";
+mortonHx_EarNode.prototype = {
+	__class__: mortonHx_EarNode
+};
+var mortonHx_IHitInt = function() { };
+mortonHx_IHitInt.__name__ = "mortonHx.IHitInt";
+mortonHx_IHitInt.__isInterface__ = true;
+mortonHx_IHitInt.prototype = {
+	__class__: mortonHx_IHitInt
+};
+var mortonHx_EdgeFunctionHitInt = function() {
+};
+mortonHx_EdgeFunctionHitInt.__name__ = "mortonHx.EdgeFunctionHitInt";
+mortonHx_EdgeFunctionHitInt.__interfaces__ = [mortonHx_IHitInt];
+mortonHx_EdgeFunctionHitInt.prototype = {
+	prepare: function(ax,ay,bx,by,cx,cy) {
+		this.a1 = ay - by;
+		this.b1 = bx - ax;
+		this.c1 = ax * by - ay * bx;
+		this.a2 = by - cy;
+		this.b2 = cx - bx;
+		this.c2 = bx * cy - by * cx;
+		this.a3 = cy - ay;
+		this.b3 = ax - cx;
+		this.c3 = cx * ay - cy * ax;
+	}
+	,hitCheck: function(x,y) {
+		var s1 = this.a1 * x + this.b1 * y + this.c1;
+		var s2 = this.a2 * x + this.b2 * y + this.c2;
+		if((s1 ^ s2) < 0) {
+			return false;
+		}
+		var s3 = this.a3 * x + this.b3 * y + this.c3;
+		return (s1 ^ s3) >= 0;
+	}
+	,__class__: mortonHx_EdgeFunctionHitInt
+};
+var mortonHx_SortableArray = {};
+mortonHx_SortableArray.findStartIndex = function(this1,target) {
+	var low = 0;
+	var high = this1.length;
+	while(low < high) {
+		var mid = low + high >>> 1;
+		if(this1[mid] < target) {
+			low = mid + 1;
+		} else {
+			high = mid;
+		}
+	}
+	return low;
+};
+mortonHx_SortableArray.findEndIndexFrom = function(this1,target,startLow) {
+	var low = startLow;
+	var high = this1.length;
+	while(low < high) {
+		var mid = low + high >>> 1;
+		if(this1[mid] <= target) {
+			low = mid + 1;
+		} else {
+			high = mid;
+		}
+	}
+	return low;
+};
+var mortonHx_TestTriangulation = function() { };
+mortonHx_TestTriangulation.__name__ = "mortonHx.TestTriangulation";
+mortonHx_TestTriangulation.main = function() {
 	var canvas = window.document.createElement("canvas");
 	canvas.width = 800;
 	canvas.height = 600;
 	var ctx = canvas.getContext("2d",null);
 	window.document.body.appendChild(canvas);
-	mortonHx_Test.drawGrid(ctx,canvas.width,canvas.height,40);
-	mortonHx_Test.drawMordon(ctx,canvas.width,canvas.height,40);
-};
-mortonHx_Test.drawMordon = function(ctx,width,height,step) {
-	var wid = Math.ceil(width / 40);
-	var hi = Math.ceil(height / 40);
-	ctx.beginPath();
-	ctx.strokeStyle = "#FF0000";
-	var this1 = js_Boot.__cast(0 , Int);
-	var j = this1;
-	j &= 1431655765;
-	j = (j ^ j >> 1) & 858993459;
-	j = (j ^ j >> 2) & 252645135;
-	j = (j ^ j >> 4) & 16711935;
-	j = (j ^ j >> 8) & 65535;
-	var j1 = this1 >> 1;
-	j1 &= 1431655765;
-	j1 = (j1 ^ j1 >> 1) & 858993459;
-	j1 = (j1 ^ j1 >> 2) & 252645135;
-	j1 = (j1 ^ j1 >> 4) & 16711935;
-	j1 = (j1 ^ j1 >> 8) & 65535;
-	var p_x = j;
-	var p_y = j1;
-	ctx.moveTo(40 * p_x + 2,40 * p_y + 2);
-	var tot = wid * hi * 40 | 0;
-	var _g = 1;
-	var _g1 = tot;
+	var arr = mortonHx_TestTriangulation.test1;
+	var scale = 1.0;
+	var pointHit = null;
+	if(scale == null) {
+		scale = 40.95875;
+	}
+	var p = [];
+	var _g = 0;
+	var _g1 = arr.length / 2 | 0;
 	while(_g < _g1) {
 		var i = _g++;
-		var this1 = js_Boot.__cast(i , Int);
-		var j = this1;
-		j &= 1431655765;
-		j = (j ^ j >> 1) & 858993459;
-		j = (j ^ j >> 2) & 252645135;
-		j = (j ^ j >> 4) & 16711935;
-		j = (j ^ j >> 8) & 65535;
-		var j1 = this1 >> 1;
-		j1 &= 1431655765;
-		j1 = (j1 ^ j1 >> 1) & 858993459;
-		j1 = (j1 ^ j1 >> 2) & 252645135;
-		j1 = (j1 ^ j1 >> 4) & 16711935;
-		j1 = (j1 ^ j1 >> 8) & 65535;
-		var p_x = j;
-		var p_y = j1;
-		if(p_x < wid && p_y < hi) {
-			ctx.lineTo(40 * p_x + 2,40 * p_y + 2);
-		}
+		p[i] = { x : arr[i * 2] * scale | 0, y : arr[i * 2 + 1] * scale | 0};
 	}
+	var earcut = new mortonHx_EarCuttingMorton(p,pointHit);
+	var triangles = earcut.triangulate();
+	mortonHx_TestTriangulation.drawGrid(ctx,canvas.width,canvas.height,40);
+	mortonHx_TestTriangulation.drawTriangles(ctx,triangles);
+	mortonHx_TestTriangulation.drawOutline(ctx,mortonHx_TestTriangulation.test1);
+};
+mortonHx_TestTriangulation.drawTriangles = function(ctx,data) {
+	ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+	ctx.lineWidth = 1;
+	var i = 0;
+	while(i < data.length) {
+		ctx.beginPath();
+		ctx.moveTo(data[i],data[i + 1]);
+		ctx.lineTo(data[i + 2],data[i + 3]);
+		ctx.lineTo(data[i + 4],data[i + 5]);
+		ctx.closePath();
+		ctx.fillStyle = "rgba(100, 150, 255, 0.2)";
+		ctx.fill();
+		ctx.stroke();
+		i += 6;
+	}
+};
+mortonHx_TestTriangulation.drawOutline = function(ctx,points) {
+	ctx.beginPath();
+	ctx.strokeStyle = "#FF0000";
+	ctx.lineWidth = 2;
+	ctx.moveTo(points[0],points[1]);
+	var i = 2;
+	while(i < points.length) {
+		ctx.lineTo(points[i],points[i + 1]);
+		i += 2;
+	}
+	ctx.closePath();
 	ctx.stroke();
 };
-mortonHx_Test.drawGrid = function(ctx,width,height,step) {
+mortonHx_TestTriangulation.drawGrid = function(ctx,width,height,step) {
 	ctx.beginPath();
-	ctx.strokeStyle = "#CCCCCC";
-	var x = 0;
-	while(x <= width) {
-		ctx.moveTo(x,0);
-		ctx.lineTo(x,height);
-		x += step;
+	ctx.strokeStyle = "#EEEEEE";
+	var _g = 0;
+	var _g1 = (width / step | 0) + 1;
+	while(_g < _g1) {
+		var x = _g++;
+		ctx.moveTo(x * step,0);
+		ctx.lineTo(x * step,height);
 	}
-	var y = 0;
-	while(y <= height) {
-		ctx.moveTo(0,y);
-		ctx.lineTo(width,y);
-		y += step;
+	var _g = 0;
+	var _g1 = (height / step | 0) + 1;
+	while(_g < _g1) {
+		var y = _g++;
+		ctx.moveTo(0,y * step);
+		ctx.lineTo(width,y * step);
 	}
 	ctx.stroke();
 };
@@ -325,5 +643,6 @@ var Bool = Boolean;
 var Class = { };
 var Enum = { };
 js_Boot.__toStr = ({ }).toString;
-mortonHx_Test.main();
+mortonHx_TestTriangulation.test1 = [93.,195.,129.,92.,280.,81.,402.,134.,477.,70.,619.,61.,759.,97.,758.,247.,662.,347.,665.,230.,721.,140.,607.,117.,472.,171.,580.,178.,603.,257.,605.,377.,690.,404.,787.,328.,786.,480.,617.,510.,611.,439.,544.,400.,529.,291.,509.,218.,400.,358.,489.,402.,425.,479.,268.,464.,341.,338.,393.,427.,373.,284.,429.,197.,301.,150.,296.,245.,252.,384.,118.,360.,190.,272.,244.,165.,81.,259.,40.,216.];
+mortonHx_TestTriangulation.main();
 })(typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this);

@@ -3,12 +3,12 @@ class js.Boot {
 
 	@:has_untyped @:pure
 	static function getClass[Function:(o : Null<Dynamic>) -> Null<Dynamic>]
-		[Arg o<5598>(VUsedByTyper):Null<Dynamic>]
+		[Arg o<5604>(VUsedByTyper):Null<Dynamic>]
 		[Block:Void]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local o(5598):Null<Dynamic>:Null<Dynamic>]
+						[Local o(5604):Null<Dynamic>:Null<Dynamic>]
 						==
 						[Const:Null<Dynamic>] null
 				[Then:Dynamic] [Return:Dynamic] [Const:Null<Dynamic>] null
@@ -20,36 +20,36 @@ class js.Boot {
 								[FStatic:(Null<Dynamic>, Class<Array>) -> Bool]
 									js.Syntax
 									instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
-							[Local o(5598):Null<Dynamic>:Null<Dynamic>]
+							[Local o(5604):Null<Dynamic>:Null<Dynamic>]
 							[TypeExpr Array:Class<Array>]
 					[Then:Dynamic] [Return:Dynamic] [TypeExpr Array:Class<Array>]
 					[Else:Dynamic] [Block:Dynamic]
-						[Var cl<5624>(VUsedByTyper):Null<Unknown<31>>]
+						[Var cl<5630>(VUsedByTyper):Null<Unknown<31>>]
 							[Call:Null<Unknown<31>>]
 								[Ident:(String, Dynamic) -> Unknown<30>] __define_feature__
 								[Const:String] "js.Boot.getClass"
 								[Field:Dynamic]
-									[Local o(5598):Null<Dynamic>:Null<Dynamic>]
+									[Local o(5604):Null<Dynamic>:Null<Dynamic>]
 									[FDynamic:Dynamic] __class__
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
-									[Local cl(5624):Null<Unknown<31>>:Null<Unknown<31>>]
+									[Local cl(5630):Null<Unknown<31>>:Null<Unknown<31>>]
 									!=
 									[Const:Null<Unknown<31>>] null
-							[Then:Dynamic] [Return:Dynamic] [Local cl(5624):Null<Unknown<31>>:Null<Unknown<31>>]
-						[Var name<5625>(VUsedByTyper):String]
+							[Then:Dynamic] [Return:Dynamic] [Local cl(5630):Null<Unknown<31>>:Null<Unknown<31>>]
+						[Var name<5631>(VUsedByTyper):String]
 							[Call:String]
 								[Field:(o : Dynamic) -> String]
 									[TypeExpr js.Boot:Class<js.Boot>]
 									[FStatic:(o : Dynamic) -> String]
 										js.Boot
 										__nativeClassName:(o : Dynamic) -> String
-								[Local o(5598):Null<Dynamic>:Null<Dynamic>]
+								[Local o(5604):Null<Dynamic>:Null<Dynamic>]
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
-									[Local name(5625):String:String]
+									[Local name(5631):String:String]
 									!=
 									[Const:String] null
 							[Then:Dynamic] [Return:Dynamic]
@@ -59,18 +59,18 @@ class js.Boot {
 										[FStatic:(name : String) -> Null<Dynamic>]
 											js.Boot
 											__resolveNativeClass:(name : String) -> Null<Dynamic>
-									[Local name(5625):String:String]
+									[Local name(5631):String:String]
 						[Return:Dynamic] [Const:Null<Dynamic>] null
 
 	@:has_untyped @:ifFeature("has_enum")
 	static function __string_rec[Function:(o : Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>, s : String) -> String]
-		[Arg o<5425>(VUsedByTyper):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
-		[Arg s<5426>(VUsedByTyper VAssigned):String]
+		[Arg o<5431>(VUsedByTyper):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+		[Arg s<5432>(VUsedByTyper VAssigned):String]
 		[Block:Unknown<37>]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+						[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 						==
 						[Const:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>] null
 				[Then:Dynamic] [Return:Dynamic] [Const:String] "null"
@@ -78,26 +78,26 @@ class js.Boot {
 				[Parenthesis:Bool]
 					[Binop:Bool]
 						[Field:Int]
-							[Local s(5426):String:String]
+							[Local s(5432):String:String]
 							[FInstance:Int]
 								String
 								length:Int
 						>=
 						[Const:Int] 5
 				[Then:Dynamic] [Return:Dynamic] [Const:String] "<...>"
-			[Var t<5427>(VUsedByTyper VAssigned):String]
+			[Var t<5433>(VUsedByTyper VAssigned):String]
 				[Call:String]
 					[Field:(o : Dynamic) -> String]
 						[TypeExpr js.Syntax:Class<js.Syntax>]
 						[FStatic:(o : Dynamic) -> String]
 							js.Syntax
 							typeof:(o : Dynamic) -> String
-					[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+					[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
 						[Binop:Bool]
-							[Local t(5427):String:String]
+							[Local t(5433):String:String]
 							==
 							[Const:String] "function"
 						&&
@@ -107,21 +107,21 @@ class js.Boot {
 									[Ident:(String, Dynamic) -> Unknown<33>] __define_feature__
 									[Const:String] "js.Boot.isClass"
 									[Field:Dynamic]
-										[Cast:Dynamic] [Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+										[Cast:Dynamic] [Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 										[FDynamic:Dynamic] __name__
 								||
 								[Call:Bool]
 									[Ident:(String, Dynamic) -> Unknown<32>] __define_feature__
 									[Const:String] "js.Boot.isEnum"
 									[Field:Dynamic]
-										[Cast:Dynamic] [Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+										[Cast:Dynamic] [Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 										[FDynamic:Dynamic] __ename__
 				[Then:String] [Binop:String]
-					[Local t(5427):String:String]
+					[Local t(5433):String:String]
 					=
 					[Const:String] "object"
 			[Switch:Void]
-				[Parenthesis:String] [Local t(5427):String:String]
+				[Parenthesis:String] [Local t(5433):String:String]
 				[Case:Dynamic]
 					[Const:String] "function"
 					[Return:Dynamic] [Const:String] "<function>"
@@ -134,50 +134,50 @@ class js.Boot {
 							[If:Void]
 								[Parenthesis:Bool]
 									[Field:Bool]
-										[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+										[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 										[FAnon:Bool] __enum__:Bool
 								[Then:Unknown<34>] [Block:Unknown<34>]
-									[Var e<5458>:{ __constructs__ : Array<{ _hx_name : String }> }]
+									[Var e<5464>:{ __constructs__ : Array<{ _hx_name : String }> }]
 										[Array:{ __constructs__ : Array<{ _hx_name : String }> }]
 											[Ident:Array<{ __constructs__ : Array<{ _hx_name : String }> }>] $hxEnums
 											[Field:Bool]
-												[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+												[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 												[FAnon:Bool] __enum__:Bool
-									[Var con<5459>:{ _hx_name : String }]
+									[Var con<5465>:{ _hx_name : String }]
 										[Array:{ _hx_name : String }]
 											[Field:Array<{ _hx_name : String }>]
-												[Local e(5458):{ __constructs__ : Array<{ _hx_name : String }> }:{ __constructs__ : Array<{ _hx_name : String }> }]
+												[Local e(5464):{ __constructs__ : Array<{ _hx_name : String }> }:{ __constructs__ : Array<{ _hx_name : String }> }]
 												[FAnon:Array<{ _hx_name : String }>] __constructs__:Array<{ _hx_name : String }>
 											[Field:Int]
-												[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+												[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 												[FAnon:Int] _hx_index:Int
-									[Var n<5460>:String]
+									[Var n<5466>:String]
 										[Field:String]
-											[Local con(5459):{ _hx_name : String }:{ _hx_name : String }]
+											[Local con(5465):{ _hx_name : String }:{ _hx_name : String }]
 											[FAnon:String] _hx_name:String
 									[If:Unknown<34>]
 										[Parenthesis:Bool]
 											[Field:Bool]
-												[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+												[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 												[FAnon:Bool] __params__:Bool
 										[Then:Unknown<34>] [Block:Unknown<34>]
 											[Binop:String]
-												[Local s(5426):String:String]
+												[Local s(5432):String:String]
 												=
 												[Binop:String]
-													[Local s(5426):String:String]
+													[Local s(5432):String:String]
 													+
 													[Const:String] "\t"
-											[Var params<5461>:Array<Any>]
+											[Var params<5467>:Array<Any>]
 												[Call:Array<Any>]
 													[Field:Bool]
-														[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+														[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 														[FAnon:Bool] __params__:Bool
 											[Block:Void]
-												[Var _g<5462>(VAssigned):Int] [Const:Int] 0
-												[Var _g1<5463>:Int]
+												[Var _g<5468>(VAssigned):Int] [Const:Int] 0
+												[Var _g1<5469>:Int]
 													[Field:Int]
-														[Local params(5461):Array<Any>:Array<Any>]
+														[Local params(5467):Array<Any>:Array<Any>]
 														[FInstance:Int]
 															Array<Any>
 															length:Int
@@ -191,27 +191,27 @@ class js.Boot {
 																	Prefix
 																	[Parenthesis:Bool]
 																		[Binop:Bool]
-																			[Local _g(5462):Int:Int]
+																			[Local _g(5468):Int:Int]
 																			<
-																			[Local _g1(5463):Int:Int]
+																			[Local _g1(5469):Int:Int]
 															[Then:Dynamic] [Break:Dynamic]
-														[Var i<5464>:Int]
+														[Var i<5470>:Int]
 															[Block:Int]
 																[Binop:Int]
-																	[Local _g(5462):Int:Int]
+																	[Local _g(5468):Int:Int]
 																	=
 																	[Binop:Int]
-																		[Local _g(5462):Int:Int]
+																		[Local _g(5468):Int:Int]
 																		+
 																		[Const:Int] 1
 																[Binop:Int]
-																	[Local _g(5462):Int:Int]
+																	[Local _g(5468):Int:Int]
 																	-
 																	[Const:Int] 1
 														[Binop:Any]
 															[Array:Any]
-																[Local params(5461):Array<Any>:Array<Any>]
-																[Local i(5464):Int:Int]
+																[Local params(5467):Array<Any>:Array<Any>]
+																[Local i(5470):Int:Int]
 															=
 															[Call:String]
 																[Field:(o : Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>, s : String) -> String]
@@ -223,9 +223,9 @@ class js.Boot {
 																	:implicitCast
 																	[Cast:Dynamic]
 																		[Array:Any]
-																			[Local params(5461):Array<Any>:Array<Any>]
-																			[Local i(5464):Int:Int]
-																[Local s(5426):String:String]
+																			[Local params(5467):Array<Any>:Array<Any>]
+																			[Local i(5470):Int:Int]
+																[Local s(5432):String:String]
 											[Return:Unknown<34>]
 												[Binop:String]
 													[Binop:String]
@@ -234,27 +234,27 @@ class js.Boot {
 																[If:String]
 																	[Parenthesis:Bool]
 																		[Binop:Bool]
-																			[Local n(5460):String:String]
+																			[Local n(5466):String:String]
 																			==
 																			[Const:Dynamic] null
 																	[Then:String] [Const:String] "null"
 																	[Else:String] [Binop:String]
 																		[Const:String] ""
 																		+
-																		[Local n(5460):String:String]
+																		[Local n(5466):String:String]
 															+
 															[Const:String] "("
 														+
 														[Call:String]
 															[Field:(sep : String) -> String]
-																[Local params(5461):Array<Any>:Array<Any>]
+																[Local params(5467):Array<Any>:Array<Any>]
 																[FInstance:(sep : String) -> String]
 																	Array<Any>
 																	join:(sep : String) -> String
 															[Const:String] ","
 													+
 													[Const:String] ")"
-										[Else:Unknown<34>] [Return:Unknown<34>] [Local n(5460):String:String]
+										[Else:Unknown<34>] [Return:Unknown<34>] [Local n(5466):String:String]
 						[If:Void]
 							[Parenthesis:Bool]
 								[Call:Bool]
@@ -263,41 +263,41 @@ class js.Boot {
 										[FStatic:(v : Dynamic, cl : Class<Dynamic>) -> Bool]
 											js.Syntax
 											instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
-									[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+									[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 									[TypeExpr Array:Class<Array>]
 							[Then:Dynamic] [Block:Dynamic]
-								[Var str<5465>(VAssigned):String] [Const:String] "["
+								[Var str<5471>(VAssigned):String] [Const:String] "["
 								[Binop:String]
-									[Local s(5426):String:String]
+									[Local s(5432):String:String]
 									+=
 									[Const:String] "\t"
 								[Block:Void]
-									[Var _g<5466>(VAssigned):Int] [Const:Int] 0
-									[Var _g1<5467>:Int]
+									[Var _g<5472>(VAssigned):Int] [Const:Int] 0
+									[Var _g1<5473>:Int]
 										[Field:Int]
-											[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+											[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 											[FAnon:Int] length:Int
 									[While:Void]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local _g(5466):Int:Int]
+												[Local _g(5472):Int:Int]
 												<
-												[Local _g1(5467):Int:Int]
+												[Local _g1(5473):Int:Int]
 										[Block:Dynamic]
-											[Var i<5468>:Int]
+											[Var i<5474>:Int]
 												[Unop:Int]
 													++
 													Postfix
-													[Local _g(5466):Int:Int]
+													[Local _g(5472):Int:Int]
 											[Binop:String]
-												[Local str(5465):String:String]
+												[Local str(5471):String:String]
 												+=
 												[Binop:String]
 													[Parenthesis:String]
 														[If:String]
 															[Parenthesis:Bool]
 																[Binop:Bool]
-																	[Local i(5468):Int:Int]
+																	[Local i(5474):Int:Int]
 																	>
 																	[Const:Int] 0
 															[Then:String] [Const:String] ","
@@ -310,35 +310,35 @@ class js.Boot {
 																js.Boot
 																__string_rec:(o : Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>, s : String) -> String
 														[Array:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
-															[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
-															[Local i(5468):Int:Int]
-														[Local s(5426):String:String]
+															[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+															[Local i(5474):Int:Int]
+														[Local s(5432):String:String]
 								[Binop:String]
-									[Local str(5465):String:String]
+									[Local str(5471):String:String]
 									+=
 									[Const:String] "]"
-								[Return:Dynamic] [Local str(5465):String:String]
-						[Var tostr<5469>(VAssigned):Null<Unknown<36>>]
+								[Return:Dynamic] [Local str(5471):String:String]
+						[Var tostr<5475>(VAssigned):Null<Unknown<36>>]
 						[Try:Void]
 							[Block:Null<Unknown<36>>]
 								[Binop:Null<Unknown<36>>]
-									[Local tostr(5469):Null<Unknown<36>>:Null<Unknown<36>>]
+									[Local tostr(5475):Null<Unknown<36>>:Null<Unknown<36>>]
 									=
 									[Field:Null<Unknown<36>>]
-										[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+										[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 										[FAnon:Null<Unknown<36>>] toString:() -> String
-							Catch [Local _g(14834):Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] "???"
+							Catch [Local _g(18665):Dynamic] [Block:Dynamic] [Return:Dynamic] [Const:String] "???"
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
 									[Binop:Bool]
 										[Binop:Bool]
-											[Local tostr(5469):Null<Unknown<36>>:Null<Unknown<36>>]
+											[Local tostr(5475):Null<Unknown<36>>:Null<Unknown<36>>]
 											!=
 											[Const:Null<Unknown<36>>] null
 										&&
 										[Binop:Bool]
-											[Local tostr(5469):Null<Unknown<36>>:Null<Unknown<36>>]
+											[Local tostr(5475):Null<Unknown<36>>:Null<Unknown<36>>]
 											!=
 											[Call:Dynamic]
 												[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
@@ -355,35 +355,35 @@ class js.Boot {
 												[FStatic:(o : Dynamic) -> String]
 													js.Syntax
 													typeof:(o : Dynamic) -> String
-											[Local tostr(5469):Null<Unknown<36>>:Null<Unknown<36>>]
+											[Local tostr(5475):Null<Unknown<36>>:Null<Unknown<36>>]
 										==
 										[Const:String] "function"
 							[Then:Void] [Block:Void]
-								[Var s2<5471>:String]
+								[Var s2<5477>:String]
 									[Call:String]
 										[Field:() -> String]
-											[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+											[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 											[FAnon:() -> String] toString:() -> String
 								[If:Void]
 									[Parenthesis:Bool]
 										[Binop:Bool]
-											[Local s2(5471):String:String]
+											[Local s2(5477):String:String]
 											!=
 											[Const:String] "[object Object]"
-									[Then:Dynamic] [Return:Dynamic] [Local s2(5471):String:String]
-						[Var str<5472>(VAssigned):String] [Const:String] "{\n"
+									[Then:Dynamic] [Return:Dynamic] [Local s2(5477):String:String]
+						[Var str<5478>(VAssigned):String] [Const:String] "{\n"
 						[Binop:String]
-							[Local s(5426):String:String]
+							[Local s(5432):String:String]
 							+=
 							[Const:String] "\t"
-						[Var hasp<5473>:Bool]
+						[Var hasp<5479>:Bool]
 							[Binop:Bool]
 								[Field:Null<String -> Bool>]
-									[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+									[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 									[FAnon:Null<String -> Bool>] hasOwnProperty:Null<String -> Bool>
 								!=
 								[Const:Null<String -> Bool>] null
-						[Var k<5474>:String] [Const:String] null
+						[Var k<5480>:String] [Const:String] null
 						[Call:Dynamic]
 							[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
 								[TypeExpr js.Syntax:Class<js.Syntax>]
@@ -391,21 +391,21 @@ class js.Boot {
 									js.Syntax
 									code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
 							[Const:String] "for( {0} in {1} ) {"
-							[Local k(5474):String:String]
-							[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+							[Local k(5480):String:String]
+							[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
-									[Local hasp(5473):Bool:Bool]
+									[Local hasp(5479):Bool:Bool]
 									&&
 									[Unop:Bool]
 										!
 										Prefix
 										[Call:Bool]
 											[Field:Null<String -> Bool>]
-												[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+												[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 												[FAnon:Null<String -> Bool>] hasOwnProperty:Null<String -> Bool>
-											[Local k(5474):String:String]
+											[Local k(5480):String:String]
 							[Then:Dynamic] [Call:Dynamic]
 								[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
 									[TypeExpr js.Syntax:Class<js.Syntax>]
@@ -420,27 +420,27 @@ class js.Boot {
 										[Binop:Bool]
 											[Binop:Bool]
 												[Binop:Bool]
-													[Local k(5474):String:String]
+													[Local k(5480):String:String]
 													==
 													[Const:String] "prototype"
 												||
 												[Binop:Bool]
-													[Local k(5474):String:String]
+													[Local k(5480):String:String]
 													==
 													[Const:String] "__class__"
 											||
 											[Binop:Bool]
-												[Local k(5474):String:String]
+												[Local k(5480):String:String]
 												==
 												[Const:String] "__super__"
 										||
 										[Binop:Bool]
-											[Local k(5474):String:String]
+											[Local k(5480):String:String]
 											==
 											[Const:String] "__interfaces__"
 									||
 									[Binop:Bool]
-										[Local k(5474):String:String]
+										[Local k(5480):String:String]
 										==
 										[Const:String] "__properties__"
 							[Then:Dynamic] [Call:Dynamic]
@@ -454,25 +454,25 @@ class js.Boot {
 							[Parenthesis:Bool]
 								[Binop:Bool]
 									[Field:Int]
-										[Local str(5472):String:String]
+										[Local str(5478):String:String]
 										[FInstance:Int]
 											String
 											length:Int
 									!=
 									[Const:Int] 2
 							[Then:String] [Binop:String]
-								[Local str(5472):String:String]
+								[Local str(5478):String:String]
 								+=
 								[Const:String] ", \n"
 						[Binop:String]
-							[Local str(5472):String:String]
+							[Local str(5478):String:String]
 							+=
 							[Binop:String]
 								[Binop:String]
 									[Binop:String]
-										[Local s(5426):String:String]
+										[Local s(5432):String:String]
 										+
-										[Local k(5474):String:String]
+										[Local k(5480):String:String]
 									+
 									[Const:String] " : "
 								+
@@ -483,9 +483,9 @@ class js.Boot {
 											js.Boot
 											__string_rec:(o : Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>, s : String) -> String
 									[Array:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
-										[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
-										[Local k(5474):String:String]
-									[Local s(5426):String:String]
+										[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+										[Local k(5480):String:String]
+									[Local s(5432):String:String]
 						[Call:Dynamic]
 							[Field:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
 								[TypeExpr js.Syntax:Class<js.Syntax>]
@@ -494,94 +494,94 @@ class js.Boot {
 									code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
 							[Const:String] "}"
 						[Binop:String]
-							[Local s(5426):String:String]
+							[Local s(5432):String:String]
 							=
 							[Call:String]
 								[Field:(startIndex : Int, ?endIndex : Null<Int>) -> String]
-									[Local s(5426):String:String]
+									[Local s(5432):String:String]
 									[FInstance:(startIndex : Int, ?endIndex : Null<Int>) -> String]
 										String
 										substring:(startIndex : Int, ?endIndex : Null<Int>) -> String
 								[Const:Int] 1
 						[Binop:String]
-							[Local str(5472):String:String]
+							[Local str(5478):String:String]
 							+=
 							[Binop:String]
 								[Binop:String]
 									[Const:String] "\n"
 									+
-									[Local s(5426):String:String]
+									[Local s(5432):String:String]
 								+
 								[Const:String] "}"
-						[Return:Dynamic] [Local str(5472):String:String]
+						[Return:Dynamic] [Local str(5478):String:String]
 				[Case:Dynamic]
 					[Const:String] "string"
-					[Return:Dynamic] [Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+					[Return:Dynamic] [Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 				[Default:Dynamic]
 					[Return:Dynamic]
 						[Call:String]
 							[TypeExpr String:Class<String>]
-							[Local o(5425):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
+							[Local o(5431):Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>:Null<{ toString : () -> String, length : Int, hasOwnProperty : Null<String -> Bool>, _hx_index : Int, __params__ : Bool, __enum__ : Bool }>]
 
 	@:pure
 	static function __interfLoop[Function:(cc : Dynamic, cl : Dynamic) -> Bool]
-		[Arg cc<5610>(VUsedByTyper):Dynamic]
-		[Arg cl<5611>(VUsedByTyper):Dynamic]
+		[Arg cc<5616>(VUsedByTyper):Dynamic]
+		[Arg cl<5617>(VUsedByTyper):Dynamic]
 		[Block:Dynamic]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local cc(5610):Dynamic:Dynamic]
+						[Local cc(5616):Dynamic:Dynamic]
 						==
 						[Const:Dynamic] null
 				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local cc(5610):Dynamic:Dynamic]
+						[Local cc(5616):Dynamic:Dynamic]
 						==
-						[Local cl(5611):Dynamic:Dynamic]
+						[Local cl(5617):Dynamic:Dynamic]
 				[Then:Dynamic] [Return:Dynamic] [Const:Bool] true
-			[Var intf<5612>(VUsedByTyper):Dynamic]
+			[Var intf<5618>(VUsedByTyper):Dynamic]
 				[Field:Dynamic]
-					[Local cc(5610):Dynamic:Dynamic]
+					[Local cc(5616):Dynamic:Dynamic]
 					[FDynamic:Dynamic] __interfaces__
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local intf(5612):Dynamic:Dynamic]
+						[Local intf(5618):Dynamic:Dynamic]
 						!=
 						[Const:Dynamic] null
 				[Then:Void] [Block:Void]
-					[Var _g<5615>(VAssigned):Int] [Const:Int] 0
-					[Var _g1<5616>:Int]
+					[Var _g<5621>(VAssigned):Int] [Const:Int] 0
+					[Var _g1<5622>:Int]
 						[Cast:Int]
 							[Field:Dynamic]
-								[Local intf(5612):Dynamic:Dynamic]
+								[Local intf(5618):Dynamic:Dynamic]
 								[FDynamic:Dynamic] length
 					[While:Void]
 						[Parenthesis:Bool]
 							[Binop:Bool]
-								[Local _g(5615):Int:Int]
+								[Local _g(5621):Int:Int]
 								<
-								[Local _g1(5616):Int:Int]
+								[Local _g1(5622):Int:Int]
 						[Block:Dynamic]
-							[Var i<5613>(VUsedByTyper):Int]
+							[Var i<5619>(VUsedByTyper):Int]
 								[Unop:Int]
 									++
 									Postfix
-									[Local _g(5615):Int:Int]
-							[Var i1<5614>(VUsedByTyper):Dynamic]
+									[Local _g(5621):Int:Int]
+							[Var i1<5620>(VUsedByTyper):Dynamic]
 								[Array:Unknown<38>]
-									[Local intf(5612):Dynamic:Dynamic]
-									[Local i(5613):Int:Int]
+									[Local intf(5618):Dynamic:Dynamic]
+									[Local i(5619):Int:Int]
 							[If:Void]
 								[Parenthesis:Bool]
 									[Binop:Bool]
 										[Binop:Bool]
-											[Local i1(5614):Dynamic:Dynamic]
+											[Local i1(5620):Dynamic:Dynamic]
 											==
-											[Local cl(5611):Dynamic:Dynamic]
+											[Local cl(5617):Dynamic:Dynamic]
 										||
 										[Call:Bool]
 											[Field:(cc : Dynamic, cl : Dynamic) -> Bool]
@@ -589,8 +589,8 @@ class js.Boot {
 												[FStatic:(cc : Dynamic, cl : Dynamic) -> Bool]
 													js.Boot
 													__interfLoop:(cc : Dynamic, cl : Dynamic) -> Bool
-											[Local i1(5614):Dynamic:Dynamic]
-											[Local cl(5611):Dynamic:Dynamic]
+											[Local i1(5620):Dynamic:Dynamic]
+											[Local cl(5617):Dynamic:Dynamic]
 								[Then:Dynamic] [Return:Dynamic] [Const:Bool] true
 			[Return:Dynamic]
 				[Call:Bool]
@@ -600,24 +600,24 @@ class js.Boot {
 							js.Boot
 							__interfLoop:(cc : Dynamic, cl : Dynamic) -> Bool
 					[Field:Dynamic]
-						[Local cc(5610):Dynamic:Dynamic]
+						[Local cc(5616):Dynamic:Dynamic]
 						[FDynamic:Dynamic] __super__
-					[Local cl(5611):Dynamic:Dynamic]
+					[Local cl(5617):Dynamic:Dynamic]
 
 	@:has_untyped @:pure
 	static function __instanceof[Function:(o : Dynamic, cl : Dynamic) -> Bool]
-		[Arg o<5601>(VUsedByTyper):Dynamic]
-		[Arg cl<5602>(VUsedByTyper):Dynamic]
+		[Arg o<5607>(VUsedByTyper):Dynamic]
+		[Arg cl<5608>(VUsedByTyper):Dynamic]
 		[Block:Void]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local cl(5602):Dynamic:Dynamic]
+						[Local cl(5608):Dynamic:Dynamic]
 						==
 						[Const:Dynamic] null
 				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
 			[Switch:Void]
-				[Parenthesis:Dynamic] [Local cl(5602):Dynamic:Dynamic]
+				[Parenthesis:Dynamic] [Local cl(5608):Dynamic:Dynamic]
 				[Case:Dynamic]
 					[TypeExpr Array:Class<Array>]
 					[Return:Dynamic]
@@ -627,7 +627,7 @@ class js.Boot {
 								[FStatic:(v : Dynamic, cl : Class<Dynamic>) -> Bool]
 									js.Syntax
 									instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
-							[Local o(5601):Dynamic:Dynamic]
+							[Local o(5607):Dynamic:Dynamic]
 							[TypeExpr Array:Class<Array>]
 				[Case:Dynamic]
 					[TypeExpr Bool:Abstract<Bool>]
@@ -639,14 +639,14 @@ class js.Boot {
 									[FStatic:(o : Dynamic) -> String]
 										js.Syntax
 										typeof:(o : Dynamic) -> String
-								[Local o(5601):Dynamic:Dynamic]
+								[Local o(5607):Dynamic:Dynamic]
 							==
 							[Const:String] "boolean"
 				[Case:Dynamic]
 					[TypeExpr Dynamic:Abstract<Dynamic>]
 					[Return:Dynamic]
 						[Binop:Bool]
-							[Local o(5601):Dynamic:Dynamic]
+							[Local o(5607):Dynamic:Dynamic]
 							!=
 							[Const:Dynamic] null
 				[Case:Dynamic]
@@ -659,7 +659,7 @@ class js.Boot {
 									[FStatic:(o : Dynamic) -> String]
 										js.Syntax
 										typeof:(o : Dynamic) -> String
-								[Local o(5601):Dynamic:Dynamic]
+								[Local o(5607):Dynamic:Dynamic]
 							==
 							[Const:String] "number"
 				[Case:Void]
@@ -673,7 +673,7 @@ class js.Boot {
 										[FStatic:(o : Dynamic) -> String]
 											js.Syntax
 											typeof:(o : Dynamic) -> String
-									[Local o(5601):Dynamic:Dynamic]
+									[Local o(5607):Dynamic:Dynamic]
 								==
 								[Const:String] "number"
 						[Then:Dynamic] [Return:Dynamic]
@@ -684,10 +684,10 @@ class js.Boot {
 										js.Syntax
 										strictEq:(a : Dynamic, b : Dynamic) -> Bool
 								[Binop:Int]
-									[Local o(5601):Dynamic:Dynamic]
+									[Local o(5607):Dynamic:Dynamic]
 									|
 									[Const:Int] 0
-								[Local o(5601):Dynamic:Dynamic]
+								[Local o(5607):Dynamic:Dynamic]
 						[Else:Dynamic] [Return:Dynamic] [Const:Bool] false
 				[Case:Dynamic]
 					[TypeExpr String:Class<String>]
@@ -699,7 +699,7 @@ class js.Boot {
 									[FStatic:(o : Dynamic) -> String]
 										js.Syntax
 										typeof:(o : Dynamic) -> String
-								[Local o(5601):Dynamic:Dynamic]
+								[Local o(5607):Dynamic:Dynamic]
 							==
 							[Const:String] "string"
 				[Default:Dynamic]
@@ -707,7 +707,7 @@ class js.Boot {
 						[If:Void]
 							[Parenthesis:Bool]
 								[Binop:Bool]
-									[Local o(5601):Dynamic:Dynamic]
+									[Local o(5607):Dynamic:Dynamic]
 									!=
 									[Const:Dynamic] null
 							[Then:Void] [Block:Void]
@@ -720,7 +720,7 @@ class js.Boot {
 													[FStatic:(o : Dynamic) -> String]
 														js.Syntax
 														typeof:(o : Dynamic) -> String
-												[Local cl(5602):Dynamic:Dynamic]
+												[Local cl(5608):Dynamic:Dynamic]
 											==
 											[Const:String] "function"
 									[Then:Void] [Block:Void]
@@ -732,8 +732,8 @@ class js.Boot {
 														[FStatic:(o : Dynamic, cl : Class<Dynamic>) -> Bool]
 															js.Boot
 															__downcastCheck:(o : Dynamic, cl : Class<Dynamic>) -> Bool
-													[Local o(5601):Dynamic:Dynamic]
-													[Local cl(5602):Dynamic:Dynamic]
+													[Local o(5607):Dynamic:Dynamic]
+													[Local cl(5608):Dynamic:Dynamic]
 											[Then:Dynamic] [Return:Dynamic] [Const:Bool] true
 									[Else:Void] [If:Void]
 										[Parenthesis:Bool]
@@ -745,7 +745,7 @@ class js.Boot {
 															[FStatic:(o : Dynamic) -> String]
 																js.Syntax
 																typeof:(o : Dynamic) -> String
-														[Local cl(5602):Dynamic:Dynamic]
+														[Local cl(5608):Dynamic:Dynamic]
 													==
 													[Const:String] "object"
 												&&
@@ -755,7 +755,7 @@ class js.Boot {
 														[FStatic:(o : Dynamic) -> Bool]
 															js.Boot
 															__isNativeObj:(o : Dynamic) -> Bool
-													[Local cl(5602):Dynamic:Dynamic]
+													[Local cl(5608):Dynamic:Dynamic]
 										[Then:Void] [Block:Void]
 											[If:Void]
 												[Parenthesis:Bool]
@@ -765,8 +765,8 @@ class js.Boot {
 															[FStatic:(v : Dynamic, cl : Class<Dynamic>) -> Bool]
 																js.Syntax
 																instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
-														[Local o(5601):Dynamic:Dynamic]
-														[Local cl(5602):Dynamic:Dynamic]
+														[Local o(5607):Dynamic:Dynamic]
+														[Local cl(5608):Dynamic:Dynamic]
 												[Then:Dynamic] [Return:Dynamic] [Const:Bool] true
 							[Else:Dynamic] [Return:Dynamic] [Const:Bool] false
 						[Call:Unknown<41>]
@@ -777,12 +777,12 @@ class js.Boot {
 									[If:Bool]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local cl(5602):Dynamic:Dynamic]
+												[Local cl(5608):Dynamic:Dynamic]
 												==
 												[TypeExpr Class:Abstract<Class>]
 										[Then:Bool] [Binop:Bool]
 											[Field:Dynamic]
-												[Local o(5601):Dynamic:Dynamic]
+												[Local o(5607):Dynamic:Dynamic]
 												[FDynamic:Dynamic] __name__
 											!=
 											[Const:Dynamic] null
@@ -796,12 +796,12 @@ class js.Boot {
 									[If:Bool]
 										[Parenthesis:Bool]
 											[Binop:Bool]
-												[Local cl(5602):Dynamic:Dynamic]
+												[Local cl(5608):Dynamic:Dynamic]
 												==
 												[TypeExpr Enum:Abstract<Enum>]
 										[Then:Bool] [Binop:Bool]
 											[Field:Dynamic]
-												[Local o(5601):Dynamic:Dynamic]
+												[Local o(5607):Dynamic:Dynamic]
 												[FDynamic:Dynamic] __ename__
 											!=
 											[Const:Dynamic] null
@@ -815,7 +815,7 @@ class js.Boot {
 									[Parenthesis:Bool]
 										[Binop:Bool]
 											[Field:Dynamic]
-												[Local o(5601):Dynamic:Dynamic]
+												[Local o(5607):Dynamic:Dynamic]
 												[FDynamic:Dynamic] __enum__
 											!=
 											[Const:Dynamic] null
@@ -823,16 +823,16 @@ class js.Boot {
 										[Array:Unknown<45>]
 											[Ident:Array<Unknown<45>>] $hxEnums
 											[Field:Dynamic]
-												[Local o(5601):Dynamic:Dynamic]
+												[Local o(5607):Dynamic:Dynamic]
 												[FDynamic:Dynamic] __enum__
 										==
-										[Local cl(5602):Dynamic:Dynamic]
+										[Local cl(5608):Dynamic:Dynamic]
 									[Else:Bool] [Const:Bool] false
 								[Const:Bool] false
 
 	static function __downcastCheck[Function:(o : Dynamic, cl : Class<Dynamic>) -> Bool]
-		[Arg o<5603>(VUsedByTyper):Dynamic]
-		[Arg cl<5604>(VUsedByTyper):Class<Dynamic>]
+		[Arg o<5609>(VUsedByTyper):Dynamic]
+		[Arg cl<5610>(VUsedByTyper):Class<Dynamic>]
 		[Block:Void]
 			[If:Void]
 				[Parenthesis:Bool]
@@ -845,8 +845,8 @@ class js.Boot {
 								[FStatic:(v : Dynamic, cl : Class<Dynamic>) -> Bool]
 									js.Syntax
 									instanceof:(v : Dynamic, cl : Class<Dynamic>) -> Bool
-							[Local o(5603):Dynamic:Dynamic]
-							[Local cl(5604):Class<Dynamic>:Class<Dynamic>]
+							[Local o(5609):Dynamic:Dynamic]
+							[Local cl(5610):Class<Dynamic>:Class<Dynamic>]
 				[Then:Void] [Block:Void]
 					[If:Void]
 						[Parenthesis:Bool]
@@ -854,7 +854,7 @@ class js.Boot {
 								[Ident:(String, Unknown<47>) -> Unknown<48>] __define_feature__
 								[Const:String] "js.Boot.isInterface"
 								[Field:Unknown<47>]
-									[Local cl(5604):Class<Dynamic>:Class<Dynamic>]
+									[Local cl(5610):Class<Dynamic>:Class<Dynamic>]
 									[FDynamic:Unknown<47>] __isInterface__
 						[Then:Dynamic] [Return:Dynamic]
 							[Call:Bool]
@@ -869,21 +869,21 @@ class js.Boot {
 										[FStatic:(o : Null<Dynamic>) -> Null<Dynamic>]
 											js.Boot
 											getClass:(o : Null<Dynamic>) -> Null<Dynamic>
-									[Local o(5603):Dynamic:Dynamic]
-								[Local cl(5604):Class<Dynamic>:Class<Dynamic>]
+									[Local o(5609):Dynamic:Dynamic]
+								[Local cl(5610):Class<Dynamic>:Class<Dynamic>]
 						[Else:Dynamic] [Return:Dynamic] [Const:Bool] false
 				[Else:Dynamic] [Return:Dynamic] [Const:Bool] true
 
 	@:ifFeature("typed_cast")
 	static function __cast[Function:(o : Dynamic, t : Dynamic) -> Any]
-		[Arg o<5629>(VUsedByTyper):Dynamic]
-		[Arg t<5630>(VUsedByTyper):Dynamic]
+		[Arg o<5635>(VUsedByTyper):Dynamic]
+		[Arg t<5636>(VUsedByTyper):Dynamic]
 		[Block:Void]
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
 						[Binop:Bool]
-							[Local o(5629):Dynamic:Dynamic]
+							[Local o(5635):Dynamic:Dynamic]
 							==
 							[Const:Dynamic] null
 						||
@@ -893,9 +893,9 @@ class js.Boot {
 								[FStatic:(o : Dynamic, cl : Dynamic) -> Bool]
 									js.Boot
 									__instanceof:(o : Dynamic, cl : Dynamic) -> Bool
-							[Local o(5629):Dynamic:Dynamic]
-							[Local t(5630):Dynamic:Dynamic]
-				[Then:Dynamic] [Return:Dynamic] [Local o(5629):Dynamic:Dynamic]
+							[Local o(5635):Dynamic:Dynamic]
+							[Local t(5636):Dynamic:Dynamic]
+				[Then:Dynamic] [Return:Dynamic] [Local o(5635):Dynamic:Dynamic]
 				[Else:Dynamic] [Throw:Dynamic]
 					[Meta:Any]
 						:wrappedException
@@ -916,7 +916,7 @@ class js.Boot {
 												[FStatic:(s : Dynamic) -> String]
 													Std
 													string:(s : Dynamic) -> String
-											[Local o(5629):Dynamic:Dynamic]
+											[Local o(5635):Dynamic:Dynamic]
 									+
 									[Const:String] " to "
 								+
@@ -926,14 +926,14 @@ class js.Boot {
 										[FStatic:(s : Dynamic) -> String]
 											Std
 											string:(s : Dynamic) -> String
-									[Local t(5630):Dynamic:Dynamic]
+									[Local t(5636):Dynamic:Dynamic]
 
 	static var __toStr:Function;
 
 	static function __nativeClassName[Function:(o : Dynamic) -> String]
-		[Arg o<5622>(VUsedByTyper):Dynamic]
+		[Arg o<5628>(VUsedByTyper):Dynamic]
 		[Block:Dynamic]
-			[Var name<5623>(VUsedByTyper):String]
+			[Var name<5629>(VUsedByTyper):String]
 				[Call:Dynamic]
 					[Field:Dynamic]
 						[Call:Dynamic]
@@ -946,7 +946,7 @@ class js.Boot {
 								[FInstance:(thisArg : Dynamic, args : haxe.extern.Rest<Dynamic>) -> Dynamic]
 									Function
 									call:(thisArg : Dynamic, args : haxe.extern.Rest<Dynamic>) -> Dynamic
-							[Local o(5622):Dynamic:Dynamic]
+							[Local o(5628):Dynamic:Dynamic]
 						[FDynamic:Dynamic] slice
 					[Const:Int] 8
 					[Const:Int] -1
@@ -956,29 +956,29 @@ class js.Boot {
 						[Binop:Bool]
 							[Binop:Bool]
 								[Binop:Bool]
-									[Local name(5623):String:String]
+									[Local name(5629):String:String]
 									==
 									[Const:String] "Object"
 								||
 								[Binop:Bool]
-									[Local name(5623):String:String]
+									[Local name(5629):String:String]
 									==
 									[Const:String] "Function"
 							||
 							[Binop:Bool]
-								[Local name(5623):String:String]
+								[Local name(5629):String:String]
 								==
 								[Const:String] "Math"
 						||
 						[Binop:Bool]
-							[Local name(5623):String:String]
+							[Local name(5629):String:String]
 							==
 							[Const:String] "JSON"
 				[Then:Dynamic] [Return:Dynamic] [Const:String] null
-			[Return:Dynamic] [Local name(5623):String:String]
+			[Return:Dynamic] [Local name(5629):String:String]
 
 	static function __isNativeObj[Function:(o : Dynamic) -> Bool]
-		[Arg o<5621>(VUsedByTyper):Dynamic]
+		[Arg o<5627>(VUsedByTyper):Dynamic]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Binop:Bool]
@@ -988,12 +988,12 @@ class js.Boot {
 							[FStatic:(o : Dynamic) -> String]
 								js.Boot
 								__nativeClassName:(o : Dynamic) -> String
-						[Local o(5621):Dynamic:Dynamic]
+						[Local o(5627):Dynamic:Dynamic]
 					!=
 					[Const:String] null
 
 	static function __resolveNativeClass[Function:(name : String) -> Null<Dynamic>]
-		[Arg name<5626>(VUsedByTyper):String]
+		[Arg name<5632>(VUsedByTyper):String]
 		[Block:Dynamic]
 			[Return:Dynamic]
 				[Array:Null<Dynamic>]
@@ -1008,7 +1008,7 @@ class js.Boot {
 										js.Syntax
 										code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
 								[Const:String] "$global"
-					[Cast:Int] [Local name(5626):String:String]
+					[Cast:Int] [Local name(5632):String:String]
 
 	static function __init__() [Binop:Function]
 		[Field:Function]

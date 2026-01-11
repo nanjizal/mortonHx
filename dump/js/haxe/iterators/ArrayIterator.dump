@@ -9,7 +9,7 @@ class haxe.iterators.ArrayIterator<{
 }> {
 
 	public inline function new[Function:(array : Array<haxe.iterators.ArrayIterator.T>) -> Void]
-		[Arg array<5557>(VUsedByTyper):Array<haxe.iterators.ArrayIterator.T>]
+		[Arg array<5563>(VUsedByTyper):Array<haxe.iterators.ArrayIterator.T>]
 		[Block:Void]
 			[Binop:Int]
 				[Field:Int]
@@ -26,7 +26,7 @@ class haxe.iterators.ArrayIterator<{
 						haxe.iterators.ArrayIterator<haxe.iterators.ArrayIterator.T>
 						array:Array<haxe.iterators.ArrayIterator.T>
 				=
-				[Local array(5557):Array<haxe.iterators.ArrayIterator.T>:Array<haxe.iterators.ArrayIterator.T>]
+				[Local array(5563):Array<haxe.iterators.ArrayIterator.T>:Array<haxe.iterators.ArrayIterator.T>]
 
 	var array(default,ctor):Array<haxe.iterators.ArrayIterator.T>;
 

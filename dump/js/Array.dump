@@ -16,6 +16,8 @@ extern class Array<{
 
 	function push(x:Array.T):Int;
 
+	function reverse():Void;
+
 	function sort(f:(Array.T, Array.T) -> Int):Void;
 
 	@:runtime

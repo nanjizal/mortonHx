@@ -1,0 +1,2228 @@
+class mortonHx.EarCuttingMorton {
+
+	@:value({ pointHit : null })
+	public function new[Function:(points : Array<{ y : Int, x : Int }>, ?pointHit : Null<mortonHx.IHitInt>) -> Void]
+		[Arg points<12214>(VUsedByTyper):Array<{ y : Int, x : Int }>]
+		[Arg pointHit<12215>(VUsedByTyper):Null<mortonHx.IHitInt>] [Const:Null<mortonHx.IHitInt>] null
+		[Block:Array<Int>]
+			[Binop:mortonHx.IHitInt]
+				[Field:mortonHx.IHitInt]
+					[Const:mortonHx.EarCuttingMorton] this
+					[FInstance:mortonHx.IHitInt]
+						mortonHx.EarCuttingMorton
+						pointHit:mortonHx.IHitInt
+				=
+				[If:mortonHx.IHitInt]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local pointHit(12215):Null<mortonHx.IHitInt>:Null<mortonHx.IHitInt>]
+							==
+							[Const:Null<mortonHx.IHitInt>] null
+					[Then:mortonHx.EdgeFunctionHitInt] [New:mortonHx.EdgeFunctionHitInt] mortonHx.EdgeFunctionHitInt
+					[Else:Null<mortonHx.IHitInt>] [Local pointHit(12215):Null<mortonHx.IHitInt>:Null<mortonHx.IHitInt>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Unop:Bool]
+						!
+						Prefix
+						[Call:Bool]
+							[Field:(p : Array<{ y : Int, x : Int }>) -> Bool]
+								[TypeExpr mortonHx.EarCuttingMorton:Class<mortonHx.EarCuttingMorton>]
+								[FStatic:(p : Array<{ y : Int, x : Int }>) -> Bool]
+									mortonHx.EarCuttingMorton
+									isCounterClockwise:(p : Array<{ y : Int, x : Int }>) -> Bool
+							[Local points(12214):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+				[Then:Void] [Call:Void]
+					[Field:() -> Void]
+						[Local points(12214):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+						[FInstance:() -> Void]
+							Array<{ y : Int, x : Int }>
+							reverse:() -> Void
+			[Binop:Array<{ y : Int, x : Int }>]
+				[Field:Array<{ y : Int, x : Int }>]
+					[Const:mortonHx.EarCuttingMorton] this
+					[FInstance:Array<{ y : Int, x : Int }>]
+						mortonHx.EarCuttingMorton
+						points:Array<{ y : Int, x : Int }>
+				=
+				[Local points(12214):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+			[Var _g<12222>:Array<mortonHx.Morton2D>] [ArrayDecl:Array<mortonHx.Morton2D>]
+			[Block:Void]
+				[Var _g1<12231>(VAssigned):Int] [Const:Int] 0
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g1(12231):Int:Int]
+							<
+							[Field:Int]
+								[Local points(12214):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+								[FInstance:Int]
+									Array<{ y : Int, x : Int }>
+									length:Int
+					[Block:Dynamic]
+						[Var p<12223>(VUsedByTyper):{ y : Int, x : Int }]
+							[Array:{ y : Int, x : Int }]
+								[Local points(12214):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+								[Local _g1(12231):Int:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local _g1(12231):Int:Int]
+						[Var v<12229>(VAssigned):Int]
+							[Field:Int]
+								[Local p(12223):{ y : Int, x : Int }:{ y : Int, x : Int }]
+								[FAnon:Int] y:Int
+						[Binop:Int]
+							[Local v(12229):Int:Int]
+							&=
+							[Const:Int] 65535
+						[Binop:Int]
+							[Local v(12229):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12229):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12229):Int:Int]
+											<<
+											[Const:Int] 8
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local v(12229):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12229):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12229):Int:Int]
+											<<
+											[Const:Int] 4
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local v(12229):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12229):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12229):Int:Int]
+											<<
+											[Const:Int] 2
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local v(12229):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12229):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12229):Int:Int]
+											<<
+											[Const:Int] 1
+								&
+								[Const:Int] 1431655765
+						[Var v1<12230>(VAssigned):Int]
+							[Field:Int]
+								[Local p(12223):{ y : Int, x : Int }:{ y : Int, x : Int }]
+								[FAnon:Int] x:Int
+						[Binop:Int]
+							[Local v1(12230):Int:Int]
+							&=
+							[Const:Int] 65535
+						[Binop:Int]
+							[Local v1(12230):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12230):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12230):Int:Int]
+											<<
+											[Const:Int] 8
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local v1(12230):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12230):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12230):Int:Int]
+											<<
+											[Const:Int] 4
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local v1(12230):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12230):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12230):Int:Int]
+											<<
+											[Const:Int] 2
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local v1(12230):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12230):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12230):Int:Int]
+											<<
+											[Const:Int] 1
+								&
+								[Const:Int] 1431655765
+						[Call:Int]
+							[Field:(x : mortonHx.Morton2D) -> Int]
+								[Local _g(12222):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+								[FInstance:(x : mortonHx.Morton2D) -> Int]
+									Array<mortonHx.Morton2D>
+									push:(x : Array.T) -> Int
+							[Cast:mortonHx.Morton2D]
+								[Binop:Int]
+									[Binop:Int]
+										[Local v(12229):Int:Int]
+										<<
+										[Const:Int] 1
+									|
+									[Local v1(12230):Int:Int]
+			[Binop:mortonHx.SortableArray<mortonHx.Morton2D>]
+				[Field:mortonHx.SortableArray<mortonHx.Morton2D>]
+					[Const:mortonHx.EarCuttingMorton] this
+					[FInstance:mortonHx.SortableArray<mortonHx.Morton2D>]
+						mortonHx.EarCuttingMorton
+						sortableArr:mortonHx.SortableArray<mortonHx.Morton2D>
+				=
+				[Cast:mortonHx.SortableArray<mortonHx.Morton2D>] [Local _g(12222):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+			[Block:Array<Int>]
+				[Var this1<12235>(VCaptured):Array<mortonHx.Morton2D>]
+					[Cast:Array<mortonHx.Morton2D>]
+						[Field:mortonHx.SortableArray<mortonHx.Morton2D>]
+							[Const:mortonHx.EarCuttingMorton] this
+							[FInstance:mortonHx.SortableArray<mortonHx.Morton2D>]
+								mortonHx.EarCuttingMorton
+								sortableArr:mortonHx.SortableArray<mortonHx.Morton2D>
+				[Var f<12238>(VCaptured):(mortonHx.Morton2D, mortonHx.Morton2D) -> Int]
+					[Function:(a : mortonHx.Morton2D, b : mortonHx.Morton2D) -> Int]
+						[Arg a<12236>:mortonHx.Morton2D]
+						[Arg b<12237>:mortonHx.Morton2D]
+						[Block:Dynamic]
+							[If:Void]
+								[Parenthesis:Bool]
+									[Binop:Bool]
+										[Local a(12236):mortonHx.Morton2D:mortonHx.Morton2D]
+										<
+										[Local b(12237):mortonHx.Morton2D:mortonHx.Morton2D]
+								[Then:Dynamic] [Return:Dynamic] [Const:Int] -1
+							[If:Void]
+								[Parenthesis:Bool]
+									[Binop:Bool]
+										[Local a(12236):mortonHx.Morton2D:mortonHx.Morton2D]
+										>
+										[Local b(12237):mortonHx.Morton2D:mortonHx.Morton2D]
+								[Then:Dynamic] [Return:Dynamic] [Const:Int] 1
+							[Return:Dynamic] [Const:Int] 0
+				[Var len<12239>:Int]
+					[Field:Int]
+						[Local this1(12235):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+						[FInstance:Int]
+							Array<mortonHx.Morton2D>
+							length:Int
+				[Var order<12240>(VAssigned):Array<Int>] [New:Array<Int>] Array<Int>
+				[Var _g<12241>:Array<Int>] [ArrayDecl:Array<Int>]
+				[Block:Void]
+					[Var _g1<12242>(VAssigned):Int] [Const:Int] 0
+					[Var _g2<12243>:Int] [Local len(12239):Int:Int]
+					[While:Void]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local _g1(12242):Int:Int]
+								<
+								[Local _g2(12243):Int:Int]
+						[Block:Dynamic]
+							[Var i<12244>:Int]
+								[Unop:Int]
+									++
+									Postfix
+									[Local _g1(12242):Int:Int]
+							[Call:Int]
+								[Field:(x : Int) -> Int]
+									[Local _g(12241):Array<Int>:Array<Int>]
+									[FInstance:(x : Int) -> Int]
+										Array<Int>
+										push:(x : Array.T) -> Int
+								[Local i(12244):Int:Int]
+				[Binop:Array<Int>]
+					[Local order(12240):Array<Int>:Array<Int>]
+					=
+					[Local _g(12241):Array<Int>:Array<Int>]
+				[Call:Void]
+					[Field:(f : ((Int, Int) -> Int)) -> Void]
+						[Local order(12240):Array<Int>:Array<Int>]
+						[FInstance:(f : ((Int, Int) -> Int)) -> Void]
+							Array<Int>
+							sort:(f : ((Array.T, Array.T) -> Int)) -> Void
+					[Function:(idxA : Int, idxB : Int) -> Int]
+						[Arg idxA<12245>:Int]
+						[Arg idxB<12246>:Int]
+						[Block:Dynamic]
+							[Return:Dynamic]
+								[Call:Int]
+									[Local f(12238):(mortonHx.Morton2D, mortonHx.Morton2D) -> Int:(mortonHx.Morton2D, mortonHx.Morton2D) -> Int]
+									[Array:mortonHx.Morton2D]
+										[Local this1(12235):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+										[Local idxA(12245):Int:Int]
+									[Array:mortonHx.Morton2D]
+										[Local this1(12235):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+										[Local idxB(12246):Int:Int]
+				[Var temp<12247>:Array<mortonHx.Morton2D>]
+					[Meta:Array<mortonHx.Morton2D>]
+						:pure
+						[Call:Array<mortonHx.Morton2D>]
+							[Field:() -> Array<mortonHx.Morton2D>]
+								[Cast:{ slice : () -> Array<mortonHx.Morton2D> }] [Local this1(12235):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+								[FAnon:() -> Array<mortonHx.Morton2D>] slice:() -> Array<mortonHx.Morton2D>
+				[Block:Void]
+					[Var _g<12248>(VAssigned):Int] [Const:Int] 0
+					[Var _g1<12249>:Int] [Local len(12239):Int:Int]
+					[While:Void]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local _g(12248):Int:Int]
+								<
+								[Local _g1(12249):Int:Int]
+						[Block:Dynamic]
+							[Var i<12250>:Int]
+								[Unop:Int]
+									++
+									Postfix
+									[Local _g(12248):Int:Int]
+							[Binop:mortonHx.Morton2D]
+								[Array:mortonHx.Morton2D]
+									[Local this1(12235):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+									[Local i(12250):Int:Int]
+								=
+								[Array:mortonHx.Morton2D]
+									[Local temp(12247):Array<mortonHx.Morton2D>:Array<mortonHx.Morton2D>]
+									[Array:Int]
+										[Local order(12240):Array<Int>:Array<Int>]
+										[Local i(12250):Int:Int]
+
+	var pointHit:mortonHx.IHitInt;
+
+	var points:Array<{ y : Int, x : Int }>;
+
+	var sortableArr:mortonHx.SortableArray<mortonHx.Morton2D>;
+
+	public inline function setTriangle[Function:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void]
+		[Arg ax<12251>(VUsedByTyper):Int]
+		[Arg ay<12252>(VUsedByTyper):Int]
+		[Arg bx<12253>(VUsedByTyper):Int]
+		[Arg by<12254>(VUsedByTyper):Int]
+		[Arg cx<12255>(VUsedByTyper):Int]
+		[Arg cy<12256>(VUsedByTyper):Int]
+		[Block:Void]
+			[Call:Void]
+				[Field:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void]
+					[Field:mortonHx.IHitInt]
+						[Const:mortonHx.EarCuttingMorton] this
+						[FInstance:mortonHx.IHitInt]
+							mortonHx.EarCuttingMorton
+							pointHit:mortonHx.IHitInt
+					[FInstance:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void]
+						mortonHx.IHitInt
+						prepare:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void
+				[Local ax(12251):Int:Int]
+				[Local ay(12252):Int:Int]
+				[Local bx(12253):Int:Int]
+				[Local by(12254):Int:Int]
+				[Local cx(12255):Int:Int]
+				[Local cy(12256):Int:Int]
+
+	public function pointsInTriangle[Function:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool]
+		[Arg ax<12257>(VUsedByTyper):Int]
+		[Arg ay<12258>(VUsedByTyper):Int]
+		[Arg bx<12259>(VUsedByTyper):Int]
+		[Arg by<12260>(VUsedByTyper):Int]
+		[Arg cx<12261>(VUsedByTyper):Int]
+		[Arg cy<12262>(VUsedByTyper):Int]
+		[Block:Dynamic]
+			[Call:Void]
+				[Field:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void]
+					[Field:mortonHx.IHitInt]
+						[Const:mortonHx.EarCuttingMorton] this
+						[FInstance:mortonHx.IHitInt]
+							mortonHx.EarCuttingMorton
+							pointHit:mortonHx.IHitInt
+					[FInstance:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void]
+						mortonHx.IHitInt
+						prepare:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void
+				[Local ax(12257):Int:Int]
+				[Local ay(12258):Int:Int]
+				[Local bx(12259):Int:Int]
+				[Local by(12260):Int:Int]
+				[Local cx(12261):Int:Int]
+				[Local cy(12262):Int:Int]
+			[Var v<12276>(VAssigned):Int] [Local ay(12258):Int:Int]
+			[Binop:Int]
+				[Local v(12276):Int:Int]
+				&=
+				[Const:Int] 65535
+			[Binop:Int]
+				[Local v(12276):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12276):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12276):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local v(12276):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12276):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12276):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local v(12276):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12276):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12276):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local v(12276):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12276):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12276):Int:Int]
+								<<
+								[Const:Int] 1
+					&
+					[Const:Int] 1431655765
+			[Var v1<12277>(VAssigned):Int] [Local ax(12257):Int:Int]
+			[Binop:Int]
+				[Local v1(12277):Int:Int]
+				&=
+				[Const:Int] 65535
+			[Binop:Int]
+				[Local v1(12277):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12277):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12277):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local v1(12277):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12277):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12277):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local v1(12277):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12277):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12277):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local v1(12277):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12277):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12277):Int:Int]
+								<<
+								[Const:Int] 1
+					&
+					[Const:Int] 1431655765
+			[Var v1Code<12278>(VUsedByTyper):mortonHx.Morton2D]
+				[Cast:mortonHx.Morton2D]
+					[Binop:Int]
+						[Binop:Int]
+							[Local v(12276):Int:Int]
+							<<
+							[Const:Int] 1
+						|
+						[Local v1(12277):Int:Int]
+			[Var v<12284>(VAssigned):Int] [Local by(12260):Int:Int]
+			[Binop:Int]
+				[Local v(12284):Int:Int]
+				&=
+				[Const:Int] 65535
+			[Binop:Int]
+				[Local v(12284):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12284):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12284):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local v(12284):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12284):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12284):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local v(12284):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12284):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12284):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local v(12284):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12284):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12284):Int:Int]
+								<<
+								[Const:Int] 1
+					&
+					[Const:Int] 1431655765
+			[Var v1<12285>(VAssigned):Int] [Local bx(12259):Int:Int]
+			[Binop:Int]
+				[Local v1(12285):Int:Int]
+				&=
+				[Const:Int] 65535
+			[Binop:Int]
+				[Local v1(12285):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12285):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12285):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local v1(12285):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12285):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12285):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local v1(12285):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12285):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12285):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local v1(12285):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12285):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12285):Int:Int]
+								<<
+								[Const:Int] 1
+					&
+					[Const:Int] 1431655765
+			[Var v2Code<12286>(VUsedByTyper):mortonHx.Morton2D]
+				[Cast:mortonHx.Morton2D]
+					[Binop:Int]
+						[Binop:Int]
+							[Local v(12284):Int:Int]
+							<<
+							[Const:Int] 1
+						|
+						[Local v1(12285):Int:Int]
+			[Var v<12292>(VAssigned):Int] [Local cy(12262):Int:Int]
+			[Binop:Int]
+				[Local v(12292):Int:Int]
+				&=
+				[Const:Int] 65535
+			[Binop:Int]
+				[Local v(12292):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12292):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12292):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local v(12292):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12292):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12292):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local v(12292):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12292):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12292):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local v(12292):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v(12292):Int:Int]
+							^
+							[Binop:Int]
+								[Local v(12292):Int:Int]
+								<<
+								[Const:Int] 1
+					&
+					[Const:Int] 1431655765
+			[Var v1<12293>(VAssigned):Int] [Local cx(12261):Int:Int]
+			[Binop:Int]
+				[Local v1(12293):Int:Int]
+				&=
+				[Const:Int] 65535
+			[Binop:Int]
+				[Local v1(12293):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12293):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12293):Int:Int]
+								<<
+								[Const:Int] 8
+					&
+					[Const:Int] 16711935
+			[Binop:Int]
+				[Local v1(12293):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12293):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12293):Int:Int]
+								<<
+								[Const:Int] 4
+					&
+					[Const:Int] 252645135
+			[Binop:Int]
+				[Local v1(12293):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12293):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12293):Int:Int]
+								<<
+								[Const:Int] 2
+					&
+					[Const:Int] 858993459
+			[Binop:Int]
+				[Local v1(12293):Int:Int]
+				=
+				[Binop:Int]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1(12293):Int:Int]
+							^
+							[Binop:Int]
+								[Local v1(12293):Int:Int]
+								<<
+								[Const:Int] 1
+					&
+					[Const:Int] 1431655765
+			[Var v3Code<12294>(VUsedByTyper):mortonHx.Morton2D]
+				[Cast:mortonHx.Morton2D]
+					[Binop:Int]
+						[Binop:Int]
+							[Local v(12292):Int:Int]
+							<<
+							[Const:Int] 1
+						|
+						[Local v1(12293):Int:Int]
+			[Var b<12300>:Int]
+				[If:Int]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local v2Code(12286):mortonHx.Morton2D:mortonHx.Morton2D]
+							<
+							[Local v3Code(12294):mortonHx.Morton2D:mortonHx.Morton2D]
+					[Then:mortonHx.Morton2D] [Local v2Code(12286):mortonHx.Morton2D:mortonHx.Morton2D]
+					[Else:mortonHx.Morton2D] [Local v3Code(12294):mortonHx.Morton2D:mortonHx.Morton2D]
+			[Var minCode<12301>(VUsedByTyper):Int]
+				[If:Int]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local v1Code(12278):mortonHx.Morton2D:mortonHx.Morton2D]
+							<
+							[Local b(12300):Int:Int]
+					[Then:mortonHx.Morton2D] [Local v1Code(12278):mortonHx.Morton2D:mortonHx.Morton2D]
+					[Else:Int] [Local b(12300):Int:Int]
+			[Var b<12307>:Int]
+				[If:Int]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local v2Code(12286):mortonHx.Morton2D:mortonHx.Morton2D]
+							>
+							[Local v3Code(12294):mortonHx.Morton2D:mortonHx.Morton2D]
+					[Then:mortonHx.Morton2D] [Local v2Code(12286):mortonHx.Morton2D:mortonHx.Morton2D]
+					[Else:mortonHx.Morton2D] [Local v3Code(12294):mortonHx.Morton2D:mortonHx.Morton2D]
+			[Var maxCode<12308>(VUsedByTyper):Int]
+				[If:Int]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local v1Code(12278):mortonHx.Morton2D:mortonHx.Morton2D]
+							>
+							[Local b(12307):Int:Int]
+					[Then:mortonHx.Morton2D] [Local v1Code(12278):mortonHx.Morton2D:mortonHx.Morton2D]
+					[Else:Int] [Local b(12307):Int:Int]
+			[Var start<12309>(VUsedByTyper):Int]
+				[Call:Int]
+					[Field:(this : Array<mortonHx.Morton2D>, target : mortonHx.Morton2D) -> Int]
+						[TypeExpr mortonHx._SortableArray.SortableArray_Impl_:Abstract<mortonHx.SortableArray>]
+						[FStatic:(this : Array<mortonHx.Morton2D>, target : mortonHx.Morton2D) -> Int]
+							mortonHx._SortableArray.SortableArray_Impl_
+							findStartIndex:(this : Array<mortonHx.SortableArray.T>, target : mortonHx.SortableArray.T) -> Int
+					[Field:mortonHx.SortableArray<mortonHx.Morton2D>]
+						[Const:mortonHx.EarCuttingMorton] this
+						[FInstance:mortonHx.SortableArray<mortonHx.Morton2D>]
+							mortonHx.EarCuttingMorton
+							sortableArr:mortonHx.SortableArray<mortonHx.Morton2D>
+					[Local minCode(12301):Int:Int]
+			[Var end<12310>(VUsedByTyper):Int]
+				[Call:Int]
+					[Field:(this : Array<mortonHx.Morton2D>, target : mortonHx.Morton2D, startLow : Int) -> Int]
+						[TypeExpr mortonHx._SortableArray.SortableArray_Impl_:Abstract<mortonHx.SortableArray>]
+						[FStatic:(this : Array<mortonHx.Morton2D>, target : mortonHx.Morton2D, startLow : Int) -> Int]
+							mortonHx._SortableArray.SortableArray_Impl_
+							findEndIndexFrom:(this : Array<mortonHx.SortableArray.T>, target : mortonHx.SortableArray.T, startLow : Int) -> Int
+					[Field:mortonHx.SortableArray<mortonHx.Morton2D>]
+						[Const:mortonHx.EarCuttingMorton] this
+						[FInstance:mortonHx.SortableArray<mortonHx.Morton2D>]
+							mortonHx.EarCuttingMorton
+							sortableArr:mortonHx.SortableArray<mortonHx.Morton2D>
+					[Local maxCode(12308):Int:Int]
+					[Local start(12309):Int:Int]
+			[Block:Void]
+				[Var _g<12329>(VAssigned):Int] [Local start(12309):Int:Int]
+				[Var _g1<12330>:Int] [Local end(12310):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(12329):Int:Int]
+							<
+							[Local _g1(12330):Int:Int]
+					[Block:Dynamic]
+						[Var i<12311>(VUsedByTyper):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(12329):Int:Int]
+						[Var p<12312>(VUsedByTyper):mortonHx.Morton2D]
+							[Array:mortonHx.Morton2D]
+								[Field:mortonHx.SortableArray<mortonHx.Morton2D>]
+									[Const:mortonHx.EarCuttingMorton] this
+									[FInstance:mortonHx.SortableArray<mortonHx.Morton2D>]
+										mortonHx.EarCuttingMorton
+										sortableArr:mortonHx.SortableArray<mortonHx.Morton2D>
+								[Local i(12311):Int:Int]
+						[If:Void]
+							[Parenthesis:Bool]
+								[Unop:Bool]
+									!
+									Prefix
+									[Call:Bool]
+										[Field:(pCode : Int, v1Code : Int, minCode : Int, maxCode : Int) -> Bool]
+											[TypeExpr mortonHx.EarCuttingMorton:Class<mortonHx.EarCuttingMorton>]
+											[FStatic:(pCode : Int, v1Code : Int, minCode : Int, maxCode : Int) -> Bool]
+												mortonHx.EarCuttingMorton
+												isInRange:(pCode : Int, v1Code : Int, minCode : Int, maxCode : Int) -> Bool
+										[Local p(12312):mortonHx.Morton2D:mortonHx.Morton2D]
+										[Local v1Code(12278):mortonHx.Morton2D:mortonHx.Morton2D]
+										[Local minCode(12301):Int:Int]
+										[Local maxCode(12308):Int:Int]
+							[Then:Dynamic] [Continue:Dynamic]
+						[If:Void]
+							[Parenthesis:Bool]
+								[Binop:Bool]
+									[Binop:Bool]
+										[Binop:Bool]
+											[Local p(12312):mortonHx.Morton2D:mortonHx.Morton2D]
+											==
+											[Local v1Code(12278):mortonHx.Morton2D:mortonHx.Morton2D]
+										||
+										[Binop:Bool]
+											[Local p(12312):mortonHx.Morton2D:mortonHx.Morton2D]
+											==
+											[Local v2Code(12286):mortonHx.Morton2D:mortonHx.Morton2D]
+									||
+									[Binop:Bool]
+										[Local p(12312):mortonHx.Morton2D:mortonHx.Morton2D]
+										==
+										[Local v3Code(12294):mortonHx.Morton2D:mortonHx.Morton2D]
+							[Then:Dynamic] [Continue:Dynamic]
+						[Var j<12323>(VAssigned):Int] [Cast:Int] [Local p(12312):mortonHx.Morton2D:mortonHx.Morton2D]
+						[Binop:Int]
+							[Local j(12323):Int:Int]
+							&=
+							[Const:Int] 1431655765
+						[Binop:Int]
+							[Local j(12323):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(12323):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(12323):Int:Int]
+											>>
+											[Const:Int] 1
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local j(12323):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(12323):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(12323):Int:Int]
+											>>
+											[Const:Int] 2
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local j(12323):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(12323):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(12323):Int:Int]
+											>>
+											[Const:Int] 4
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local j(12323):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j(12323):Int:Int]
+										^
+										[Binop:Int]
+											[Local j(12323):Int:Int]
+											>>
+											[Const:Int] 8
+								&
+								[Const:Int] 65535
+						[Var j1<12325>(VAssigned):Int]
+							[Binop:Int]
+								[Cast:Int] [Local p(12312):mortonHx.Morton2D:mortonHx.Morton2D]
+								>>
+								[Const:Int] 1
+						[Binop:Int]
+							[Local j1(12325):Int:Int]
+							&=
+							[Const:Int] 1431655765
+						[Binop:Int]
+							[Local j1(12325):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(12325):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(12325):Int:Int]
+											>>
+											[Const:Int] 1
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local j1(12325):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(12325):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(12325):Int:Int]
+											>>
+											[Const:Int] 2
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local j1(12325):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(12325):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(12325):Int:Int]
+											>>
+											[Const:Int] 4
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local j1(12325):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local j1(12325):Int:Int]
+										^
+										[Binop:Int]
+											[Local j1(12325):Int:Int]
+											>>
+											[Const:Int] 8
+								&
+								[Const:Int] 65535
+						[Var decode_x<18675>(VAssigned):Int] [Local j(12323):Int:Int]
+						[Var decode_y<18676>(VAssigned):Int] [Local j1(12325):Int:Int]
+						[If:Void]
+							[Parenthesis:Bool]
+								[Call:Bool]
+									[Field:(x : Int, y : Int) -> Bool]
+										[Field:mortonHx.IHitInt]
+											[Const:mortonHx.EarCuttingMorton] this
+											[FInstance:mortonHx.IHitInt]
+												mortonHx.EarCuttingMorton
+												pointHit:mortonHx.IHitInt
+										[FInstance:(x : Int, y : Int) -> Bool]
+											mortonHx.IHitInt
+											hitCheck:(x : Int, y : Int) -> Bool
+									[Local decode_x(18675):Int:Int]
+									[Local decode_y(18676):Int:Int]
+							[Then:Dynamic] [Return:Dynamic] [Const:Bool] true
+			[Return:Dynamic] [Const:Bool] false
+
+	function createLinkedList[Function:() -> mortonHx.EarNode]
+		[Block:Dynamic]
+			[Var _g<12331>:Array<mortonHx.EarNode>] [ArrayDecl:Array<mortonHx.EarNode>]
+			[Block:Void]
+				[Var _g1<12343>(VAssigned):Int] [Const:Int] 0
+				[Var _g2<12344>:Array<{ y : Int, x : Int }>]
+					[Field:Array<{ y : Int, x : Int }>]
+						[Const:mortonHx.EarCuttingMorton] this
+						[FInstance:Array<{ y : Int, x : Int }>]
+							mortonHx.EarCuttingMorton
+							points:Array<{ y : Int, x : Int }>
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g1(12343):Int:Int]
+							<
+							[Field:Int]
+								[Local _g2(12344):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+								[FInstance:Int]
+									Array<{ y : Int, x : Int }>
+									length:Int
+					[Block:Dynamic]
+						[Var p<12332>(VUsedByTyper):{ y : Int, x : Int }]
+							[Array:{ y : Int, x : Int }]
+								[Local _g2(12344):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+								[Local _g1(12343):Int:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local _g1(12343):Int:Int]
+						[Var v<12338>(VAssigned):Int]
+							[Field:Int]
+								[Local p(12332):{ y : Int, x : Int }:{ y : Int, x : Int }]
+								[FAnon:Int] y:Int
+						[Binop:Int]
+							[Local v(12338):Int:Int]
+							&=
+							[Const:Int] 65535
+						[Binop:Int]
+							[Local v(12338):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12338):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12338):Int:Int]
+											<<
+											[Const:Int] 8
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local v(12338):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12338):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12338):Int:Int]
+											<<
+											[Const:Int] 4
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local v(12338):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12338):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12338):Int:Int]
+											<<
+											[Const:Int] 2
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local v(12338):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v(12338):Int:Int]
+										^
+										[Binop:Int]
+											[Local v(12338):Int:Int]
+											<<
+											[Const:Int] 1
+								&
+								[Const:Int] 1431655765
+						[Var v1<12339>(VAssigned):Int]
+							[Field:Int]
+								[Local p(12332):{ y : Int, x : Int }:{ y : Int, x : Int }]
+								[FAnon:Int] x:Int
+						[Binop:Int]
+							[Local v1(12339):Int:Int]
+							&=
+							[Const:Int] 65535
+						[Binop:Int]
+							[Local v1(12339):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12339):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12339):Int:Int]
+											<<
+											[Const:Int] 8
+								&
+								[Const:Int] 16711935
+						[Binop:Int]
+							[Local v1(12339):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12339):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12339):Int:Int]
+											<<
+											[Const:Int] 4
+								&
+								[Const:Int] 252645135
+						[Binop:Int]
+							[Local v1(12339):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12339):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12339):Int:Int]
+											<<
+											[Const:Int] 2
+								&
+								[Const:Int] 858993459
+						[Binop:Int]
+							[Local v1(12339):Int:Int]
+							=
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local v1(12339):Int:Int]
+										^
+										[Binop:Int]
+											[Local v1(12339):Int:Int]
+											<<
+											[Const:Int] 1
+								&
+								[Const:Int] 1431655765
+						[Var n<12342>(VUsedByTyper):mortonHx.EarNode]
+							[New:mortonHx.EarNode]
+								mortonHx.EarNode
+								[Field:Int]
+									[Local p(12332):{ y : Int, x : Int }:{ y : Int, x : Int }]
+									[FAnon:Int] x:Int
+								[Field:Int]
+									[Local p(12332):{ y : Int, x : Int }:{ y : Int, x : Int }]
+									[FAnon:Int] y:Int
+								[Cast:Int]
+									[Cast:mortonHx.Morton2D]
+										[Binop:Int]
+											[Binop:Int]
+												[Local v(12338):Int:Int]
+												<<
+												[Const:Int] 1
+											|
+											[Local v1(12339):Int:Int]
+								[Const:mortonHx.EarNode] null
+								[Const:mortonHx.EarNode] null
+								[Const:Bool] false
+						[Call:Int]
+							[Field:(x : mortonHx.EarNode) -> Int]
+								[Local _g(12331):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+								[FInstance:(x : mortonHx.EarNode) -> Int]
+									Array<mortonHx.EarNode>
+									push:(x : Array.T) -> Int
+							[Local n(12342):mortonHx.EarNode:mortonHx.EarNode]
+			[Var list<12345>(VUsedByTyper):Array<mortonHx.EarNode>] [Local _g(12331):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+			[Block:Void]
+				[Var _g<12347>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<12348>:Int]
+					[Field:Int]
+						[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+						[FInstance:Int]
+							Array<mortonHx.EarNode>
+							length:Int
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(12347):Int:Int]
+							<
+							[Local _g1(12348):Int:Int]
+					[Block:Dynamic]
+						[Var i<12346>(VUsedByTyper):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(12347):Int:Int]
+						[Binop:mortonHx.EarNode]
+							[Field:mortonHx.EarNode]
+								[Array:mortonHx.EarNode]
+									[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+									[Local i(12346):Int:Int]
+								[FInstance:mortonHx.EarNode]
+									mortonHx.EarNode
+									next:mortonHx.EarNode
+							=
+							[Array:mortonHx.EarNode]
+								[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+								[Binop:Int]
+									[Parenthesis:Int]
+										[Binop:Int]
+											[Local i(12346):Int:Int]
+											+
+											[Const:Int] 1
+									%
+									[Field:Int]
+										[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+										[FInstance:Int]
+											Array<mortonHx.EarNode>
+											length:Int
+						[Binop:mortonHx.EarNode]
+							[Field:mortonHx.EarNode]
+								[Array:mortonHx.EarNode]
+									[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+									[Local i(12346):Int:Int]
+								[FInstance:mortonHx.EarNode]
+									mortonHx.EarNode
+									prev:mortonHx.EarNode
+							=
+							[Array:mortonHx.EarNode]
+								[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+								[Binop:Int]
+									[Parenthesis:Int]
+										[Binop:Int]
+											[Binop:Int]
+												[Local i(12346):Int:Int]
+												+
+												[Field:Int]
+													[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+													[FInstance:Int]
+														Array<mortonHx.EarNode>
+														length:Int
+											-
+											[Const:Int] 1
+									%
+									[Field:Int]
+										[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+										[FInstance:Int]
+											Array<mortonHx.EarNode>
+											length:Int
+			[Return:Dynamic]
+				[Array:mortonHx.EarNode]
+					[Local list(12345):Array<mortonHx.EarNode>:Array<mortonHx.EarNode>]
+					[Const:Int] 0
+
+	public inline function isValidEar[Function:(ear : mortonHx.EarNode) -> Bool]
+		[Arg ear<12349>(VUsedByTyper):mortonHx.EarNode]
+		[Block:Dynamic]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Field:Bool]
+						[Local ear(12349):mortonHx.EarNode:mortonHx.EarNode]
+						[FInstance:Bool]
+							mortonHx.EarNode
+							isReflex:Bool
+				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Return:Dynamic]
+				[Unop:Bool]
+					!
+					Prefix
+					[Call:Bool]
+						[Field:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool]
+							[Const:mortonHx.EarCuttingMorton] this
+							[FInstance:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool]
+								mortonHx.EarCuttingMorton
+								pointsInTriangle:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool
+						[Field:Int]
+							[Field:mortonHx.EarNode]
+								[Local ear(12349):mortonHx.EarNode:mortonHx.EarNode]
+								[FInstance:mortonHx.EarNode]
+									mortonHx.EarNode
+									prev:mortonHx.EarNode
+							[FInstance:Int]
+								mortonHx.EarNode
+								x:Int
+						[Field:Int]
+							[Field:mortonHx.EarNode]
+								[Local ear(12349):mortonHx.EarNode:mortonHx.EarNode]
+								[FInstance:mortonHx.EarNode]
+									mortonHx.EarNode
+									prev:mortonHx.EarNode
+							[FInstance:Int]
+								mortonHx.EarNode
+								y:Int
+						[Field:Int]
+							[Local ear(12349):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:Int]
+								mortonHx.EarNode
+								x:Int
+						[Field:Int]
+							[Local ear(12349):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:Int]
+								mortonHx.EarNode
+								y:Int
+						[Field:Int]
+							[Field:mortonHx.EarNode]
+								[Local ear(12349):mortonHx.EarNode:mortonHx.EarNode]
+								[FInstance:mortonHx.EarNode]
+									mortonHx.EarNode
+									next:mortonHx.EarNode
+							[FInstance:Int]
+								mortonHx.EarNode
+								x:Int
+						[Field:Int]
+							[Field:mortonHx.EarNode]
+								[Local ear(12349):mortonHx.EarNode:mortonHx.EarNode]
+								[FInstance:mortonHx.EarNode]
+									mortonHx.EarNode
+									next:mortonHx.EarNode
+							[FInstance:Int]
+								mortonHx.EarNode
+								y:Int
+
+	public function triangulate[Function:() -> Array<Int>]
+		[Block:Dynamic]
+			[Var current<12350>(VUsedByTyper VAssigned):mortonHx.EarNode]
+				[Call:mortonHx.EarNode]
+					[Field:() -> mortonHx.EarNode]
+						[Const:mortonHx.EarCuttingMorton] this
+						[FInstance:() -> mortonHx.EarNode]
+							mortonHx.EarCuttingMorton
+							createLinkedList:() -> mortonHx.EarNode
+			[Var indices<12351>(VUsedByTyper):Array<Int>] [ArrayDecl:Array<Int>]
+			[Var count<12352>(VUsedByTyper VAssigned):Int]
+				[Field:Int]
+					[Field:Array<{ y : Int, x : Int }>]
+						[Const:mortonHx.EarCuttingMorton] this
+						[FInstance:Array<{ y : Int, x : Int }>]
+							mortonHx.EarCuttingMorton
+							points:Array<{ y : Int, x : Int }>
+					[FInstance:Int]
+						Array<{ y : Int, x : Int }>
+						length:Int
+			[Var node<12353>(VUsedByTyper VAssigned):mortonHx.EarNode] [Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+			[Do:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+						!=
+						[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+				[Block:Void]
+					[Var bx<12365>:Int]
+						[Field:Int]
+							[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:Int]
+								mortonHx.EarNode
+								x:Int
+					[Var by<12366>:Int]
+						[Field:Int]
+							[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:Int]
+								mortonHx.EarNode
+								y:Int
+					[Var val<12369>:Float]
+						[Binop:Float]
+							[Binop:Float]
+								[Cast:Float]
+									[Binop:Int]
+										[Local bx(12365):Int:Int]
+										-
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													prev:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												x:Int
+									[TypeExpr Float:Float]
+								*
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													next:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												y:Int
+										-
+										[Local by(12366):Int:Int]
+							-
+							[Binop:Float]
+								[Cast:Float]
+									[Binop:Int]
+										[Local by(12366):Int:Int]
+										-
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													prev:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												y:Int
+									[TypeExpr Float:Float]
+								*
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													next:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												x:Int
+										-
+										[Local bx(12365):Int:Int]
+					[Binop:Bool]
+						[Field:Bool]
+							[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:Bool]
+								mortonHx.EarNode
+								isReflex:Bool
+						=
+						[Unop:Bool]
+							!
+							Prefix
+							[Parenthesis:Bool]
+								[Binop:Bool]
+									[Local val(12369):Float:Float]
+									>
+									[Const:Int] 0
+					[Binop:mortonHx.EarNode]
+						[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+						=
+						[Field:mortonHx.EarNode]
+							[Local node(12353):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:mortonHx.EarNode]
+								mortonHx.EarNode
+								next:mortonHx.EarNode
+			[Var stopNode<12370>(VUsedByTyper VAssigned):mortonHx.EarNode] [Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+			[While:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local count(12352):Int:Int]
+						>
+						[Const:Int] 3
+				[Block:Dynamic]
+					[Var prev<12371>(VUsedByTyper):mortonHx.EarNode]
+						[Field:mortonHx.EarNode]
+							[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:mortonHx.EarNode]
+								mortonHx.EarNode
+								prev:mortonHx.EarNode
+					[Var next<12372>(VUsedByTyper):mortonHx.EarNode]
+						[Field:mortonHx.EarNode]
+							[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+							[FInstance:mortonHx.EarNode]
+								mortonHx.EarNode
+								next:mortonHx.EarNode
+					[If:Void]
+						[Parenthesis:Bool]
+							[If:Bool]
+								[Parenthesis:Bool]
+									[Field:Bool]
+										[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+										[FInstance:Bool]
+											mortonHx.EarNode
+											isReflex:Bool
+								[Then:Bool] [Const:Bool] false
+								[Else:Bool] [Unop:Bool]
+									!
+									Prefix
+									[Call:Bool]
+										[Field:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool]
+											[Const:mortonHx.EarCuttingMorton] this
+											[FInstance:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool]
+												mortonHx.EarCuttingMorton
+												pointsInTriangle:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													prev:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												x:Int
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													prev:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												y:Int
+										[Field:Int]
+											[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+											[FInstance:Int]
+												mortonHx.EarNode
+												x:Int
+										[Field:Int]
+											[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+											[FInstance:Int]
+												mortonHx.EarNode
+												y:Int
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													next:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												x:Int
+										[Field:Int]
+											[Field:mortonHx.EarNode]
+												[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+												[FInstance:mortonHx.EarNode]
+													mortonHx.EarNode
+													next:mortonHx.EarNode
+											[FInstance:Int]
+												mortonHx.EarNode
+												y:Int
+						[Then:Int] [Block:Int]
+							[Call:Int]
+								[Field:(x : Int) -> Int]
+									[Local indices(12351):Array<Int>:Array<Int>]
+									[FInstance:(x : Int) -> Int]
+										Array<Int>
+										push:(x : Array.T) -> Int
+								[Field:Int]
+									[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										x:Int
+							[Call:Int]
+								[Field:(x : Int) -> Int]
+									[Local indices(12351):Array<Int>:Array<Int>]
+									[FInstance:(x : Int) -> Int]
+										Array<Int>
+										push:(x : Array.T) -> Int
+								[Field:Int]
+									[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										y:Int
+							[Call:Int]
+								[Field:(x : Int) -> Int]
+									[Local indices(12351):Array<Int>:Array<Int>]
+									[FInstance:(x : Int) -> Int]
+										Array<Int>
+										push:(x : Array.T) -> Int
+								[Field:Int]
+									[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										x:Int
+							[Call:Int]
+								[Field:(x : Int) -> Int]
+									[Local indices(12351):Array<Int>:Array<Int>]
+									[FInstance:(x : Int) -> Int]
+										Array<Int>
+										push:(x : Array.T) -> Int
+								[Field:Int]
+									[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										y:Int
+							[Call:Int]
+								[Field:(x : Int) -> Int]
+									[Local indices(12351):Array<Int>:Array<Int>]
+									[FInstance:(x : Int) -> Int]
+										Array<Int>
+										push:(x : Array.T) -> Int
+								[Field:Int]
+									[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										x:Int
+							[Call:Int]
+								[Field:(x : Int) -> Int]
+									[Local indices(12351):Array<Int>:Array<Int>]
+									[FInstance:(x : Int) -> Int]
+										Array<Int>
+										push:(x : Array.T) -> Int
+								[Field:Int]
+									[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										y:Int
+							[Binop:mortonHx.EarNode]
+								[Field:mortonHx.EarNode]
+									[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:mortonHx.EarNode]
+										mortonHx.EarNode
+										next:mortonHx.EarNode
+								=
+								[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+							[Binop:mortonHx.EarNode]
+								[Field:mortonHx.EarNode]
+									[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:mortonHx.EarNode]
+										mortonHx.EarNode
+										prev:mortonHx.EarNode
+								=
+								[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+							[Var bx<12380>:Int]
+								[Field:Int]
+									[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										x:Int
+							[Var by<12381>:Int]
+								[Field:Int]
+									[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										y:Int
+							[Var val<12384>:Float]
+								[Binop:Float]
+									[Binop:Float]
+										[Cast:Float]
+											[Binop:Int]
+												[Local bx(12380):Int:Int]
+												-
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															prev:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														x:Int
+											[TypeExpr Float:Float]
+										*
+										[Parenthesis:Int]
+											[Binop:Int]
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															next:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														y:Int
+												-
+												[Local by(12381):Int:Int]
+									-
+									[Binop:Float]
+										[Cast:Float]
+											[Binop:Int]
+												[Local by(12381):Int:Int]
+												-
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															prev:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														y:Int
+											[TypeExpr Float:Float]
+										*
+										[Parenthesis:Int]
+											[Binop:Int]
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															next:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														x:Int
+												-
+												[Local bx(12380):Int:Int]
+							[Binop:Bool]
+								[Field:Bool]
+									[Local prev(12371):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Bool]
+										mortonHx.EarNode
+										isReflex:Bool
+								=
+								[Unop:Bool]
+									!
+									Prefix
+									[Parenthesis:Bool]
+										[Binop:Bool]
+											[Local val(12384):Float:Float]
+											>
+											[Const:Int] 0
+							[Var bx1<12389>:Int]
+								[Field:Int]
+									[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										x:Int
+							[Var by1<12390>:Int]
+								[Field:Int]
+									[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Int]
+										mortonHx.EarNode
+										y:Int
+							[Var val1<12393>:Float]
+								[Binop:Float]
+									[Binop:Float]
+										[Cast:Float]
+											[Binop:Int]
+												[Local bx1(12389):Int:Int]
+												-
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															prev:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														x:Int
+											[TypeExpr Float:Float]
+										*
+										[Parenthesis:Int]
+											[Binop:Int]
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															next:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														y:Int
+												-
+												[Local by1(12390):Int:Int]
+									-
+									[Binop:Float]
+										[Cast:Float]
+											[Binop:Int]
+												[Local by1(12390):Int:Int]
+												-
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															prev:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														y:Int
+											[TypeExpr Float:Float]
+										*
+										[Parenthesis:Int]
+											[Binop:Int]
+												[Field:Int]
+													[Field:mortonHx.EarNode]
+														[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+														[FInstance:mortonHx.EarNode]
+															mortonHx.EarNode
+															next:mortonHx.EarNode
+													[FInstance:Int]
+														mortonHx.EarNode
+														x:Int
+												-
+												[Local bx1(12389):Int:Int]
+							[Binop:Bool]
+								[Field:Bool]
+									[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+									[FInstance:Bool]
+										mortonHx.EarNode
+										isReflex:Bool
+								=
+								[Unop:Bool]
+									!
+									Prefix
+									[Parenthesis:Bool]
+										[Binop:Bool]
+											[Local val1(12393):Float:Float]
+											>
+											[Const:Int] 0
+							[Binop:mortonHx.EarNode]
+								[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+								=
+								[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+							[Binop:mortonHx.EarNode]
+								[Local stopNode(12370):mortonHx.EarNode:mortonHx.EarNode]
+								=
+								[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+							[Unop:Int]
+								--
+								Prefix
+								[Local count(12352):Int:Int]
+						[Else:Void] [Block:Void]
+							[Binop:mortonHx.EarNode]
+								[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+								=
+								[Local next(12372):mortonHx.EarNode:mortonHx.EarNode]
+							[If:Void]
+								[Parenthesis:Bool]
+									[Binop:Bool]
+										[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+										==
+										[Local stopNode(12370):mortonHx.EarNode:mortonHx.EarNode]
+								[Then:Dynamic] [Break:Dynamic]
+			[Call:Int]
+				[Field:(x : Int) -> Int]
+					[Local indices(12351):Array<Int>:Array<Int>]
+					[FInstance:(x : Int) -> Int]
+						Array<Int>
+						push:(x : Array.T) -> Int
+				[Field:Int]
+					[Field:mortonHx.EarNode]
+						[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+						[FInstance:mortonHx.EarNode]
+							mortonHx.EarNode
+							prev:mortonHx.EarNode
+					[FInstance:Int]
+						mortonHx.EarNode
+						x:Int
+			[Call:Int]
+				[Field:(x : Int) -> Int]
+					[Local indices(12351):Array<Int>:Array<Int>]
+					[FInstance:(x : Int) -> Int]
+						Array<Int>
+						push:(x : Array.T) -> Int
+				[Field:Int]
+					[Field:mortonHx.EarNode]
+						[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+						[FInstance:mortonHx.EarNode]
+							mortonHx.EarNode
+							prev:mortonHx.EarNode
+					[FInstance:Int]
+						mortonHx.EarNode
+						y:Int
+			[Call:Int]
+				[Field:(x : Int) -> Int]
+					[Local indices(12351):Array<Int>:Array<Int>]
+					[FInstance:(x : Int) -> Int]
+						Array<Int>
+						push:(x : Array.T) -> Int
+				[Field:Int]
+					[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+					[FInstance:Int]
+						mortonHx.EarNode
+						x:Int
+			[Call:Int]
+				[Field:(x : Int) -> Int]
+					[Local indices(12351):Array<Int>:Array<Int>]
+					[FInstance:(x : Int) -> Int]
+						Array<Int>
+						push:(x : Array.T) -> Int
+				[Field:Int]
+					[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+					[FInstance:Int]
+						mortonHx.EarNode
+						y:Int
+			[Call:Int]
+				[Field:(x : Int) -> Int]
+					[Local indices(12351):Array<Int>:Array<Int>]
+					[FInstance:(x : Int) -> Int]
+						Array<Int>
+						push:(x : Array.T) -> Int
+				[Field:Int]
+					[Field:mortonHx.EarNode]
+						[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+						[FInstance:mortonHx.EarNode]
+							mortonHx.EarNode
+							next:mortonHx.EarNode
+					[FInstance:Int]
+						mortonHx.EarNode
+						x:Int
+			[Call:Int]
+				[Field:(x : Int) -> Int]
+					[Local indices(12351):Array<Int>:Array<Int>]
+					[FInstance:(x : Int) -> Int]
+						Array<Int>
+						push:(x : Array.T) -> Int
+				[Field:Int]
+					[Field:mortonHx.EarNode]
+						[Local current(12350):mortonHx.EarNode:mortonHx.EarNode]
+						[FInstance:mortonHx.EarNode]
+							mortonHx.EarNode
+							next:mortonHx.EarNode
+					[FInstance:Int]
+						mortonHx.EarNode
+						y:Int
+			[Return:Dynamic] [Local indices(12351):Array<Int>:Array<Int>]
+
+	@:value({ pointHit : null, scale : 32767 / 800 })
+	public static inline function fromArrayFloat[Function:(arr : Array<Float>, ?scale : Float, ?pointHit : Null<mortonHx.IHitInt>) -> mortonHx.EarCuttingMorton]
+		[Arg arr<12198>(VUsedByTyper):Array<Float>]
+		[Arg scale<12199>(VUsedByTyper):Float] [Const:Float] 40.95875
+		[Arg pointHit<12200>(VUsedByTyper):Null<mortonHx.IHitInt>] [Const:Null<mortonHx.IHitInt>] null
+		[Block:Dynamic]
+			[Var p<12201>(VUsedByTyper):Array<{ y : Int, x : Int }>] [New:Array<{ y : Int, x : Int }>] Array<{ y : Int, x : Int }>
+			[Block:Void]
+				[Var _g<12212>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<12213>:Int]
+					[Binop:Int]
+						[Cast:Int]
+							[Binop:Float]
+								[Field:Int]
+									[Local arr(12198):Array<Float>:Array<Float>]
+									[FInstance:Int]
+										Array<Float>
+										length:Int
+								/
+								[Const:Int] 2
+						|
+						[Const:Int] 0
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(12212):Int:Int]
+							<
+							[Local _g1(12213):Int:Int]
+					[Block:Dynamic]
+						[Var i<12205>(VUsedByTyper):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(12212):Int:Int]
+						[Binop:{ y : Int, x : Int }]
+							[Array:{ y : Int, x : Int }]
+								[Local p(12201):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+								[Local i(12205):Int:Int]
+							=
+							[ObjectDecl:{ y : Int, x : Int }]
+								x: [Binop:Int]
+									[Cast:Int]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(12198):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local i(12205):Int:Int]
+													*
+													[Const:Int] 2
+											*
+											[Local scale(12199):Float:Float]
+									|
+									[Const:Int] 0
+								y: [Binop:Int]
+									[Cast:Int]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(12198):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Binop:Int]
+														[Local i(12205):Int:Int]
+														*
+														[Const:Int] 2
+													+
+													[Const:Int] 1
+											*
+											[Local scale(12199):Float:Float]
+									|
+									[Const:Int] 0
+			[Return:Dynamic]
+				[New:mortonHx.EarCuttingMorton]
+					mortonHx.EarCuttingMorton
+					[Local p(12201):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+					[Local pointHit(12200):Null<mortonHx.IHitInt>:Null<mortonHx.IHitInt>]
+
+	static function isCounterClockwise[Function:(p : Array<{ y : Int, x : Int }>) -> Bool]
+		[Arg p<12216>(VUsedByTyper):Array<{ y : Int, x : Int }>]
+		[Block:Dynamic]
+			[Var area<12217>(VUsedByTyper VAssigned):Float] [Const:Int] 0
+			[Block:Void]
+				[Var _g<12220>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<12221>:Int]
+					[Field:Int]
+						[Local p(12216):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+						[FInstance:Int]
+							Array<{ y : Int, x : Int }>
+							length:Int
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(12220):Int:Int]
+							<
+							[Local _g1(12221):Int:Int]
+					[Block:Dynamic]
+						[Var i<12218>(VUsedByTyper):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(12220):Int:Int]
+						[Var j<12219>(VUsedByTyper):Int]
+							[Binop:Int]
+								[Parenthesis:Int]
+									[Binop:Int]
+										[Local i(12218):Int:Int]
+										+
+										[Const:Int] 1
+								%
+								[Field:Int]
+									[Local p(12216):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+									[FInstance:Int]
+										Array<{ y : Int, x : Int }>
+										length:Int
+						[Binop:Float]
+							[Local area(12217):Float:Float]
+							+=
+							[Binop:Float]
+								[Binop:Float]
+									[Cast:Float]
+										[Field:Int]
+											[Array:{ y : Int, x : Int }]
+												[Local p(12216):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+												[Local i(12218):Int:Int]
+											[FAnon:Int] x:Int
+										[TypeExpr Float:Float]
+									*
+									[Field:Int]
+										[Array:{ y : Int, x : Int }]
+											[Local p(12216):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+											[Local j(12219):Int:Int]
+										[FAnon:Int] y:Int
+								-
+								[Binop:Float]
+									[Cast:Float]
+										[Field:Int]
+											[Array:{ y : Int, x : Int }]
+												[Local p(12216):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+												[Local j(12219):Int:Int]
+											[FAnon:Int] x:Int
+										[TypeExpr Float:Float]
+									*
+									[Field:Int]
+										[Array:{ y : Int, x : Int }]
+											[Local p(12216):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
+											[Local i(12218):Int:Int]
+										[FAnon:Int] y:Int
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Local area(12217):Float:Float]
+					>
+					[Const:Int] 0
+
+	public static inline function isConvexFloat[Function:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Bool]
+		[Arg ax<12354>(VUsedByTyper):Int]
+		[Arg ay<12355>(VUsedByTyper):Int]
+		[Arg bx<12356>(VUsedByTyper):Int]
+		[Arg by<12357>(VUsedByTyper):Int]
+		[Arg cx<12358>(VUsedByTyper):Int]
+		[Arg cy<12359>(VUsedByTyper):Int]
+		[Block:Dynamic]
+			[Var val<12360>(VUsedByTyper):Float]
+				[Binop:Float]
+					[Binop:Float]
+						[Cast:Float]
+							[Binop:Int]
+								[Local bx(12356):Int:Int]
+								-
+								[Local ax(12354):Int:Int]
+							[TypeExpr Float:Float]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cy(12359):Int:Int]
+								-
+								[Local by(12357):Int:Int]
+					-
+					[Binop:Float]
+						[Cast:Float]
+							[Binop:Int]
+								[Local by(12357):Int:Int]
+								-
+								[Local ay(12355):Int:Int]
+							[TypeExpr Float:Float]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cx(12358):Int:Int]
+								-
+								[Local bx(12356):Int:Int]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Local val(12360):Float:Float]
+					>
+					[Const:Int] 0
+
+	public static function isInRange[Function:(pCode : Int, v1Code : Int, minCode : Int, maxCode : Int) -> Bool]
+		[Arg pCode<12313>(VUsedByTyper):Int]
+		[Arg v1Code<12314>(VUsedByTyper):Int]
+		[Arg minCode<12315>(VUsedByTyper):Int]
+		[Arg maxCode<12316>(VUsedByTyper):Int]
+		[Block:Dynamic]
+			[Var diff<12317>(VUsedByTyper):Int]
+				[Binop:Int]
+					[Local minCode(12315):Int:Int]
+					^
+					[Local maxCode(12316):Int:Int]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local diff(12317):Int:Int]
+						==
+						[Const:Int] 0
+				[Then:Dynamic] [Return:Dynamic]
+					[Binop:Bool]
+						[Local pCode(12313):Int:Int]
+						==
+						[Local v1Code(12314):Int:Int]
+			[Var v<12318>(VUsedByTyper VAssigned):Int] [Local diff(12317):Int:Int]
+			[Binop:Int]
+				[Local v(12318):Int:Int]
+				|=
+				[Binop:Int]
+					[Local v(12318):Int:Int]
+					>>
+					[Const:Int] 1
+			[Binop:Int]
+				[Local v(12318):Int:Int]
+				|=
+				[Binop:Int]
+					[Local v(12318):Int:Int]
+					>>
+					[Const:Int] 2
+			[Binop:Int]
+				[Local v(12318):Int:Int]
+				|=
+				[Binop:Int]
+					[Local v(12318):Int:Int]
+					>>
+					[Const:Int] 4
+			[Binop:Int]
+				[Local v(12318):Int:Int]
+				|=
+				[Binop:Int]
+					[Local v(12318):Int:Int]
+					>>
+					[Const:Int] 8
+			[Binop:Int]
+				[Local v(12318):Int:Int]
+				|=
+				[Binop:Int]
+					[Local v(12318):Int:Int]
+					>>
+					[Const:Int] 16
+			[Var mask<12319>(VUsedByTyper):Int]
+				[Unop:Int]
+					~
+					Prefix
+					[Local v(12318):Int:Int]
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local pCode(12313):Int:Int]
+							&
+							[Local mask(12319):Int:Int]
+					==
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local v1Code(12314):Int:Int]
+							&
+							[Local mask(12319):Int:Int]
+}

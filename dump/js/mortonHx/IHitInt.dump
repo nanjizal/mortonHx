@@ -1,0 +1,6 @@
+interface mortonHx.IHitInt {
+
+	function prepare(ax:Int, ay:Int, bx:Int, by:Int, cx:Int, cy:Int):Void;
+
+	function hitCheck(x:Int, y:Int):Bool;
+}

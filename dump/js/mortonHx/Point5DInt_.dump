@@ -2,11 +2,11 @@
 class mortonHx.Point5DInt_ {
 
 	public inline function new[Function:(x : Int, y : Int, z : Int, w : Int, v : Int) -> Void]
-		[Arg x<10564>(VUsedByTyper):Int]
-		[Arg y<10565>(VUsedByTyper):Int]
-		[Arg z<10566>(VUsedByTyper):Int]
-		[Arg w<10567>(VUsedByTyper):Int]
-		[Arg v<10568>(VUsedByTyper):Int]
+		[Arg x<14395>(VUsedByTyper):Int]
+		[Arg y<14396>(VUsedByTyper):Int]
+		[Arg z<14397>(VUsedByTyper):Int]
+		[Arg w<14398>(VUsedByTyper):Int]
+		[Arg v<14399>(VUsedByTyper):Int]
 		[Block:Int]
 			[Binop:Int]
 				[Field:Int]
@@ -15,7 +15,7 @@ class mortonHx.Point5DInt_ {
 						mortonHx.Point5DInt_
 						x:Int
 				=
-				[Local x(10564):Int:Int]
+				[Local x(14395):Int:Int]
 			[Binop:Int]
 				[Field:Int]
 					[Const:mortonHx.Point5DInt_] this
@@ -23,7 +23,7 @@ class mortonHx.Point5DInt_ {
 						mortonHx.Point5DInt_
 						y:Int
 				=
-				[Local y(10565):Int:Int]
+				[Local y(14396):Int:Int]
 			[Binop:Int]
 				[Field:Int]
 					[Const:mortonHx.Point5DInt_] this
@@ -31,7 +31,7 @@ class mortonHx.Point5DInt_ {
 						mortonHx.Point5DInt_
 						z:Int
 				=
-				[Local z(10566):Int:Int]
+				[Local z(14397):Int:Int]
 			[Binop:Int]
 				[Field:Int]
 					[Const:mortonHx.Point5DInt_] this
@@ -39,7 +39,7 @@ class mortonHx.Point5DInt_ {
 						mortonHx.Point5DInt_
 						w:Int
 				=
-				[Local w(10567):Int:Int]
+				[Local w(14398):Int:Int]
 			[Binop:Int]
 				[Field:Int]
 					[Const:mortonHx.Point5DInt_] this
@@ -47,7 +47,7 @@ class mortonHx.Point5DInt_ {
 						mortonHx.Point5DInt_
 						v:Int
 				=
-				[Local v(10568):Int:Int]
+				[Local v(14399):Int:Int]
 
 	public var x:Int;
 

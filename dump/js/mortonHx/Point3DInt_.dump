@@ -2,9 +2,9 @@
 class mortonHx.Point3DInt_ {
 
 	public inline function new[Function:(x : Int, y : Int, z : Int) -> Void]
-		[Arg x<6665>(VUsedByTyper):Int]
-		[Arg y<6666>(VUsedByTyper):Int]
-		[Arg z<6667>(VUsedByTyper):Int]
+		[Arg x<6718>(VUsedByTyper):Int]
+		[Arg y<6719>(VUsedByTyper):Int]
+		[Arg z<6720>(VUsedByTyper):Int]
 		[Block:Int]
 			[Binop:Int]
 				[Field:Int]
@@ -13,7 +13,7 @@ class mortonHx.Point3DInt_ {
 						mortonHx.Point3DInt_
 						x:Int
 				=
-				[Local x(6665):Int:Int]
+				[Local x(6718):Int:Int]
 			[Binop:Int]
 				[Field:Int]
 					[Const:mortonHx.Point3DInt_] this
@@ -21,7 +21,7 @@ class mortonHx.Point3DInt_ {
 						mortonHx.Point3DInt_
 						y:Int
 				=
-				[Local y(6666):Int:Int]
+				[Local y(6719):Int:Int]
 			[Binop:Int]
 				[Field:Int]
 					[Const:mortonHx.Point3DInt_] this
@@ -29,7 +29,7 @@ class mortonHx.Point3DInt_ {
 						mortonHx.Point3DInt_
 						z:Int
 				=
-				[Local z(6667):Int:Int]
+				[Local z(6720):Int:Int]
 
 	public var x:Int;
 

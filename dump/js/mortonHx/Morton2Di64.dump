@@ -1,0 +1,2 @@
+@:used @:forward
+abstract mortonHx.Morton2Di64 from haxe.Int64 to haxe.Int64 {}

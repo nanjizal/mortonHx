@@ -1,0 +1,2 @@
+@:used
+abstract mortonHx.SortableArray64 from Array<haxe.Int64> to Array<haxe.Int64> {}

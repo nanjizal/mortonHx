@@ -1,0 +1,237 @@
+private class mortonHx._SortableArrayi64.SortableArray64_Impl_ {
+
+	@:noCompletion
+	public static inline function _new[Function:(a : Array<haxe.Int64>) -> mortonHx.SortableArray64]
+		[Arg a<8520>(VUsedByTyper):Array<haxe.Int64>]
+		[Block:Dynamic] [Return:Dynamic] [Cast:mortonHx.SortableArray64] [Local a(8520):Array<haxe.Int64>:Array<haxe.Int64>]
+
+	public static function sortWithOrder[Function:(this : Array<haxe.Int64>, f : ((haxe.Int64, haxe.Int64) -> Int)) -> Array<Int>]
+		[Arg this1<8522>(VUsedByTyper VCaptured):Array<haxe.Int64>]
+		[Arg f<8523>(VUsedByTyper VCaptured):(haxe.Int64, haxe.Int64) -> Int]
+		[Block:Dynamic]
+			[Var len<8524>(VUsedByTyper):Int]
+				[Field:Int]
+					[Local this1(8522):Array<haxe.Int64>:Array<haxe.Int64>]
+					[FInstance:Int]
+						Array<haxe.Int64>
+						length:Int
+			[Var order<8525>(VUsedByTyper VAssigned):Array<Int>] [New:Array<Int>] Array<Int>
+			[Var _g<8526>:Array<Int>] [ArrayDecl:Array<Int>]
+			[Block:Void]
+				[Var _g1<8528>(VAssigned):Int] [Const:Int] 0
+				[Var _g2<8529>:Int] [Local len(8524):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g1(8528):Int:Int]
+							<
+							[Local _g2(8529):Int:Int]
+					[Block:Dynamic]
+						[Var i<8527>(VUsedByTyper):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g1(8528):Int:Int]
+						[Call:Int]
+							[Field:(x : Int) -> Int]
+								[Local _g(8526):Array<Int>:Array<Int>]
+								[FInstance:(x : Int) -> Int]
+									Array<Int>
+									push:(x : Array.T) -> Int
+							[Local i(8527):Int:Int]
+			[Binop:Array<Int>]
+				[Local order(8525):Array<Int>:Array<Int>]
+				=
+				[Local _g(8526):Array<Int>:Array<Int>]
+			[Call:Void]
+				[Field:(f : ((Int, Int) -> Int)) -> Void]
+					[Local order(8525):Array<Int>:Array<Int>]
+					[FInstance:(f : ((Int, Int) -> Int)) -> Void]
+						Array<Int>
+						sort:(f : ((Array.T, Array.T) -> Int)) -> Void
+				[Function:(idxA : Int, idxB : Int) -> Int]
+					[Arg idxA<8530>(VUsedByTyper):Int]
+					[Arg idxB<8531>(VUsedByTyper):Int]
+					[Block:Dynamic]
+						[Return:Dynamic]
+							[Call:Int]
+								[Local f(8523):(haxe.Int64, haxe.Int64) -> Int:(haxe.Int64, haxe.Int64) -> Int]
+								[Array:haxe.Int64]
+									[Local this1(8522):Array<haxe.Int64>:Array<haxe.Int64>]
+									[Local idxA(8530):Int:Int]
+								[Array:haxe.Int64]
+									[Local this1(8522):Array<haxe.Int64>:Array<haxe.Int64>]
+									[Local idxB(8531):Int:Int]
+			[Var temp<8534>(VUsedByTyper):Array<haxe.Int64>]
+				[Meta:Array<haxe.Int64>]
+					:pure
+					[Call:Array<haxe.Int64>]
+						[Field:() -> Array<haxe.Int64>]
+							[Cast:{ slice : () -> Array<haxe.Int64> }] [Local this1(8522):Array<haxe.Int64>:Array<haxe.Int64>]
+							[FAnon:() -> Array<haxe.Int64>] slice:() -> Array<haxe.Int64>
+			[Block:Void]
+				[Var _g<8536>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<8537>:Int] [Local len(8524):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(8536):Int:Int]
+							<
+							[Local _g1(8537):Int:Int]
+					[Block:Dynamic]
+						[Var i<8535>(VUsedByTyper):Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(8536):Int:Int]
+						[Binop:haxe.Int64]
+							[Array:haxe.Int64]
+								[Local this1(8522):Array<haxe.Int64>:Array<haxe.Int64>]
+								[Local i(8535):Int:Int]
+							=
+							[Array:haxe.Int64]
+								[Local temp(8534):Array<haxe.Int64>:Array<haxe.Int64>]
+								[Array:Int]
+									[Local order(8525):Array<Int>:Array<Int>]
+									[Local i(8535):Int:Int]
+			[Return:Dynamic] [Local order(8525):Array<Int>:Array<Int>]
+
+	public static function findStartIndex[Function:(this : Array<haxe.Int64>, target : haxe.Int64) -> Int]
+		[Arg this1<8538>:Array<haxe.Int64>]
+		[Arg target<8539>(VUsedByTyper):haxe.Int64]
+		[Block:Dynamic]
+			[Var low<8540>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+			[Var high<8541>(VUsedByTyper VAssigned):Int]
+				[Field:Int]
+					[Local this1(8538):Array<haxe.Int64>:Array<haxe.Int64>]
+					[FInstance:Int]
+						Array<haxe.Int64>
+						length:Int
+			[Var mid<8542>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+			[Var v<8548>(VUsedByTyper VAssigned):haxe.Int64]
+				[Cast:haxe.Int64]
+					[New:haxe._Int64.___Int64]
+						haxe._Int64.___Int64
+						[Const:Int] 0
+						[Const:Int] 0
+			[While:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local low(8540):Int:Int]
+						<
+						[Local high(8541):Int:Int]
+				[Block:Dynamic]
+					[Binop:Int]
+						[Local mid(8542):Int:Int]
+						=
+						[Binop:Int]
+							[Binop:Int]
+								[Local low(8540):Int:Int]
+								+
+								[Local high(8541):Int:Int]
+							>>>
+							[Const:Int] 1
+					[Binop:haxe.Int64]
+						[Local v(8548):haxe.Int64:haxe.Int64]
+						=
+						[Array:haxe.Int64]
+							[Local this1(8538):Array<haxe.Int64>:Array<haxe.Int64>]
+							[Local mid(8542):Int:Int]
+					[Var v1<8553>(VAssigned):haxe.Int32]
+						[Cast:haxe.Int32]
+							[Binop:Int]
+								[Binop:Int]
+									[Cast:Int]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local v(8548):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+									-
+									[Cast:Int]
+										[Field:haxe.Int32]
+											[Cast:haxe._Int64.__Int64] [Local target(8539):haxe.Int64:haxe.Int64]
+											[FInstance:haxe.Int32]
+												haxe._Int64.___Int64
+												high:haxe.Int32
+								|
+								[Const:Int] 0
+					[If:Void]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Local v1(8553):haxe.Int32:haxe.Int32]
+								==
+								[Const:Int] 0
+						[Then:Int] [Binop:Int]
+							[Local v1(8553):haxe.Int32:haxe.Int32]
+							=
+							[Call:Int]
+								[Field:(a : haxe.Int32, b : haxe.Int32) -> Int]
+									[TypeExpr haxe._Int32.Int32_Impl_:Abstract<haxe.Int32>]
+									[FStatic:(a : haxe.Int32, b : haxe.Int32) -> Int]
+										haxe._Int32.Int32_Impl_
+										ucompare:(a : haxe.Int32, b : haxe.Int32) -> Int
+								[Field:haxe.Int32]
+									[Cast:haxe._Int64.__Int64] [Local v(8548):haxe.Int64:haxe.Int64]
+									[FInstance:haxe.Int32]
+										haxe._Int64.___Int64
+										low:haxe.Int32
+								[Field:haxe.Int32]
+									[Cast:haxe._Int64.__Int64] [Local target(8539):haxe.Int64:haxe.Int64]
+									[FInstance:haxe.Int32]
+										haxe._Int64.___Int64
+										low:haxe.Int32
+					[If:Void]
+						[Parenthesis:Bool]
+							[Binop:Bool]
+								[Parenthesis:Int]
+									[If:Int]
+										[Parenthesis:Bool]
+											[Binop:Bool]
+												[Field:haxe.Int32]
+													[Cast:haxe._Int64.__Int64] [Local v(8548):haxe.Int64:haxe.Int64]
+													[FInstance:haxe.Int32]
+														haxe._Int64.___Int64
+														high:haxe.Int32
+												<
+												[Const:Int] 0
+										[Then:Int] [Block:Int]
+											[If:Int]
+												[Parenthesis:Bool]
+													[Binop:Bool]
+														[Field:haxe.Int32]
+															[Cast:haxe._Int64.__Int64] [Local target(8539):haxe.Int64:haxe.Int64]
+															[FInstance:haxe.Int32]
+																haxe._Int64.___Int64
+																high:haxe.Int32
+														<
+														[Const:Int] 0
+												[Then:haxe.Int32] [Local v1(8553):haxe.Int32:haxe.Int32]
+												[Else:Int] [Const:Int] -1
+										[Else:Int] [If:Int]
+											[Parenthesis:Bool]
+												[Binop:Bool]
+													[Field:haxe.Int32]
+														[Cast:haxe._Int64.__Int64] [Local target(8539):haxe.Int64:haxe.Int64]
+														[FInstance:haxe.Int32]
+															haxe._Int64.___Int64
+															high:haxe.Int32
+													>=
+													[Const:Int] 0
+											[Then:haxe.Int32] [Local v1(8553):haxe.Int32:haxe.Int32]
+											[Else:Int] [Const:Int] 1
+								<
+								[Const:Int] 0
+						[Then:Int] [Binop:Int]
+							[Local low(8540):Int:Int]
+							=
+							[Binop:Int]
+								[Local mid(8542):Int:Int]
+								+
+								[Const:Int] 1
+						[Else:Int] [Binop:Int]
+							[Local high(8541):Int:Int]
+							=
+							[Local mid(8542):Int:Int]
+			[Return:Dynamic] [Local low(8540):Int:Int]
+}

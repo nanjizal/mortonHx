@@ -2,9 +2,9 @@
 class haxe.ValueException extends haxe.Exception {
 
 	public function new[Function:(value : Any, ?previous : Null<haxe.Exception>, ?native : Null<Any>) -> Void]
-		[Arg value<6483>(VUsedByTyper):Any]
-		[Arg previous<6484>(VUsedByTyper):Null<haxe.Exception>] [Const:Null<haxe.Exception>] null
-		[Arg native<6485>(VUsedByTyper):Null<Any>] [Const:Null<Any>] null
+		[Arg value<6489>(VUsedByTyper):Any]
+		[Arg previous<6490>(VUsedByTyper):Null<haxe.Exception>] [Const:Null<haxe.Exception>] null
+		[Arg native<6491>(VUsedByTyper):Null<Any>] [Const:Null<Any>] null
 		[Block:Any]
 			[Call:Void]
 				[Const:haxe.Exception] super
@@ -15,9 +15,9 @@ class haxe.ValueException extends haxe.Exception {
 							js.Syntax
 							code:(code : String, args : haxe.extern.Rest<Dynamic>) -> Dynamic
 					[Const:String] "String({0})"
-					[Local value(6483):Any:Any]
-				[Local previous(6484):Null<haxe.Exception>:Null<haxe.Exception>]
-				[Local native(6485):Null<Any>:Null<Any>]
+					[Local value(6489):Any:Any]
+				[Local previous(6490):Null<haxe.Exception>:Null<haxe.Exception>]
+				[Local native(6491):Null<Any>:Null<Any>]
 			[Binop:Any]
 				[Field:Any]
 					[Const:haxe.ValueException] this
@@ -25,7 +25,7 @@ class haxe.ValueException extends haxe.Exception {
 						haxe.ValueException
 						value:Any
 				=
-				[Local value(6483):Any:Any]
+				[Local value(6489):Any:Any]
 
 	public var value(default,null):Any;
 }

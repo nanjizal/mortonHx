@@ -1,0 +1,457 @@
+class mortonHx.SameSideHitInt implements mortonHx.IHitInt {
+
+	public function new[Function:() -> Void] [Block:Void]
+
+	var abx:Int;
+
+	var aby:Int;
+
+	var bcx:Int;
+
+	var bcy:Int;
+
+	var cax:Int;
+
+	var cay:Int;
+
+	var ax:Int;
+
+	var ay:Int;
+
+	var bx:Int;
+
+	var by:Int;
+
+	var cx:Int;
+
+	var cy:Int;
+
+	var signA:Int;
+
+	var signB:Int;
+
+	var signC:Int;
+
+	public inline function prepare[Function:(ax : Int, ay : Int, bx : Int, by : Int, cx : Int, cy : Int) -> Void]
+		[Arg ax<6989>(VUsedByTyper):Int]
+		[Arg ay<6990>(VUsedByTyper):Int]
+		[Arg bx<6991>(VUsedByTyper):Int]
+		[Arg by<6992>(VUsedByTyper):Int]
+		[Arg cx<6993>(VUsedByTyper):Int]
+		[Arg cy<6994>(VUsedByTyper):Int]
+		[Block:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						ax:Int
+				=
+				[Local ax(6989):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						ay:Int
+				=
+				[Local ay(6990):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						bx:Int
+				=
+				[Local bx(6991):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						by:Int
+				=
+				[Local by(6992):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						cx:Int
+				=
+				[Local cx(6993):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						cy:Int
+				=
+				[Local cy(6994):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						abx:Int
+				=
+				[Binop:Int]
+					[Local bx(6991):Int:Int]
+					-
+					[Local ax(6989):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						aby:Int
+				=
+				[Binop:Int]
+					[Local by(6992):Int:Int]
+					-
+					[Local ay(6990):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						bcx:Int
+				=
+				[Binop:Int]
+					[Local cx(6993):Int:Int]
+					-
+					[Local bx(6991):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						bcy:Int
+				=
+				[Binop:Int]
+					[Local cy(6994):Int:Int]
+					-
+					[Local by(6992):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						cax:Int
+				=
+				[Binop:Int]
+					[Local ax(6989):Int:Int]
+					-
+					[Local cx(6993):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						cay:Int
+				=
+				[Binop:Int]
+					[Local ay(6990):Int:Int]
+					-
+					[Local cy(6994):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						signA:Int
+				=
+				[Binop:Int]
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cx(6993):Int:Int]
+								-
+								[Local bx(6991):Int:Int]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local ay(6990):Int:Int]
+								-
+								[Local by(6992):Int:Int]
+					-
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cy(6994):Int:Int]
+								-
+								[Local by(6992):Int:Int]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local ax(6989):Int:Int]
+								-
+								[Local bx(6991):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						signB:Int
+				=
+				[Binop:Int]
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local ax(6989):Int:Int]
+								-
+								[Local cx(6993):Int:Int]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local by(6992):Int:Int]
+								-
+								[Local cy(6994):Int:Int]
+					-
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local ay(6990):Int:Int]
+								-
+								[Local cy(6994):Int:Int]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local bx(6991):Int:Int]
+								-
+								[Local cx(6993):Int:Int]
+			[Binop:Int]
+				[Field:Int]
+					[Const:mortonHx.SameSideHitInt] this
+					[FInstance:Int]
+						mortonHx.SameSideHitInt
+						signC:Int
+				=
+				[Binop:Int]
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local bx(6991):Int:Int]
+								-
+								[Local ax(6989):Int:Int]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cy(6994):Int:Int]
+								-
+								[Local ay(6990):Int:Int]
+					-
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local by(6992):Int:Int]
+								-
+								[Local ay(6990):Int:Int]
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cx(6993):Int:Int]
+								-
+								[Local ax(6989):Int:Int]
+
+	public inline function hitCheck[Function:(x : Int, y : Int) -> Bool]
+		[Arg x<6995>(VUsedByTyper):Int]
+		[Arg y<6996>(VUsedByTyper):Int]
+		[Block:Dynamic]
+			[Var cpA<6997>(VUsedByTyper VFinal):Int]
+				[Binop:Int]
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										cx:Int
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										bx:Int
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local y(6996):Int:Int]
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										by:Int
+					-
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										cy:Int
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										by:Int
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local x(6995):Int:Int]
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										bx:Int
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cpA(6997):Int:Int]
+								^
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										signA:Int
+						<
+						[Const:Int] 0
+				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Var cpB<6998>(VUsedByTyper VFinal):Int]
+				[Binop:Int]
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										ax:Int
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										cx:Int
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local y(6996):Int:Int]
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										cy:Int
+					-
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										ay:Int
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										cy:Int
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local x(6995):Int:Int]
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										cx:Int
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local cpB(6998):Int:Int]
+								^
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										signB:Int
+						<
+						[Const:Int] 0
+				[Then:Dynamic] [Return:Dynamic] [Const:Bool] false
+			[Var cpC<6999>(VUsedByTyper VFinal):Int]
+				[Binop:Int]
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										bx:Int
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										ax:Int
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local y(6996):Int:Int]
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										ay:Int
+					-
+					[Binop:Int]
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										by:Int
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										ay:Int
+						*
+						[Parenthesis:Int]
+							[Binop:Int]
+								[Local x(6995):Int:Int]
+								-
+								[Field:Int]
+									[Const:mortonHx.SameSideHitInt] this
+									[FInstance:Int]
+										mortonHx.SameSideHitInt
+										ax:Int
+			[Return:Dynamic]
+				[Binop:Bool]
+					[Parenthesis:Int]
+						[Binop:Int]
+							[Local cpC(6999):Int:Int]
+							^
+							[Field:Int]
+								[Const:mortonHx.SameSideHitInt] this
+								[FInstance:Int]
+									mortonHx.SameSideHitInt
+									signC:Int
+					>=
+					[Const:Int] 0
+}

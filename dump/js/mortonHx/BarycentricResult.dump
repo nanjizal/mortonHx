@@ -1,0 +1,50 @@
+@:directlyUsed @:structInit
+class mortonHx.BarycentricResult {
+
+	public function new[Function:(hit : Bool, u : Float, v : Float, w : Float) -> Void]
+		[Arg hit<7008>(VUsedByTyper):Bool]
+		[Arg u<7009>(VUsedByTyper):Float]
+		[Arg v<7010>(VUsedByTyper):Float]
+		[Arg w<7011>(VUsedByTyper):Float]
+		[Block:Float]
+			[Binop:Bool]
+				[Field:Bool]
+					[Const:mortonHx.BarycentricResult] this
+					[FInstance:Bool]
+						mortonHx.BarycentricResult
+						hit:Bool
+				=
+				[Local hit(7008):Bool:Bool]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricResult] this
+					[FInstance:Float]
+						mortonHx.BarycentricResult
+						u:Float
+				=
+				[Local u(7009):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricResult] this
+					[FInstance:Float]
+						mortonHx.BarycentricResult
+						v:Float
+				=
+				[Local v(7010):Float:Float]
+			[Binop:Float]
+				[Field:Float]
+					[Const:mortonHx.BarycentricResult] this
+					[FInstance:Float]
+						mortonHx.BarycentricResult
+						w:Float
+				=
+				[Local w(7011):Float:Float]
+
+	public var hit:Bool;
+
+	public var u:Float;
+
+	public var v:Float;
+
+	public var w:Float;
+}
