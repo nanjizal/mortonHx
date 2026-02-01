@@ -1,9 +1,0 @@
-@:enum
-abstract haxe.display.ClassFieldOriginKind<{
-	name = T;
-	class = haxe.display.ClassFieldOriginKind.T;
-	host = TPHType;
-	type = TInst(haxe.display.ClassFieldOriginKind.T, []);
-	constraints = [];
-	default = None;
-}> {}

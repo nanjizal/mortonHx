@@ -1,1 +1,0 @@
-typedef haxe.hxb.WriterTargetConfig = { ?include : Null<Array<String>>, ?hxbVersion : Null<Int>, ?generateDocumentation : Null<Bool>, ?generate : Null<Bool>, ?exclude : Null<Array<String>> }

@@ -1,5 +1,0 @@
-@:realPath("js.html.PropertyNodeList") @:native("PropertyNodeList")
-extern class PropertyNodeList extends NodeList {
-
-	function getValues():Array<Dynamic>;
-}

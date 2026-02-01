@@ -1,8 +1,0 @@
-typedef haxe.display.DisplayItemOccurrence<{
-	name = T;
-	class = haxe.display.DisplayItemOccurrence.T;
-	host = TPHType;
-	type = TInst(haxe.display.DisplayItemOccurrence.T, []);
-	constraints = [];
-	default = None;
-}> = { range : haxe.display.Range, ?moduleTypeFollowed : Null<haxe.display.JsonModuleType<Dynamic>>, ?moduleType : Null<haxe.display.JsonModuleType<Dynamic>>, item : haxe.display.DisplayItem<haxe.display.DisplayItemOccurrence.T> }

@@ -1,8 +1,0 @@
-typedef haxe.display.JsonFieldKind<{
-	name = T;
-	class = haxe.display.JsonFieldKind.T;
-	host = TPHType;
-	type = TInst(haxe.display.JsonFieldKind.T, []);
-	constraints = [];
-	default = None;
-}> = { kind : haxe.display.JsonFieldKindKind<haxe.display.JsonFieldKind.T>, args : haxe.display.JsonFieldKind.T }

@@ -1,9 +1,0 @@
-@:publicFields
-class haxe.display.Methods {
-
-	@:value(new HaxeRequestMethod<InitializeParams,InitializeResult>("initialize"))
-	public static inline var Initialize:haxe.display.HaxeRequestMethod<haxe.display.InitializeParams, haxe.display.InitializeResult> = [Cast:haxe.display.HaxeRequestMethod<haxe.display.InitializeParams, haxe.display.InitializeResult>] [Const:String] "initialize";
-
-	@:value(new HaxeRequestMethod<ResetCacheParams,ResetCacheResult>("server/resetCache"))
-	public static inline var ResetCache:haxe.display.HaxeRequestMethod<haxe.display.ResetCacheParams, haxe.display.ResetCacheResult> = [Cast:haxe.display.HaxeRequestMethod<haxe.display.ResetCacheParams, haxe.display.ResetCacheResult>] [Const:String] "server/resetCache";
-}

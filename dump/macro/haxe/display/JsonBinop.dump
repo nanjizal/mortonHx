@@ -1,8 +1,0 @@
-typedef haxe.display.JsonBinop<{
-	name = T;
-	class = haxe.display.JsonBinop.T;
-	host = TPHType;
-	type = TInst(haxe.display.JsonBinop.T, []);
-	constraints = [];
-	default = None;
-}> = { kind : haxe.display.JsonBinopKind<haxe.display.JsonBinop.T>, args : haxe.display.JsonBinop.T }

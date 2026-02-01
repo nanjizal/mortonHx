@@ -1,8 +1,0 @@
-typedef haxe.macro.ExprOf<{
-	name = T;
-	class = haxe.macro.ExprOf.T;
-	host = TPHType;
-	type = TInst(haxe.macro.ExprOf.T, []);
-	constraints = [];
-	default = None;
-}> = haxe.macro.Expr

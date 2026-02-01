@@ -1,3 +1,0 @@
-@:realPath("js.html.webgl.UniformLocation") @:native("WebGLUniformLocation")
-extern class WebGLUniformLocation {
-}

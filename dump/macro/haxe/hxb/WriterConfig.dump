@@ -1,1 +1,0 @@
-typedef haxe.hxb.WriterConfig = { ?targetConfig : Null<haxe.hxb.WriterTargetConfig>, ?macroConfig : Null<haxe.hxb.WriterTargetConfig>, archivePath : String }

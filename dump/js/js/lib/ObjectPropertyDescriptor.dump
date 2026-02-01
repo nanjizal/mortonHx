@@ -1,8 +1,0 @@
-typedef js.lib.ObjectPropertyDescriptor<{
-	name = TProp;
-	class = js.lib.ObjectPropertyDescriptor.TProp;
-	host = TPHType;
-	type = TInst(js.lib.ObjectPropertyDescriptor.TProp, []);
-	constraints = [];
-	default = None;
-}> = { ?writable : Null<Bool>, ?value : Null<js.lib.ObjectPropertyDescriptor.TProp>, ?set : Null<js.lib.ObjectPropertyDescriptor.TProp -> Void>, ?get : Null<() -> js.lib.ObjectPropertyDescriptor.TProp>, ?enumerable : Null<Bool>, ?configurable : Null<Bool> }

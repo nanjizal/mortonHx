@@ -1,1 +1,0 @@
-typedef js.html.NavigatorShareData = { ?url : Null<String>, ?title : Null<String>, ?text : Null<String>, ?files : Null<Array<File>> }

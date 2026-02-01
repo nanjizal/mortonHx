@@ -1,9 +1,0 @@
-@:valueUsed @:used @:coreType @:runtimeValue
-abstract Class<{
-	name = T;
-	class = Class.T;
-	host = TPHType;
-	type = TInst(Class.T, []);
-	constraints = [];
-	default = None;
-}> {}

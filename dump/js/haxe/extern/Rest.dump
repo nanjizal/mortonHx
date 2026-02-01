@@ -1,8 +1,0 @@
-typedef haxe.extern.Rest<{
-	name = T;
-	class = haxe.extern.Rest.T;
-	host = TPHType;
-	type = TInst(haxe.extern.Rest.T, []);
-	constraints = [];
-	default = None;
-}> = haxe.Rest<haxe.extern.Rest.T>

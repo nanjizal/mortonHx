@@ -1,8 +1,0 @@
-typedef haxe.display.JsonTConstant<{
-	name = T;
-	class = haxe.display.JsonTConstant.T;
-	host = TPHType;
-	type = TInst(haxe.display.JsonTConstant.T, []);
-	constraints = [];
-	default = None;
-}> = { kind : haxe.display.JsonTConstantKind<haxe.display.JsonTConstant.T>, args : haxe.display.JsonTConstant.T }

@@ -1,9 +1,0 @@
-@:forward(copy, filter, indexOf, iterator, keyValueIterator, join, lastIndexOf, map, slice, contains, toString)
-abstract haxe.ds.ReadOnlyArray<{
-	name = T;
-	class = haxe.ds.ReadOnlyArray.T;
-	host = TPHType;
-	type = TInst(haxe.ds.ReadOnlyArray.T, []);
-	constraints = [];
-	default = None;
-}> from Array<haxe.ds.ReadOnlyArray.T> to Iterable<haxe.ds.ReadOnlyArray.T> {}

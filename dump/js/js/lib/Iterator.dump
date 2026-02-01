@@ -1,8 +1,0 @@
-typedef js.lib.Iterator<{
-	name = T;
-	class = js.lib.Iterator.T;
-	host = TPHType;
-	type = TInst(js.lib.Iterator.T, []);
-	constraints = [];
-	default = None;
-}> = { next : () -> js.lib.IteratorStep<js.lib.Iterator.T> }

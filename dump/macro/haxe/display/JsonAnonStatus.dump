@@ -1,8 +1,0 @@
-typedef haxe.display.JsonAnonStatus<{
-	name = T;
-	class = haxe.display.JsonAnonStatus.T;
-	host = TPHType;
-	type = TInst(haxe.display.JsonAnonStatus.T, []);
-	constraints = [];
-	default = None;
-}> = { kind : haxe.display.JsonAnonStatusKind<haxe.display.JsonAnonStatus.T>, args : haxe.display.JsonAnonStatus.T }

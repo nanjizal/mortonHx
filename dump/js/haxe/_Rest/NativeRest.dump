@@ -1,8 +1,0 @@
-private typedef haxe._Rest.NativeRest<{
-	name = T;
-	class = haxe._Rest.NativeRest.T;
-	host = TPHType;
-	type = TInst(haxe._Rest.NativeRest.T, []);
-	constraints = [];
-	default = None;
-}> = Array<haxe._Rest.NativeRest.T>

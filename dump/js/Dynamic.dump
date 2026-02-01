@@ -1,9 +1,0 @@
-@:used @:valueUsed @:coreType @:runtimeValue
-abstract Dynamic<{
-	name = T;
-	class = Dynamic.T;
-	host = TPHType;
-	type = TInst(Dynamic.T, []);
-	constraints = [];
-	default = None;
-}> {}

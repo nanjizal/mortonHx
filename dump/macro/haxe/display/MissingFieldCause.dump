@@ -1,8 +1,0 @@
-typedef haxe.display.MissingFieldCause<{
-	name = T;
-	class = haxe.display.MissingFieldCause.T;
-	host = TPHType;
-	type = TInst(haxe.display.MissingFieldCause.T, []);
-	constraints = [];
-	default = None;
-}> = { kind : haxe.display.MissingFieldCauseKind<haxe.display.MissingFieldCause.T>, args : haxe.display.MissingFieldCause.T }

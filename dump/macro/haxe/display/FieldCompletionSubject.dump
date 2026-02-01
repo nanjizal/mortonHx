@@ -1,8 +1,0 @@
-typedef haxe.display.FieldCompletionSubject<{
-	name = T;
-	class = haxe.display.FieldCompletionSubject.T;
-	host = TPHType;
-	type = TInst(haxe.display.FieldCompletionSubject.T, []);
-	constraints = [];
-	default = None;
-}> = { range : haxe.display.Range, ?moduleTypeFollowed : Null<haxe.display.JsonModuleType<Dynamic>>, ?moduleType : Null<haxe.display.JsonModuleType<Dynamic>>, ?keyValueIterator : Null<{ value : haxe.display.JsonType<Dynamic>, key : haxe.display.JsonType<Dynamic> }>, ?iterator : Null<{ type : haxe.display.JsonType<Dynamic> }>, item : haxe.display.DisplayItem<haxe.display.FieldCompletionSubject.T> }

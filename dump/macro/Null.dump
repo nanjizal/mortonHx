@@ -1,9 +1,0 @@
-@:forward @:coreType
-abstract Null<{
-	name = T;
-	class = Null.T;
-	host = TPHType;
-	type = TInst(Null.T, []);
-	constraints = [];
-	default = None;
-}> from Null.T to Null.T {}

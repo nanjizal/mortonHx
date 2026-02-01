@@ -1,9 +1,0 @@
-@:realPath("js.html.WakeLockSentinel") @:native("WakeLockSentinel")
-extern class WakeLockSentinel extends EventTarget {
-
-	var released(default,ctor):Bool;
-
-	var type(default,ctor):js.html.WakeLockType;
-
-	function release():Promise<Void>;
-}

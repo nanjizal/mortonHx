@@ -1,8 +1,0 @@
-typedef haxe.display.EnumFieldOccurrence<{
-	name = T;
-	class = haxe.display.EnumFieldOccurrence.T;
-	host = TPHType;
-	type = TInst(haxe.display.EnumFieldOccurrence.T, []);
-	constraints = [];
-	default = None;
-}> = { resolution : haxe.display.FieldResolution, ?origin : Null<haxe.display.EnumFieldOrigin<haxe.display.EnumFieldOccurrence.T>>, field : haxe.display.JsonEnumField }

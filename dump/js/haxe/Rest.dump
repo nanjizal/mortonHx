@@ -1,9 +1,0 @@
-@:used @:coreApi
-abstract haxe.Rest<{
-	name = T;
-	class = haxe.Rest.T;
-	host = TPHType;
-	type = TInst(haxe.Rest.T, []);
-	constraints = [];
-	default = None;
-}> {}

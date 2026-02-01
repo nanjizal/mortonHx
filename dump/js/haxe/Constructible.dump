@@ -1,8 +1,0 @@
-abstract haxe.Constructible<{
-	name = T;
-	class = haxe.Constructible.T;
-	host = TPHType;
-	type = TInst(haxe.Constructible.T, []);
-	constraints = [];
-	default = None;
-}> {}
