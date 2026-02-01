@@ -29,7 +29,7 @@ Has implementation of a choice of 3 Line Intersectors
 You can choose to connect Holes to the shell with a bridge from North, South, East or West.
 East is the usual, West on the test has an overlay issue. 
 Currently it uses a triangle 'fit', and visiblity to decide when to use the directions' nearest Edge vertices.  
-The code is setup to allow exploring alternative bridging. There are optimisation on reducing the edge checks yet for the bridges but there is for point in triangle for actual triangulation.
+The code is setup to allow exploring alternative bridging. There are no optimisation on reducing the edge checks yet for the bridges, but there is for point in triangle for actual triangulation.
 
 ### EarCutMorton  
   
