@@ -20,6 +20,8 @@ extern class Array<{
 
 	function sort(f:(Array.T, Array.T) -> Int):Void;
 
+	function splice(pos:Int, len:Int):Array<Array.T>;
+
 	@:runtime
 	inline function iterator():haxe.iterators.ArrayIterator<Array.T>;
 }

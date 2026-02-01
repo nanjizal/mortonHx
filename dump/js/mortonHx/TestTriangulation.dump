@@ -85,7 +85,7 @@ class mortonHx.TestTriangulation {
 
 	static function main[Function:() -> Void]
 		[Block:Void]
-			[Var canvas<12398>(VUsedByTyper):HTMLCanvasElement]
+			[Var canvas<13525>(VUsedByTyper):HTMLCanvasElement]
 				[Cast:HTMLCanvasElement]
 					[Call:HTMLElement]
 						[Field:(localName : String, ?options : Null<js.html.ElementCreationOptions>) -> HTMLElement]
@@ -107,7 +107,7 @@ class mortonHx.TestTriangulation {
 						[Const:String] "canvas"
 			[Binop:Int]
 				[Field:Int]
-					[Local canvas(12398):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(13525):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						width:Int
@@ -115,17 +115,17 @@ class mortonHx.TestTriangulation {
 				[Const:Int] 800
 			[Binop:Int]
 				[Field:Int]
-					[Local canvas(12398):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(13525):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						height:Int
 				=
 				[Const:Int] 600
-			[Var ctx<12402>(VUsedByTyper):CanvasRenderingContext2D]
+			[Var ctx<13529>(VUsedByTyper):CanvasRenderingContext2D]
 				[Cast:CanvasRenderingContext2D]
 					[Call:Dynamic]
 						[Field:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic]
-							[Local canvas(12398):HTMLCanvasElement:HTMLCanvasElement]
+							[Local canvas(13525):HTMLCanvasElement:HTMLCanvasElement]
 							[FInstance:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic]
 								HTMLCanvasElement
 								getContext:(contextId : String, ?contextOptions : Null<Dynamic>) -> Dynamic
@@ -152,114 +152,1895 @@ class mortonHx.TestTriangulation {
 					[FInstance:(node : Node) -> Node]
 						Node
 						appendChild:(node : Node) -> Node
-				[Local canvas(12398):HTMLCanvasElement:HTMLCanvasElement]
-			[Var arr<12407>:Array<Float>]
+				[Local canvas(13525):HTMLCanvasElement:HTMLCanvasElement]
+			[Var arr<13534>:Array<Float>]
 				[Field:Array<Float>]
 					[TypeExpr mortonHx.TestTriangulation:Class<mortonHx.TestTriangulation>]
 					[FStatic:Array<Float>]
 						mortonHx.TestTriangulation
 						test1:Array<Float>
-			[Var scale<12408>(VAssigned):Float] [Const:Float] 1.0
-			[Var pointHit<12409>:Null<mortonHx.IHitInt>] [New:mortonHx.EdgeFunctionHitInt] mortonHx.EdgeFunctionHitInt
+			[Var scale<13535>(VAssigned):Float] [Const:Int] 1
 			[If:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local scale(12408):Float:Float]
+						[Local scale(13535):Float:Float]
 						==
 						[Const:Float] null
 				[Then:Float] [Binop:Float]
-					[Local scale(12408):Float:Float]
+					[Local scale(13535):Float:Float]
 					=
-					[Const:Float] 40.95875
-			[Var p<12410>:Array<{ y : Int, x : Int }>] [New:Array<{ y : Int, x : Int }>] Array<{ y : Int, x : Int }>
+					[Const:Int] 1
+			[Var p<13538>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13539>:Int]
+				[Field:Int]
+					[Local arr(13534):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13540>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13541>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13539):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
 			[Block:Void]
-				[Var _g<12411>(VAssigned):Int] [Const:Int] 0
-				[Var _g1<12412>:Int]
-					[Binop:Int]
-						[Cast:Int]
-							[Binop:Float]
-								[Field:Int]
-									[Local arr(12407):Array<Float>:Array<Float>]
-									[FInstance:Int]
-										Array<Float>
-										length:Int
-								/
-								[Const:Int] 2
-						|
-						[Const:Int] 0
+				[Var _g<13542>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13543>:Int] [Local totalPoints(13541):Int:Int]
 				[While:Void]
 					[Parenthesis:Bool]
 						[Binop:Bool]
-							[Local _g(12411):Int:Int]
+							[Local _g(13542):Int:Int]
 							<
-							[Local _g1(12412):Int:Int]
+							[Local _g1(13543):Int:Int]
 					[Block:Dynamic]
-						[Var i<12413>:Int]
+						[Var i<13544>:Int]
 							[Unop:Int]
 								++
 								Postfix
-								[Local _g(12411):Int:Int]
-						[Binop:{ y : Int, x : Int }]
-							[Array:{ y : Int, x : Int }]
-								[Local p(12410):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
-								[Local i(12413):Int:Int]
+								[Local _g(13542):Int:Int]
+						[Var base<13545>:Int]
+							[Binop:Int]
+								[Local i(13544):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13538):Array<Int>:Array<Int>]
+								[Local j(13540):Int:Int]
 							=
-							[ObjectDecl:{ y : Int, x : Int }]
-								x: [Binop:Int]
-									[Cast:Int]
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
 										[Binop:Float]
 											[Array:Float]
-												[Local arr(12407):Array<Float>:Array<Float>]
-												[Binop:Int]
-													[Local i(12413):Int:Int]
-													*
-													[Const:Int] 2
+												[Local arr(13534):Array<Float>:Array<Float>]
+												[Local base(13545):Int:Int]
 											*
-											[Local scale(12408):Float:Float]
-									|
-									[Const:Int] 0
-								y: [Binop:Int]
-									[Cast:Int]
+											[Local scale(13535):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13535):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13540):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13538):Array<Int>:Array<Int>]
+								[Local j(13540):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
 										[Binop:Float]
 											[Array:Float]
-												[Local arr(12407):Array<Float>:Array<Float>]
+												[Local arr(13534):Array<Float>:Array<Float>]
 												[Binop:Int]
-													[Binop:Int]
-														[Local i(12413):Int:Int]
-														*
-														[Const:Int] 2
+													[Local base(13545):Int:Int]
 													+
 													[Const:Int] 1
 											*
-											[Local scale(12408):Float:Float]
-									|
-									[Const:Int] 0
-			[Var earcut<12414>(VUsedByTyper):mortonHx.EarCuttingMorton]
-				[New:mortonHx.EarCuttingMorton]
-					mortonHx.EarCuttingMorton
-					[Local p(12410):Array<{ y : Int, x : Int }>:Array<{ y : Int, x : Int }>]
-					[Local pointHit(12409):Null<mortonHx.IHitInt>:Null<mortonHx.IHitInt>]
-			[Var triangles<12415>(VUsedByTyper):Array<Int>]
+											[Local scale(13535):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13535):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13540):Int:Int]
+			[Var a<13546>(VAssigned):Null<Array<Int>>] [Local p(13538):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13546):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13546):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var points<13548>(VUsedByTyper):mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13546):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13551>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole1:Array<Float>
+			[Var scale<13552>(VAssigned):Float] [Const:Int] 1
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13552):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13552):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13555>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13556>:Int]
+				[Field:Int]
+					[Local arr(13551):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13557>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13558>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13556):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13559>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13560>:Int] [Local totalPoints(13558):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13559):Int:Int]
+							<
+							[Local _g1(13560):Int:Int]
+					[Block:Dynamic]
+						[Var i<13561>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13559):Int:Int]
+						[Var base<13562>:Int]
+							[Binop:Int]
+								[Local i(13561):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13555):Array<Int>:Array<Int>]
+								[Local j(13557):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13551):Array<Float>:Array<Float>]
+												[Local base(13562):Int:Int]
+											*
+											[Local scale(13552):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13552):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13557):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13555):Array<Int>:Array<Int>]
+								[Local j(13557):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13551):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13562):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13552):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13552):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13557):Int:Int]
+			[Var a<13563>(VAssigned):Null<Array<Int>>] [Local p(13555):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13563):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13563):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes<38695>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13563):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13567>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole2:Array<Float>
+			[Var scale<13568>(VAssigned):Float] [Const:Int] 1
+			[Var dx<13569>(VAssigned):Float] [Const:Int] 50
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dx(13569):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dx(13569):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13568):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13568):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13571>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13572>:Int]
+				[Field:Int]
+					[Local arr(13567):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13573>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13574>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13572):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13575>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13576>:Int] [Local totalPoints(13574):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13575):Int:Int]
+							<
+							[Local _g1(13576):Int:Int]
+					[Block:Dynamic]
+						[Var i<13577>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13575):Int:Int]
+						[Var base<13578>:Int]
+							[Binop:Int]
+								[Local i(13577):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13571):Array<Int>:Array<Int>]
+								[Local j(13573):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13567):Array<Float>:Array<Float>]
+												[Local base(13578):Int:Int]
+											*
+											[Local scale(13568):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13568):Float:Float]
+											*
+											[Local dx(13569):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13573):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13571):Array<Int>:Array<Int>]
+								[Local j(13573):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13567):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13578):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13568):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13568):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13573):Int:Int]
+			[Var a<13579>(VAssigned):Null<Array<Int>>] [Local p(13571):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13579):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13579):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes1<38708>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13579):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13583>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole5:Array<Float>
+			[Var scale<13584>(VAssigned):Float] [Const:Int] 1
+			[Var dx<13585>(VAssigned):Float] [Const:Int] 0
+			[Var dy<13586>(VAssigned):Float] [Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dy(13586):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dy(13586):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dx(13585):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dx(13585):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13584):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13584):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13587>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13588>:Int]
+				[Field:Int]
+					[Local arr(13583):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13589>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13590>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13588):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13591>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13592>:Int] [Local totalPoints(13590):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13591):Int:Int]
+							<
+							[Local _g1(13592):Int:Int]
+					[Block:Dynamic]
+						[Var i<13593>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13591):Int:Int]
+						[Var base<13594>:Int]
+							[Binop:Int]
+								[Local i(13593):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13587):Array<Int>:Array<Int>]
+								[Local j(13589):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13583):Array<Float>:Array<Float>]
+												[Local base(13594):Int:Int]
+											*
+											[Local scale(13584):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13584):Float:Float]
+											*
+											[Local dx(13585):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13589):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13587):Array<Int>:Array<Int>]
+								[Local j(13589):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13583):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13594):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13584):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13584):Float:Float]
+											*
+											[Local dy(13586):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13589):Int:Int]
+			[Var a<13595>(VAssigned):Null<Array<Int>>] [Local p(13587):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13595):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13595):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes2<38722>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13595):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13599>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole5:Array<Float>
+			[Var scale<13600>(VAssigned):Float] [Const:Int] 1
+			[Var dx<13601>(VAssigned):Float] [Const:Int] -30
+			[Var dy<13602>(VAssigned):Float] [Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dy(13602):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dy(13602):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dx(13601):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dx(13601):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13600):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13600):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13603>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13604>:Int]
+				[Field:Int]
+					[Local arr(13599):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13605>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13606>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13604):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13607>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13608>:Int] [Local totalPoints(13606):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13607):Int:Int]
+							<
+							[Local _g1(13608):Int:Int]
+					[Block:Dynamic]
+						[Var i<13609>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13607):Int:Int]
+						[Var base<13610>:Int]
+							[Binop:Int]
+								[Local i(13609):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13603):Array<Int>:Array<Int>]
+								[Local j(13605):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13599):Array<Float>:Array<Float>]
+												[Local base(13610):Int:Int]
+											*
+											[Local scale(13600):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13600):Float:Float]
+											*
+											[Local dx(13601):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13605):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13603):Array<Int>:Array<Int>]
+								[Local j(13605):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13599):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13610):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13600):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13600):Float:Float]
+											*
+											[Local dy(13602):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13605):Int:Int]
+			[Var a<13611>(VAssigned):Null<Array<Int>>] [Local p(13603):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13611):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13611):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes3<38737>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13611):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13615>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole6:Array<Float>
+			[Var scale<13616>(VAssigned):Float] [Const:Int] 1
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13616):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13616):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13619>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13620>:Int]
+				[Field:Int]
+					[Local arr(13615):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13621>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13622>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13620):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13623>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13624>:Int] [Local totalPoints(13622):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13623):Int:Int]
+							<
+							[Local _g1(13624):Int:Int]
+					[Block:Dynamic]
+						[Var i<13625>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13623):Int:Int]
+						[Var base<13626>:Int]
+							[Binop:Int]
+								[Local i(13625):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13619):Array<Int>:Array<Int>]
+								[Local j(13621):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13615):Array<Float>:Array<Float>]
+												[Local base(13626):Int:Int]
+											*
+											[Local scale(13616):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13616):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13621):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13619):Array<Int>:Array<Int>]
+								[Local j(13621):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13615):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13626):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13616):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13616):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13621):Int:Int]
+			[Var a<13627>(VAssigned):Null<Array<Int>>] [Local p(13619):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13627):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13627):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes4<38752>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13627):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13631>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole7:Array<Float>
+			[Var scale<13632>(VAssigned):Float] [Const:Int] 1
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13632):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13632):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13635>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13636>:Int]
+				[Field:Int]
+					[Local arr(13631):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13637>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13638>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13636):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13639>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13640>:Int] [Local totalPoints(13638):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13639):Int:Int]
+							<
+							[Local _g1(13640):Int:Int]
+					[Block:Dynamic]
+						[Var i<13641>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13639):Int:Int]
+						[Var base<13642>:Int]
+							[Binop:Int]
+								[Local i(13641):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13635):Array<Int>:Array<Int>]
+								[Local j(13637):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13631):Array<Float>:Array<Float>]
+												[Local base(13642):Int:Int]
+											*
+											[Local scale(13632):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13632):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13637):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13635):Array<Int>:Array<Int>]
+								[Local j(13637):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13631):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13642):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13632):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13632):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13637):Int:Int]
+			[Var a<13643>(VAssigned):Null<Array<Int>>] [Local p(13635):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13643):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13643):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes5<38765>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13643):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13647>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole8:Array<Float>
+			[Var scale<13648>(VAssigned):Float] [Const:Int] 1
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13648):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13648):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13651>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13652>:Int]
+				[Field:Int]
+					[Local arr(13647):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13653>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13654>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13652):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13655>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13656>:Int] [Local totalPoints(13654):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13655):Int:Int]
+							<
+							[Local _g1(13656):Int:Int]
+					[Block:Dynamic]
+						[Var i<13657>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13655):Int:Int]
+						[Var base<13658>:Int]
+							[Binop:Int]
+								[Local i(13657):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13651):Array<Int>:Array<Int>]
+								[Local j(13653):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13647):Array<Float>:Array<Float>]
+												[Local base(13658):Int:Int]
+											*
+											[Local scale(13648):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13648):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13653):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13651):Array<Int>:Array<Int>]
+								[Local j(13653):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13647):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13658):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13648):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13648):Float:Float]
+											*
+											[Const:Int] 0
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13653):Int:Int]
+			[Var a<13659>(VAssigned):Null<Array<Int>>] [Local p(13651):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13659):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13659):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes6<38778>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13659):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13663>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole9:Array<Float>
+			[Var scale<13664>(VAssigned):Float] [Const:Int] 1
+			[Var dx<13665>(VAssigned):Float] [Const:Int] -10
+			[Var dy<13666>(VAssigned):Float] [Const:Int] -10
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dy(13666):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dy(13666):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dx(13665):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dx(13665):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13664):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13664):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13667>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13668>:Int]
+				[Field:Int]
+					[Local arr(13663):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13669>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13670>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13668):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13671>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13672>:Int] [Local totalPoints(13670):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13671):Int:Int]
+							<
+							[Local _g1(13672):Int:Int]
+					[Block:Dynamic]
+						[Var i<13673>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13671):Int:Int]
+						[Var base<13674>:Int]
+							[Binop:Int]
+								[Local i(13673):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13667):Array<Int>:Array<Int>]
+								[Local j(13669):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13663):Array<Float>:Array<Float>]
+												[Local base(13674):Int:Int]
+											*
+											[Local scale(13664):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13664):Float:Float]
+											*
+											[Local dx(13665):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13669):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13667):Array<Int>:Array<Int>]
+								[Local j(13669):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13663):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13674):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13664):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13664):Float:Float]
+											*
+											[Local dy(13666):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13669):Int:Int]
+			[Var a<13675>(VAssigned):Null<Array<Int>>] [Local p(13667):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13675):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13675):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes7<38791>:mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13675):Null<Array<Int>>:Null<Array<Int>>]
+			[Var arr<13679>:Array<Float>]
+				[Field:Array<Float>]
+					[TypeExpr mortonHx._TestData.TestData_Fields_:Class<mortonHx._TestData.TestData_Fields_>]
+					[FStatic:Array<Float>]
+						mortonHx._TestData.TestData_Fields_
+						hole10:Array<Float>
+			[Var scale<13680>(VAssigned):Float] [Const:Int] 1
+			[Var dx<13681>(VAssigned):Float] [Const:Int] 0
+			[Var dy<13682>(VAssigned):Float] [Const:Int] -40
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dy(13682):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dy(13682):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local dx(13681):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local dx(13681):Float:Float]
+					=
+					[Const:Int] 0
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local scale(13680):Float:Float]
+						==
+						[Const:Float] null
+				[Then:Float] [Binop:Float]
+					[Local scale(13680):Float:Float]
+					=
+					[Const:Int] 1
+			[Var p<13683>:Array<Int>] [New:Array<Int>] Array<Int>
+			[Var len<13684>:Int]
+				[Field:Int]
+					[Local arr(13679):Array<Float>:Array<Float>]
+					[FInstance:Int]
+						Array<Float>
+						length:Int
+			[Var j<13685>(VAssigned):Int] [Const:Int] 0
+			[Var totalPoints<13686>:Int]
+				[Binop:Int]
+					[Cast:Int]
+						[Binop:Float]
+							[Local len(13684):Int:Int]
+							/
+							[Const:Int] 2
+					|
+					[Const:Int] 0
+			[Block:Void]
+				[Var _g<13687>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13688>:Int] [Local totalPoints(13686):Int:Int]
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13687):Int:Int]
+							<
+							[Local _g1(13688):Int:Int]
+					[Block:Dynamic]
+						[Var i<13689>:Int]
+							[Unop:Int]
+								++
+								Postfix
+								[Local _g(13687):Int:Int]
+						[Var base<13690>:Int]
+							[Binop:Int]
+								[Local i(13689):Int:Int]
+								*
+								[Const:Int] 2
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13683):Array<Int>:Array<Int>]
+								[Local j(13685):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13679):Array<Float>:Array<Float>]
+												[Local base(13690):Int:Int]
+											*
+											[Local scale(13680):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13680):Float:Float]
+											*
+											[Local dx(13681):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13685):Int:Int]
+						[Binop:Int]
+							[Array:Int]
+								[Local p(13683):Array<Int>:Array<Int>]
+								[Local j(13685):Int:Int]
+							=
+							[Binop:Int]
+								[Cast:Int]
+									[Binop:Float]
+										[Binop:Float]
+											[Array:Float]
+												[Local arr(13679):Array<Float>:Array<Float>]
+												[Binop:Int]
+													[Local base(13690):Int:Int]
+													+
+													[Const:Int] 1
+											*
+											[Local scale(13680):Float:Float]
+										+
+										[Binop:Float]
+											[Local scale(13680):Float:Float]
+											*
+											[Local dy(13682):Float:Float]
+								|
+								[Const:Int] 0
+						[Unop:Int]
+							++
+							Prefix
+							[Local j(13685):Int:Int]
+			[Var a<13691>(VAssigned):Null<Array<Int>>] [Local p(13683):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13691):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13691):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var holes8<13693>(VUsedByTyper):Array<mortonHx.ds.EdgeData<Int>>]
+				[ArrayDecl:Array<mortonHx.ds.EdgeData<Int>>]
+					[Local holes(38695):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes1(38708):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes2(38722):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes3(38737):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes4(38752):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes5(38765):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes6(38778):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes7(38791):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Cast:mortonHx.ds.EdgeData<Int>] [Local a(13691):Null<Array<Int>>:Null<Array<Int>>]
+			[Block:Void]
+				[Var _g<13719>(VAssigned):Int] [Const:Int] 0
+				[While:Void]
+					[Parenthesis:Bool]
+						[Binop:Bool]
+							[Local _g(13719):Int:Int]
+							<
+							[Field:Int]
+								[Local holes8(13693):Array<mortonHx.ds.EdgeData<Int>>:Array<mortonHx.ds.EdgeData<Int>>]
+								[FInstance:Int]
+									Array<mortonHx.ds.EdgeData<Int>>
+									length:Int
+					[Block:Dynamic]
+						[Var hole<13694>(VUsedByTyper):mortonHx.ds.EdgeData<Int>]
+							[Array:mortonHx.ds.EdgeData<Int>]
+								[Local holes8(13693):Array<mortonHx.ds.EdgeData<Int>>:Array<mortonHx.ds.EdgeData<Int>>]
+								[Local _g(13719):Int:Int]
+						[Unop:Int]
+							++
+							Prefix
+							[Local _g(13719):Int:Int]
+						[Var area<13698>(VAssigned):Float] [Const:Int] 0
+						[Var len<13699>:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+									[FInstance:Int]
+										Array<Int>
+										length:Int
+								>>
+								[Const:Int] 1
+						[Var tmp<38823>:Bool]
+						[If:Void]
+							[Parenthesis:Bool]
+								[Binop:Bool]
+									[Local len(13699):Int:Int]
+									<
+									[Const:Int] 3
+							[Then:Bool] [Binop:Bool]
+								[Local tmp(38823):Bool:Bool]
+								=
+								[Const:Bool] false
+							[Else:Bool] [Block:Bool]
+								[Var EPSILON<13700>:Float] [Const:Float] 1e-9
+								[Block:Void]
+									[Var _g1<13701>(VAssigned):Int] [Const:Int] 0
+									[Var _g2<13702>:Int] [Local len(13699):Int:Int]
+									[While:Void]
+										[Parenthesis:Bool]
+											[Binop:Bool]
+												[Local _g1(13701):Int:Int]
+												<
+												[Local _g2(13702):Int:Int]
+										[Block:Dynamic]
+											[Var i<13703>:Int]
+												[Unop:Int]
+													++
+													Postfix
+													[Local _g1(13701):Int:Int]
+											[Var j<13704>:Int]
+												[Binop:Int]
+													[Parenthesis:Int]
+														[Binop:Int]
+															[Local i(13703):Int:Int]
+															+
+															[Const:Int] 1
+													%
+													[Local len(13699):Int:Int]
+											[Binop:Float]
+												[Local area(13698):Float:Float]
+												+=
+												[Binop:Float]
+													[Binop:Float]
+														[Cast:Float]
+															[Array:Int]
+																[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+																[Binop:Int]
+																	[Local i(13703):Int:Int]
+																	<<
+																	[Const:Int] 1
+														*
+														[Cast:Float]
+															[Array:Int]
+																[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+																[Binop:Int]
+																	[Const:Int] 1
+																	+
+																	[Parenthesis:Int]
+																		[Binop:Int]
+																			[Local j(13704):Int:Int]
+																			<<
+																			[Const:Int] 1
+													-
+													[Binop:Float]
+														[Cast:Float]
+															[Array:Int]
+																[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+																[Binop:Int]
+																	[Local j(13704):Int:Int]
+																	<<
+																	[Const:Int] 1
+														*
+														[Cast:Float]
+															[Array:Int]
+																[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+																[Binop:Int]
+																	[Const:Int] 1
+																	+
+																	[Parenthesis:Int]
+																		[Binop:Int]
+																			[Local i(13703):Int:Int]
+																			<<
+																			[Const:Int] 1
+								[Binop:Bool]
+									[Local tmp(38823):Bool:Bool]
+									=
+									[If:Bool]
+										[Parenthesis:Bool]
+											[Binop:Bool]
+												[Call:Float]
+													[Field:(v : Float) -> Float]
+														[TypeExpr Math:Class<Math>]
+														[FStatic:(v : Float) -> Float]
+															Math
+															abs:(v : Float) -> Float
+													[Local area(13698):Float:Float]
+												<
+												[Local EPSILON(13700):Float:Float]
+										[Then:Bool] [Const:Bool] false
+										[Else:Bool] [Binop:Bool]
+											[Local area(13698):Float:Float]
+											<
+											[Const:Int] 0
+						[If:Void]
+							[Parenthesis:Bool]
+								[Unop:Bool]
+									!
+									Prefix
+									[Local tmp(38823):Bool:Bool]
+							[Then:Void] [Block:Void]
+								[Block:mortonHx.ds.EdgeData<Int>]
+									[Var len1<13708>:Int]
+										[Field:Int]
+											[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+											[FInstance:Int]
+												Array<Int>
+												length:Int
+									[Var half<13709>:Int]
+										[Binop:Int]
+											[Local len1(13708):Int:Int]
+											>>
+											[Const:Int] 2
+									[Var a<13710>(VAssigned):Int]
+									[Var b<13711>(VAssigned):Int]
+									[Block:Void]
+										[Var _g3<13712>(VAssigned):Int] [Const:Int] 0
+										[Var _g4<13713>:Int] [Local half(13709):Int:Int]
+										[While:Void]
+											[Parenthesis:Bool]
+												[Binop:Bool]
+													[Local _g3(13712):Int:Int]
+													<
+													[Local _g4(13713):Int:Int]
+											[Block:Dynamic]
+												[Var i1<13714>:Int]
+													[Unop:Int]
+														++
+														Postfix
+														[Local _g3(13712):Int:Int]
+												[Binop:Int]
+													[Local a(13710):Int:Int]
+													=
+													[Binop:Int]
+														[Local i1(13714):Int:Int]
+														<<
+														[Const:Int] 1
+												[Binop:Int]
+													[Local b(13711):Int:Int]
+													=
+													[Binop:Int]
+														[Binop:Int]
+															[Local len1(13708):Int:Int]
+															-
+															[Const:Int] 2
+														-
+														[Local a(13710):Int:Int]
+												[Block:Void]
+													[Var temp<13715>:Int]
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local a(13710):Int:Int]
+													[Binop:Int]
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local a(13710):Int:Int]
+														=
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local b(13711):Int:Int]
+													[Binop:Int]
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local b(13711):Int:Int]
+														=
+														[Local temp(13715):Int:Int]
+												[Block:Void]
+													[Var a1<13716>:Int]
+														[Binop:Int]
+															[Local a(13710):Int:Int]
+															+
+															[Const:Int] 1
+													[Var b1<13717>:Int]
+														[Binop:Int]
+															[Local b(13711):Int:Int]
+															+
+															[Const:Int] 1
+													[Var temp1<13718>:Int]
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local a1(13716):Int:Int]
+													[Binop:Int]
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local a1(13716):Int:Int]
+														=
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local b1(13717):Int:Int]
+													[Binop:Int]
+														[Array:Int]
+															[Cast:Array<Int>] [Local hole(13694):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+															[Local b1(13717):Int:Int]
+														=
+														[Local temp1(13718):Int:Int]
+								[Call:Void]
+									[Ident:Dynamic] `trace
+									[Const:String] "reversing"
+									[ObjectDecl:{ methodName : String, lineNumber : Int, fileName : String, className : String }]
+										fileName: [Const:String] "src/mortonHx/TestTriangulation.hx"
+										lineNumber: [Const:Int] 41
+										className: [Const:String] "mortonHx.TestTriangulation"
+										methodName: [Const:String] "main"
+							[Else:Void] [Call:Void]
+								[Ident:Dynamic] `trace
+								[Const:String] "not reversing"
+								[ObjectDecl:{ methodName : String, lineNumber : Int, fileName : String, className : String }]
+									fileName: [Const:String] "src/mortonHx/TestTriangulation.hx"
+									lineNumber: [Const:Int] 43
+									className: [Const:String] "mortonHx.TestTriangulation"
+									methodName: [Const:String] "main"
+			[Call:Void]
+				[Ident:Dynamic] `trace
+				[Local holes8(13693):Array<mortonHx.ds.EdgeData<Int>>:Array<mortonHx.ds.EdgeData<Int>>]
+				[ObjectDecl:{ methodName : String, lineNumber : Int, fileName : String, className : String }]
+					fileName: [Const:String] "src/mortonHx/TestTriangulation.hx"
+					lineNumber: [Const:Int] 46
+					className: [Const:String] "mortonHx.TestTriangulation"
+					methodName: [Const:String] "main"
+			[Call:Void]
+				[Ident:Dynamic] `trace
+				[Const:String] "MERGING HOLES"
+				[ObjectDecl:{ methodName : String, lineNumber : Int, fileName : String, className : String }]
+					fileName: [Const:String] "src/mortonHx/TestTriangulation.hx"
+					lineNumber: [Const:Int] 47
+					className: [Const:String] "mortonHx.TestTriangulation"
+					methodName: [Const:String] "main"
+			[Var bridger_<13720>:mortonHx.ds.EdgeData<Int>]
+				[Call:Null<mortonHx.ds.EdgeData<Int>>]
+					[Field:(shellEdges : mortonHx.ds.EdgeData<Int>, allHoles : Array<mortonHx.ds.EdgeData<Int>>, ?intersector : Null<Class<mortonHx.lineIntersection.Intersector>>) -> Null<mortonHx.ds.EdgeData<Int>>]
+						[TypeExpr mortonHx.scanLine.Bridger:Class<mortonHx.scanLine.Bridger>]
+						[FStatic:(shellEdges : mortonHx.ds.EdgeData<Int>, allHoles : Array<mortonHx.ds.EdgeData<Int>>, ?intersector : Null<Class<mortonHx.lineIntersection.Intersector>>) -> Null<mortonHx.ds.EdgeData<Int>>]
+							mortonHx.scanLine.Bridger
+							mergeHolesSouth:(shellEdges : mortonHx.ds.EdgeData<Int>, allHoles : Array<mortonHx.ds.EdgeData<Int>>, ?intersector : Null<Class<mortonHx.lineIntersection.Intersector>>) -> Null<mortonHx.ds.EdgeData<Int>>
+					[Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[Local holes8(13693):Array<mortonHx.ds.EdgeData<Int>>:Array<mortonHx.ds.EdgeData<Int>>]
+			[Var minX<13729>(VUsedByTyper):Int]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Binop:Int]
+							[Field:Int]
+								[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+								[FInstance:Int]
+									Array<Int>
+									length:Int
+							>>
+							[Const:Int] 1
+						==
+						[Const:Int] 0
+				[Then:Int] [Binop:Int]
+					[Local minX(13729):Int:Int]
+					=
+					[Cast:Int] [Const:Float] 0.0
+				[Else:Int] [Block:Int]
+					[Var m<13724>(VAssigned):Int]
+						[Array:Int]
+							[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+							[Const:Int] 0
+					[Block:Void]
+						[Var _g<13725>(VAssigned):Int] [Const:Int] 1
+						[Var _g1<13726>:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+									[FInstance:Int]
+										Array<Int>
+										length:Int
+								>>
+								[Const:Int] 1
+						[While:Void]
+							[Parenthesis:Bool]
+								[Binop:Bool]
+									[Local _g(13725):Int:Int]
+									<
+									[Local _g1(13726):Int:Int]
+							[Block:Dynamic]
+								[Var i<13727>:Int]
+									[Unop:Int]
+										++
+										Postfix
+										[Local _g(13725):Int:Int]
+								[Var n<13728>:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Local i(13727):Int:Int]
+											<<
+											[Const:Int] 1
+								[If:Void]
+									[Parenthesis:Bool]
+										[Binop:Bool]
+											[Local n(13728):Int:Int]
+											<
+											[Local m(13724):Int:Int]
+									[Then:Int] [Binop:Int]
+										[Local m(13724):Int:Int]
+										=
+										[Local n(13728):Int:Int]
+					[Binop:Int]
+						[Local minX(13729):Int:Int]
+						=
+						[Local m(13724):Int:Int]
+			[Var minY<13738>(VUsedByTyper):Int]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Binop:Int]
+							[Field:Int]
+								[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+								[FInstance:Int]
+									Array<Int>
+									length:Int
+							>>
+							[Const:Int] 1
+						==
+						[Const:Int] 0
+				[Then:Int] [Binop:Int]
+					[Local minY(13738):Int:Int]
+					=
+					[Cast:Int] [Const:Float] 0.0
+				[Else:Int] [Block:Int]
+					[Var m<13733>(VAssigned):Int]
+						[Array:Int]
+							[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+							[Const:Int] 1
+					[Block:Void]
+						[Var _g<13734>(VAssigned):Int] [Const:Int] 1
+						[Var _g1<13735>:Int]
+							[Binop:Int]
+								[Field:Int]
+									[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+									[FInstance:Int]
+										Array<Int>
+										length:Int
+								>>
+								[Const:Int] 1
+						[While:Void]
+							[Parenthesis:Bool]
+								[Binop:Bool]
+									[Local _g(13734):Int:Int]
+									<
+									[Local _g1(13735):Int:Int]
+							[Block:Dynamic]
+								[Var i<13736>:Int]
+									[Unop:Int]
+										++
+										Postfix
+										[Local _g(13734):Int:Int]
+								[Var n<13737>:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Const:Int] 1
+											+
+											[Parenthesis:Int]
+												[Binop:Int]
+													[Local i(13736):Int:Int]
+													<<
+													[Const:Int] 1
+								[If:Void]
+									[Parenthesis:Bool]
+										[Binop:Bool]
+											[Local n(13737):Int:Int]
+											<
+											[Local m(13733):Int:Int]
+									[Then:Int] [Binop:Int]
+										[Local m(13733):Int:Int]
+										=
+										[Local n(13737):Int:Int]
+					[Binop:Int]
+						[Local minY(13738):Int:Int]
+						=
+						[Local m(13733):Int:Int]
+			[Block:Void]
+				[Var x<13742>:Int]
+					[Unop:Int]
+						-
+						Prefix
+						[Local minX(13729):Int:Int]
+				[Var y<13743>:Int]
+					[Unop:Int]
+						-
+						Prefix
+						[Local minY(13738):Int:Int]
+				[Var j<13744>(VAssigned):Int] [Const:Int] 0
+				[Block:Void]
+					[Var p<21511>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+						[Call:Iterator<mortonHx.ds.Vertex2i<Int>>]
+							[Field:(this : Array<Int>) -> Iterator<mortonHx.ds.Vertex2i<Int>>]
+								[TypeExpr mortonHx.ds._EdgeData.EdgeData_Impl_:Abstract<mortonHx.ds.EdgeData>]
+								[FStatic:(this : Array<Int>) -> Iterator<mortonHx.ds.Vertex2i<Int>>]
+									mortonHx.ds._EdgeData.EdgeData_Impl_
+									iteratorPoints:(this : Array<mortonHx.ds.EdgeData.T>) -> Iterator<mortonHx.ds.Vertex2i<mortonHx.ds.EdgeData.T>>
+							[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[While:Void]
+						[Parenthesis:Bool]
+							[Call:Bool]
+								[Field:() -> Bool]
+									[Local p(21511):Iterator<mortonHx.ds.Vertex2i<Int>>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+									[FAnon:() -> Bool] hasNext:() -> Bool
+						[Block:Dynamic]
+							[Var p1<13745>:mortonHx.ds.Vertex2i<Int>]
+								[Call:mortonHx.ds.Vertex2i<Int>]
+									[Field:() -> mortonHx.ds.Vertex2i<Int>]
+										[Local p(21511):Iterator<mortonHx.ds.Vertex2i<Int>>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+										[FAnon:() -> mortonHx.ds.Vertex2i<Int>] next:() -> mortonHx.ds.Vertex2i<Int>
+							[Block:Void]
+								[Binop:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Local j(13744):Int:Int]
+											<<
+											[Const:Int] 1
+									=
+									[Binop:Int]
+										[Field:Int]
+											[Cast:mortonHx.ds.Vertex2i_<Int>] [Local p1(13745):mortonHx.ds.Vertex2i<Int>:mortonHx.ds.Vertex2i<Int>]
+											[FInstance:Int]
+												mortonHx.ds.Vertex2i_<Int>
+												x:mortonHx.ds.Vertex2i_.T
+										+
+										[Local x(13742):Int:Int]
+								[Binop:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Const:Int] 1
+											+
+											[Parenthesis:Int]
+												[Binop:Int]
+													[Local j(13744):Int:Int]
+													<<
+													[Const:Int] 1
+									=
+									[Binop:Int]
+										[Field:Int]
+											[Cast:mortonHx.ds.Vertex2i_<Int>] [Local p1(13745):mortonHx.ds.Vertex2i<Int>:mortonHx.ds.Vertex2i<Int>]
+											[FInstance:Int]
+												mortonHx.ds.Vertex2i_<Int>
+												y:mortonHx.ds.Vertex2i_.T
+										+
+										[Local y(13743):Int:Int]
+							[Unop:Int]
+								++
+								Prefix
+								[Local j(13744):Int:Int]
+			[Var earcut<13748>(VUsedByTyper):mortonHx.ear.EarCuttingMorton]
+				[New:mortonHx.ear.EarCuttingMorton]
+					mortonHx.ear.EarCuttingMorton
+					[Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[New:mortonHx.pointInTriangle.EdgeFunctionHitInt] mortonHx.pointInTriangle.EdgeFunctionHitInt
+			[Var triangles<13749>(VUsedByTyper):Array<Int>]
 				[Call:Array<Int>]
 					[Field:() -> Array<Int>]
-						[Local earcut(12414):mortonHx.EarCuttingMorton:mortonHx.EarCuttingMorton]
+						[Local earcut(13748):mortonHx.ear.EarCuttingMorton:mortonHx.ear.EarCuttingMorton]
 						[FInstance:() -> Array<Int>]
-							mortonHx.EarCuttingMorton
+							mortonHx.ear.EarCuttingMorton
 							triangulate:() -> Array<Int>
+			[Var a<13752>(VAssigned):Null<Array<Int>>] [Local triangles(13749):Array<Int>:Array<Int>]
+			[If:Void]
+				[Parenthesis:Bool]
+					[Binop:Bool]
+						[Local a(13752):Null<Array<Int>>:Null<Array<Int>>]
+						==
+						[Const:Null<Array<Int>>] null
+				[Then:Null<Array<Int>>] [Binop:Null<Array<Int>>]
+					[Local a(13752):Null<Array<Int>>:Null<Array<Int>>]
+					=
+					[New:Array<Int>] Array<Int>
+			[Var tri<13754>(VUsedByTyper):mortonHx.ds.EdgeData<Int>] [Cast:mortonHx.ds.EdgeData<Int>] [Local a(13752):Null<Array<Int>>:Null<Array<Int>>]
+			[Block:Void]
+				[Var j<13760>(VAssigned):Int] [Const:Int] 0
+				[Block:Void]
+					[Var p<21512>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+						[Call:Iterator<mortonHx.ds.Vertex2i<Int>>]
+							[Field:(this : Array<Int>) -> Iterator<mortonHx.ds.Vertex2i<Int>>]
+								[TypeExpr mortonHx.ds._EdgeData.EdgeData_Impl_:Abstract<mortonHx.ds.EdgeData>]
+								[FStatic:(this : Array<Int>) -> Iterator<mortonHx.ds.Vertex2i<Int>>]
+									mortonHx.ds._EdgeData.EdgeData_Impl_
+									iteratorPoints:(this : Array<mortonHx.ds.EdgeData.T>) -> Iterator<mortonHx.ds.Vertex2i<mortonHx.ds.EdgeData.T>>
+							[Cast:Array<Int>] [Local tri(13754):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[While:Void]
+						[Parenthesis:Bool]
+							[Call:Bool]
+								[Field:() -> Bool]
+									[Local p(21512):Iterator<mortonHx.ds.Vertex2i<Int>>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+									[FAnon:() -> Bool] hasNext:() -> Bool
+						[Block:Dynamic]
+							[Var p1<13761>:mortonHx.ds.Vertex2i<Int>]
+								[Call:mortonHx.ds.Vertex2i<Int>]
+									[Field:() -> mortonHx.ds.Vertex2i<Int>]
+										[Local p(21512):Iterator<mortonHx.ds.Vertex2i<Int>>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+										[FAnon:() -> mortonHx.ds.Vertex2i<Int>] next:() -> mortonHx.ds.Vertex2i<Int>
+							[Block:Void]
+								[Binop:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local tri(13754):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Local j(13760):Int:Int]
+											<<
+											[Const:Int] 1
+									=
+									[Binop:Int]
+										[Field:Int]
+											[Cast:mortonHx.ds.Vertex2i_<Int>] [Local p1(13761):mortonHx.ds.Vertex2i<Int>:mortonHx.ds.Vertex2i<Int>]
+											[FInstance:Int]
+												mortonHx.ds.Vertex2i_<Int>
+												x:mortonHx.ds.Vertex2i_.T
+										+
+										[Local minX(13729):Int:Int]
+								[Binop:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local tri(13754):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Const:Int] 1
+											+
+											[Parenthesis:Int]
+												[Binop:Int]
+													[Local j(13760):Int:Int]
+													<<
+													[Const:Int] 1
+									=
+									[Binop:Int]
+										[Field:Int]
+											[Cast:mortonHx.ds.Vertex2i_<Int>] [Local p1(13761):mortonHx.ds.Vertex2i<Int>:mortonHx.ds.Vertex2i<Int>]
+											[FInstance:Int]
+												mortonHx.ds.Vertex2i_<Int>
+												y:mortonHx.ds.Vertex2i_.T
+										+
+										[Local minY(13738):Int:Int]
+							[Unop:Int]
+								++
+								Prefix
+								[Local j(13760):Int:Int]
 			[Call:Void]
 				[Field:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
 					[TypeExpr mortonHx.TestTriangulation:Class<mortonHx.TestTriangulation>]
 					[FStatic:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
 						mortonHx.TestTriangulation
 						drawGrid:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void
-				[Local ctx(12402):CanvasRenderingContext2D:CanvasRenderingContext2D]
+				[Local ctx(13529):CanvasRenderingContext2D:CanvasRenderingContext2D]
 				[Field:Int]
-					[Local canvas(12398):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(13525):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						width:Int
 				[Field:Int]
-					[Local canvas(12398):HTMLCanvasElement:HTMLCanvasElement]
+					[Local canvas(13525):HTMLCanvasElement:HTMLCanvasElement]
 					[FInstance:Int]
 						HTMLCanvasElement
 						height:Int
@@ -270,28 +2051,90 @@ class mortonHx.TestTriangulation {
 					[FStatic:(ctx : CanvasRenderingContext2D, data : Array<Int>) -> Void]
 						mortonHx.TestTriangulation
 						drawTriangles:(ctx : CanvasRenderingContext2D, data : Array<Int>) -> Void
-				[Local ctx(12402):CanvasRenderingContext2D:CanvasRenderingContext2D]
-				[Local triangles(12415):Array<Int>:Array<Int>]
+				[Local ctx(13529):CanvasRenderingContext2D:CanvasRenderingContext2D]
+				[Local triangles(13749):Array<Int>:Array<Int>]
+			[Block:Void]
+				[Var j<13788>(VAssigned):Int] [Const:Int] 0
+				[Block:Void]
+					[Var p<21513>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+						[Call:Iterator<mortonHx.ds.Vertex2i<Int>>]
+							[Field:(this : Array<Int>) -> Iterator<mortonHx.ds.Vertex2i<Int>>]
+								[TypeExpr mortonHx.ds._EdgeData.EdgeData_Impl_:Abstract<mortonHx.ds.EdgeData>]
+								[FStatic:(this : Array<Int>) -> Iterator<mortonHx.ds.Vertex2i<Int>>]
+									mortonHx.ds._EdgeData.EdgeData_Impl_
+									iteratorPoints:(this : Array<mortonHx.ds.EdgeData.T>) -> Iterator<mortonHx.ds.Vertex2i<mortonHx.ds.EdgeData.T>>
+							[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+					[While:Void]
+						[Parenthesis:Bool]
+							[Call:Bool]
+								[Field:() -> Bool]
+									[Local p(21513):Iterator<mortonHx.ds.Vertex2i<Int>>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+									[FAnon:() -> Bool] hasNext:() -> Bool
+						[Block:Dynamic]
+							[Var p1<13789>:mortonHx.ds.Vertex2i<Int>]
+								[Call:mortonHx.ds.Vertex2i<Int>]
+									[Field:() -> mortonHx.ds.Vertex2i<Int>]
+										[Local p(21513):Iterator<mortonHx.ds.Vertex2i<Int>>:Iterator<mortonHx.ds.Vertex2i<Int>>]
+										[FAnon:() -> mortonHx.ds.Vertex2i<Int>] next:() -> mortonHx.ds.Vertex2i<Int>
+							[Block:Void]
+								[Binop:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Local j(13788):Int:Int]
+											<<
+											[Const:Int] 1
+									=
+									[Binop:Int]
+										[Field:Int]
+											[Cast:mortonHx.ds.Vertex2i_<Int>] [Local p1(13789):mortonHx.ds.Vertex2i<Int>:mortonHx.ds.Vertex2i<Int>]
+											[FInstance:Int]
+												mortonHx.ds.Vertex2i_<Int>
+												x:mortonHx.ds.Vertex2i_.T
+										+
+										[Local minX(13729):Int:Int]
+								[Binop:Int]
+									[Array:Int]
+										[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+										[Binop:Int]
+											[Const:Int] 1
+											+
+											[Parenthesis:Int]
+												[Binop:Int]
+													[Local j(13788):Int:Int]
+													<<
+													[Const:Int] 1
+									=
+									[Binop:Int]
+										[Field:Int]
+											[Cast:mortonHx.ds.Vertex2i_<Int>] [Local p1(13789):mortonHx.ds.Vertex2i<Int>:mortonHx.ds.Vertex2i<Int>]
+											[FInstance:Int]
+												mortonHx.ds.Vertex2i_<Int>
+												y:mortonHx.ds.Vertex2i_.T
+										+
+										[Local minY(13738):Int:Int]
+							[Unop:Int]
+								++
+								Prefix
+								[Local j(13788):Int:Int]
 			[Call:Void]
-				[Field:(ctx : CanvasRenderingContext2D, points : Array<Float>) -> Void]
+				[Field:(ctx : CanvasRenderingContext2D, points : Array<Int>, color : Int, thick : Int) -> Void]
 					[TypeExpr mortonHx.TestTriangulation:Class<mortonHx.TestTriangulation>]
-					[FStatic:(ctx : CanvasRenderingContext2D, points : Array<Float>) -> Void]
+					[FStatic:(ctx : CanvasRenderingContext2D, points : Array<Int>, color : Int, thick : Int) -> Void]
 						mortonHx.TestTriangulation
-						drawOutline:(ctx : CanvasRenderingContext2D, points : Array<Float>) -> Void
-				[Local ctx(12402):CanvasRenderingContext2D:CanvasRenderingContext2D]
-				[Field:Array<Float>]
-					[TypeExpr mortonHx.TestTriangulation:Class<mortonHx.TestTriangulation>]
-					[FStatic:Array<Float>]
-						mortonHx.TestTriangulation
-						test1:Array<Float>
+						drawOutline:(ctx : CanvasRenderingContext2D, points : Array<Int>, color : Int, thick : Int) -> Void
+				[Local ctx(13529):CanvasRenderingContext2D:CanvasRenderingContext2D]
+				[Cast:Array<Int>] [Local points(13548):mortonHx.ds.EdgeData<Int>:mortonHx.ds.EdgeData<Int>]
+				[Const:Int] 16711680
+				[Const:Int] 2
 
 	static function drawTriangles[Function:(ctx : CanvasRenderingContext2D, data : Array<Int>) -> Void]
-		[Arg ctx<12432>(VUsedByTyper):CanvasRenderingContext2D]
-		[Arg data<12433>(VUsedByTyper):Array<Int>]
+		[Arg ctx<13780>(VUsedByTyper):CanvasRenderingContext2D]
+		[Arg data<13781>(VUsedByTyper):Array<Int>]
 		[Block:Void]
 			[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 				[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
-					[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 						CanvasRenderingContext2D
 						strokeStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
@@ -299,90 +2142,90 @@ class mortonHx.TestTriangulation {
 				[Const:String] "rgba(0, 0, 255, 0.5)"
 			[Binop:Float]
 				[Field:Float]
-					[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:Float]
 						CanvasRenderingContext2D
 						lineWidth:Float
 				=
 				[Const:Int] 1
-			[Var i<12434>(VUsedByTyper VAssigned):Int] [Const:Int] 0
+			[Var i<13782>(VUsedByTyper VAssigned):Int] [Const:Int] 0
 			[While:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local i(12434):Int:Int]
+						[Local i(13782):Int:Int]
 						<
 						[Field:Int]
-							[Local data(12433):Array<Int>:Array<Int>]
+							[Local data(13781):Array<Int>:Array<Int>]
 							[FInstance:Int]
 								Array<Int>
 								length:Int
 				[Block:Dynamic]
 					[Call:Void]
 						[Field:() -> Void]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:() -> Void]
 								CanvasRenderingContext2D
 								beginPath:() -> Void
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								moveTo:(x : Float, y : Float) -> Void
 						[Array:Int]
-							[Local data(12433):Array<Int>:Array<Int>]
-							[Local i(12434):Int:Int]
+							[Local data(13781):Array<Int>:Array<Int>]
+							[Local i(13782):Int:Int]
 						[Array:Int]
-							[Local data(12433):Array<Int>:Array<Int>]
+							[Local data(13781):Array<Int>:Array<Int>]
 							[Binop:Int]
-								[Local i(12434):Int:Int]
+								[Local i(13782):Int:Int]
 								+
 								[Const:Int] 1
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								lineTo:(x : Float, y : Float) -> Void
 						[Array:Int]
-							[Local data(12433):Array<Int>:Array<Int>]
+							[Local data(13781):Array<Int>:Array<Int>]
 							[Binop:Int]
-								[Local i(12434):Int:Int]
+								[Local i(13782):Int:Int]
 								+
 								[Const:Int] 2
 						[Array:Int]
-							[Local data(12433):Array<Int>:Array<Int>]
+							[Local data(13781):Array<Int>:Array<Int>]
 							[Binop:Int]
-								[Local i(12434):Int:Int]
+								[Local i(13782):Int:Int]
 								+
 								[Const:Int] 3
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								lineTo:(x : Float, y : Float) -> Void
 						[Array:Int]
-							[Local data(12433):Array<Int>:Array<Int>]
+							[Local data(13781):Array<Int>:Array<Int>]
 							[Binop:Int]
-								[Local i(12434):Int:Int]
+								[Local i(13782):Int:Int]
 								+
 								[Const:Int] 4
 						[Array:Int]
-							[Local data(12433):Array<Int>:Array<Int>]
+							[Local data(13781):Array<Int>:Array<Int>]
 							[Binop:Int]
-								[Local i(12434):Int:Int]
+								[Local i(13782):Int:Int]
 								+
 								[Const:Int] 5
 					[Call:Void]
 						[Field:() -> Void]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:() -> Void]
 								CanvasRenderingContext2D
 								closePath:() -> Void
 					[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 						[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 								CanvasRenderingContext2D
 								fillStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
@@ -390,134 +2233,146 @@ class mortonHx.TestTriangulation {
 						[Const:String] "rgba(100, 150, 255, 0.2)"
 					[Call:Void]
 						[Field:(?winding : js.html.CanvasWindingRule) -> Void]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(?winding : js.html.CanvasWindingRule) -> Void]
 								CanvasRenderingContext2D
 								fill:(?winding : js.html.CanvasWindingRule) -> Void
 					[Call:Void]
 						[Field:() -> Void]
-							[Local ctx(12432):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13780):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:() -> Void]
 								CanvasRenderingContext2D
 								stroke:() -> Void
 					[Binop:Int]
-						[Local i(12434):Int:Int]
+						[Local i(13782):Int:Int]
 						+=
 						[Const:Int] 6
 
-	static function drawOutline[Function:(ctx : CanvasRenderingContext2D, points : Array<Float>) -> Void]
-		[Arg ctx<12435>(VUsedByTyper):CanvasRenderingContext2D]
-		[Arg points<12436>(VUsedByTyper):Array<Float>]
+	static function drawOutline[Function:(ctx : CanvasRenderingContext2D, points : Array<Int>, color : Int, thick : Int) -> Void]
+		[Arg ctx<13792>(VUsedByTyper):CanvasRenderingContext2D]
+		[Arg points<13793>(VUsedByTyper):Array<Int>]
+		[Arg color<13794>(VUsedByTyper):Int]
+		[Arg thick<13795>(VUsedByTyper):Int]
 		[Block:Void]
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(12435):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13792):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						beginPath:() -> Void
 			[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 				[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
-					[Local ctx(12435):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13792):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 						CanvasRenderingContext2D
 						strokeStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
 				=
-				[Const:String] "#FF0000"
+				[Binop:String]
+					[Const:String] "#"
+					+
+					[Call:String]
+						[Field:(n : Int, ?digits : Null<Int>) -> String]
+							[TypeExpr StringTools:Class<StringTools>]
+							[FStatic:(n : Int, ?digits : Null<Int>) -> String]
+								StringTools
+								hex:(n : Int, ?digits : Null<Int>) -> String
+						[Local color(13794):Int:Int]
+						[Const:Int] 6
 			[Binop:Float]
 				[Field:Float]
-					[Local ctx(12435):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13792):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:Float]
 						CanvasRenderingContext2D
 						lineWidth:Float
 				=
-				[Const:Int] 2
+				[Local thick(13795):Int:Int]
 			[Call:Void]
 				[Field:(x : Float, y : Float) -> Void]
-					[Local ctx(12435):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13792):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:(x : Float, y : Float) -> Void]
 						CanvasRenderingContext2D
 						moveTo:(x : Float, y : Float) -> Void
-				[Array:Float]
-					[Local points(12436):Array<Float>:Array<Float>]
+				[Array:Int]
+					[Local points(13793):Array<Int>:Array<Int>]
 					[Const:Int] 0
-				[Array:Float]
-					[Local points(12436):Array<Float>:Array<Float>]
+				[Array:Int]
+					[Local points(13793):Array<Int>:Array<Int>]
 					[Const:Int] 1
-			[Var i<12437>(VUsedByTyper VAssigned):Int] [Const:Int] 2
+			[Var i<13796>(VUsedByTyper VAssigned):Int] [Const:Int] 2
 			[While:Void]
 				[Parenthesis:Bool]
 					[Binop:Bool]
-						[Local i(12437):Int:Int]
+						[Local i(13796):Int:Int]
 						<
 						[Field:Int]
-							[Local points(12436):Array<Float>:Array<Float>]
+							[Local points(13793):Array<Int>:Array<Int>]
 							[FInstance:Int]
-								Array<Float>
+								Array<Int>
 								length:Int
 				[Block:Dynamic]
 					[Call:Void]
 						[Field:(x : Float, y : Float) -> Void]
-							[Local ctx(12435):CanvasRenderingContext2D:CanvasRenderingContext2D]
+							[Local ctx(13792):CanvasRenderingContext2D:CanvasRenderingContext2D]
 							[FInstance:(x : Float, y : Float) -> Void]
 								CanvasRenderingContext2D
 								lineTo:(x : Float, y : Float) -> Void
-						[Array:Float]
-							[Local points(12436):Array<Float>:Array<Float>]
-							[Local i(12437):Int:Int]
-						[Array:Float]
-							[Local points(12436):Array<Float>:Array<Float>]
+						[Array:Int]
+							[Local points(13793):Array<Int>:Array<Int>]
+							[Local i(13796):Int:Int]
+						[Array:Int]
+							[Local points(13793):Array<Int>:Array<Int>]
 							[Binop:Int]
-								[Local i(12437):Int:Int]
+								[Local i(13796):Int:Int]
 								+
 								[Const:Int] 1
 					[Binop:Int]
-						[Local i(12437):Int:Int]
+						[Local i(13796):Int:Int]
 						+=
 						[Const:Int] 2
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(12435):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13792):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						closePath:() -> Void
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(12435):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13792):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						stroke:() -> Void
 
 	static function drawGrid[Function:(ctx : CanvasRenderingContext2D, width : Int, height : Int, step : Int) -> Void]
-		[Arg ctx<12416>(VUsedByTyper):CanvasRenderingContext2D]
-		[Arg width<12417>(VUsedByTyper):Int]
-		[Arg height<12418>(VUsedByTyper):Int]
-		[Arg step<12419>(VUsedByTyper):Int]
+		[Arg ctx<13764>(VUsedByTyper):CanvasRenderingContext2D]
+		[Arg width<13765>(VUsedByTyper):Int]
+		[Arg height<13766>(VUsedByTyper):Int]
+		[Arg step<13767>(VUsedByTyper):Int]
 		[Block:Void]
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(12416):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13764):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						beginPath:() -> Void
 			[Binop:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 				[Field:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
-					[Local ctx(12416):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13764):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>]
 						CanvasRenderingContext2D
 						strokeStyle:haxe.extern.EitherType<String, haxe.extern.EitherType<CanvasGradient, CanvasPattern>>
 				=
 				[Const:String] "#EEEEEE"
 			[Block:Void]
-				[Var _g<12424>(VAssigned):Int] [Const:Int] 0
-				[Var _g1<12425>:Int]
+				[Var _g<13772>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13773>:Int]
 					[Binop:Int]
 						[Parenthesis:Int]
 							[Binop:Int]
 								[Cast:Int]
 									[Binop:Float]
-										[Local width(12417):Int:Int]
+										[Local width(13765):Int:Int]
 										/
-										[Local step(12419):Int:Int]
+										[Local step(13767):Int:Int]
 								|
 								[Const:Int] 0
 						+
@@ -525,48 +2380,48 @@ class mortonHx.TestTriangulation {
 				[While:Void]
 					[Parenthesis:Bool]
 						[Binop:Bool]
-							[Local _g(12424):Int:Int]
+							[Local _g(13772):Int:Int]
 							<
-							[Local _g1(12425):Int:Int]
+							[Local _g1(13773):Int:Int]
 					[Block:Dynamic]
-						[Var x<12423>(VUsedByTyper):Int]
+						[Var x<13771>(VUsedByTyper):Int]
 							[Unop:Int]
 								++
 								Postfix
-								[Local _g(12424):Int:Int]
+								[Local _g(13772):Int:Int]
 						[Call:Void]
 							[Field:(x : Float, y : Float) -> Void]
-								[Local ctx(12416):CanvasRenderingContext2D:CanvasRenderingContext2D]
+								[Local ctx(13764):CanvasRenderingContext2D:CanvasRenderingContext2D]
 								[FInstance:(x : Float, y : Float) -> Void]
 									CanvasRenderingContext2D
 									moveTo:(x : Float, y : Float) -> Void
 							[Binop:Int]
-								[Local x(12423):Int:Int]
+								[Local x(13771):Int:Int]
 								*
-								[Local step(12419):Int:Int]
+								[Local step(13767):Int:Int]
 							[Const:Int] 0
 						[Call:Void]
 							[Field:(x : Float, y : Float) -> Void]
-								[Local ctx(12416):CanvasRenderingContext2D:CanvasRenderingContext2D]
+								[Local ctx(13764):CanvasRenderingContext2D:CanvasRenderingContext2D]
 								[FInstance:(x : Float, y : Float) -> Void]
 									CanvasRenderingContext2D
 									lineTo:(x : Float, y : Float) -> Void
 							[Binop:Int]
-								[Local x(12423):Int:Int]
+								[Local x(13771):Int:Int]
 								*
-								[Local step(12419):Int:Int]
-							[Local height(12418):Int:Int]
+								[Local step(13767):Int:Int]
+							[Local height(13766):Int:Int]
 			[Block:Void]
-				[Var _g<12430>(VAssigned):Int] [Const:Int] 0
-				[Var _g1<12431>:Int]
+				[Var _g<13778>(VAssigned):Int] [Const:Int] 0
+				[Var _g1<13779>:Int]
 					[Binop:Int]
 						[Parenthesis:Int]
 							[Binop:Int]
 								[Cast:Int]
 									[Binop:Float]
-										[Local height(12418):Int:Int]
+										[Local height(13766):Int:Int]
 										/
-										[Local step(12419):Int:Int]
+										[Local step(13767):Int:Int]
 								|
 								[Const:Int] 0
 						+
@@ -574,40 +2429,40 @@ class mortonHx.TestTriangulation {
 				[While:Void]
 					[Parenthesis:Bool]
 						[Binop:Bool]
-							[Local _g(12430):Int:Int]
+							[Local _g(13778):Int:Int]
 							<
-							[Local _g1(12431):Int:Int]
+							[Local _g1(13779):Int:Int]
 					[Block:Dynamic]
-						[Var y<12429>(VUsedByTyper):Int]
+						[Var y<13777>(VUsedByTyper):Int]
 							[Unop:Int]
 								++
 								Postfix
-								[Local _g(12430):Int:Int]
+								[Local _g(13778):Int:Int]
 						[Call:Void]
 							[Field:(x : Float, y : Float) -> Void]
-								[Local ctx(12416):CanvasRenderingContext2D:CanvasRenderingContext2D]
+								[Local ctx(13764):CanvasRenderingContext2D:CanvasRenderingContext2D]
 								[FInstance:(x : Float, y : Float) -> Void]
 									CanvasRenderingContext2D
 									moveTo:(x : Float, y : Float) -> Void
 							[Const:Int] 0
 							[Binop:Int]
-								[Local y(12429):Int:Int]
+								[Local y(13777):Int:Int]
 								*
-								[Local step(12419):Int:Int]
+								[Local step(13767):Int:Int]
 						[Call:Void]
 							[Field:(x : Float, y : Float) -> Void]
-								[Local ctx(12416):CanvasRenderingContext2D:CanvasRenderingContext2D]
+								[Local ctx(13764):CanvasRenderingContext2D:CanvasRenderingContext2D]
 								[FInstance:(x : Float, y : Float) -> Void]
 									CanvasRenderingContext2D
 									lineTo:(x : Float, y : Float) -> Void
-							[Local width(12417):Int:Int]
+							[Local width(13765):Int:Int]
 							[Binop:Int]
-								[Local y(12429):Int:Int]
+								[Local y(13777):Int:Int]
 								*
-								[Local step(12419):Int:Int]
+								[Local step(13767):Int:Int]
 			[Call:Void]
 				[Field:() -> Void]
-					[Local ctx(12416):CanvasRenderingContext2D:CanvasRenderingContext2D]
+					[Local ctx(13764):CanvasRenderingContext2D:CanvasRenderingContext2D]
 					[FInstance:() -> Void]
 						CanvasRenderingContext2D
 						stroke:() -> Void

@@ -2,7 +2,13 @@
 extern class Math {
 
 	@:pure
+	static function abs(v:Float):Float;
+
+	@:pure
 	static function ceil(v:Float):Int;
+
+	@:pure
+	static function sqrt(v:Float):Float;
 
 	static function __init__() [Call:Unknown<1>]
 		[Ident:(String, Class<Math>) -> Unknown<0>] __feature__

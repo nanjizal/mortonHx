@@ -1,4 +1,4 @@
-@:realPath("js.lib.Float32Array") @:native("Float32Array")
+@:realPath("js.lib.Float32Array") @:directlyUsed @:native("Float32Array")
 extern class Float32Array implements js.lib.ArrayBufferView implements ArrayAccess<Float> {
 
 	@:pure

@@ -12,6 +12,20 @@ Std.__name__ = "Std";
 Std.string = function(s) {
 	return js_Boot.__string_rec(s,"");
 };
+var StringTools = function() { };
+StringTools.__name__ = "StringTools";
+StringTools.hex = function(n,digits) {
+	var s = "";
+	var hexChars = "0123456789ABCDEF";
+	do {
+		s = hexChars.charAt(n & 15) + s;
+		n >>>= 4;
+	} while(n > 0);
+	if(digits != null) {
+		while(s.length < digits) s = "0" + s;
+	}
+	return s;
+};
 var haxe_Exception = function(message,previous,native) {
 	Error.call(this,message);
 	this.message = message;
@@ -239,24 +253,571 @@ js_Boot.__isNativeObj = function(o) {
 js_Boot.__resolveNativeClass = function(name) {
 	return $global[name];
 };
-var mortonHx_EarCuttingMorton = function(points,pointHit) {
-	this.pointHit = pointHit == null ? new mortonHx_EdgeFunctionHitInt() : pointHit;
-	if(!mortonHx_EarCuttingMorton.isCounterClockwise(points)) {
+var mortonHx_TestTriangulation = function() { };
+mortonHx_TestTriangulation.__name__ = "mortonHx.TestTriangulation";
+mortonHx_TestTriangulation.main = function() {
+	var canvas = window.document.createElement("canvas");
+	canvas.width = 800;
+	canvas.height = 600;
+	var ctx = canvas.getContext("2d",null);
+	window.document.body.appendChild(canvas);
+	var arr = mortonHx_TestTriangulation.test1;
+	var scale = 1;
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * 0 | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var points = a;
+	var arr = mortonHx_TestData_hole1;
+	var scale = 1;
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * 0 | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes = a;
+	var arr = mortonHx_TestData_hole2;
+	var scale = 1;
+	var dx = 50;
+	if(dx == null) {
+		dx = 0;
+	}
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * dx | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes1 = a;
+	var arr = mortonHx_TestData_hole5;
+	var scale = 1;
+	var dx = 0;
+	var dy = 0;
+	if(dy == null) {
+		dy = 0;
+	}
+	if(dx == null) {
+		dx = 0;
+	}
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * dx | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes2 = a;
+	var arr = mortonHx_TestData_hole5;
+	var scale = 1;
+	var dx = -30;
+	var dy = 0;
+	if(dy == null) {
+		dy = 0;
+	}
+	if(dx == null) {
+		dx = 0;
+	}
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * dx | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes3 = a;
+	var arr = mortonHx_TestData_hole6;
+	var scale = 1;
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * 0 | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes4 = a;
+	var arr = mortonHx_TestData_hole7;
+	var scale = 1;
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * 0 | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes5 = a;
+	var arr = mortonHx_TestData_hole8;
+	var scale = 1;
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * 0 | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes6 = a;
+	var arr = mortonHx_TestData_hole9;
+	var scale = 1;
+	var dx = -10;
+	var dy = -10;
+	if(dy == null) {
+		dy = 0;
+	}
+	if(dx == null) {
+		dx = 0;
+	}
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * dx | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes7 = a;
+	var arr = mortonHx_TestData_hole10;
+	var scale = 1;
+	var dx = 0;
+	var dy = -40;
+	if(dy == null) {
+		dy = 0;
+	}
+	if(dx == null) {
+		dx = 0;
+	}
+	if(scale == null) {
+		scale = 1;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		p[j] = arr[base] * scale + scale * dx | 0;
+		++j;
+		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var holes8 = [holes,holes1,holes2,holes3,holes4,holes5,holes6,holes7,a];
+	var _g = 0;
+	while(_g < holes8.length) {
+		var hole = holes8[_g];
+		++_g;
+		var area = 0;
+		var len = hole.length >> 1;
+		var tmp;
+		if(len < 3) {
+			tmp = false;
+		} else {
+			var EPSILON = 1e-9;
+			var _g1 = 0;
+			var _g2 = len;
+			while(_g1 < _g2) {
+				var i = _g1++;
+				var j = (i + 1) % len;
+				area += hole[i << 1] * hole[1 + (j << 1)] - hole[j << 1] * hole[1 + (i << 1)];
+			}
+			tmp = Math.abs(area) < EPSILON ? false : area < 0;
+		}
+		if(!tmp) {
+			var len1 = hole.length;
+			var half = len1 >> 2;
+			var a;
+			var b;
+			var _g3 = 0;
+			var _g4 = half;
+			while(_g3 < _g4) {
+				var i1 = _g3++;
+				a = i1 << 1;
+				b = len1 - 2 - a;
+				var temp = hole[a];
+				hole[a] = hole[b];
+				hole[b] = temp;
+				var a1 = a + 1;
+				var b1 = b + 1;
+				var temp1 = hole[a1];
+				hole[a1] = hole[b1];
+				hole[b1] = temp1;
+			}
+			console.log("src/mortonHx/TestTriangulation.hx:41:","reversing");
+		} else {
+			console.log("src/mortonHx/TestTriangulation.hx:43:","not reversing");
+		}
+	}
+	console.log("src/mortonHx/TestTriangulation.hx:46:",holes8);
+	console.log("src/mortonHx/TestTriangulation.hx:47:","MERGING HOLES");
+	var bridger_ = mortonHx_scanLine_Bridger.mergeHolesSouth(points,holes8);
+	var minX;
+	if(points.length >> 1 == 0) {
+		minX = 0.0;
+	} else {
+		var m = points[0];
+		var _g = 1;
+		var _g1 = points.length >> 1;
+		while(_g < _g1) {
+			var i = _g++;
+			var n = points[i << 1];
+			if(n < m) {
+				m = n;
+			}
+		}
+		minX = m;
+	}
+	var minY;
+	if(points.length >> 1 == 0) {
+		minY = 0.0;
+	} else {
+		var m = points[1];
+		var _g = 1;
+		var _g1 = points.length >> 1;
+		while(_g < _g1) {
+			var i = _g++;
+			var n = points[1 + (i << 1)];
+			if(n < m) {
+				m = n;
+			}
+		}
+		minY = m;
+	}
+	var x = -minX;
+	var y = -minY;
+	var j = 0;
+	var p = mortonHx_ds_EdgeData.iteratorPoints(points);
+	while(p.hasNext()) {
+		var p1 = p.next();
+		points[j << 1] = p1.x + x;
+		points[1 + (j << 1)] = p1.y + y;
+		++j;
+	}
+	var earcut = new mortonHx_ear_EarCuttingMorton(points,new mortonHx_pointInTriangle_EdgeFunctionHitInt());
+	var triangles = earcut.triangulate();
+	var a = triangles;
+	if(a == null) {
+		a = [];
+	}
+	var tri = a;
+	var j = 0;
+	var p = mortonHx_ds_EdgeData.iteratorPoints(tri);
+	while(p.hasNext()) {
+		var p1 = p.next();
+		tri[j << 1] = p1.x + minX;
+		tri[1 + (j << 1)] = p1.y + minY;
+		++j;
+	}
+	mortonHx_TestTriangulation.drawGrid(ctx,canvas.width,canvas.height,40);
+	mortonHx_TestTriangulation.drawTriangles(ctx,triangles);
+	var j = 0;
+	var p = mortonHx_ds_EdgeData.iteratorPoints(points);
+	while(p.hasNext()) {
+		var p1 = p.next();
+		points[j << 1] = p1.x + minX;
+		points[1 + (j << 1)] = p1.y + minY;
+		++j;
+	}
+	mortonHx_TestTriangulation.drawOutline(ctx,points,16711680,2);
+};
+mortonHx_TestTriangulation.drawTriangles = function(ctx,data) {
+	ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+	ctx.lineWidth = 1;
+	var i = 0;
+	while(i < data.length) {
+		ctx.beginPath();
+		ctx.moveTo(data[i],data[i + 1]);
+		ctx.lineTo(data[i + 2],data[i + 3]);
+		ctx.lineTo(data[i + 4],data[i + 5]);
+		ctx.closePath();
+		ctx.fillStyle = "rgba(100, 150, 255, 0.2)";
+		ctx.fill();
+		ctx.stroke();
+		i += 6;
+	}
+};
+mortonHx_TestTriangulation.drawOutline = function(ctx,points,color,thick) {
+	ctx.beginPath();
+	ctx.strokeStyle = "#" + StringTools.hex(color,6);
+	ctx.lineWidth = thick;
+	ctx.moveTo(points[0],points[1]);
+	var i = 2;
+	while(i < points.length) {
+		ctx.lineTo(points[i],points[i + 1]);
+		i += 2;
+	}
+	ctx.closePath();
+	ctx.stroke();
+};
+mortonHx_TestTriangulation.drawGrid = function(ctx,width,height,step) {
+	ctx.beginPath();
+	ctx.strokeStyle = "#EEEEEE";
+	var _g = 0;
+	var _g1 = (width / step | 0) + 1;
+	while(_g < _g1) {
+		var x = _g++;
+		ctx.moveTo(x * step,0);
+		ctx.lineTo(x * step,height);
+	}
+	var _g = 0;
+	var _g1 = (height / step | 0) + 1;
+	while(_g < _g1) {
+		var y = _g++;
+		ctx.moveTo(0,y * step);
+		ctx.lineTo(width,y * step);
+	}
+	ctx.stroke();
+};
+var mortonHx_ds_Edge = function(ax,ay,bx,by) {
+	this.ax = ax;
+	this.ay = ay;
+	this.bx = bx;
+	this.by = by;
+};
+mortonHx_ds_Edge.__name__ = "mortonHx.ds.Edge";
+mortonHx_ds_Edge.prototype = {
+	__class__: mortonHx_ds_Edge
+};
+var mortonHx_ds_EdgeData = {};
+mortonHx_ds_EdgeData.iteratorPoints = function(this1) {
+	var i = 0;
+	var data = this1;
+	var totalPoints = data.length >> 1;
+	return { hasNext : function() {
+		return i < totalPoints;
+	}, next : function() {
+		var px = data[i << 1];
+		var py = data[(i << 1) + 1];
+		i += 1;
+		return new mortonHx_ds_Vertex2i_$(px,py);
+	}};
+};
+mortonHx_ds_EdgeData.maxYindex = function(this1) {
+	if(this1.length >> 1 <= 1) {
+		return 0;
+	}
+	var m = this1[1];
+	var idx = 0;
+	var _g = 1;
+	var _g1 = this1.length >> 1;
+	while(_g < _g1) {
+		var i = _g++;
+		var n = this1[1 + (i << 1)];
+		if(n > m) {
+			m = n;
+			idx = i;
+		}
+	}
+	return idx;
+};
+mortonHx_ds_EdgeData.replaceRange = function(this1,pos,len,arr) {
+	this1.splice(pos,len);
+	var i = arr.length;
+	while(i-- > 0) this1.splice(pos,0,arr[i]);
+};
+var mortonHx_ds_SortableArray = {};
+mortonHx_ds_SortableArray.findStartIndex = function(this1,target) {
+	var low = 0;
+	var high = this1.length;
+	while(low < high) {
+		var mid = low + high >>> 1;
+		if(this1[mid] < target) {
+			low = mid + 1;
+		} else {
+			high = mid;
+		}
+	}
+	return low;
+};
+mortonHx_ds_SortableArray.findEndIndexFrom = function(this1,target,startLow) {
+	var low = startLow;
+	var high = this1.length;
+	while(low < high) {
+		var mid = low + high >>> 1;
+		if(this1[mid] <= target) {
+			low = mid + 1;
+		} else {
+			high = mid;
+		}
+	}
+	return low;
+};
+var mortonHx_ds_Vertex2i_$ = function(x,y) {
+	this.x = x;
+	this.y = y;
+};
+mortonHx_ds_Vertex2i_$.__name__ = "mortonHx.ds.Vertex2i_";
+mortonHx_ds_Vertex2i_$.prototype = {
+	__class__: mortonHx_ds_Vertex2i_$
+};
+var mortonHx_ear_EarCuttingMorton = function(points,pointHit) {
+	this.pointHit = pointHit == null ? new mortonHx_pointInTriangle_EdgeFunctionHitInt() : pointHit;
+	var area = 0;
+	var len = points.length >> 1;
+	var tmp;
+	if(len < 3) {
+		tmp = false;
+	} else {
+		var EPSILON = 1e-9;
+		var _g = 0;
+		var _g1 = len;
+		while(_g < _g1) {
+			var i = _g++;
+			var j = (i + 1) % len;
+			area += points[i << 1] * points[1 + (j << 1)] - points[j << 1] * points[1 + (i << 1)];
+		}
+		tmp = Math.abs(area) < EPSILON ? false : area < 0;
+	}
+	if(tmp) {
 		points.reverse();
 	}
+	this.edges = points;
 	this.points = points;
 	var _g = [];
-	var _g1 = 0;
-	while(_g1 < points.length) {
-		var p = points[_g1];
-		++_g1;
-		var v = p.y;
+	var p = mortonHx_ds_EdgeData.iteratorPoints(points);
+	while(p.hasNext()) {
+		var p1 = p.next();
+		var v = p1.y;
 		v &= 65535;
 		v = (v ^ v << 8) & 16711935;
 		v = (v ^ v << 4) & 252645135;
 		v = (v ^ v << 2) & 858993459;
 		v = (v ^ v << 1) & 1431655765;
-		var v1 = p.x;
+		var v1 = p1.x;
 		v1 &= 65535;
 		v1 = (v1 ^ v1 << 8) & 16711935;
 		v1 = (v1 ^ v1 << 4) & 252645135;
@@ -296,19 +857,8 @@ var mortonHx_EarCuttingMorton = function(points,pointHit) {
 		this1[i] = temp[order[i]];
 	}
 };
-mortonHx_EarCuttingMorton.__name__ = "mortonHx.EarCuttingMorton";
-mortonHx_EarCuttingMorton.isCounterClockwise = function(p) {
-	var area = 0;
-	var _g = 0;
-	var _g1 = p.length;
-	while(_g < _g1) {
-		var i = _g++;
-		var j = (i + 1) % p.length;
-		area += js_Boot.__cast(p[i].x , Float) * p[j].y - js_Boot.__cast(p[j].x , Float) * p[i].y;
-	}
-	return area > 0;
-};
-mortonHx_EarCuttingMorton.isInRange = function(pCode,v1Code,minCode,maxCode) {
+mortonHx_ear_EarCuttingMorton.__name__ = "mortonHx.ear.EarCuttingMorton";
+mortonHx_ear_EarCuttingMorton.isInRange = function(pCode,v1Code,minCode,maxCode) {
 	var diff = minCode ^ maxCode;
 	if(diff == 0) {
 		return pCode == v1Code;
@@ -322,7 +872,7 @@ mortonHx_EarCuttingMorton.isInRange = function(pCode,v1Code,minCode,maxCode) {
 	var mask = ~v;
 	return (pCode & mask) == (v1Code & mask);
 };
-mortonHx_EarCuttingMorton.prototype = {
+mortonHx_ear_EarCuttingMorton.prototype = {
 	pointsInTriangle: function(ax,ay,bx,by,cx,cy) {
 		this.pointHit.prepare(ax,ay,bx,by,cx,cy);
 		var v = ay;
@@ -368,14 +918,14 @@ mortonHx_EarCuttingMorton.prototype = {
 		var minCode = v1Code < b ? v1Code : b;
 		var b = v2Code > v3Code ? v2Code : v3Code;
 		var maxCode = v1Code > b ? v1Code : b;
-		var start = mortonHx_SortableArray.findStartIndex(this.sortableArr,minCode);
-		var end = mortonHx_SortableArray.findEndIndexFrom(this.sortableArr,maxCode,start);
+		var start = mortonHx_ds_SortableArray.findStartIndex(this.sortableArr,minCode);
+		var end = mortonHx_ds_SortableArray.findEndIndexFrom(this.sortableArr,maxCode,start);
 		var _g = start;
 		var _g1 = end;
 		while(_g < _g1) {
 			var i = _g++;
 			var p = this.sortableArr[i];
-			if(!mortonHx_EarCuttingMorton.isInRange(p,v1Code,minCode,maxCode)) {
+			if(!mortonHx_ear_EarCuttingMorton.isInRange(p,v1Code,minCode,maxCode)) {
 				continue;
 			}
 			if(p == v1Code || p == v2Code || p == v3Code) {
@@ -393,9 +943,8 @@ mortonHx_EarCuttingMorton.prototype = {
 			j1 = (j1 ^ j1 >> 2) & 252645135;
 			j1 = (j1 ^ j1 >> 4) & 16711935;
 			j1 = (j1 ^ j1 >> 8) & 65535;
-			var decode_x = j;
-			var decode_y = j1;
-			if(this.pointHit.hitCheck(decode_x,decode_y)) {
+			var decode = new mortonHx_ds_Vertex2i_$(j,j1);
+			if(this.pointHit.hitCheck(decode.x,decode.y)) {
 				return true;
 			}
 		}
@@ -403,24 +952,22 @@ mortonHx_EarCuttingMorton.prototype = {
 	}
 	,createLinkedList: function() {
 		var _g = [];
-		var _g1 = 0;
-		var _g2 = this.points;
-		while(_g1 < _g2.length) {
-			var p = _g2[_g1];
-			++_g1;
-			var v = p.y;
+		var p = mortonHx_ds_EdgeData.iteratorPoints(this.points);
+		while(p.hasNext()) {
+			var p1 = p.next();
+			var v = p1.y;
 			v &= 65535;
 			v = (v ^ v << 8) & 16711935;
 			v = (v ^ v << 4) & 252645135;
 			v = (v ^ v << 2) & 858993459;
 			v = (v ^ v << 1) & 1431655765;
-			var v1 = p.x;
+			var v1 = p1.x;
 			v1 &= 65535;
 			v1 = (v1 ^ v1 << 8) & 16711935;
 			v1 = (v1 ^ v1 << 4) & 252645135;
 			v1 = (v1 ^ v1 << 2) & 858993459;
 			v1 = (v1 ^ v1 << 1) & 1431655765;
-			var n = new mortonHx_EarNode(p.x,p.y,v << 1 | v1,null,null,false);
+			var n = new mortonHx_ear_EarNode(p1.x,p1.y,v << 1 | v1,null,null,false);
 			_g.push(n);
 		}
 		var list = _g;
@@ -433,6 +980,12 @@ mortonHx_EarCuttingMorton.prototype = {
 		}
 		return list[0];
 	}
+	,isValidEar: function(ear) {
+		if(ear.isReflex) {
+			return false;
+		}
+		return !this.pointsInTriangle(ear.prev.x,ear.prev.y,ear.x,ear.y,ear.next.x,ear.next.y);
+	}
 	,triangulate: function() {
 		var current = this.createLinkedList();
 		var indices = [];
@@ -442,14 +995,17 @@ mortonHx_EarCuttingMorton.prototype = {
 			var bx = node.x;
 			var by = node.y;
 			var val = js_Boot.__cast(bx - node.prev.x , Float) * (node.next.y - by) - js_Boot.__cast(by - node.prev.y , Float) * (node.next.x - bx);
-			node.isReflex = !(val > 0);
+			node.isReflex = !(val > 0.000000001);
 			node = node.next;
 		} while(node != current);
 		var stopNode = current;
-		while(count > 3) {
+		var iterations = 0;
+		var maxIterations = count * 2;
+		while(count > 2 && iterations < maxIterations) {
+			++iterations;
 			var prev = current.prev;
 			var next = current.next;
-			if(current.isReflex ? false : !this.pointsInTriangle(current.prev.x,current.prev.y,current.x,current.y,current.next.x,current.next.y)) {
+			if(this.isValidEar(current) && js_Boot.__cast(current.x - prev.x , Float) * (next.y - current.y) - js_Boot.__cast(current.y - prev.y , Float) * (next.x - current.x) > 0.) {
 				indices.push(prev.x);
 				indices.push(prev.y);
 				indices.push(current.x);
@@ -461,32 +1017,34 @@ mortonHx_EarCuttingMorton.prototype = {
 				var bx = prev.x;
 				var by = prev.y;
 				var val = js_Boot.__cast(bx - prev.prev.x , Float) * (prev.next.y - by) - js_Boot.__cast(by - prev.prev.y , Float) * (prev.next.x - bx);
-				prev.isReflex = !(val > 0);
+				prev.isReflex = !(val > 0.000000001);
 				var bx1 = next.x;
 				var by1 = next.y;
 				var val1 = js_Boot.__cast(bx1 - next.prev.x , Float) * (next.next.y - by1) - js_Boot.__cast(by1 - next.prev.y , Float) * (next.next.x - bx1);
-				next.isReflex = !(val1 > 0);
+				next.isReflex = !(val1 > 0.000000001);
 				current = next;
 				stopNode = next;
 				--count;
-			} else {
-				current = next;
-				if(current == stopNode) {
-					break;
-				}
+				continue;
+			}
+			current = next;
+			if(current == stopNode) {
+				break;
 			}
 		}
-		indices.push(current.prev.x);
-		indices.push(current.prev.y);
-		indices.push(current.x);
-		indices.push(current.y);
-		indices.push(current.next.x);
-		indices.push(current.next.y);
+		if(count == 3) {
+			indices.push(current.prev.x);
+			indices.push(current.prev.y);
+			indices.push(current.x);
+			indices.push(current.y);
+			indices.push(current.next.x);
+			indices.push(current.next.y);
+		}
 		return indices;
 	}
-	,__class__: mortonHx_EarCuttingMorton
+	,__class__: mortonHx_ear_EarCuttingMorton
 };
-var mortonHx_EarNode = function(x,y,m,prev,next,isReflex) {
+var mortonHx_ear_EarNode = function(x,y,m,prev,next,isReflex) {
 	this.x = x;
 	this.y = y;
 	this.m = m;
@@ -494,21 +1052,133 @@ var mortonHx_EarNode = function(x,y,m,prev,next,isReflex) {
 	this.next = next;
 	this.isReflex = isReflex;
 };
-mortonHx_EarNode.__name__ = "mortonHx.EarNode";
-mortonHx_EarNode.prototype = {
-	__class__: mortonHx_EarNode
+mortonHx_ear_EarNode.__name__ = "mortonHx.ear.EarNode";
+mortonHx_ear_EarNode.prototype = {
+	__class__: mortonHx_ear_EarNode
 };
-var mortonHx_IHitInt = function() { };
-mortonHx_IHitInt.__name__ = "mortonHx.IHitInt";
-mortonHx_IHitInt.__isInterface__ = true;
-mortonHx_IHitInt.prototype = {
-	__class__: mortonHx_IHitInt
+var mortonHx_lineIntersection_Intersector = function() { };
+mortonHx_lineIntersection_Intersector.__name__ = "mortonHx.lineIntersection.Intersector";
+mortonHx_lineIntersection_Intersector.__isInterface__ = true;
+mortonHx_lineIntersection_Intersector.prototype = {
+	__class__: mortonHx_lineIntersection_Intersector
 };
-var mortonHx_EdgeFunctionHitInt = function() {
+var mortonHx_lineIntersection_BaseIntersector = function(x1,y1,x2,y2) {
+	this.a1x = x1;
+	this.a1y = y1;
+	this.s1x = x2 - x1;
+	this.s1y = y2 - y1;
+	this.dist = (x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2);
 };
-mortonHx_EdgeFunctionHitInt.__name__ = "mortonHx.EdgeFunctionHitInt";
-mortonHx_EdgeFunctionHitInt.__interfaces__ = [mortonHx_IHitInt];
-mortonHx_EdgeFunctionHitInt.prototype = {
+mortonHx_lineIntersection_BaseIntersector.__name__ = "mortonHx.lineIntersection.BaseIntersector";
+mortonHx_lineIntersection_BaseIntersector.__interfaces__ = [mortonHx_lineIntersection_Intersector];
+mortonHx_lineIntersection_BaseIntersector.prototype = {
+	distanceSq: function() {
+		return this.dist;
+	}
+	,__class__: mortonHx_lineIntersection_BaseIntersector
+};
+var mortonHx_lineIntersection_IntersectorFA = function(x1,y1,x2,y2) {
+	mortonHx_lineIntersection_BaseIntersector.call(this,x1,y1,x2,y2);
+};
+mortonHx_lineIntersection_IntersectorFA.__name__ = "mortonHx.lineIntersection.IntersectorFA";
+mortonHx_lineIntersection_IntersectorFA.__super__ = mortonHx_lineIntersection_BaseIntersector;
+mortonHx_lineIntersection_IntersectorFA.prototype = $extend(mortonHx_lineIntersection_BaseIntersector.prototype,{
+	check: function(b1x,b1y,b2x,b2y) {
+		if(this.s1x > 0) {
+			if(b1x > this.a1x + this.s1x && b2x > this.a1x + this.s1x || b1x < this.a1x && b2x < this.a1x) {
+				return null;
+			}
+		} else if(b1x > this.a1x && b2x > this.a1x || b1x < this.a1x + this.s1x && b2x < this.a1x + this.s1x) {
+			return null;
+		}
+		if(this.s1y > 0) {
+			if(b1y > this.a1y + this.s1y && b2y > this.a1y + this.s1y || b1y < this.a1y && b2y < this.a1y) {
+				return null;
+			}
+		} else if(b1y > this.a1y && b2y > this.a1y || b1y < this.a1y + this.s1y && b2y < this.a1y + this.s1y) {
+			return null;
+		}
+		var bx = b1x - b2x;
+		var by = b1y - b2y;
+		var cx = this.a1x - b1x;
+		var cy = this.a1y - b1y;
+		var den = this.s1y * bx - this.s1x * by;
+		if(den == 0) {
+			return null;
+		}
+		var alphaNum = by * cx - bx * cy;
+		var betaNum = this.s1x * cy - this.s1y * cx;
+		if(den > 0) {
+			if(alphaNum < 0 || alphaNum > den || betaNum < 0 || betaNum > den) {
+				return null;
+			}
+		} else if(alphaNum > 0 || alphaNum < den || betaNum > 0 || betaNum < den) {
+			return null;
+		}
+		var t = alphaNum / den;
+		return new mortonHx_ds_Vertex2i_$(this.a1x + t * this.s1x | 0,this.a1y + t * this.s1y | 0);
+	}
+	,__class__: mortonHx_lineIntersection_IntersectorFA
+});
+var mortonHx_lineIntersection_IntersectorGareth = function(x1,y1,x2,y2) {
+	mortonHx_lineIntersection_BaseIntersector.call(this,x1,y1,x2,y2);
+};
+mortonHx_lineIntersection_IntersectorGareth.__name__ = "mortonHx.lineIntersection.IntersectorGareth";
+mortonHx_lineIntersection_IntersectorGareth.__super__ = mortonHx_lineIntersection_BaseIntersector;
+mortonHx_lineIntersection_IntersectorGareth.prototype = $extend(mortonHx_lineIntersection_BaseIntersector.prototype,{
+	check: function(b1x,b1y,b2x,b2y) {
+		var s2x = b2x - b1x;
+		var s2y = b2y - b1y;
+		var den = -s2x * this.s1y + this.s1x * s2y;
+		if(den == 0.0) {
+			return null;
+		}
+		var s = (-this.s1y * (this.a1x - b1x) + this.s1x * (this.a1y - b1y)) / den;
+		var t = (s2x * (this.a1y - b1y) - s2y * (this.a1x - b1x)) / den;
+		if(s >= 0 && s <= 1 && t >= 0 && t <= 1) {
+			var t1 = t * den / den;
+			return new mortonHx_ds_Vertex2i_$(this.a1x + t1 * this.s1x | 0,this.a1y + t1 * this.s1y | 0);
+		}
+		return null;
+	}
+	,__class__: mortonHx_lineIntersection_IntersectorGareth
+});
+var mortonHx_lineIntersection_IntersectorCramer = function(x1,y1,x2,y2) {
+	mortonHx_lineIntersection_BaseIntersector.call(this,x1,y1,x2,y2);
+};
+mortonHx_lineIntersection_IntersectorCramer.__name__ = "mortonHx.lineIntersection.IntersectorCramer";
+mortonHx_lineIntersection_IntersectorCramer.__super__ = mortonHx_lineIntersection_BaseIntersector;
+mortonHx_lineIntersection_IntersectorCramer.prototype = $extend(mortonHx_lineIntersection_BaseIntersector.prototype,{
+	check: function(b1x,b1y,b2x,b2y) {
+		var dx2 = b2x - b1x;
+		var dy2 = b2y - b1y;
+		var det = this.s1x * dy2 - this.s1y * dx2;
+		if(Math.abs(det) < 1e-10) {
+			return null;
+		}
+		var dx3 = b1x - this.a1x;
+		var dy3 = b1y - this.a1y;
+		var t = (dx3 * dy2 - dy3 * dx2) / det;
+		var u = (dx3 * this.s1y - dy3 * this.s1x) / det;
+		if(t >= 0 && t <= 1 && u >= 0 && u <= 1) {
+			var t1 = t * det / det;
+			return new mortonHx_ds_Vertex2i_$(this.a1x + t1 * this.s1x | 0,this.a1y + t1 * this.s1y | 0);
+		}
+		return null;
+	}
+	,__class__: mortonHx_lineIntersection_IntersectorCramer
+});
+var mortonHx_pointInTriangle_IHitInt = function() { };
+mortonHx_pointInTriangle_IHitInt.__name__ = "mortonHx.pointInTriangle.IHitInt";
+mortonHx_pointInTriangle_IHitInt.__isInterface__ = true;
+mortonHx_pointInTriangle_IHitInt.prototype = {
+	__class__: mortonHx_pointInTriangle_IHitInt
+};
+var mortonHx_pointInTriangle_EdgeFunctionHitInt = function() {
+};
+mortonHx_pointInTriangle_EdgeFunctionHitInt.__name__ = "mortonHx.pointInTriangle.EdgeFunctionHitInt";
+mortonHx_pointInTriangle_EdgeFunctionHitInt.__interfaces__ = [mortonHx_pointInTriangle_IHitInt];
+mortonHx_pointInTriangle_EdgeFunctionHitInt.prototype = {
 	prepare: function(ax,ay,bx,by,cx,cy) {
 		this.a1 = ay - by;
 		this.b1 = bx - ax;
@@ -529,109 +1199,330 @@ mortonHx_EdgeFunctionHitInt.prototype = {
 		var s3 = this.a3 * x + this.b3 * y + this.c3;
 		return (s1 ^ s3) >= 0;
 	}
-	,__class__: mortonHx_EdgeFunctionHitInt
+	,__class__: mortonHx_pointInTriangle_EdgeFunctionHitInt
 };
-var mortonHx_SortableArray = {};
-mortonHx_SortableArray.findStartIndex = function(this1,target) {
-	var low = 0;
-	var high = this1.length;
-	while(low < high) {
-		var mid = low + high >>> 1;
-		if(this1[mid] < target) {
-			low = mid + 1;
-		} else {
-			high = mid;
-		}
+var mortonHx_qualityTriangle_GoodTriangle = function() { };
+mortonHx_qualityTriangle_GoodTriangle.__name__ = "mortonHx.qualityTriangle.GoodTriangle";
+mortonHx_qualityTriangle_GoodTriangle.score = function(a,b,c) {
+	var baX = b.x - a.x;
+	var baY = b.y - a.y;
+	var caX = c.x - a.x;
+	var caY = c.y - a.y;
+	var bcX = b.x - c.x;
+	var bcY = b.y - c.y;
+	var area = baX * caY - baY * caX;
+	if(area == 0) {
+		return 0;
 	}
-	return low;
+	var aSq = js_Boot.__cast(area , Float) * area;
+	var ba = baX * baX + baY * baY;
+	var ca = caX * caX + caY * caY;
+	var bc = bcX * bcX + bcY * bcY;
+	var sides = js_Boot.__cast(ba , Float) + ca + bc;
+	return 12 * aSq / (sides * sides);
 };
-mortonHx_SortableArray.findEndIndexFrom = function(this1,target,startLow) {
-	var low = startLow;
-	var high = this1.length;
-	while(low < high) {
-		var mid = low + high >>> 1;
-		if(this1[mid] <= target) {
-			low = mid + 1;
-		} else {
-			high = mid;
-		}
-	}
-	return low;
+var mortonHx_scanLine_BridgeResult = function(point,edgeIdx,distanceSq) {
+	this.point = point;
+	this.edgeIdx = edgeIdx;
+	this.distanceSq = distanceSq;
 };
-var mortonHx_TestTriangulation = function() { };
-mortonHx_TestTriangulation.__name__ = "mortonHx.TestTriangulation";
-mortonHx_TestTriangulation.main = function() {
-	var canvas = window.document.createElement("canvas");
-	canvas.width = 800;
-	canvas.height = 600;
-	var ctx = canvas.getContext("2d",null);
-	window.document.body.appendChild(canvas);
-	var arr = mortonHx_TestTriangulation.test1;
-	var scale = 1.0;
-	var pointHit = new mortonHx_EdgeFunctionHitInt();
-	if(scale == null) {
-		scale = 40.95875;
+mortonHx_scanLine_BridgeResult.__name__ = "mortonHx.scanLine.BridgeResult";
+mortonHx_scanLine_BridgeResult.prototype = {
+	__class__: mortonHx_scanLine_BridgeResult
+};
+var mortonHx_scanLine_BridgeData = function(begin,originalEdge,holeBridge,distanceSq) {
+	this.begin = begin;
+	this.originalEdge = originalEdge;
+	this.holeBridge = holeBridge;
+	this.distanceSq = distanceSq;
+};
+mortonHx_scanLine_BridgeData.__name__ = "mortonHx.scanLine.BridgeData";
+mortonHx_scanLine_BridgeData.prototype = {
+	__class__: mortonHx_scanLine_BridgeData
+};
+var mortonHx_scanLine_TriangleCheck = function(visibleA,visibleB,score,distA,distB) {
+	if(distB == null) {
+		distB = -1;
 	}
-	var p = [];
+	if(distA == null) {
+		distA = -1;
+	}
+	if(score == null) {
+		score = 0;
+	}
+	if(visibleB == null) {
+		visibleB = false;
+	}
+	if(visibleA == null) {
+		visibleA = false;
+	}
+	this.visibleA = visibleA;
+	this.visibleB = visibleB;
+	this.score = score;
+	this.distA = distA == -1 ? Infinity : distA;
+	this.distB = distB == -1 ? Infinity : distA;
+};
+mortonHx_scanLine_TriangleCheck.__name__ = "mortonHx.scanLine.TriangleCheck";
+mortonHx_scanLine_TriangleCheck.prototype = {
+	__class__: mortonHx_scanLine_TriangleCheck
+};
+var mortonHx_scanLine_Bridger = function() { };
+mortonHx_scanLine_Bridger.__name__ = "mortonHx.scanLine.Bridger";
+mortonHx_scanLine_Bridger.triangleViable = function(holePt,edge,holes,shell,intersector) {
+	var x1 = edge.ax;
+	var y1 = edge.ay;
+	var x2 = holePt.x;
+	var y2 = holePt.y;
+	var pathA = intersector == null ? new mortonHx_lineIntersection_IntersectorFA(x1,y1,x2,y2) : intersector == mortonHx_lineIntersection_IntersectorFA ? new mortonHx_lineIntersection_IntersectorFA(x1,y1,x2,y2) : intersector == mortonHx_lineIntersection_IntersectorGareth ? new mortonHx_lineIntersection_IntersectorGareth(x1,y1,x2,y2) : intersector == mortonHx_lineIntersection_IntersectorCramer ? new mortonHx_lineIntersection_IntersectorCramer(x1,y1,x2,y2) : new mortonHx_lineIntersection_IntersectorFA(x1,y1,x2,y2);
+	var x1 = edge.bx;
+	var y1 = edge.by;
+	var x2 = holePt.x;
+	var y2 = holePt.y;
+	var pathB = intersector == null ? new mortonHx_lineIntersection_IntersectorFA(x1,y1,x2,y2) : intersector == mortonHx_lineIntersection_IntersectorFA ? new mortonHx_lineIntersection_IntersectorFA(x1,y1,x2,y2) : intersector == mortonHx_lineIntersection_IntersectorGareth ? new mortonHx_lineIntersection_IntersectorGareth(x1,y1,x2,y2) : intersector == mortonHx_lineIntersection_IntersectorCramer ? new mortonHx_lineIntersection_IntersectorCramer(x1,y1,x2,y2) : new mortonHx_lineIntersection_IntersectorFA(x1,y1,x2,y2);
+	var visibleA = true;
+	var visibleB = true;
 	var _g = 0;
-	var _g1 = arr.length / 2 | 0;
+	var _g1 = shell.length >> 1 > 0 ? (shell.length >> 1) - 1 : 0;
 	while(_g < _g1) {
 		var i = _g++;
-		p[i] = { x : arr[i * 2] * scale | 0, y : arr[i * 2 + 1] * scale | 0};
-	}
-	var earcut = new mortonHx_EarCuttingMorton(p,pointHit);
-	var triangles = earcut.triangulate();
-	mortonHx_TestTriangulation.drawGrid(ctx,canvas.width,canvas.height,40);
-	mortonHx_TestTriangulation.drawTriangles(ctx,triangles);
-	mortonHx_TestTriangulation.drawOutline(ctx,mortonHx_TestTriangulation.test1);
-};
-mortonHx_TestTriangulation.drawTriangles = function(ctx,data) {
-	ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
-	ctx.lineWidth = 1;
-	var i = 0;
-	while(i < data.length) {
-		ctx.beginPath();
-		ctx.moveTo(data[i],data[i + 1]);
-		ctx.lineTo(data[i + 2],data[i + 3]);
-		ctx.lineTo(data[i + 4],data[i + 5]);
-		ctx.closePath();
-		ctx.fillStyle = "rgba(100, 150, 255, 0.2)";
-		ctx.fill();
-		ctx.stroke();
-		i += 6;
-	}
-};
-mortonHx_TestTriangulation.drawOutline = function(ctx,points) {
-	ctx.beginPath();
-	ctx.strokeStyle = "#FF0000";
-	ctx.lineWidth = 2;
-	ctx.moveTo(points[0],points[1]);
-	var i = 2;
-	while(i < points.length) {
-		ctx.lineTo(points[i],points[i + 1]);
-		i += 2;
-	}
-	ctx.closePath();
-	ctx.stroke();
-};
-mortonHx_TestTriangulation.drawGrid = function(ctx,width,height,step) {
-	ctx.beginPath();
-	ctx.strokeStyle = "#EEEEEE";
-	var _g = 0;
-	var _g1 = (width / step | 0) + 1;
-	while(_g < _g1) {
-		var x = _g++;
-		ctx.moveTo(x * step,0);
-		ctx.lineTo(x * step,height);
+		var ax = shell[i << 1];
+		var ay = shell[(i << 1) + 1];
+		var bx = shell[(i << 1) + 2];
+		var by = shell[(i << 1) + 3];
+		if(ax == edge.ax && ay == edge.ay || ax == edge.bx && ay == edge.by || (bx == edge.ax && by == edge.ay || bx == edge.bx && by == edge.by)) {
+			continue;
+		}
+		if(visibleA) {
+			if(pathA.check(ax,ay,bx,by) != null) {
+				visibleA = false;
+			}
+		}
+		if(visibleB) {
+			if(pathB.check(ax,ay,bx,by) != null) {
+				visibleB = false;
+			}
+		}
+		var notVisible = !visibleA && !visibleB;
+		if(notVisible) {
+			return new mortonHx_scanLine_TriangleCheck();
+		}
 	}
 	var _g = 0;
-	var _g1 = (height / step | 0) + 1;
-	while(_g < _g1) {
-		var y = _g++;
-		ctx.moveTo(0,y * step);
-		ctx.lineTo(width,y * step);
+	while(_g < holes.length) {
+		var hole = holes[_g];
+		++_g;
+		var _g1 = 0;
+		var _g2 = hole.length >> 1 > 0 ? (hole.length >> 1) - 1 : 0;
+		while(_g1 < _g2) {
+			var i = _g1++;
+			var ax = hole[i << 1];
+			var ay = hole[(i << 1) + 1];
+			var bx = hole[(i << 1) + 2];
+			var by = hole[(i << 1) + 3];
+			if(ax == holePt.x || ay == holePt.y) {
+				continue;
+			}
+			if(bx == holePt.x || by == holePt.y) {
+				continue;
+			}
+			if(ax == edge.ax && ay == edge.ay || ax == edge.bx && ay == edge.by || (bx == edge.ax && by == edge.ay || bx == edge.bx && by == edge.by)) {
+				continue;
+			}
+			if(visibleA) {
+				if(pathA.check(ax,ay,bx,by) != null) {
+					visibleA = false;
+				}
+			}
+			if(visibleB) {
+				if(pathB.check(ax,ay,bx,by) != null) {
+					visibleB = false;
+				}
+			}
+			var notVisible = !visibleA && !visibleB;
+			if(notVisible) {
+				return new mortonHx_scanLine_TriangleCheck();
+			}
+		}
 	}
-	ctx.stroke();
+	var trianglePossible = visibleA && visibleB;
+	var triangleCheck = new mortonHx_scanLine_TriangleCheck(visibleA,visibleB);
+	if(trianglePossible) {
+		triangleCheck.score = mortonHx_qualityTriangle_GoodTriangle.score(holePt,new mortonHx_ds_Vertex2i_$(edge.ax,edge.ay),new mortonHx_ds_Vertex2i_$(edge.bx,edge.by));
+		triangleCheck.distA = pathA.distanceSq();
+		triangleCheck.distB = pathB.distanceSq();
+	}
+	return triangleCheck;
+};
+mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,intersector) {
+	var bridgeDatas = [];
+	var _g = 0;
+	var _g1 = allHoles.length;
+	while(_g < _g1) {
+		var i = _g++;
+		bridgeDatas[i] = null;
+	}
+	var arr = allHoles;
+	var f = function(a,b) {
+		var f;
+		if(a.length >> 1 == 0) {
+			f = 0.0;
+		} else {
+			var m = a[1];
+			var _g = 1;
+			var _g1 = a.length >> 1;
+			while(_g < _g1) {
+				var i = _g++;
+				var n = a[1 + (i << 1)];
+				if(n > m) {
+					m = n;
+				}
+			}
+			f = m;
+		}
+		var f1;
+		if(b.length >> 1 == 0) {
+			f1 = 0.0;
+		} else {
+			var m = b[1];
+			var _g = 1;
+			var _g1 = b.length >> 1;
+			while(_g < _g1) {
+				var i = _g++;
+				var n = b[1 + (i << 1)];
+				if(n > m) {
+					m = n;
+				}
+			}
+			f1 = m;
+		}
+		return f - f1;
+	};
+	var _g = [];
+	var _g1 = 0;
+	var _g2 = arr.length;
+	while(_g1 < _g2) {
+		var i = _g1++;
+		_g.push(i);
+	}
+	var order = _g;
+	order.sort(function(idxA,idxB) {
+		return f(arr[idxA],arr[idxB]);
+	});
+	var order1 = order;
+	var hole = allHoles[order1[0]];
+	var a = [];
+	if(a == null) {
+		a = [];
+	}
+	var e = a;
+	var lastBegin = -1;
+	var _g = 0;
+	var _g1 = order1.length;
+	while(_g < _g1) {
+		var i = _g++;
+		var hole = allHoles[order1[i]];
+		var hole_i = mortonHx_ds_EdgeData.maxYindex(hole);
+		var holePt = new mortonHx_ds_Vertex2i_$(hole[hole_i << 1],hole[1 + (hole_i << 1)]);
+		var result = mortonHx_scanLine_Bridger.findBestTargetY(holePt,shellEdges,intersector);
+		if(result != null) {
+			var begin = result.edgeIdx << 1;
+			var edgeIndex = result.edgeIdx;
+			var targetEdge = new mortonHx_ds_Edge(shellEdges[edgeIndex << 1],shellEdges[(edgeIndex << 1) + 1],shellEdges[(edgeIndex << 1) + 2],shellEdges[(edgeIndex << 1) + 3]);
+			var tri = mortonHx_scanLine_Bridger.triangleViable(holePt,targetEdge,allHoles,shellEdges,intersector);
+			var bridgePoint = tri.score > 0.1 ? tri.distA < tri.distB ? new mortonHx_ds_Vertex2i_$(targetEdge.ax,targetEdge.ay) : new mortonHx_ds_Vertex2i_$(targetEdge.bx,targetEdge.by) : result.point;
+			var e = mortonHx_scanLine_Bridger.connectHole(shellEdges,hole,hole_i,bridgePoint,result.edgeIdx);
+			var b = new mortonHx_scanLine_BridgeData(begin,targetEdge,e,result.distanceSq);
+			bridgeDatas[order1[i]] = b;
+			mortonHx_ds_EdgeData.replaceRange(shellEdges,b.begin,4,b.holeBridge);
+		}
+	}
+	return shellEdges;
+};
+mortonHx_scanLine_Bridger.findBestTargetY = function(holePt,shell,intersector) {
+	var y = holePt.y;
+	var x1 = holePt.x;
+	var x2 = holePt.x;
+	var scanner = intersector == null ? new mortonHx_lineIntersection_IntersectorFA(x1,y,x2,999999) : intersector == mortonHx_lineIntersection_IntersectorFA ? new mortonHx_lineIntersection_IntersectorFA(x1,y,x2,999999) : intersector == mortonHx_lineIntersection_IntersectorGareth ? new mortonHx_lineIntersection_IntersectorGareth(x1,y,x2,999999) : intersector == mortonHx_lineIntersection_IntersectorCramer ? new mortonHx_lineIntersection_IntersectorCramer(x1,y,x2,999999) : new mortonHx_lineIntersection_IntersectorFA(x1,y,x2,999999);
+	var bestPoint = null;
+	var bestIdx = -1;
+	var minDist = Infinity;
+	var _g = 0;
+	var _g1 = shell.length >> 1 > 0 ? (shell.length >> 1) - 1 : 0;
+	while(_g < _g1) {
+		var i = _g++;
+		var hit = scanner.check(shell[i << 1],shell[(i << 1) + 1],shell[(i << 1) + 2],shell[(i << 1) + 3]);
+		if(hit != null) {
+			var d = hit.y - holePt.y;
+			if(d < minDist) {
+				minDist = d;
+				bestPoint = hit;
+				bestIdx = i;
+			}
+		}
+	}
+	if(bestPoint == null) {
+		return null;
+	}
+	return new mortonHx_scanLine_BridgeResult(bestPoint,bestIdx,minDist * minDist);
+};
+mortonHx_scanLine_Bridger.pushHole = function(tempEdgeData,holePtIdx,hole) {
+	var e = tempEdgeData;
+	var holePt = new mortonHx_ds_Vertex2i_$(hole[holePtIdx << 1],hole[1 + (holePtIdx << 1)]);
+	var holeLen = hole.length >> 1;
+	var y = holePt.y;
+	e.push(holePt.x);
+	e.push(y);
+	var lastX = holePt.x;
+	var lastY = holePt.y;
+	var _g = 1;
+	var _g1 = holeLen;
+	while(_g < _g1) {
+		var i = _g++;
+		var id = (holePtIdx + i) % holeLen;
+		var hx = hole[id << 1];
+		var hy = hole[1 + (id << 1)];
+		if(hx == lastX && hy == lastY) {
+			continue;
+		}
+		e.push(hx);
+		e.push(hy);
+		lastX = hx;
+		lastY = hy;
+	}
+	if(lastX != holePt.x || lastY != holePt.y) {
+		var y = holePt.y;
+		e.push(holePt.x);
+		e.push(y);
+	}
+	return tempEdgeData;
+};
+mortonHx_scanLine_Bridger.connectHole = function(shell,hole,holePtIdx,bridgeTarget,edgeIdx) {
+	var edgeAB = new mortonHx_ds_Edge(shell[edgeIdx << 1],shell[(edgeIdx << 1) + 1],shell[(edgeIdx << 1) + 2],shell[(edgeIdx << 1) + 3]);
+	var a = [];
+	if(a == null) {
+		a = [];
+	}
+	var e = a;
+	var y = edgeAB.ay;
+	e.push(edgeAB.ax);
+	e.push(y);
+	var exitShell = new mortonHx_ds_Vertex2i_$(edgeAB.ax,edgeAB.ay);
+	if(!(bridgeTarget.x == edgeAB.ax && bridgeTarget.y == edgeAB.ay)) {
+		var y = bridgeTarget.y;
+		e.push(bridgeTarget.x);
+		e.push(y);
+		exitShell = bridgeTarget;
+	}
+	mortonHx_scanLine_Bridger.pushHole(e,holePtIdx,hole);
+	var y = exitShell.y;
+	e.push(exitShell.x);
+	e.push(y);
+	if(!(exitShell.x == edgeAB.bx && exitShell.y == edgeAB.by)) {
+		var y = edgeAB.by;
+		e.push(edgeAB.bx);
+		e.push(y);
+	}
+	return e;
 };
 Object.defineProperty(String.prototype,"__class__",{ value : String, enumerable : false, writable : true});
 String.__name__ = "String";
@@ -643,6 +1534,14 @@ var Bool = Boolean;
 var Class = { };
 var Enum = { };
 js_Boot.__toStr = ({ }).toString;
+var mortonHx_TestData_hole1 = [110,205,115,214,120,215,125,214,130,205,125,196,120,195,115,196,110,205];
+var mortonHx_TestData_hole2 = [190,280,195,289,200,290,205,289,210,280,205,271,200,270,195,271,190,280];
+var mortonHx_TestData_hole5 = [480,120,485,129,490,130,495,129,500,120,495,111,490,110,485,111,480,120];
+var mortonHx_TestData_hole6 = [560,250,565,259,570,260,575,259,580,250,575,241,570,240,565,241,560,250];
+var mortonHx_TestData_hole7 = [650,100,655,109,660,110,665,109,670,100,665,91,660,90,655,91,650,100];
+var mortonHx_TestData_hole8 = [680,430,685,439,690,440,695,439,700,430,695,421,690,420,685,421,680,430];
+var mortonHx_TestData_hole9 = [740,200,745,209,750,210,755,209,760,200,755,191,750,190,745,191,740,200];
+var mortonHx_TestData_hole10 = [580,450,585,459,590,460,595,459,600,450,595,441,590,440,585,441,580,450];
 mortonHx_TestTriangulation.test1 = [93.,195.,129.,92.,280.,81.,402.,134.,477.,70.,619.,61.,759.,97.,758.,247.,662.,347.,665.,230.,721.,140.,607.,117.,472.,171.,580.,178.,603.,257.,605.,377.,690.,404.,787.,328.,786.,480.,617.,510.,611.,439.,544.,400.,529.,291.,509.,218.,400.,358.,489.,402.,425.,479.,268.,464.,341.,338.,393.,427.,373.,284.,429.,197.,301.,150.,296.,245.,252.,384.,118.,360.,190.,272.,244.,165.,81.,259.,40.,216.];
 mortonHx_TestTriangulation.main();
 })(typeof window != "undefined" ? window : typeof global != "undefined" ? global : typeof self != "undefined" ? self : this);

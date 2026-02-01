@@ -1,2 +1,0 @@
-@:used @:forward
-abstract mortonHx.Point5DInt from mortonHx.Point5DInt_ to mortonHx.Point5DInt_ {}

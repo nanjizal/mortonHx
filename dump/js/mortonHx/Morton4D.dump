@@ -1,2 +1,0 @@
-@:used
-abstract mortonHx.Morton4D from Int to Int {}

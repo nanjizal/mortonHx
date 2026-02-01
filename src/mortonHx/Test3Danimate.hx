@@ -4,7 +4,7 @@ package mortonHx;
 import js.Browser;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
-import mortonHx.Morton3D; // Ensure this matches your file structure
+import mortonHx.morton.Morton3D; // Ensure this matches your file structure
 @:dox(hide)
 class Test3Danimate {
     static inline var STEP:Int = 10; // Size of the grid cells

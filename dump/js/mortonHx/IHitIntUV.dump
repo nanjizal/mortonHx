@@ -1,6 +1,0 @@
-interface mortonHx.IHitIntUV {
-
-	function prepare(ax:Int, ay:Int, bx:Int, by:Int, cx:Int, cy:Int):Void;
-
-	function getWeights(x:Int, y:Int):mortonHx.BarycentricResult;
-}

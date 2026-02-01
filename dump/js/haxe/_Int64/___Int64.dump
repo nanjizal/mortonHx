@@ -2,8 +2,8 @@
 private class haxe._Int64.___Int64 {
 
 	public inline function new[Function:(high : haxe.Int32, low : haxe.Int32) -> Void]
-		[Arg high<7130>(VUsedByTyper):haxe.Int32]
-		[Arg low<7131>(VUsedByTyper):haxe.Int32]
+		[Arg high<6544>(VUsedByTyper):haxe.Int32]
+		[Arg low<6545>(VUsedByTyper):haxe.Int32]
 		[Block:haxe.Int32]
 			[Binop:haxe.Int32]
 				[Field:haxe.Int32]
@@ -12,7 +12,7 @@ private class haxe._Int64.___Int64 {
 						haxe._Int64.___Int64
 						high:haxe.Int32
 				=
-				[Local high(7130):haxe.Int32:haxe.Int32]
+				[Local high(6544):haxe.Int32:haxe.Int32]
 			[Binop:haxe.Int32]
 				[Field:haxe.Int32]
 					[Const:haxe._Int64.___Int64] this
@@ -20,7 +20,7 @@ private class haxe._Int64.___Int64 {
 						haxe._Int64.___Int64
 						low:haxe.Int32
 				=
-				[Local low(7131):haxe.Int32:haxe.Int32]
+				[Local low(6545):haxe.Int32:haxe.Int32]
 
 	public var high:haxe.Int32;
 

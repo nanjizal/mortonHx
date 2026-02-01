@@ -1,6 +1,6 @@
 package mortonHx;
-import mortonHx.Morton2D;
-import mortonHx.Morton3D;
+import mortonHx.morton.*;
+import mortonHx.intersection.*;
 @:dox(hide)
 class Doc {
     public static function main(){

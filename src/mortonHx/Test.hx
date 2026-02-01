@@ -1,5 +1,5 @@
 package mortonHx;
-import mortonHx.Morton2D;
+import mortonHx.morton.Morton2D;
 import js.Browser;
 import js.html.CanvasElement;
 import js.html.CanvasRenderingContext2D;
