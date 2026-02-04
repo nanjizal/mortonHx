@@ -123,9 +123,10 @@ class Bridger {
     /**
      * Connects and merges holes into a shell progressively to the East of the Shell.
      */
-    public static function mergeHolesEast(  shellEdges:  EdgeData<Int>
-                                         ,  allHoles:    Array<EdgeData<Int>>
-                                         ,  intersector: Null<Class<Intersector>> = null 
+    public static function mergeHolesEast(  shellEdges:         EdgeData<Int>
+                                         ,  allHoles:           Array<EdgeData<Int>>
+                                         ,  triangleUnitMerit : Float = 0.1
+                                         ,  intersector:        Null<Class<Intersector>> = null 
                                          ): Null<EdgeData<Int>> {
         // East
         var bridgeDatas = new Array<Null<BridgeData>>();
@@ -144,7 +145,7 @@ class Bridger {
                 var begin                         = shellEdges.axi(result.edgeIdx);
                 var targetEdge: Edge<Int>         = shellEdges.getEdge( result.edgeIdx );
                 var tri:        TriangleCheck     = triangleViable( holePt, targetEdge, allHoles, shellEdges, intersector );
-                var bridgePoint = if( tri.score > 0.1 ) {
+                var bridgePoint = if( tri.score > triangleUnitMerit ) {
                     if( tri.distA < tri.distB ){
                         targetEdge.a;
                     } else {
@@ -182,9 +183,10 @@ class Bridger {
     /**
      * Connects and merges holes into a shell progressively to the North of the Shell.
      */
-    public static function mergeHolesNorth(  shellEdges:  EdgeData<Int>
-                                          ,  allHoles:    Array<EdgeData<Int>>
-                                          ,  intersector: Null<Class<Intersector>> = null 
+    public static function mergeHolesNorth(  shellEdges:        EdgeData<Int>
+                                          ,  allHoles:          Array<EdgeData<Int>>
+                                          ,  triangleUnitMerit: Float = 0.1
+                                          ,  intersector:       Null<Class<Intersector>> = null 
                                           ): Null<EdgeData<Int>> {
         // North
         var bridgeDatas = new Array<Null<BridgeData>>();
@@ -203,7 +205,7 @@ class Bridger {
                 var begin                         = shellEdges.axi(result.edgeIdx);
                 var targetEdge: Edge<Int>         = shellEdges.getEdge( result.edgeIdx );
                 var tri:        TriangleCheck     = triangleViable( holePt, targetEdge, allHoles, shellEdges, intersector );
-                var bridgePoint = if( tri.score > 0.1 ) {
+                var bridgePoint = if( tri.score > triangleUnitMerit ) {
                     if( tri.distA < tri.distB ){
                         targetEdge.a;
                     } else {
@@ -241,9 +243,10 @@ class Bridger {
     /**
      * Connects and merges holes into a shell progressively to the West of the Shell.
      */
-    public static function mergeHolesWest(  shellEdges:  EdgeData<Int>
-                                         ,  allHoles:    Array<EdgeData<Int>>
-                                         ,  intersector: Null<Class<Intersector>> = null 
+    public static function mergeHolesWest(  shellEdges:         EdgeData<Int>
+                                         ,  allHoles:           Array<EdgeData<Int>>
+                                         ,  triangleUnitMerit:  Float = 0.1
+                                         ,  intersector:        Null<Class<Intersector>> = null 
                                          ): Null<EdgeData<Int>> {
         // North
         var bridgeDatas = new Array<Null<BridgeData>>();
@@ -262,7 +265,7 @@ class Bridger {
                 var begin                         = shellEdges.axi(result.edgeIdx);
                 var targetEdge: Edge<Int>         = shellEdges.getEdge( result.edgeIdx );
                 var tri:        TriangleCheck     = triangleViable( holePt, targetEdge, allHoles, shellEdges, intersector );
-                var bridgePoint = if( tri.score > 0.1 ) {
+                var bridgePoint = if( tri.score > triangleUnitMerit ) {
                     if( tri.distA < tri.distB ){
                         targetEdge.a;
                     } else {
@@ -300,10 +303,11 @@ class Bridger {
         /**
      * Connects and merges holes into a shell progressively to the South of the Shell.
      */
-    public static function mergeHolesSouth(  shellEdges:  EdgeData<Int>
-                                         ,  allHoles:    Array<EdgeData<Int>>
-                                         ,  intersector: Null<Class<Intersector>> = null 
-                                         ): Null<EdgeData<Int>> {
+    public static function mergeHolesSouth(  shellEdges:        EdgeData<Int>
+                                          ,  allHoles:           Array<EdgeData<Int>>
+                                          ,  triangleUnitMerit:  Float = 0.1
+                                          ,  intersector:        Null<Class<Intersector>> = null 
+                                          ): Null<EdgeData<Int>> {
         // North
         var bridgeDatas = new Array<Null<BridgeData>>();
         for( i in 0...allHoles.length ) bridgeDatas[i] = null;

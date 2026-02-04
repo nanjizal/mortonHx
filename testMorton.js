@@ -1353,7 +1353,10 @@ mortonHx_scanLine_Bridger.triangleViable = function(holePt,edge,holes,shell,inte
 	}
 	return triangleCheck;
 };
-mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,intersector) {
+mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,triangleUnitMerit,intersector) {
+	if(triangleUnitMerit == null) {
+		triangleUnitMerit = 0.1;
+	}
 	var bridgeDatas = [];
 	var _g = 0;
 	var _g1 = allHoles.length;
