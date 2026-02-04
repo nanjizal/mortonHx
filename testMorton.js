@@ -1203,7 +1203,7 @@ mortonHx_pointInTriangle_EdgeFunctionHitInt.prototype = {
 };
 var mortonHx_qualityTriangle_GoodTriangle = function() { };
 mortonHx_qualityTriangle_GoodTriangle.__name__ = "mortonHx.qualityTriangle.GoodTriangle";
-mortonHx_qualityTriangle_GoodTriangle.score = function(a,b,c) {
+mortonHx_qualityTriangle_GoodTriangle.triangleUnitMerit = function(a,b,c) {
 	var baX = b.x - a.x;
 	var baY = b.y - a.y;
 	var caX = c.x - a.x;
@@ -1240,15 +1240,15 @@ mortonHx_scanLine_BridgeData.__name__ = "mortonHx.scanLine.BridgeData";
 mortonHx_scanLine_BridgeData.prototype = {
 	__class__: mortonHx_scanLine_BridgeData
 };
-var mortonHx_scanLine_TriangleCheck = function(visibleA,visibleB,score,distA,distB) {
+var mortonHx_scanLine_TriangleCheck = function(visibleA,visibleB,triangleUnitMerit,distA,distB) {
 	if(distB == null) {
 		distB = -1;
 	}
 	if(distA == null) {
 		distA = -1;
 	}
-	if(score == null) {
-		score = 0;
+	if(triangleUnitMerit == null) {
+		triangleUnitMerit = 0;
 	}
 	if(visibleB == null) {
 		visibleB = false;
@@ -1258,7 +1258,7 @@ var mortonHx_scanLine_TriangleCheck = function(visibleA,visibleB,score,distA,dis
 	}
 	this.visibleA = visibleA;
 	this.visibleB = visibleB;
-	this.score = score;
+	this.triangleUnitMerit = triangleUnitMerit;
 	this.distA = distA == -1 ? Infinity : distA;
 	this.distB = distB == -1 ? Infinity : distA;
 };
@@ -1347,7 +1347,7 @@ mortonHx_scanLine_Bridger.triangleViable = function(holePt,edge,holes,shell,inte
 	var trianglePossible = visibleA && visibleB;
 	var triangleCheck = new mortonHx_scanLine_TriangleCheck(visibleA,visibleB);
 	if(trianglePossible) {
-		triangleCheck.score = mortonHx_qualityTriangle_GoodTriangle.score(holePt,new mortonHx_ds_Vertex2i_$(edge.ax,edge.ay),new mortonHx_ds_Vertex2i_$(edge.bx,edge.by));
+		triangleCheck.triangleUnitMerit = mortonHx_qualityTriangle_GoodTriangle.triangleUnitMerit(holePt,new mortonHx_ds_Vertex2i_$(edge.ax,edge.ay),new mortonHx_ds_Vertex2i_$(edge.bx,edge.by));
 		triangleCheck.distA = pathA.distanceSq();
 		triangleCheck.distB = pathB.distanceSq();
 	}
@@ -1432,7 +1432,7 @@ mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,triangl
 			var edgeIndex = result.edgeIdx;
 			var targetEdge = new mortonHx_ds_Edge(shellEdges[edgeIndex << 1],shellEdges[(edgeIndex << 1) + 1],shellEdges[(edgeIndex << 1) + 2],shellEdges[(edgeIndex << 1) + 3]);
 			var tri = mortonHx_scanLine_Bridger.triangleViable(holePt,targetEdge,allHoles,shellEdges,intersector);
-			var bridgePoint = tri.score > 0.1 ? tri.distA < tri.distB ? new mortonHx_ds_Vertex2i_$(targetEdge.ax,targetEdge.ay) : new mortonHx_ds_Vertex2i_$(targetEdge.bx,targetEdge.by) : result.point;
+			var bridgePoint = tri.triangleUnitMerit > 0.1 ? tri.distA < tri.distB ? new mortonHx_ds_Vertex2i_$(targetEdge.ax,targetEdge.ay) : new mortonHx_ds_Vertex2i_$(targetEdge.bx,targetEdge.by) : result.point;
 			var e = mortonHx_scanLine_Bridger.connectHole(shellEdges,hole,hole_i,bridgePoint,result.edgeIdx);
 			var b = new mortonHx_scanLine_BridgeData(begin,targetEdge,e,result.distanceSq);
 			bridgeDatas[order1[i]] = b;

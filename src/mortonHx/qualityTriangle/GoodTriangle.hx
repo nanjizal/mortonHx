@@ -4,16 +4,16 @@ class GoodTriangle {
     /**
      * Quality Score Reference Table:
      * 
-     *   Score     | Shape Style      | Shader Impact            | x 48
-     *   ----------|------------------|---------------------------------------
-     *   0.0208    | Equilateral      | Perfect sampling         |  nearly 1
-     *   0.0156    | Right Isosceles  | Very stable              |  0.75
-     *   0.0100    | Oblique          | Good                     |  0.5   
-     *   0.0050    | Thin Sliver      | Potential Moire/Aliasing |  0.25
-     *   0.0010    | Needle/Flat      | High artifact risk       |  0.05 
+     *    Shape Style      | Shader Impact            | triangleUnitMerit
+     *   ------------------|---------------------------------------
+     *   Equilateral       | Perfect sampling         |  nearly 1
+     *   Right Isosceles   | Very stable              |  0.75
+     *   Oblique           | Good                     |  0.5   
+     *   Thin Sliver       | Potential Moire/Aliasing |  0.25
+     *   Needle/Flat       | High artifact risk       |  0.05 
      *
      */
-     public static function score( a: Vertex2i<Int>, b: Vertex2i<Int>, c: Vertex2i<Int> ):Float {
+     public static function triangleUnitMerit( a: Vertex2i<Int>, b: Vertex2i<Int>, c: Vertex2i<Int> ):Float {
         var baX = b.x - a.x;
         var baY = b.y - a.y;
         var caX = c.x - a.x;

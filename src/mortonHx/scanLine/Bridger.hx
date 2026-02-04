@@ -47,18 +47,18 @@ class BridgeData {
 class TriangleCheck {
     public var visibleA: Bool;
     public var visibleB: Bool;
-    public var score: Float;
+    public var triangleUnitMerit: Float;
     public var distA: Float;
     public var distB: Float;
     public 
     function new ( visibleA: Bool = false
                  , visibleB: Bool = false
-                 , score:    Float = 0
+                 , triangleUnitMerit:    Float = 0
                  , distA:    Float = -1
                  , distB:    Float = -1 ){
         this.visibleA = visibleA;
         this.visibleB = visibleB;
-        this.score    = score;
+        this.triangleUnitMerit    = triangleUnitMerit;
         this.distA    = ( distA == -1 )? Math.POSITIVE_INFINITY: distA;
         this.distB    = ( distB == -1 )? Math.POSITIVE_INFINITY: distA;
     }
@@ -114,7 +114,7 @@ class Bridger {
         var trianglePossible = visibleA && visibleB;
         var triangleCheck = new TriangleCheck( visibleA, visibleB );
         if( trianglePossible ){
-            triangleCheck.score = GoodTriangle.score( holePt, edge.a, edge.b );
+            triangleCheck.triangleUnitMerit = GoodTriangle.triangleUnitMerit( holePt, edge.a, edge.b );
             triangleCheck.distA = pathA.distanceSq();
             triangleCheck.distB = pathB.distanceSq();
         }
@@ -145,7 +145,7 @@ class Bridger {
                 var begin                         = shellEdges.axi(result.edgeIdx);
                 var targetEdge: Edge<Int>         = shellEdges.getEdge( result.edgeIdx );
                 var tri:        TriangleCheck     = triangleViable( holePt, targetEdge, allHoles, shellEdges, intersector );
-                var bridgePoint = if( tri.score > triangleUnitMerit ) {
+                var bridgePoint = if( tri.triangleUnitMerit > triangleUnitMerit ) {
                     if( tri.distA < tri.distB ){
                         targetEdge.a;
                     } else {
@@ -205,7 +205,7 @@ class Bridger {
                 var begin                         = shellEdges.axi(result.edgeIdx);
                 var targetEdge: Edge<Int>         = shellEdges.getEdge( result.edgeIdx );
                 var tri:        TriangleCheck     = triangleViable( holePt, targetEdge, allHoles, shellEdges, intersector );
-                var bridgePoint = if( tri.score > triangleUnitMerit ) {
+                var bridgePoint = if( tri.triangleUnitMerit > triangleUnitMerit ) {
                     if( tri.distA < tri.distB ){
                         targetEdge.a;
                     } else {
@@ -265,7 +265,7 @@ class Bridger {
                 var begin                         = shellEdges.axi(result.edgeIdx);
                 var targetEdge: Edge<Int>         = shellEdges.getEdge( result.edgeIdx );
                 var tri:        TriangleCheck     = triangleViable( holePt, targetEdge, allHoles, shellEdges, intersector );
-                var bridgePoint = if( tri.score > triangleUnitMerit ) {
+                var bridgePoint = if( tri.triangleUnitMerit > triangleUnitMerit ) {
                     if( tri.distA < tri.distB ){
                         targetEdge.a;
                     } else {
@@ -325,7 +325,7 @@ class Bridger {
                 var begin                         = shellEdges.axi(result.edgeIdx);
                 var targetEdge: Edge<Int>         = shellEdges.getEdge( result.edgeIdx );
                 var tri:        TriangleCheck     = triangleViable( holePt, targetEdge, allHoles, shellEdges, intersector );
-                var bridgePoint = if( tri.score > 0.1 ) {
+                var bridgePoint = if( tri.triangleUnitMerit > 0.1 ) {
                     if( tri.distA < tri.distB ){
                         targetEdge.a;
                     } else {

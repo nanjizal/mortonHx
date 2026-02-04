@@ -42191,7 +42191,7 @@
  * Calculates precise triangle weights for points in large coordinate spaces.</haxe_doc>
 	</class>
 	<class path="mortonHx.qualityTriangle.GoodTriangle" params="" file="src/mortonHx/qualityTriangle/GoodTriangle.hx">
-		<score public="1" set="method" line="16" static="1">
+		<triangleUnitMerit public="1" set="method" line="16" static="1">
 			<f a="a:b:c">
 				<x path="mortonHx.ds.Vertex2i"><x path="Int"/></x>
 				<x path="mortonHx.ds.Vertex2i"><x path="Int"/></x>
@@ -42200,15 +42200,15 @@
 			</f>
 			<haxe_doc>* Quality Score Reference Table:
      * 
-     *   Score     | Shape Style      | Shader Impact            | x 48
-     *   ----------|------------------|---------------------------------------
-     *   0.0208    | Equilateral      | Perfect sampling         |  nearly 1
-     *   0.0156    | Right Isosceles  | Very stable              |  0.75
-     *   0.0100    | Oblique          | Good                     |  0.5   
-     *   0.0050    | Thin Sliver      | Potential Moire/Aliasing |  0.25
-     *   0.0010    | Needle/Flat      | High artifact risk       |  0.05 
+     *    Shape Style      | Shader Impact            | triangleUnitMerit
+     *   ------------------|---------------------------------------
+     *   Equilateral       | Perfect sampling         |  nearly 1
+     *   Right Isosceles   | Very stable              |  0.75
+     *   Oblique           | Good                     |  0.5   
+     *   Thin Sliver       | Potential Moire/Aliasing |  0.25
+     *   Needle/Flat       | High artifact risk       |  0.05 
      *</haxe_doc>
-		</score>
+		</triangleUnitMerit>
 		<meta><m n=":directlyUsed"/></meta>
 	</class>
 	<class path="mortonHx.scanLine.BridgeResult" params="" file="src/mortonHx/scanLine/Bridger.hx" module="mortonHx.scanLine.Bridger">
@@ -42256,11 +42256,11 @@
 	<class path="mortonHx.scanLine.TriangleCheck" params="" file="src/mortonHx/scanLine/Bridger.hx" module="mortonHx.scanLine.Bridger">
 		<visibleA public="1"><x path="Bool"/></visibleA>
 		<visibleB public="1"><x path="Bool"/></visibleB>
-		<score public="1"><x path="Float"/></score>
+		<triangleUnitMerit public="1"><x path="Float"/></triangleUnitMerit>
 		<distA public="1"><x path="Float"/></distA>
 		<distB public="1"><x path="Float"/></distB>
 		<new public="1" set="method" line="58">
-			<f a="?visibleA:?visibleB:?score:?distA:?distB" v="false:false:0:-1:-1">
+			<f a="?visibleA:?visibleB:?triangleUnitMerit:?distA:?distB" v="false:false:0:-1:-1">
 				<x path="Bool"/>
 				<x path="Bool"/>
 				<x path="Float"/>
@@ -42268,7 +42268,7 @@
 				<x path="Float"/>
 				<x path="Void"/>
 			</f>
-			<meta><m n=":value"><e>{ distB : -1, distA : -1, score : 0, visibleB : false, visibleA : false }</e></m></meta>
+			<meta><m n=":value"><e>{ distB : -1, distA : -1, triangleUnitMerit : 0, visibleB : false, visibleA : false }</e></m></meta>
 		</new>
 		<meta>
 			<m n=":directlyUsed"/>
@@ -42288,47 +42288,51 @@
 			</f>
 			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
 		</triangleViable>
-		<mergeHolesEast public="1" set="method" line="129" static="1">
-			<f a="shellEdges:allHoles:?intersector" v="::null">
+		<mergeHolesEast public="1" set="method" line="130" static="1">
+			<f a="shellEdges:allHoles:?triangleUnitMerit:?intersector" v="::0.1:null">
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 				<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
+				<x path="Float"/>
 				<x path="Class"><c path="mortonHx.lineIntersection.Intersector"/></x>
 				<x path="Null"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></x>
 			</f>
-			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
+			<meta><m n=":value"><e>{ intersector : null, triangleUnitMerit : 0.1 }</e></m></meta>
 			<haxe_doc>* Connects and merges holes into a shell progressively to the East of the Shell.</haxe_doc>
 		</mergeHolesEast>
-		<mergeHolesNorth public="1" set="method" line="188" static="1">
-			<f a="shellEdges:allHoles:?intersector" v="::null">
+		<mergeHolesNorth public="1" set="method" line="190" static="1">
+			<f a="shellEdges:allHoles:?triangleUnitMerit:?intersector" v="::0.1:null">
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 				<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
+				<x path="Float"/>
 				<x path="Class"><c path="mortonHx.lineIntersection.Intersector"/></x>
 				<x path="Null"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></x>
 			</f>
-			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
+			<meta><m n=":value"><e>{ intersector : null, triangleUnitMerit : 0.1 }</e></m></meta>
 			<haxe_doc>* Connects and merges holes into a shell progressively to the North of the Shell.</haxe_doc>
 		</mergeHolesNorth>
-		<mergeHolesWest public="1" set="method" line="247" static="1">
-			<f a="shellEdges:allHoles:?intersector" v="::null">
+		<mergeHolesWest public="1" set="method" line="250" static="1">
+			<f a="shellEdges:allHoles:?triangleUnitMerit:?intersector" v="::0.1:null">
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 				<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
+				<x path="Float"/>
 				<x path="Class"><c path="mortonHx.lineIntersection.Intersector"/></x>
 				<x path="Null"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></x>
 			</f>
-			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
+			<meta><m n=":value"><e>{ intersector : null, triangleUnitMerit : 0.1 }</e></m></meta>
 			<haxe_doc>* Connects and merges holes into a shell progressively to the West of the Shell.</haxe_doc>
 		</mergeHolesWest>
-		<mergeHolesSouth public="1" set="method" line="306" static="1">
-			<f a="shellEdges:allHoles:?intersector" v="::null">
+		<mergeHolesSouth public="1" set="method" line="310" static="1">
+			<f a="shellEdges:allHoles:?triangleUnitMerit:?intersector" v="::0.1:null">
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 				<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
+				<x path="Float"/>
 				<x path="Class"><c path="mortonHx.lineIntersection.Intersector"/></x>
 				<x path="Null"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></x>
 			</f>
-			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
+			<meta><m n=":value"><e>{ intersector : null, triangleUnitMerit : 0.1 }</e></m></meta>
 			<haxe_doc>* Connects and merges holes into a shell progressively to the South of the Shell.</haxe_doc>
 		</mergeHolesSouth>
-		<findBestTargetX set="method" line="365" static="1">
+		<findBestTargetX set="method" line="369" static="1">
 			<f a="holePt:shell:?intersector" v="::null">
 				<x path="mortonHx.ds.Vertex2i"><x path="Int"/></x>
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
@@ -42338,7 +42342,7 @@
 			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
 			<haxe_doc>* Finds the nearest shell edge and returns a BridgeResult struct.</haxe_doc>
 		</findBestTargetX>
-		<findBestTargetnegX set="method" line="388" static="1">
+		<findBestTargetnegX set="method" line="392" static="1">
 			<f a="holePt:shell:?intersector" v="::null">
 				<x path="mortonHx.ds.Vertex2i"><x path="Int"/></x>
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
@@ -42347,7 +42351,7 @@
 			</f>
 			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
 		</findBestTargetnegX>
-		<findBestTargetY set="method" line="411" static="1">
+		<findBestTargetY set="method" line="415" static="1">
 			<f a="holePt:shell:?intersector" v="::null">
 				<x path="mortonHx.ds.Vertex2i"><x path="Int"/></x>
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
@@ -42356,7 +42360,7 @@
 			</f>
 			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
 		</findBestTargetY>
-		<findBestTargetnegY set="method" line="434" static="1">
+		<findBestTargetnegY set="method" line="438" static="1">
 			<f a="holePt:shell:?intersector" v="::null">
 				<x path="mortonHx.ds.Vertex2i"><x path="Int"/></x>
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
@@ -42365,7 +42369,7 @@
 			</f>
 			<meta><m n=":value"><e>{ intersector : null }</e></m></meta>
 		</findBestTargetnegY>
-		<pushHole public="1" set="method" line="463" static="1">
+		<pushHole public="1" set="method" line="467" static="1">
 			<f a="tempEdgeData:holePtIdx:hole">
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 				<x path="Int"/>
@@ -42378,7 +42382,7 @@
      * @param hole         hole as an EdgeData 
      * @return EdgeData<Int>]]></haxe_doc>
 		</pushHole>
-		<connectHole public="1" set="method" line="495" static="1">
+		<connectHole public="1" set="method" line="499" static="1">
 			<f a="shell:hole:holePtIdx:bridgeTarget:edgeIdx">
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
@@ -42396,7 +42400,7 @@
     * @param bridgeTarget  The integer point on the shell edge (possibly snapped)
     * @param edgeIdx       The index of the shell edge being split</haxe_doc>
 		</connectHole>
-		<isConvex public="1" get="inline" set="null" line="516" static="1">
+		<isConvex public="1" get="inline" set="null" line="520" static="1">
 			<f a="ax:ay:bx:by:cx:cy">
 				<x path="Int"/>
 				<x path="Int"/>
