@@ -419,7 +419,7 @@ abstract EdgeData<T:Float>(Array<T>) from Array<T> to Array<T> {
         }
     }
 
-    public inline static function makePointsInt(arr:Array<Float>, scale:Float = 1, dx:Float = 0, dy:Float = 0):EdgeData<Int> {
+    public inline static function makePointsInt( arr:Array<Float>, ?scale:Float = 1., ?scaleFromCentre: Bool = false, ?dx:Float = 0., ?dy:Float = 0. ):EdgeData<Int> {
         var p = new Array<Int>();
         var len = arr.length;
         #if (cpp || hl || jvm || reflaxe_cs || reflaxe_java || flash )
@@ -427,12 +427,28 @@ abstract EdgeData<T:Float>(Array<T>) from Array<T> to Array<T> {
         #end
         var j = 0;
         var totalPoints = Std.int(len / 2);
-        
+        var cx: Float = 0.;
+        var cy: Float = 0.;
+        if( scaleFromCentre == true ){
+            for (i in 0...totalPoints) {
+                var base = i * 2;
+                cx += arr[ base ]/totalPoints;
+                cy += arr[ base + 1 ]/totalPoints;
+            }
+        }
         for (i in 0...totalPoints) {
             var base = i * 2;
-            p[j] = Std.int(arr[base] * scale + scale * dx);
+            if( scaleFromCentre ){
+                p[j] = Std.int((cx + (arr[base]-cx) * scale) + dx);
+            } else {
+                p[j] = Std.int((arr[base] * scale) + scale * dx);
+            }
             j++;
-            p[j] = Std.int(arr[base + 1] * scale + scale * dy);
+            if( scaleFromCentre ){
+                p[j] = Std.int((cy + (arr[base + 1] -cy)* scale) + dy);
+            } else {
+                p[j] = Std.int((arr[base + 1] * scale) + scale * dy);
+            }
             j++;
         }
         

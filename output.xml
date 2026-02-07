@@ -37481,19 +37481,19 @@
 			<meta><m n=":value"><e>[93., 195., 129., 92., 280., 81., 402., 134., 477., 70., 619., 61., 759., 97., 758., 247., 662., 347., 665., 230., 721., 140., 607., 117., 472., 171., 580., 178., 603., 257., 605., 377., 690., 404., 787., 328., 786., 480., 617., 510., 611., 439., 544., 400., 529., 291., 509., 218., 400., 358., 489., 402., 425., 479., 268., 464., 341., 338., 393., 427., 373., 284., 429., 197., 301., 150., 296., 245., 252., 384., 118., 360., 190., 272., 244., 165., 81., 259., 40., 216.]</e></m></meta>
 		</test1>
 		<main set="method" line="17" static="1"><f a=""><x path="Void"/></f></main>
-		<drawTriangles set="method" line="90" static="1"><f a="ctx:data">
+		<drawTriangles set="method" line="89" static="1"><f a="ctx:data">
 	<c path="js.html.CanvasRenderingContext2D"/>
 	<c path="Array"><x path="Int"/></c>
 	<x path="Void"/>
 </f></drawTriangles>
-		<drawOutline set="method" line="112" static="1"><f a="ctx:points:color:thick">
+		<drawOutline set="method" line="111" static="1"><f a="ctx:points:color:thick">
 	<c path="js.html.CanvasRenderingContext2D"/>
 	<c path="Array"><x path="Int"/></c>
 	<x path="Int"/>
 	<x path="Int"/>
 	<x path="Void"/>
 </f></drawOutline>
-		<drawGrid set="method" line="127" static="1"><f a="ctx:width:height:step">
+		<drawGrid set="method" line="126" static="1"><f a="ctx:width:height:step">
 	<c path="js.html.CanvasRenderingContext2D"/>
 	<x path="Int"/>
 	<x path="Int"/>
@@ -37884,16 +37884,17 @@
 	<x path="Void"/>
 </f></replaceRange>
 	<makePointsInt public="1" get="inline" set="null" line="422" static="1">
-		<f a="arr:?scale:?dx:?dy" v=":1:0:0">
+		<f a="arr:?scale:?scaleFromCentre:?dx:?dy" v=":1.:false:0.:0.">
 			<c path="Array"><x path="Float"/></c>
 			<x path="Float"/>
+			<x path="Bool"/>
 			<x path="Float"/>
 			<x path="Float"/>
 			<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 		</f>
-		<meta><m n=":value"><e>{ dy : 0, dx : 0, scale : 1 }</e></m></meta>
+		<meta><m n=":value"><e>{ dy : 0., dx : 0., scaleFromCentre : false, scale : 1. }</e></m></meta>
 	</makePointsInt>
-	<getSortedMap public="1" params="T" get="inline" set="null" line="446" static="1">
+	<getSortedMap public="1" params="T" get="inline" set="null" line="462" static="1">
 		<f a="arr:f">
 			<c path="Array"><c path="getSortedMap.T"/></c>
 			<f a="a:b">
@@ -37907,27 +37908,27 @@
     * @param arr The array of data (e.g., EdgeData)
     * @param f   A comparator function: returns > 0 if 'b' should come before 'a']]></haxe_doc>
 	</getSortedMap>
-	<sortMapDescendingX public="1" get="inline" set="null" line="460" static="1"><f a="arr">
+	<sortMapDescendingX public="1" get="inline" set="null" line="476" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapDescendingX>
-	<sortMapAssendingX public="1" get="inline" set="null" line="463" static="1"><f a="arr">
+	<sortMapAssendingX public="1" get="inline" set="null" line="479" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapAssendingX>
-	<sortMapDescendingY public="1" get="inline" set="null" line="466" static="1"><f a="arr">
+	<sortMapDescendingY public="1" get="inline" set="null" line="482" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapDescendingY>
-	<sortMapAssendingY public="1" get="inline" set="null" line="469" static="1"><f a="arr">
+	<sortMapAssendingY public="1" get="inline" set="null" line="485" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapAssendingY>
-	<isCounterClockwise public="1" get="inline" set="null" line="482" static="1"><f a="this">
+	<isCounterClockwise public="1" get="inline" set="null" line="498" static="1"><f a="this">
 	<c path="Array"><c path="mortonHx.ds.EdgeData.T"/></c>
 	<x path="Bool"/>
 </f></isCounterClockwise>
-	<isClockwise public="1" get="inline" set="null" line="522" static="1">
+	<isClockwise public="1" get="inline" set="null" line="538" static="1">
 		<f a="this">
 			<c path="Array"><c path="mortonHx.ds.EdgeData.T"/></c>
 			<x path="Bool"/>
@@ -38178,16 +38179,17 @@
 	<x path="Void"/>
 </f></replaceRange>
 		<makePointsInt public="1" get="inline" set="null" line="422" static="1">
-			<f a="arr:?scale:?dx:?dy" v=":1:0:0">
+			<f a="arr:?scale:?scaleFromCentre:?dx:?dy" v=":1.:false:0.:0.">
 				<c path="Array"><x path="Float"/></c>
 				<x path="Float"/>
+				<x path="Bool"/>
 				<x path="Float"/>
 				<x path="Float"/>
 				<x path="mortonHx.ds.EdgeData"><x path="Int"/></x>
 			</f>
-			<meta><m n=":value"><e>{ dy : 0, dx : 0, scale : 1 }</e></m></meta>
+			<meta><m n=":value"><e>{ dy : 0., dx : 0., scaleFromCentre : false, scale : 1. }</e></m></meta>
 		</makePointsInt>
-		<getSortedMap public="1" params="T" get="inline" set="null" line="446" static="1">
+		<getSortedMap public="1" params="T" get="inline" set="null" line="462" static="1">
 			<f a="arr:f">
 				<c path="Array"><c path="getSortedMap.T"/></c>
 				<f a="a:b">
@@ -38201,27 +38203,27 @@
     * @param arr The array of data (e.g., EdgeData)
     * @param f   A comparator function: returns > 0 if 'b' should come before 'a']]></haxe_doc>
 		</getSortedMap>
-		<sortMapDescendingX public="1" get="inline" set="null" line="460" static="1"><f a="arr">
+		<sortMapDescendingX public="1" get="inline" set="null" line="476" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapDescendingX>
-		<sortMapAssendingX public="1" get="inline" set="null" line="463" static="1"><f a="arr">
+		<sortMapAssendingX public="1" get="inline" set="null" line="479" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapAssendingX>
-		<sortMapDescendingY public="1" get="inline" set="null" line="466" static="1"><f a="arr">
+		<sortMapDescendingY public="1" get="inline" set="null" line="482" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapDescendingY>
-		<sortMapAssendingY public="1" get="inline" set="null" line="469" static="1"><f a="arr">
+		<sortMapAssendingY public="1" get="inline" set="null" line="485" static="1"><f a="arr">
 	<c path="Array"><x path="mortonHx.ds.EdgeData"><x path="Int"/></x></c>
 	<c path="Array"><x path="Int"/></c>
 </f></sortMapAssendingY>
-		<isCounterClockwise public="1" get="inline" set="null" line="482" static="1"><f a="this">
+		<isCounterClockwise public="1" get="inline" set="null" line="498" static="1"><f a="this">
 	<c path="Array"><c path="mortonHx.ds.EdgeData.T"/></c>
 	<x path="Bool"/>
 </f></isCounterClockwise>
-		<isClockwise public="1" get="inline" set="null" line="522" static="1">
+		<isClockwise public="1" get="inline" set="null" line="538" static="1">
 			<f a="this">
 				<c path="Array"><c path="mortonHx.ds.EdgeData.T"/></c>
 				<x path="Bool"/>

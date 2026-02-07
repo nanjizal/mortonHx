@@ -22,30 +22,29 @@ class TestTriangulation {
         Browser.document.body.appendChild( canvas );
         var points = EdgeData.makePointsInt( test1, 1 );
         //var edges = EarCuttingMorton.makeEdges( points );
-        var holes  = [EdgeData.makePointsInt( hole1, 1 )
-                    , EdgeData.makePointsInt( hole2, 1, 50 )
-                    , EdgeData.makePointsInt( hole5, 1, 0, 0 )
-                    , EdgeData.makePointsInt( hole5, 1, -30, 0 )
-                    , EdgeData.makePointsInt( hole6, 1 )
-                    , EdgeData.makePointsInt( hole7, 1 )
-                    , EdgeData.makePointsInt( hole8, 1 )
-                    , EdgeData.makePointsInt( hole9, 1, -10, -10 )
-                    , EdgeData.makePointsInt( hole10, 1, 0, -40 )
+        var holes  = [EdgeData.makePointsInt( hole1, 1.3, true, 0, 0 )
+                    , EdgeData.makePointsInt( hole2, 1.3, true, 30 )
+                    , EdgeData.makePointsInt( hole5, 1.3, true, 10, 0 )
+                    , EdgeData.makePointsInt( hole5, 1.3, true, -40, 0 )
+                    , EdgeData.makePointsInt( hole6, 1.3, true )
+                    , EdgeData.makePointsInt( hole7, 1.3, true )
+                    , EdgeData.makePointsInt( hole8, 1.3, true )
+                    , EdgeData.makePointsInt( hole9, 1.3, true, -10, -10 )
+                    , EdgeData.makePointsInt( hole10, 1.3, true, 0, -40 )
                  ];
-        // short cut for testing one hole
-        //         holes = [holes[1]]; 
-        //
-        for( hole in holes ){
-            if( hole.isCounterClockwise() ) {
-                hole.reverseData();
-                trace( 'reversing' );
-            } else {
-                trace('not reversing');
-            }
-        }
-        trace( holes );
+        // islands under development
+        var islands = [EdgeData.makePointsInt( hole1, 0.5, true, 0, 0 )
+                     , EdgeData.makePointsInt( hole2, 0.5, true, 30 )
+                     , EdgeData.makePointsInt( hole5, 0.5, true, 10, 0 )
+                     , EdgeData.makePointsInt( hole5, 0.5, true, -40, 0 )
+                     , EdgeData.makePointsInt( hole6, 0.5, true )
+                     , EdgeData.makePointsInt( hole7, 0.5, true )
+                     , EdgeData.makePointsInt( hole8, 0.5, true )
+                     , EdgeData.makePointsInt( hole9, 0.5, true, -10, -10 )
+                     , EdgeData.makePointsInt( hole10, 0.5, true, 0, -40 )
+         ];
         trace('MERGING HOLES');
-        var bridger_: EdgeData<Int> = Bridger.mergeHolesSouth( points, holes );
+        var bridger_: EdgeData<Int> = Bridger.mergeHolesEast( points, holes );
         //trace( bridger_ );
         //points = holes[0];
         var minX = points.minX;

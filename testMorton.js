@@ -264,20 +264,22 @@ mortonHx_TestTriangulation.main = function() {
 	var arr = mortonHx_TestTriangulation.test1;
 	var scale = 1;
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * 0 | 0;
+		p[j] = arr[base] * scale + scale * 0. | 0;
 		++j;
-		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		p[j] = arr[base + 1] * scale + scale * 0. | 0;
 		++j;
 	}
 	var a = p;
@@ -286,22 +288,54 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var points = a;
 	var arr = mortonHx_TestData_hole1;
-	var scale = 1;
+	var scale = 1.3;
+	var scaleFromCentre = true;
+	var dx = 0;
+	var dy = 0;
+	if(dy == null) {
+		dy = 0.;
+	}
+	if(dx == null) {
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -310,26 +344,50 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes = a;
 	var arr = mortonHx_TestData_hole2;
-	var scale = 1;
-	var dx = 50;
+	var scale = 1.3;
+	var scaleFromCentre = true;
+	var dx = 30;
 	if(dx == null) {
-		dx = 0;
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
 	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * dx | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -338,30 +396,54 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes1 = a;
 	var arr = mortonHx_TestData_hole5;
-	var scale = 1;
-	var dx = 0;
+	var scale = 1.3;
+	var scaleFromCentre = true;
+	var dx = 10;
 	var dy = 0;
 	if(dy == null) {
-		dy = 0;
+		dy = 0.;
 	}
 	if(dx == null) {
-		dx = 0;
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
 	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * dx | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -370,30 +452,54 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes2 = a;
 	var arr = mortonHx_TestData_hole5;
-	var scale = 1;
-	var dx = -30;
+	var scale = 1.3;
+	var scaleFromCentre = true;
+	var dx = -40;
 	var dy = 0;
 	if(dy == null) {
-		dy = 0;
+		dy = 0.;
 	}
 	if(dx == null) {
-		dx = 0;
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
 	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * dx | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -402,22 +508,46 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes3 = a;
 	var arr = mortonHx_TestData_hole6;
-	var scale = 1;
+	var scale = 1.3;
+	var scaleFromCentre = true;
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * 0. | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -426,22 +556,46 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes4 = a;
 	var arr = mortonHx_TestData_hole7;
-	var scale = 1;
+	var scale = 1.3;
+	var scaleFromCentre = true;
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * 0. | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -450,22 +604,46 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes5 = a;
 	var arr = mortonHx_TestData_hole8;
-	var scale = 1;
+	var scale = 1.3;
+	var scaleFromCentre = true;
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * 0. | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * 0 | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -474,30 +652,54 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes6 = a;
 	var arr = mortonHx_TestData_hole9;
-	var scale = 1;
+	var scale = 1.3;
+	var scaleFromCentre = true;
 	var dx = -10;
 	var dy = -10;
 	if(dy == null) {
-		dy = 0;
+		dy = 0.;
 	}
 	if(dx == null) {
-		dx = 0;
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
 	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * dx | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -506,30 +708,54 @@ mortonHx_TestTriangulation.main = function() {
 	}
 	var holes7 = a;
 	var arr = mortonHx_TestData_hole10;
-	var scale = 1;
+	var scale = 1.3;
+	var scaleFromCentre = true;
 	var dx = 0;
 	var dy = -40;
 	if(dy == null) {
-		dy = 0;
+		dy = 0.;
 	}
 	if(dx == null) {
-		dx = 0;
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
 	}
 	if(scale == null) {
-		scale = 1;
+		scale = 1.;
 	}
 	var p = [];
 	var len = arr.length;
 	var j = 0;
 	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
 	var _g = 0;
 	var _g1 = totalPoints;
 	while(_g < _g1) {
 		var i = _g++;
 		var base = i * 2;
-		p[j] = arr[base] * scale + scale * dx | 0;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
 		++j;
-		p[j] = arr[base + 1] * scale + scale * dy | 0;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
 		++j;
 	}
 	var a = p;
@@ -537,54 +763,484 @@ mortonHx_TestTriangulation.main = function() {
 		a = [];
 	}
 	var holes8 = [holes,holes1,holes2,holes3,holes4,holes5,holes6,holes7,a];
-	var _g = 0;
-	while(_g < holes8.length) {
-		var hole = holes8[_g];
-		++_g;
-		var area = 0;
-		var len = hole.length >> 1;
-		var tmp;
-		if(len < 3) {
-			tmp = false;
-		} else {
-			var EPSILON = 1e-9;
-			var _g1 = 0;
-			var _g2 = len;
-			while(_g1 < _g2) {
-				var i = _g1++;
-				var j = (i + 1) % len;
-				area += hole[i << 1] * hole[1 + (j << 1)] - hole[j << 1] * hole[1 + (i << 1)];
-			}
-			tmp = Math.abs(area) < EPSILON ? false : area < 0;
-		}
-		if(!tmp) {
-			var len1 = hole.length;
-			var half = len1 >> 2;
-			var a;
-			var b;
-			var _g3 = 0;
-			var _g4 = half;
-			while(_g3 < _g4) {
-				var i1 = _g3++;
-				a = i1 << 1;
-				b = len1 - 2 - a;
-				var temp = hole[a];
-				hole[a] = hole[b];
-				hole[b] = temp;
-				var a1 = a + 1;
-				var b1 = b + 1;
-				var temp1 = hole[a1];
-				hole[a1] = hole[b1];
-				hole[b1] = temp1;
-			}
-			console.log("src/mortonHx/TestTriangulation.hx:41:","reversing");
-		} else {
-			console.log("src/mortonHx/TestTriangulation.hx:43:","not reversing");
+	var arr = mortonHx_TestData_hole1;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	var dx = 0;
+	var dy = 0;
+	if(dy == null) {
+		dy = 0.;
+	}
+	if(dx == null) {
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
 		}
 	}
-	console.log("src/mortonHx/TestTriangulation.hx:46:",holes8);
-	console.log("src/mortonHx/TestTriangulation.hx:47:","MERGING HOLES");
-	var bridger_ = mortonHx_scanLine_Bridger.mergeHolesSouth(points,holes8);
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_0 = a;
+	var arr = mortonHx_TestData_hole2;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	var dx = 30;
+	if(dx == null) {
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_1 = a;
+	var arr = mortonHx_TestData_hole5;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	var dx = 10;
+	var dy = 0;
+	if(dy == null) {
+		dy = 0.;
+	}
+	if(dx == null) {
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_2 = a;
+	var arr = mortonHx_TestData_hole5;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	var dx = -40;
+	var dy = 0;
+	if(dy == null) {
+		dy = 0.;
+	}
+	if(dx == null) {
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_3 = a;
+	var arr = mortonHx_TestData_hole6;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * 0. | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_4 = a;
+	var arr = mortonHx_TestData_hole7;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * 0. | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_5 = a;
+	var arr = mortonHx_TestData_hole8;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * 0. | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * 0. | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_6 = a;
+	var arr = mortonHx_TestData_hole9;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	var dx = -10;
+	var dy = -10;
+	if(dy == null) {
+		dy = 0.;
+	}
+	if(dx == null) {
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_7 = a;
+	var arr = mortonHx_TestData_hole10;
+	var scale = 0.5;
+	var scaleFromCentre = true;
+	var dx = 0;
+	var dy = -40;
+	if(dy == null) {
+		dy = 0.;
+	}
+	if(dx == null) {
+		dx = 0.;
+	}
+	if(scaleFromCentre == null) {
+		scaleFromCentre = false;
+	}
+	if(scale == null) {
+		scale = 1.;
+	}
+	var p = [];
+	var len = arr.length;
+	var j = 0;
+	var totalPoints = len / 2 | 0;
+	var cx = 0.;
+	var cy = 0.;
+	if(scaleFromCentre == true) {
+		var _g = 0;
+		var _g1 = totalPoints;
+		while(_g < _g1) {
+			var i = _g++;
+			var base = i * 2;
+			cx += arr[base] / totalPoints;
+			cy += arr[base + 1] / totalPoints;
+		}
+	}
+	var _g = 0;
+	var _g1 = totalPoints;
+	while(_g < _g1) {
+		var i = _g++;
+		var base = i * 2;
+		if(scaleFromCentre) {
+			p[j] = cx + (arr[base] - cx) * scale + dx | 0;
+		} else {
+			p[j] = arr[base] * scale + scale * dx | 0;
+		}
+		++j;
+		if(scaleFromCentre) {
+			p[j] = cy + (arr[base + 1] - cy) * scale + dy | 0;
+		} else {
+			p[j] = arr[base + 1] * scale + scale * dy | 0;
+		}
+		++j;
+	}
+	var a = p;
+	if(a == null) {
+		a = [];
+	}
+	var islands_8 = a;
+	console.log("src/mortonHx/TestTriangulation.hx:46:","MERGING HOLES");
+	var bridger_ = mortonHx_scanLine_Bridger.mergeHolesEast(points,holes8);
 	var minX;
 	if(points.length >> 1 == 0) {
 		minX = 0.0;
@@ -726,17 +1382,17 @@ mortonHx_ds_EdgeData.iteratorPoints = function(this1) {
 		return new mortonHx_ds_Vertex2i_$(px,py);
 	}};
 };
-mortonHx_ds_EdgeData.maxYindex = function(this1) {
+mortonHx_ds_EdgeData.maxXindex = function(this1) {
 	if(this1.length >> 1 <= 1) {
 		return 0;
 	}
-	var m = this1[1];
+	var m = this1[0];
 	var idx = 0;
 	var _g = 1;
 	var _g1 = this1.length >> 1;
 	while(_g < _g1) {
 		var i = _g++;
-		var n = this1[1 + (i << 1)];
+		var n = this1[i << 1];
 		if(n > m) {
 			m = n;
 			idx = i;
@@ -1353,7 +2009,7 @@ mortonHx_scanLine_Bridger.triangleViable = function(holePt,edge,holes,shell,inte
 	}
 	return triangleCheck;
 };
-mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,triangleUnitMerit,intersector) {
+mortonHx_scanLine_Bridger.mergeHolesEast = function(shellEdges,allHoles,triangleUnitMerit,intersector) {
 	if(triangleUnitMerit == null) {
 		triangleUnitMerit = 0.1;
 	}
@@ -1367,15 +2023,15 @@ mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,triangl
 	var arr = allHoles;
 	var f = function(a,b) {
 		var f;
-		if(a.length >> 1 == 0) {
+		if(b.length >> 1 == 0) {
 			f = 0.0;
 		} else {
-			var m = a[1];
+			var m = b[0];
 			var _g = 1;
-			var _g1 = a.length >> 1;
+			var _g1 = b.length >> 1;
 			while(_g < _g1) {
 				var i = _g++;
-				var n = a[1 + (i << 1)];
+				var n = b[i << 1];
 				if(n > m) {
 					m = n;
 				}
@@ -1383,15 +2039,15 @@ mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,triangl
 			f = m;
 		}
 		var f1;
-		if(b.length >> 1 == 0) {
+		if(a.length >> 1 == 0) {
 			f1 = 0.0;
 		} else {
-			var m = b[1];
+			var m = a[0];
 			var _g = 1;
-			var _g1 = b.length >> 1;
+			var _g1 = a.length >> 1;
 			while(_g < _g1) {
 				var i = _g++;
-				var n = b[1 + (i << 1)];
+				var n = a[i << 1];
 				if(n > m) {
 					m = n;
 				}
@@ -1424,15 +2080,15 @@ mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,triangl
 	while(_g < _g1) {
 		var i = _g++;
 		var hole = allHoles[order1[i]];
-		var hole_i = mortonHx_ds_EdgeData.maxYindex(hole);
+		var hole_i = mortonHx_ds_EdgeData.maxXindex(hole);
 		var holePt = new mortonHx_ds_Vertex2i_$(hole[hole_i << 1],hole[1 + (hole_i << 1)]);
-		var result = mortonHx_scanLine_Bridger.findBestTargetY(holePt,shellEdges,intersector);
+		var result = mortonHx_scanLine_Bridger.findBestTargetX(holePt,shellEdges,intersector);
 		if(result != null) {
 			var begin = result.edgeIdx << 1;
 			var edgeIndex = result.edgeIdx;
 			var targetEdge = new mortonHx_ds_Edge(shellEdges[edgeIndex << 1],shellEdges[(edgeIndex << 1) + 1],shellEdges[(edgeIndex << 1) + 2],shellEdges[(edgeIndex << 1) + 3]);
 			var tri = mortonHx_scanLine_Bridger.triangleViable(holePt,targetEdge,allHoles,shellEdges,intersector);
-			var bridgePoint = tri.triangleUnitMerit > 0.1 ? tri.distA < tri.distB ? new mortonHx_ds_Vertex2i_$(targetEdge.ax,targetEdge.ay) : new mortonHx_ds_Vertex2i_$(targetEdge.bx,targetEdge.by) : result.point;
+			var bridgePoint = tri.triangleUnitMerit > triangleUnitMerit ? tri.distA < tri.distB ? new mortonHx_ds_Vertex2i_$(targetEdge.ax,targetEdge.ay) : new mortonHx_ds_Vertex2i_$(targetEdge.bx,targetEdge.by) : result.point;
 			var e = mortonHx_scanLine_Bridger.connectHole(shellEdges,hole,hole_i,bridgePoint,result.edgeIdx);
 			var b = new mortonHx_scanLine_BridgeData(begin,targetEdge,e,result.distanceSq);
 			bridgeDatas[order1[i]] = b;
@@ -1441,11 +2097,11 @@ mortonHx_scanLine_Bridger.mergeHolesSouth = function(shellEdges,allHoles,triangl
 	}
 	return shellEdges;
 };
-mortonHx_scanLine_Bridger.findBestTargetY = function(holePt,shell,intersector) {
-	var y = holePt.y;
-	var x1 = holePt.x;
-	var x2 = holePt.x;
-	var scanner = intersector == null ? new mortonHx_lineIntersection_IntersectorFA(x1,y,x2,999999) : intersector == mortonHx_lineIntersection_IntersectorFA ? new mortonHx_lineIntersection_IntersectorFA(x1,y,x2,999999) : intersector == mortonHx_lineIntersection_IntersectorGareth ? new mortonHx_lineIntersection_IntersectorGareth(x1,y,x2,999999) : intersector == mortonHx_lineIntersection_IntersectorCramer ? new mortonHx_lineIntersection_IntersectorCramer(x1,y,x2,999999) : new mortonHx_lineIntersection_IntersectorFA(x1,y,x2,999999);
+mortonHx_scanLine_Bridger.findBestTargetX = function(holePt,shell,intersector) {
+	var x = holePt.x;
+	var y1 = holePt.y;
+	var y2 = holePt.y;
+	var scanner = intersector == null ? new mortonHx_lineIntersection_IntersectorFA(x,y1,999999,y2) : intersector == mortonHx_lineIntersection_IntersectorFA ? new mortonHx_lineIntersection_IntersectorFA(x,y1,999999,y2) : intersector == mortonHx_lineIntersection_IntersectorGareth ? new mortonHx_lineIntersection_IntersectorGareth(x,y1,999999,y2) : intersector == mortonHx_lineIntersection_IntersectorCramer ? new mortonHx_lineIntersection_IntersectorCramer(x,y1,999999,y2) : new mortonHx_lineIntersection_IntersectorFA(x,y1,999999,y2);
 	var bestPoint = null;
 	var bestIdx = -1;
 	var minDist = Infinity;
@@ -1455,7 +2111,7 @@ mortonHx_scanLine_Bridger.findBestTargetY = function(holePt,shell,intersector) {
 		var i = _g++;
 		var hit = scanner.check(shell[i << 1],shell[(i << 1) + 1],shell[(i << 1) + 2],shell[(i << 1) + 3]);
 		if(hit != null) {
-			var d = hit.y - holePt.y;
+			var d = hit.x - holePt.x;
 			if(d < minDist) {
 				minDist = d;
 				bestPoint = hit;
